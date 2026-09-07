@@ -1,0 +1,186 @@
+{
+  "htmlLang": "en",
+  "ogLocale": "en_US",
+  "meta": {
+    "title": "PAWWER | Commercial & marketing CRM",
+    "description": "Organize your leads, centralize attention and turn commercial follow-up into a measurable system. See the PAWWER plans from $99 USD per month."
+  },
+  "nav": {
+    "skip": "Skip to content",
+    "links": [
+      { "label": "Solutions", "hash": "#soluciones" },
+      { "label": "Benefits", "hash": "#beneficios" },
+      { "label": "Plans", "hash": "#planes" },
+      { "label": "Contact", "hash": "#contacto" }
+    ],
+    "login": "Sign in / Login",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "langLabel": "ES",
+    "langAria": "Ver esta página en español"
+  },
+  "hero": {
+    "kicker": "Commercial & marketing CRM",
+    "h1": { "a": "Data makes", "b": "momentum." },
+    "sub": "Your leads are already talking. PAWWER turns every conversation into context, and every context into action.",
+    "ctaPrimary": "Build your system",
+    "ctaSecondary": "Explore the process",
+    "bottomLeft": "Scroll to explore",
+    "bottomRight": "CRM / Marketing / Follow-up"
+  },
+  "chapter": {
+    "label": "PAWWER for teams on the move",
+    "h2": { "a": "When everything that", "b": "matters is connected." },
+    "p": "One read on your commercial operation: capture, engage, convert and measure without losing the thread."
+  },
+  "solutions": {
+    "label": "Explore our process",
+    "h2": { "a": "From the first signal", "b": "to the next step." },
+    "phases": [
+      { "name": "Capture", "line": "Every lead arrives with its source and context, whatever the channel." },
+      { "name": "Understand", "line": "See the full history before you reply: what they asked, when and through which channel." },
+      { "name": "Engage", "line": "Conversations, meetings and tasks in one place, with the next step always visible." },
+      { "name": "Convert", "line": "Quotes, proposals and closing connected to follow-up, with no loose ends." },
+      { "name": "Measure", "line": "Source, results and team activity to decide where to invest energy." }
+    ],
+    "pillarsEyebrow": "What PAWWER does",
+    "pillarsTitle": { "a": "One system,", "b": "three moves." },
+    "showcaseEyebrow": "Product view",
+    "items": [
+      { "h3": "Engage with context", "p": "Leads, contacts and follow-up in one place so every conversation keeps its continuity." },
+      { "h3": "Turn interest into action", "p": "Connect your calendar with follow-up and give every opportunity a next step." },
+      { "h3": "Measure what moves the team", "p": "Source, results and operational analytics to decide where to invest energy." }
+    ],
+    "mock": {
+      "bar": "Commercial operating system",
+      "eyebrow": "Today · 09:42",
+      "h3": "The next step is clear.",
+      "leads": [
+        { "stage": "New lead", "initials": "AC", "name": "Andrea C.", "role": "Service inquiry", "status": "Next step defined" },
+        { "stage": "Following up", "initials": "LM", "name": "Luis M.", "role": "Proposal in review", "status": "Meeting booked" },
+        { "stage": "Proposal", "initials": "SR", "name": "Sofía R.", "role": "Commercial project", "status": "Next step defined" }
+      ],
+      "context": "One history that keeps things moving.",
+      "caption": "Conceptual view · fictional data"
+    }
+  },
+  "benefits": {
+    "label": "The operating layer",
+    "h2": { "a": "Less memory.", "b": "More momentum." },
+    "items": [
+      { "h3": "A place for every lead", "p": "Centralize contacts and opportunities to work from a shared view." },
+      { "h3": "A clear next step", "p": "Connect meetings and follow-up to keep the commercial rhythm." },
+      { "h3": "A measurable read", "p": "Understand what works and what needs attention from Crecimiento and Escala." }
+    ]
+  },
+  "pricing": {
+    "label": "Plans & pricing",
+    "h2": { "a": "Choose the pace", "b": "of your growth." },
+    "intro": "7-day trial with access to the Escala tier. A card is registered in the CRM and the subscription starts when the trial ends; cancel anytime. Prices in USD.",
+    "priceUnit": "USD / mo",
+    "mostPopular": "Most popular",
+    "cta": "Get started",
+    "activationLabel": "In activation",
+    "compareFeatureCol": "Included",
+    "plans": [
+      {
+        "name": "Esencial",
+        "summary": "Bring order to your commercial operation.",
+        "inherits": "The essentials to get started",
+        "features": [
+          { "text": "Leads, contacts and follow-up CRM" },
+          { "text": "Appointment calendar" },
+          { "text": "Brand, library and content preparation" },
+          { "text": "3 team members" },
+          { "text": "Up to 2 channels with official connection" },
+          { "text": "60 operational credits" }
+        ],
+        "note": ""
+      },
+      {
+        "name": "Crecimiento",
+        "summary": "Connect your content with your opportunities.",
+        "inherits": "Everything in Esencial, plus",
+        "features": [
+          { "text": "10 team members" },
+          { "text": "Content planner" },
+          { "text": "Lead map and source" },
+          { "text": "Results, quotes and contracts" },
+          { "text": "Up to 4 channels with official connection" },
+          { "text": "180 operational credits" }
+        ],
+        "note": ""
+      },
+      {
+        "name": "Escala",
+        "summary": "Extend your team's reach.",
+        "inherits": "Everything in Crecimiento, plus",
+        "features": [
+          { "text": "25 team members" },
+          { "text": "Commercial automation" },
+          { "text": "Priority support" },
+          { "text": "Operational analytics" },
+          { "text": "Up to 8 channels with official connection" },
+          { "text": "400 operational credits" }
+        ],
+        "note": "AI agent with human handoff and multichannel automations, pending completion of integration testing."
+      }
+    ],
+    "compareTitle": "Compare the plans",
+    "comparison": [
+      { "label": "Team members", "esencial": "3", "crecimiento": "10", "escala": "25" },
+      { "label": "Channels with official connection", "esencial": "Up to 2", "crecimiento": "Up to 4", "escala": "Up to 8" },
+      { "label": "Operational credits / mo", "esencial": "60", "crecimiento": "180", "escala": "400" },
+      { "label": "Leads, contacts and follow-up CRM", "esencial": "✓", "crecimiento": "✓", "escala": "✓" },
+      { "label": "Appointment calendar", "esencial": "✓", "crecimiento": "✓", "escala": "✓" },
+      { "label": "Brand, library and content preparation", "esencial": "✓", "crecimiento": "✓", "escala": "✓" },
+      { "label": "Content planner", "esencial": "—", "crecimiento": "✓", "escala": "✓" },
+      { "label": "Lead map and source", "esencial": "—", "crecimiento": "✓", "escala": "✓" },
+      { "label": "Results, quotes and contracts", "esencial": "—", "crecimiento": "✓", "escala": "✓" },
+      { "label": "Commercial automation", "esencial": "—", "crecimiento": "—", "escala": "✓" },
+      { "label": "Priority support", "esencial": "—", "crecimiento": "—", "escala": "✓" },
+      { "label": "Operational analytics", "esencial": "—", "crecimiento": "—", "escala": "✓" },
+      { "label": "AI agent with human handoff", "esencial": "—", "crecimiento": "—", "escala": "In activation" }
+    ],
+    "agency": {
+      "label": "PAWWER Agencia",
+      "h3": { "a": "The system and the team", "b": "to make it grow." },
+      "p": "Everything in Escala plus strategy, content, paid media, operations and support from PAWWER / Creativo Coyote MKT. Always by proposal and contract, never auto-charged.",
+      "cta": "Request a proposal"
+    },
+    "notes": [
+      { "lead": "The monthly fee covers PAWWER.", "body": "It does not include ad spend, Meta, Google or TikTok charges, phone numbers, SMS, WhatsApp templates, messaging usage or third-party services." },
+      { "lead": "", "body": "The card is registered in the CRM, not on this site. When the 7-day trial ends, the plan subscription starts automatically; you can cancel it at any time and, if you cancel before it ends, no charge is made. Tax and renewal conditions: to be confirmed with PAWWER." }
+    ]
+  },
+  "contact": {
+    "label": "Start building with us",
+    "h2": { "a": "Make every", "b": "lead move forward." },
+    "cta": "Request the 7-day trial",
+    "addressLabel": "Office"
+  },
+  "footer": {
+    "privacy": "Privacy policy",
+    "privacyHref": "/en/privacy",
+    "rights": "PAWWER"
+  },
+  "planDetail": {
+    "back": "← Back to plans",
+    "includesTitle": "What's included",
+    "inheritsLabel": "Also includes everything in the previous plan.",
+    "trialTitle": "How the 7-day trial works",
+    "trialLines": [
+      { "text": "During the trial you get temporary access to the Escala tier." },
+      { "text": "To start it you register a credit card in the CRM (crm.pawwerapp.com). This site does not capture or store card data." },
+      { "text": "When the 7 days end, this plan's subscription starts automatically and the card is charged at the price shown." },
+      { "text": "You can cancel your subscription at any time from the CRM. If you cancel before the 7 days end, no charge is made." },
+      { "text": "Tax, proration and credit renewal conditions: to be confirmed with PAWWER." }
+    ],
+    "activationTitle": "In activation",
+    "exclusionsTitle": "What the monthly fee does not cover",
+    "ctaTrial": "Start the 7-day trial",
+    "ctaCheckout": "Continue to payment",
+    "ctaSales": "Talk to sales",
+    "priceUnit": "USD / mo"
+  }
+}

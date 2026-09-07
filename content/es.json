@@ -1,0 +1,186 @@
+{
+  "htmlLang": "es-MX",
+  "ogLocale": "es_MX",
+  "meta": {
+    "title": "PAWWER | CRM comercial y de marketing",
+    "description": "Organiza tus leads, centraliza la atención y convierte el seguimiento comercial en un sistema medible. Conoce los planes PAWWER desde $99 USD al mes."
+  },
+  "nav": {
+    "skip": "Saltar al contenido",
+    "links": [
+      { "label": "Soluciones", "hash": "#soluciones" },
+      { "label": "Beneficios", "hash": "#beneficios" },
+      { "label": "Planes", "hash": "#planes" },
+      { "label": "Contacto", "hash": "#contacto" }
+    ],
+    "login": "Sign in / Login",
+    "menuOpen": "Abrir menú",
+    "menuClose": "Cerrar menú",
+    "langLabel": "EN",
+    "langAria": "View this page in English"
+  },
+  "hero": {
+    "kicker": "CRM comercial y de marketing",
+    "h1": { "a": "Los datos", "b": "crean impulso." },
+    "sub": "Tus leads ya están hablando. PAWWER convierte cada conversación en contexto, y cada contexto en acción.",
+    "ctaPrimary": "Construye tu sistema",
+    "ctaSecondary": "Explorar el proceso",
+    "bottomLeft": "Desliza para explorar",
+    "bottomRight": "CRM / Marketing / Seguimiento"
+  },
+  "chapter": {
+    "label": "PAWWER para equipos en movimiento",
+    "h2": { "a": "Cuando todo lo que", "b": "importa está conectado." },
+    "p": "Una sola lectura de tu operación comercial: captas, atiendes, conviertes y mides sin perder el hilo."
+  },
+  "solutions": {
+    "label": "Explora el proceso",
+    "h2": { "a": "De la primera señal", "b": "al siguiente paso." },
+    "phases": [
+      { "name": "Captar", "line": "Cada lead entra con su origen y su contexto, venga del canal que venga." },
+      { "name": "Entender", "line": "Ves el historial completo antes de responder: qué pidió, cuándo y por dónde." },
+      { "name": "Atender", "line": "Conversaciones, citas y tareas en un mismo lugar, con el próximo paso siempre visible." },
+      { "name": "Convertir", "line": "Cotizaciones, propuestas y cierre conectados al seguimiento, sin cabos sueltos." },
+      { "name": "Medir", "line": "Origen, resultados y actividad del equipo para decidir dónde invertir energía." }
+    ],
+    "pillarsEyebrow": "Qué hace PAWWER",
+    "pillarsTitle": { "a": "Un sistema,", "b": "tres movimientos." },
+    "showcaseEyebrow": "Vista del producto",
+    "items": [
+      { "h3": "Atiende con contexto", "p": "Leads, contactos y seguimiento en un mismo lugar para que cada conversación tenga continuidad." },
+      { "h3": "Convierte interés en acción", "p": "Relaciona tu calendario con el seguimiento y da a cada oportunidad un próximo paso." },
+      { "h3": "Mide lo que mueve al equipo", "p": "Origen, resultados y analítica operativa para decidir dónde invertir energía." }
+    ],
+    "mock": {
+      "bar": "Sistema operativo comercial",
+      "eyebrow": "Hoy · 09:42",
+      "h3": "El siguiente paso es claro.",
+      "leads": [
+        { "stage": "Nuevo lead", "initials": "AC", "name": "Andrea C.", "role": "Consulta de servicio", "status": "Próximo paso definido" },
+        { "stage": "En seguimiento", "initials": "LM", "name": "Luis M.", "role": "Propuesta en revisión", "status": "Cita agendada" },
+        { "stage": "Propuesta", "initials": "SR", "name": "Sofía R.", "role": "Proyecto comercial", "status": "Próximo paso definido" }
+      ],
+      "context": "Un historial para dar continuidad.",
+      "caption": "Vista conceptual · datos ficticios"
+    }
+  },
+  "benefits": {
+    "label": "La capa operativa",
+    "h2": { "a": "Menos memoria.", "b": "Más impulso." },
+    "items": [
+      { "h3": "Un lugar para cada lead", "p": "Centraliza contactos y oportunidades para trabajar con una visión compartida." },
+      { "h3": "Un próximo paso claro", "p": "Conecta citas y seguimiento para mantener el ritmo comercial." },
+      { "h3": "Una lectura medible", "p": "Entiende qué funciona y qué necesita atención desde Crecimiento y Escala." }
+    ]
+  },
+  "pricing": {
+    "label": "Planes y precios",
+    "h2": { "a": "Elige el ritmo", "b": "de tu crecimiento." },
+    "intro": "Prueba de 7 días con acceso al nivel Escala. Se registra una tarjeta en el CRM y la suscripción se activa al terminar; cancela cuando quieras. Precios en USD.",
+    "priceUnit": "USD / mes",
+    "mostPopular": "Más elegido",
+    "cta": "Empezar",
+    "activationLabel": "En activación",
+    "compareFeatureCol": "Incluye",
+    "plans": [
+      {
+        "name": "Esencial",
+        "summary": "Pon orden en tu operación comercial.",
+        "inherits": "Lo esencial para comenzar",
+        "features": [
+          { "text": "CRM de leads, contactos y seguimiento" },
+          { "text": "Calendario de citas" },
+          { "text": "Marca, biblioteca y preparación de contenidos" },
+          { "text": "3 integrantes" },
+          { "text": "Hasta 2 canales con conexión oficial" },
+          { "text": "60 créditos operativos" }
+        ],
+        "note": ""
+      },
+      {
+        "name": "Crecimiento",
+        "summary": "Conecta tus contenidos con tus oportunidades.",
+        "inherits": "Todo Esencial, más",
+        "features": [
+          { "text": "10 integrantes" },
+          { "text": "Planner de contenidos" },
+          { "text": "Mapa y origen de leads" },
+          { "text": "Resultados, cotizaciones y contratos" },
+          { "text": "Hasta 4 canales con conexión oficial" },
+          { "text": "180 créditos operativos" }
+        ],
+        "note": ""
+      },
+      {
+        "name": "Escala",
+        "summary": "Amplía el alcance de tu equipo.",
+        "inherits": "Todo Crecimiento, más",
+        "features": [
+          { "text": "25 integrantes" },
+          { "text": "Automatización comercial" },
+          { "text": "Atención prioritaria" },
+          { "text": "Analítica operativa" },
+          { "text": "Hasta 8 canales con conexión oficial" },
+          { "text": "400 créditos operativos" }
+        ],
+        "note": "Agente IA con traspaso humano y automatizaciones multicanal, sujetos a concluir pruebas de integración."
+      }
+    ],
+    "compareTitle": "Comparar los planes",
+    "comparison": [
+      { "label": "Integrantes", "esencial": "3", "crecimiento": "10", "escala": "25" },
+      { "label": "Canales con conexión oficial", "esencial": "Hasta 2", "crecimiento": "Hasta 4", "escala": "Hasta 8" },
+      { "label": "Créditos operativos / mes", "esencial": "60", "crecimiento": "180", "escala": "400" },
+      { "label": "CRM de leads, contactos y seguimiento", "esencial": "✓", "crecimiento": "✓", "escala": "✓" },
+      { "label": "Calendario de citas", "esencial": "✓", "crecimiento": "✓", "escala": "✓" },
+      { "label": "Marca, biblioteca y preparación de contenidos", "esencial": "✓", "crecimiento": "✓", "escala": "✓" },
+      { "label": "Planner de contenidos", "esencial": "—", "crecimiento": "✓", "escala": "✓" },
+      { "label": "Mapa y origen de leads", "esencial": "—", "crecimiento": "✓", "escala": "✓" },
+      { "label": "Resultados, cotizaciones y contratos", "esencial": "—", "crecimiento": "✓", "escala": "✓" },
+      { "label": "Automatización comercial", "esencial": "—", "crecimiento": "—", "escala": "✓" },
+      { "label": "Atención prioritaria", "esencial": "—", "crecimiento": "—", "escala": "✓" },
+      { "label": "Analítica operativa", "esencial": "—", "crecimiento": "—", "escala": "✓" },
+      { "label": "Agente IA con traspaso humano", "esencial": "—", "crecimiento": "—", "escala": "En activación" }
+    ],
+    "agency": {
+      "label": "PAWWER Agencia",
+      "h3": { "a": "El sistema y el equipo", "b": "para hacerlo crecer." },
+      "p": "Todo Escala más estrategia, contenido, pauta, operación y acompañamiento de PAWWER / Creativo Coyote MKT. Siempre con propuesta y contrato, sin cobro automático.",
+      "cta": "Solicitar propuesta"
+    },
+    "notes": [
+      { "lead": "La mensualidad cubre PAWWER.", "body": "No incluye inversión publicitaria, cargos de Meta, Google o TikTok, números, SMS, plantillas de WhatsApp, consumo de mensajería ni servicios de terceros." },
+      { "lead": "", "body": "La tarjeta se registra en el CRM, no en este sitio. Al terminar los 7 días de prueba, la suscripción del plan se activa automáticamente; puedes cancelarla en cualquier momento y, si cancelas antes de que terminen, no se genera cargo. IVA y condiciones de renovación: por confirmar con PAWWER." }
+    ]
+  },
+  "contact": {
+    "label": "Empecemos juntos",
+    "h2": { "a": "Haz que cada", "b": "lead avance." },
+    "cta": "Solicitar prueba de 7 días",
+    "addressLabel": "Oficina"
+  },
+  "footer": {
+    "privacy": "Política de privacidad",
+    "privacyHref": "/privacidad",
+    "rights": "PAWWER"
+  },
+  "planDetail": {
+    "back": "← Volver a planes",
+    "includesTitle": "Qué incluye",
+    "inheritsLabel": "Incluye además todo lo del plan anterior.",
+    "trialTitle": "Cómo funciona la prueba de 7 días",
+    "trialLines": [
+      { "text": "Durante la prueba tienes acceso temporal al nivel Escala." },
+      { "text": "Para iniciarla registras una tarjeta de crédito en el CRM (crm.pawwerapp.com). Este sitio no captura ni almacena datos de tarjeta." },
+      { "text": "Al terminar los 7 días, la suscripción de este plan se activa automáticamente y la tarjeta se cobra según el precio mostrado." },
+      { "text": "Puedes cancelar tu suscripción en cualquier momento desde el CRM. Si cancelas antes de que terminen los 7 días, no se genera ningún cargo." },
+      { "text": "IVA, prorrateo y condiciones de renovación de créditos: por confirmar con PAWWER." }
+    ],
+    "activationTitle": "En activación",
+    "exclusionsTitle": "Qué no cubre la mensualidad",
+    "ctaTrial": "Iniciar prueba de 7 días",
+    "ctaCheckout": "Continuar al pago",
+    "ctaSales": "Hablar con ventas",
+    "priceUnit": "USD / mes"
+  }
+}

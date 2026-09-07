@@ -4,7 +4,6 @@ import { content, media, mailFor, planHref, planSlug, type Locale, EMAIL, PHONE_
 
 const PILLAR_ICONS = [MessageSquare, CalendarDays, ChartNoAxesCombined];
 const BENEFIT_ICONS = [Target, CalendarDays, ChartNoAxesCombined];
-const LEAD_INITIALS = ['AC', 'LM', 'SR'];
 
 function Cell({ value }: { value: string }) {
   if (value === '✓') return <Check size={17} className="yes" aria-label="Sí" />;
@@ -28,7 +27,7 @@ export default function Landing({ locale }: { locale: Locale }) {
         <section className="hero">
           <div className="wrap hero__inner">
             <p className="hero__kicker"><i /> {t.hero.kicker}</p>
-            <h1>{t.hero.h1[0]} {t.hero.h1[1]}</h1>
+            <h1>{t.hero.h1.a} {t.hero.h1.b}</h1>
             <div className="hero__body">
               <div className="hero__actions">
                 <a className="btn btn--solid" href={contact.trial}>{t.hero.ctaPrimary} <ArrowUpRight size={17} /></a>
@@ -53,7 +52,7 @@ export default function Landing({ locale }: { locale: Locale }) {
         <section className="band statement">
           <div className="wrap" data-reveal>
             <p className="eyebrow">{t.chapter.label}</p>
-            <h2>{t.chapter.h2[0]} {t.chapter.h2[1]}</h2>
+            <h2>{t.chapter.h2.a} {t.chapter.h2.b}</h2>
             <p>{t.chapter.p}</p>
           </div>
         </section>
@@ -63,7 +62,7 @@ export default function Landing({ locale }: { locale: Locale }) {
           <div className="wrap">
             <div className="process__head" data-reveal>
               <p className="eyebrow">{t.solutions.label}</p>
-              <h2>{t.solutions.h2[0]} {t.solutions.h2[1]}</h2>
+              <h2>{t.solutions.h2.a} {t.solutions.h2.b}</h2>
             </div>
             {t.solutions.phases.map((phase, i) => (
               <div className="phase" key={phase.name} data-reveal>
@@ -82,7 +81,7 @@ export default function Landing({ locale }: { locale: Locale }) {
           <div className="wrap">
             <div className="pillars__head" data-reveal>
               <p className="eyebrow">{t.solutions.pillarsEyebrow}</p>
-              <h2>{t.solutions.pillarsTitle[0]} {t.solutions.pillarsTitle[1]}</h2>
+              <h2>{t.solutions.pillarsTitle.a} {t.solutions.pillarsTitle.b}</h2>
             </div>
             <div className="pillars__grid">
               {t.solutions.items.map((item, i) => {
@@ -110,32 +109,32 @@ export default function Landing({ locale }: { locale: Locale }) {
             {media.showcaseImage ? (
               <img className="mock mock--img" src={media.showcaseImage} alt="" data-reveal />
             ) : (
-            <div className="mock" data-reveal>
-              <div className="mock__bar">
-                <span className="mock__brand">pawwer<PawPrint size={15} aria-hidden /></span>
-                <span>{m.bar}</span>
-                <span className="mock__avatar">P</span>
-              </div>
-              <div className="mock__body">
-                <p className="mock__eyebrow">{m.eyebrow}</p>
-                <h3>{m.h3}</h3>
-                <div className="pipeline">
-                  {m.stages.map((stage, i) => (
-                    <div key={stage}>
-                      <span className={'stage s' + i}><i />{stage}</span>
-                      <div className={'lead ' + (i === 1 ? 'featured' : '')}>
-                        <span className="lead__icon">{LEAD_INITIALS[i]}</span>
-                        <strong>{m.names[i]}</strong>
-                        <small>{m.roles[i]}</small>
-                        <p>{i === 1 ? m.statusFeatured : m.statusDefault}</p>
-                      </div>
-                    </div>
-                  ))}
+              <div className="mock" data-reveal>
+                <div className="mock__bar">
+                  <span className="mock__brand">pawwer<PawPrint size={15} aria-hidden /></span>
+                  <span>{m.bar}</span>
+                  <span className="mock__avatar">P</span>
                 </div>
-                <div className="mock__ctx"><Check size={15} /> {m.context}</div>
+                <div className="mock__body">
+                  <p className="mock__eyebrow">{m.eyebrow}</p>
+                  <h3>{m.h3}</h3>
+                  <div className="pipeline">
+                    {m.leads.map((lead, i) => (
+                      <div key={lead.name}>
+                        <span className={'stage s' + i}><i />{lead.stage}</span>
+                        <div className={'lead ' + (i === 1 ? 'featured' : '')}>
+                          <span className="lead__icon">{lead.initials}</span>
+                          <strong>{lead.name}</strong>
+                          <small>{lead.role}</small>
+                          <p>{lead.status}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mock__ctx"><Check size={15} /> {m.context}</div>
+                </div>
+                <p className="mock__cap">{m.caption}</p>
               </div>
-              <p className="mock__cap">{m.caption}</p>
-            </div>
             )}
           </div>
         </section>
@@ -145,7 +144,7 @@ export default function Landing({ locale }: { locale: Locale }) {
           <div className="wrap">
             <div className="benefits__head" data-reveal>
               <p className="eyebrow">{t.benefits.label}</p>
-              <h2>{t.benefits.h2[0]} {t.benefits.h2[1]}</h2>
+              <h2>{t.benefits.h2.a} {t.benefits.h2.b}</h2>
             </div>
             <div className="benefits__grid">
               {t.benefits.items.map((item, i) => {
@@ -167,7 +166,7 @@ export default function Landing({ locale }: { locale: Locale }) {
           <div className="wrap">
             <div className="pricing__head" data-reveal>
               <p className="eyebrow">{t.pricing.label}</p>
-              <h2>{t.pricing.h2[0]} {t.pricing.h2[1]}</h2>
+              <h2>{t.pricing.h2.a} {t.pricing.h2.b}</h2>
               <p>{t.pricing.intro}</p>
             </div>
             <div className="plans">
@@ -183,7 +182,7 @@ export default function Landing({ locale }: { locale: Locale }) {
                     <a className={'btn' + (featured ? ' btn--solid' : '')} href={href}>{t.pricing.cta} <ArrowUpRight size={15} /></a>
                     <p className="plan__inherits">{plan.inherits}</p>
                     <ul className="plan__list">
-                      {plan.features.map(f => <li key={f}><Check size={15} />{f}</li>)}
+                      {plan.features.map(f => <li key={f.text}><Check size={15} />{f.text}</li>)}
                     </ul>
                     {plan.note && <p className="plan__note"><b>{t.pricing.activationLabel}</b>{plan.note}</p>}
                   </article>
@@ -197,7 +196,7 @@ export default function Landing({ locale }: { locale: Locale }) {
                 <table>
                   <thead>
                     <tr>
-                      <th>{locale === 'es' ? 'Incluye' : 'Included'}</th>
+                      <th>{t.pricing.compareFeatureCol}</th>
                       {t.pricing.plans.map(p => <th key={p.name}>{p.name}</th>)}
                     </tr>
                   </thead>
@@ -205,7 +204,9 @@ export default function Landing({ locale }: { locale: Locale }) {
                     {t.pricing.comparison.map(row => (
                       <tr key={row.label}>
                         <th scope="row">{row.label}</th>
-                        {row.values.map((v, i) => <td key={i}><Cell value={v} /></td>)}
+                        {[row.esencial, row.crecimiento, row.escala].map((v, i) => (
+                          <td key={i}><Cell value={v} /></td>
+                        ))}
                       </tr>
                     ))}
                   </tbody>
@@ -220,7 +221,7 @@ export default function Landing({ locale }: { locale: Locale }) {
           <div className="wrap agency__inner" data-reveal>
             <div>
               <p className="eyebrow">{t.pricing.agency.label}</p>
-              <h2>{t.pricing.agency.h3[0]} {t.pricing.agency.h3[1]}</h2>
+              <h2>{t.pricing.agency.h3.a} {t.pricing.agency.h3.b}</h2>
               <p>{t.pricing.agency.p}</p>
             </div>
             <a className="btn btn--solid" href={contact.agency}>{t.pricing.agency.cta} <ArrowUpRight size={16} /></a>
@@ -243,7 +244,7 @@ export default function Landing({ locale }: { locale: Locale }) {
           <div className="wrap cta__grid">
             <div data-reveal>
               <p className="eyebrow">{t.contact.label}</p>
-              <h2>{t.contact.h2[0]} {t.contact.h2[1]}</h2>
+              <h2>{t.contact.h2.a} {t.contact.h2.b}</h2>
               <div className="cta__actions">
                 <a className="btn btn--solid" href={contact.trial}>{t.contact.cta} <ArrowUpRight size={17} /></a>
               </div>

@@ -48,7 +48,7 @@ export default function PlanDetail({ locale, slug }: { locale: Locale; slug: str
           <h2>{c.includesTitle}</h2>
           {plan.name !== 'Esencial' && <p className="plan-detail__inherits">{c.inheritsLabel}</p>}
           <ul className="plan-detail__list">
-            {plan.features.map(f => <li key={f}><Check size={16} />{f}</li>)}
+            {plan.features.map(f => <li key={f.text}><Check size={16} />{f.text}</li>)}
           </ul>
           {plan.note && <p className="plan-detail__note"><b>{c.activationTitle}</b> {plan.note}</p>}
         </section>
@@ -56,7 +56,7 @@ export default function PlanDetail({ locale, slug }: { locale: Locale; slug: str
         <section className="plan-detail__block">
           <h2>{c.trialTitle}</h2>
           <ul className="plan-detail__list plain">
-            {c.trialLines.map((l, i) => <li key={i}>{l}</li>)}
+            {c.trialLines.map((l, i) => <li key={i}>{l.text}</li>)}
           </ul>
         </section>
 

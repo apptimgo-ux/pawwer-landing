@@ -1,0 +1,29 @@
+{
+  "media": {
+    "heroImage": "",
+    "showcaseImage": "",
+    "ogImage": ""
+  },
+  "contact": {
+    "email": "cuentamelo@pawwerapp.com",
+    "phoneLabel": "667 800 2000",
+    "phoneHref": "tel:+526678002000",
+    "addressLine1": "Torre B, Blvd. Pedro Infante 2550-Piso 1,",
+    "addressLine2": "Los Álamos, 80100 Culiacán Rosales, Sin.",
+    "crmUrl": "https://crm.pawwerapp.com"
+  },
+  "prices": {
+    "esencial": "$99",
+    "crecimiento": "$199",
+    "escala": "$349"
+  },
+  "checkout": {
+    "esencial": "",
+    "crecimiento": "",
+    "escala": ""
+  },
+  "privacyReview": {
+    "es": "6 de septiembre de 2026",
+    "en": "September 6, 2026"
+  }
+}
