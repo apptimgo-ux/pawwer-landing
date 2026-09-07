@@ -14,7 +14,7 @@ export default function PlanDetail({ locale, slug }: { locale: Locale; slug: str
     return (
       <>
         <Header locale={locale} homeHref={homeHref} altHref={locale === 'es' ? '/en' : '/'} />
-        <main id="contenido" className="plan-detail wrap" lang={locale === 'en' ? 'en' : undefined}>
+        <main id="contenido" className="plan-detail" lang={locale === 'en' ? 'en' : undefined}>
           <a className="back" href={`${homeHref}#planes`}>{c.back}</a>
           <h1>404</h1>
         </main>
@@ -27,43 +27,43 @@ export default function PlanDetail({ locale, slug }: { locale: Locale; slug: str
   const primaryHref = checkout || CRM_URL;
   const primaryLabel = checkout ? c.ctaCheckout : c.ctaTrial;
   const cta = (
-    <div className="plan-detail-actions">
-      <a className="button primary" href={primaryHref}>{primaryLabel} <ArrowUpRight size={18} /></a>
-      <a className="text-link" href={contact.plan(plan.name)}>{c.ctaSales}</a>
+    <div className="plan-detail__actions">
+      <a className="btn btn--solid" href={primaryHref}>{primaryLabel} <ArrowUpRight size={18} /></a>
+      <a className="textlink" href={contact.plan(plan.name)}>{c.ctaSales}</a>
     </div>
   );
 
   return (
     <>
       <Header locale={locale} homeHref={homeHref} altHref={altHref} />
-      <main id="contenido" className="plan-detail wrap" lang={locale === 'en' ? 'en' : undefined}>
+      <main id="contenido" className="plan-detail" lang={locale === 'en' ? 'en' : undefined}>
         <a className="back" href={`${homeHref}#planes`}>{c.back}</a>
-        <p className="section-label">{t.pricing.label}</p>
+        <p className="eyebrow">{t.pricing.label}</p>
         <h1>{plan.name}</h1>
-        <p className="plan-detail-summary">{plan.summary}</p>
-        <div className="plan-detail-price">{plan.price}<span>{c.priceUnit}</span></div>
+        <p className="plan-detail__summary">{plan.summary}</p>
+        <div className="plan-detail__price">{plan.price}<span>{c.priceUnit}</span></div>
         {cta}
 
-        <section className="plan-detail-block">
+        <section className="plan-detail__block">
           <h2>{c.includesTitle}</h2>
-          {plan.name !== 'Esencial' && <p className="plan-detail-inherits">{c.inheritsLabel}</p>}
-          <ul className="plan-detail-list">
+          {plan.name !== 'Esencial' && <p className="plan-detail__inherits">{c.inheritsLabel}</p>}
+          <ul className="plan-detail__list">
             {plan.features.map(f => <li key={f}><Check size={16} />{f}</li>)}
           </ul>
-          {plan.note && <p className="activation"><span>{c.activationTitle}</span> {plan.note}</p>}
+          {plan.note && <p className="plan-detail__note"><b>{c.activationTitle}</b> {plan.note}</p>}
         </section>
 
-        <section className="plan-detail-block">
+        <section className="plan-detail__block">
           <h2>{c.trialTitle}</h2>
-          <ul className="plan-detail-list plain">
+          <ul className="plan-detail__list plain">
             {c.trialLines.map((l, i) => <li key={i}>{l}</li>)}
           </ul>
         </section>
 
-        <section className="plan-detail-block">
+        <section className="plan-detail__block">
           <h2>{c.exclusionsTitle}</h2>
           {t.pricing.notes.map((n, i) => (
-            <p key={i} className="plan-detail-note">{n.lead && <strong>{n.lead} </strong>}{n.body}</p>
+            <p key={i} className="plan-detail__note">{n.lead && <strong>{n.lead} </strong>}{n.body}</p>
           ))}
         </section>
 

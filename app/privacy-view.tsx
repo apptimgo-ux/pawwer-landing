@@ -133,7 +133,7 @@ export default function PrivacyView({ locale }: { locale: Locale }) {
   return (
     <>
       <Header locale={locale} homeHref={homeHref} altHref={altHref} />
-      <main id="contenido" className="privacy wrap" lang={locale === 'en' ? 'en' : undefined}>
+      <main id="contenido" className="prose-page" lang={locale === 'en' ? 'en' : undefined}>
         <a href={homeHref} className="back">{c.back}</a>
         <p className="section-label">{c.label}</p>
         <h1>{c.h1}</h1>

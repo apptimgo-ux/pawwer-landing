@@ -1,10 +1,16 @@
 import { ArrowUpRight, Check, CalendarDays, ChartNoAxesCombined, MessageSquare, Target } from 'lucide-react';
-import { Header, HeroMedia, Footer } from './site-ui';
+import { Header, Footer } from './site-ui';
 import { content, mailFor, planHref, planSlug, type Locale, EMAIL, PHONE_HREF, PHONE_LABEL, ADDRESS_LINES } from './site-content';
 
-const SOLUTION_ICONS = [MessageSquare, CalendarDays, ChartNoAxesCombined];
+const PILLAR_ICONS = [MessageSquare, CalendarDays, ChartNoAxesCombined];
 const BENEFIT_ICONS = [Target, CalendarDays, ChartNoAxesCombined];
 const LEAD_INITIALS = ['AC', 'LM', 'SR'];
+
+function Cell({ value }: { value: string }) {
+  if (value === '✓') return <Check size={17} className="yes" aria-label="Sí" />;
+  if (value === '—') return <span className="no" aria-label="No">—</span>;
+  return <>{value}</>;
+}
 
 export default function Landing({ locale }: { locale: Locale }) {
   const t = content[locale];
@@ -17,96 +23,67 @@ export default function Landing({ locale }: { locale: Locale }) {
     <>
       <Header locale={locale} homeHref={homeHref} altHref={altHref} />
       <main id="contenido" lang={locale === 'en' ? 'en' : undefined}>
+
+        {/* Hero */}
         <section className="hero">
-          <HeroMedia locale={locale} />
-          <div className="hero-shade" />
-          <div className="hero-content wrap">
-            <p className="hero-kicker"><span /> {t.hero.kicker}</p>
-            <h1>{t.hero.h1[0]}<br />{t.hero.h1[1]}</h1>
-            <p className="hero-es">{t.hero.sub}</p>
-            <div className="actions">
-              <a className="button primary" href={contact.trial}>{t.hero.ctaPrimary} <ArrowUpRight size={18} /></a>
-              <a className="text-link light" href="#soluciones">{t.hero.ctaSecondary} <span>↓</span></a>
+          <div className="wrap hero__inner">
+            <p className="hero__kicker"><i /> {t.hero.kicker}</p>
+            <h1>{t.hero.h1[0]} {t.hero.h1[1]}</h1>
+            <div className="hero__body">
+              <div className="hero__actions">
+                <a className="btn btn--solid" href={contact.trial}>{t.hero.ctaPrimary} <ArrowUpRight size={17} /></a>
+                <a className="textlink" href="#soluciones">{t.hero.ctaSecondary}</a>
+              </div>
+              <p className="hero__lead">{t.hero.sub}</p>
             </div>
-          </div>
-          <div className="hero-bottom wrap">
-            <span>{t.hero.bottomLeft}</span>
-            <span className="hero-rule" />
-            <span>{t.hero.bottomRight}</span>
+            <div className="hero__meta">
+              <span>{t.hero.bottomLeft}</span>
+              <hr className="rule" />
+              <span>{t.hero.bottomRight}</span>
+            </div>
           </div>
         </section>
 
-        <section className="chapter-intro">
-          <div className="wrap">
-            <p className="section-label">{t.chapter.label}</p>
-            <h2>{t.chapter.h2[0]}<br />{t.chapter.h2[1]}</h2>
+        {/* Statement */}
+        <section className="band statement">
+          <div className="wrap" data-reveal>
+            <p className="eyebrow">{t.chapter.label}</p>
+            <h2>{t.chapter.h2[0]} {t.chapter.h2[1]}</h2>
             <p>{t.chapter.p}</p>
           </div>
         </section>
 
-        <section id="soluciones" className="section wrap solutions">
-          <div className="section-heading">
-            <p className="section-label">{t.solutions.label}</p>
-            <h2>{t.solutions.h2[0]}<br />{t.solutions.h2[1]}</h2>
-          </div>
-          <div className="phase-strip">
-            {t.solutions.phases.map((p, i) => (
-              <span key={p}><b>{String(i + 1).padStart(2, '0')}</b> {p}</span>
-            ))}
-          </div>
-          <div className="solution-layout">
-            <div className="solution-copy">
-              {t.solutions.items.map((item, i) => {
-                const Icon = SOLUTION_ICONS[i];
-                return (
-                  <article key={item.h3}>
-                    <Icon />
-                    <div>
-                      <h3>{item.h3}</h3>
-                      <p>{item.p}</p>
-                    </div>
-                  </article>
-                );
-              })}
+        {/* Process / phases */}
+        <section id="soluciones" className="band band--dark process">
+          <div className="wrap">
+            <div className="process__head" data-reveal>
+              <p className="eyebrow">{t.solutions.label}</p>
+              <h2>{t.solutions.h2[0]} {t.solutions.h2[1]}</h2>
             </div>
-            <div className="product-window">
-              <div className="window-bar">
-                <span className="mini-brand">pawwer<span>✳</span></span>
-                <span>{m.bar}</span>
-                <span className="avatar">P</span>
-              </div>
-              <div className="window-body">
-                <p className="window-eyebrow">{m.eyebrow}</p>
-                <h3>{m.h3}</h3>
-                <div className="pipeline">
-                  {m.stages.map((stage, i) => (
-                    <div key={stage}>
-                      <span className={'stage s' + i}><i />{stage}</span>
-                      <div className={'lead ' + (i === 1 ? 'featured' : '')}>
-                        <span className="lead-icon">{LEAD_INITIALS[i]}</span>
-                        <strong>{m.names[i]}</strong>
-                        <small>{m.roles[i]}</small>
-                        <p>{i === 1 ? m.statusFeatured : m.statusDefault}</p>
-                      </div>
-                    </div>
-                  ))}
+            {t.solutions.phases.map((phase, i) => (
+              <div className="phase" key={phase.name} data-reveal>
+                <div className="phase__num">{String(i + 1).padStart(2, '0')}</div>
+                <div>
+                  <h3 className="phase__name">{phase.name}</h3>
+                  <p className="phase__line">{phase.line}</p>
                 </div>
-                <div className="context-strip"><Check size={16} /> {m.context}</div>
               </div>
-              <p className="mock-caption">{m.caption}</p>
-            </div>
+            ))}
           </div>
         </section>
 
-        <section id="beneficios" className="benefits">
+        {/* Pillars */}
+        <section className="band pillars">
           <div className="wrap">
-            <p className="section-label">{t.benefits.label}</p>
-            <h2>{t.benefits.h2[0]}<br />{t.benefits.h2[1]}</h2>
-            <div className="benefit-grid">
-              {t.benefits.items.map((item, i) => {
-                const Icon = BENEFIT_ICONS[i];
+            <div className="pillars__head" data-reveal>
+              <p className="eyebrow">{t.solutions.pillarsEyebrow}</p>
+              <h2>{t.solutions.pillarsTitle[0]} {t.solutions.pillarsTitle[1]}</h2>
+            </div>
+            <div className="pillars__grid">
+              {t.solutions.items.map((item, i) => {
+                const Icon = PILLAR_ICONS[i];
                 return (
-                  <article key={item.h3}>
+                  <article className="pillar" key={item.h3} data-reveal>
                     <Icon />
                     <h3>{item.h3}</h3>
                     <p>{item.p}</p>
@@ -117,54 +94,154 @@ export default function Landing({ locale }: { locale: Locale }) {
           </div>
         </section>
 
-        <section id="planes" className="section wrap pricing">
-          <div className="section-heading">
-            <p className="section-label">{t.pricing.label}</p>
-            <h2>{t.pricing.h2[0]}<br />{t.pricing.h2[1]}</h2>
-            <p>{t.pricing.intro}</p>
+        {/* Showcase */}
+        <section className="band band--dark showcase">
+          <div className="wrap showcase__inner">
+            <div className="showcase__copy" data-reveal>
+              <p className="eyebrow">{t.solutions.showcaseEyebrow}</p>
+              <h2>{m.h3}</h2>
+              <p>{t.chapter.p}</p>
+            </div>
+            <div className="mock" data-reveal>
+              <div className="mock__bar">
+                <span className="mock__brand">pawwer<span>✳</span></span>
+                <span>{m.bar}</span>
+                <span className="mock__avatar">P</span>
+              </div>
+              <div className="mock__body">
+                <p className="mock__eyebrow">{m.eyebrow}</p>
+                <h3>{m.h3}</h3>
+                <div className="pipeline">
+                  {m.stages.map((stage, i) => (
+                    <div key={stage}>
+                      <span className={'stage s' + i}><i />{stage}</span>
+                      <div className={'lead ' + (i === 1 ? 'featured' : '')}>
+                        <span className="lead__icon">{LEAD_INITIALS[i]}</span>
+                        <strong>{m.names[i]}</strong>
+                        <small>{m.roles[i]}</small>
+                        <p>{i === 1 ? m.statusFeatured : m.statusDefault}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="mock__ctx"><Check size={15} /> {m.context}</div>
+              </div>
+              <p className="mock__cap">{m.caption}</p>
+            </div>
           </div>
-          <div className="plans">
-            {t.pricing.plans.map(plan => {
-              const highlight = plan.name === 'Crecimiento';
-              return (
-                <article className={'plan ' + (highlight ? 'highlight' : '')} key={plan.name}>
-                  {highlight && <span className="plan-banner">{t.pricing.mostPopular}</span>}
-                  <h3>{plan.name}</h3>
-                  <p className="plan-summary">{plan.summary}</p>
-                  <a className="price" href={planHref(locale, planSlug(plan.name))}>{plan.price}<span>{t.pricing.priceUnit}</span></a>
-                  <a href={planHref(locale, planSlug(plan.name))} className={'button ' + (highlight ? 'primary' : 'outline')}>{t.pricing.cta} <ArrowUpRight size={15} /></a>
-                  <p className="includes">{plan.inherits}</p>
-                  <ul>{plan.features.map(f => <li key={f}><Check size={15} />{f}</li>)}</ul>
-                  {plan.note && <p className="activation"><span>{t.pricing.activationLabel}</span> {plan.note}</p>}
-                </article>
-              );
-            })}
+        </section>
+
+        {/* Benefits */}
+        <section id="beneficios" className="band band--cream2 benefits">
+          <div className="wrap">
+            <div className="benefits__head" data-reveal>
+              <p className="eyebrow">{t.benefits.label}</p>
+              <h2>{t.benefits.h2[0]} {t.benefits.h2[1]}</h2>
+            </div>
+            <div className="benefits__grid">
+              {t.benefits.items.map((item, i) => {
+                const Icon = BENEFIT_ICONS[i];
+                return (
+                  <article className="benefit" key={item.h3} data-reveal>
+                    <Icon />
+                    <h3>{item.h3}</h3>
+                    <p>{item.p}</p>
+                  </article>
+                );
+              })}
+            </div>
           </div>
-          <div className="agency">
+        </section>
+
+        {/* Pricing */}
+        <section id="planes" className="band pricing">
+          <div className="wrap">
+            <div className="pricing__head" data-reveal>
+              <p className="eyebrow">{t.pricing.label}</p>
+              <h2>{t.pricing.h2[0]} {t.pricing.h2[1]}</h2>
+              <p>{t.pricing.intro}</p>
+            </div>
+            <div className="plans">
+              {t.pricing.plans.map(plan => {
+                const featured = plan.name === 'Crecimiento';
+                const href = planHref(locale, planSlug(plan.name));
+                return (
+                  <article className={'plan' + (featured ? ' plan--featured' : '')} key={plan.name} data-reveal>
+                    {featured && <span className="plan__banner">{t.pricing.mostPopular}</span>}
+                    <h3>{plan.name}</h3>
+                    <p className="plan__summary">{plan.summary}</p>
+                    <a className="plan__price" href={href}>{plan.price}<span>{t.pricing.priceUnit}</span></a>
+                    <a className={'btn' + (featured ? ' btn--solid' : '')} href={href}>{t.pricing.cta} <ArrowUpRight size={15} /></a>
+                    <p className="plan__inherits">{plan.inherits}</p>
+                    <ul className="plan__list">
+                      {plan.features.map(f => <li key={f}><Check size={15} />{f}</li>)}
+                    </ul>
+                    {plan.note && <p className="plan__note"><b>{t.pricing.activationLabel}</b>{plan.note}</p>}
+                  </article>
+                );
+              })}
+            </div>
+
+            <div className="compare" data-reveal>
+              <h3>{t.pricing.compareTitle}</h3>
+              <div className="compare__scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>{locale === 'es' ? 'Incluye' : 'Included'}</th>
+                      {t.pricing.plans.map(p => <th key={p.name}>{p.name}</th>)}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {t.pricing.comparison.map(row => (
+                      <tr key={row.label}>
+                        <th scope="row">{row.label}</th>
+                        {row.values.map((v, i) => <td key={i}><Cell value={v} /></td>)}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Agency */}
+        <section className="band band--cream2 agency">
+          <div className="wrap agency__inner" data-reveal>
             <div>
-              <p className="section-label">{t.pricing.agency.label}</p>
-              <h3>{t.pricing.agency.h3[0]}<br />{t.pricing.agency.h3[1]}</h3>
+              <p className="eyebrow">{t.pricing.agency.label}</p>
+              <h2>{t.pricing.agency.h3[0]} {t.pricing.agency.h3[1]}</h2>
               <p>{t.pricing.agency.p}</p>
             </div>
-            <a className="button dark" href={contact.agency}>{t.pricing.agency.cta} <ArrowUpRight size={17} /></a>
+            <a className="btn btn--solid" href={contact.agency}>{t.pricing.agency.cta} <ArrowUpRight size={16} /></a>
           </div>
-          <div className="pricing-notes">
+        </section>
+
+        {/* Pricing notes */}
+        <section className="band pricing-notes-band">
+          <div className="wrap" data-reveal>
             {t.pricing.notes.map((n, i) => (
-              <p key={i}>{n.lead && <strong>{n.lead}</strong>}{n.lead ? ' ' : ''}{n.body}</p>
+              <p key={i} className="plan-detail__note" style={{ marginBottom: 12, maxWidth: '80ch' }}>
+                {n.lead && <strong>{n.lead} </strong>}{n.body}
+              </p>
             ))}
           </div>
         </section>
 
-        <section id="contacto" className="contact-section">
-          <div className="wrap contact-grid">
-            <div>
-              <p className="section-label">{t.contact.label}</p>
-              <h2>{t.contact.h2[0]}<br />{t.contact.h2[1]}</h2>
-              <a href={contact.trial} className="button primary">{t.contact.cta} <ArrowUpRight size={18} /></a>
+        {/* Final CTA */}
+        <section id="contacto" className="band band--dark cta">
+          <div className="wrap cta__grid">
+            <div data-reveal>
+              <p className="eyebrow">{t.contact.label}</p>
+              <h2>{t.contact.h2[0]} {t.contact.h2[1]}</h2>
+              <div className="cta__actions">
+                <a className="btn btn--solid" href={contact.trial}>{t.contact.cta} <ArrowUpRight size={17} /></a>
+              </div>
             </div>
-            <div className="contact-details">
-              <a href={`mailto:${EMAIL}`}>{EMAIL} <ArrowUpRight size={17} /></a>
-              <a href={PHONE_HREF}>{PHONE_LABEL} <ArrowUpRight size={17} /></a>
+            <div className="contact-list" data-reveal>
+              <a href={`mailto:${EMAIL}`}>{EMAIL} <ArrowUpRight size={16} /></a>
+              <a href={PHONE_HREF}>{PHONE_LABEL} <ArrowUpRight size={16} /></a>
               <address>{ADDRESS_LINES[0]}<br />{ADDRESS_LINES[1]}</address>
             </div>
           </div>

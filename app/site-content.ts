@@ -57,7 +57,8 @@ type Content = {
   };
   chapter: { label: string; h2: [string, string]; p: string };
   solutions: {
-    label: string; h2: [string, string]; phases: string[];
+    label: string; h2: [string, string]; phases: { name: string; line: string }[];
+    pillarsEyebrow: string; pillarsTitle: [string, string]; showcaseEyebrow: string;
     items: { h3: string; p: string }[];
     mock: {
       bar: string; eyebrow: string; h3: string;
@@ -70,6 +71,8 @@ type Content = {
     label: string; h2: [string, string]; intro: string; priceUnit: string;
     mostPopular: string; cta: string; activationLabel: string;
     plans: Plan[];
+    compareTitle: string;
+    comparison: { label: string; values: [string, string, string] }[];
     agency: { label: string; h3: [string, string]; p: string; cta: string };
     notes: { lead?: string; body: string }[];
   };
@@ -120,7 +123,16 @@ export const content: Record<Locale, Content> = {
     solutions: {
       label: 'Explora el proceso',
       h2: ['De la primera señal', 'al siguiente paso.'],
-      phases: ['Captar', 'Entender', 'Atender', 'Convertir', 'Medir'],
+      phases: [
+        { name: 'Captar', line: 'Cada lead entra con su origen y su contexto, venga del canal que venga.' },
+        { name: 'Entender', line: 'Ves el historial completo antes de responder: qué pidió, cuándo y por dónde.' },
+        { name: 'Atender', line: 'Conversaciones, citas y tareas en un mismo lugar, con el próximo paso siempre visible.' },
+        { name: 'Convertir', line: 'Cotizaciones, propuestas y cierre conectados al seguimiento, sin cabos sueltos.' },
+        { name: 'Medir', line: 'Origen, resultados y actividad del equipo para decidir dónde invertir energía.' },
+      ],
+      pillarsEyebrow: 'Qué hace PAWWER',
+      pillarsTitle: ['Un sistema,', 'tres movimientos.'],
+      showcaseEyebrow: 'Vista del producto',
       items: [
         { h3: 'Atiende con contexto', p: 'Leads, contactos y seguimiento en un mismo lugar para que cada conversación tenga continuidad.' },
         { h3: 'Convierte interés en acción', p: 'Relaciona tu calendario con el seguimiento y da a cada oportunidad un próximo paso.' },
@@ -178,6 +190,22 @@ export const content: Record<Locale, Content> = {
           features: ['25 integrantes', 'Automatización comercial', 'Atención prioritaria', 'Analítica operativa', 'Hasta 8 canales con conexión oficial', '400 créditos operativos'],
           note: 'Agente IA con traspaso humano y automatizaciones multicanal, sujetos a concluir pruebas de integración.',
         },
+      ],
+      compareTitle: 'Comparar los planes',
+      comparison: [
+        { label: 'Integrantes', values: ['3', '10', '25'] },
+        { label: 'Canales con conexión oficial', values: ['Hasta 2', 'Hasta 4', 'Hasta 8'] },
+        { label: 'Créditos operativos / mes', values: ['60', '180', '400'] },
+        { label: 'CRM de leads, contactos y seguimiento', values: ['✓', '✓', '✓'] },
+        { label: 'Calendario de citas', values: ['✓', '✓', '✓'] },
+        { label: 'Marca, biblioteca y preparación de contenidos', values: ['✓', '✓', '✓'] },
+        { label: 'Planner de contenidos', values: ['—', '✓', '✓'] },
+        { label: 'Mapa y origen de leads', values: ['—', '✓', '✓'] },
+        { label: 'Resultados, cotizaciones y contratos', values: ['—', '✓', '✓'] },
+        { label: 'Automatización comercial', values: ['—', '—', '✓'] },
+        { label: 'Atención prioritaria', values: ['—', '—', '✓'] },
+        { label: 'Analítica operativa', values: ['—', '—', '✓'] },
+        { label: 'Agente IA con traspaso humano', values: ['—', '—', 'En activación'] },
       ],
       agency: {
         label: 'PAWWER Agencia',
@@ -241,7 +269,16 @@ export const content: Record<Locale, Content> = {
     solutions: {
       label: 'Explore our process',
       h2: ['From the first signal', 'to the next step.'],
-      phases: ['Capture', 'Understand', 'Engage', 'Convert', 'Measure'],
+      phases: [
+        { name: 'Capture', line: 'Every lead arrives with its source and context, whatever the channel.' },
+        { name: 'Understand', line: 'See the full history before you reply: what they asked, when and through which channel.' },
+        { name: 'Engage', line: 'Conversations, meetings and tasks in one place, with the next step always visible.' },
+        { name: 'Convert', line: 'Quotes, proposals and closing connected to follow-up, with no loose ends.' },
+        { name: 'Measure', line: 'Source, results and team activity to decide where to invest energy.' },
+      ],
+      pillarsEyebrow: 'What PAWWER does',
+      pillarsTitle: ['One system,', 'three moves.'],
+      showcaseEyebrow: 'Product view',
       items: [
         { h3: 'Engage with context', p: 'Leads, contacts and follow-up in one place so every conversation keeps its continuity.' },
         { h3: 'Turn interest into action', p: 'Connect your calendar with follow-up and give every opportunity a next step.' },
@@ -299,6 +336,22 @@ export const content: Record<Locale, Content> = {
           features: ['25 team members', 'Commercial automation', 'Priority support', 'Operational analytics', 'Up to 8 channels with official connection', '400 operational credits'],
           note: 'AI agent with human handoff and multichannel automations, pending completion of integration testing.',
         },
+      ],
+      compareTitle: 'Compare the plans',
+      comparison: [
+        { label: 'Team members', values: ['3', '10', '25'] },
+        { label: 'Channels with official connection', values: ['Up to 2', 'Up to 4', 'Up to 8'] },
+        { label: 'Operational credits / mo', values: ['60', '180', '400'] },
+        { label: 'Leads, contacts and follow-up CRM', values: ['✓', '✓', '✓'] },
+        { label: 'Appointment calendar', values: ['✓', '✓', '✓'] },
+        { label: 'Brand, library and content preparation', values: ['✓', '✓', '✓'] },
+        { label: 'Content planner', values: ['—', '✓', '✓'] },
+        { label: 'Lead map and source', values: ['—', '✓', '✓'] },
+        { label: 'Results, quotes and contracts', values: ['—', '✓', '✓'] },
+        { label: 'Commercial automation', values: ['—', '—', '✓'] },
+        { label: 'Priority support', values: ['—', '—', '✓'] },
+        { label: 'Operational analytics', values: ['—', '—', '✓'] },
+        { label: 'AI agent with human handoff', values: ['—', '—', 'In activation'] },
       ],
       agency: {
         label: 'PAWWER Agencia',
