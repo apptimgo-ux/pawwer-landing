@@ -102,7 +102,8 @@ collections:
             widget: list
             collapsed: true
             fields:
-              - { name: name, label: "Nombre", widget: string }
+              - { name: slug, label: "Identificador interno (esencial / crecimiento / escala — no cambiar)", widget: string }
+              - { name: name, label: "Nombre visible (ES: Esencial… · EN: Essential…)", widget: string }
               - { name: summary, label: "Resumen", widget: string }
               - { name: inherits, label: "Texto 'incluye…'", widget: string }
               - name: features

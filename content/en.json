@@ -26,7 +26,8 @@
   },
   "plans": [
     {
-      "name": "Esencial",
+      "slug": "esencial",
+      "name": "Essential",
       "summary": "Bring order to your commercial operation.",
       "inherits": "The essentials to get started",
       "features": [
@@ -40,9 +41,10 @@
       "note": ""
     },
     {
-      "name": "Crecimiento",
+      "slug": "crecimiento",
+      "name": "Growth",
       "summary": "Connect your content with your opportunities.",
-      "inherits": "Everything in Esencial, plus",
+      "inherits": "Everything in Essential, plus",
       "features": [
         { "text": "10 team members" },
         { "text": "Content planner" },
@@ -54,9 +56,10 @@
       "note": ""
     },
     {
-      "name": "Escala",
+      "slug": "escala",
+      "name": "Scale",
       "summary": "Extend your team's reach.",
-      "inherits": "Everything in Crecimiento, plus",
+      "inherits": "Everything in Growth, plus",
       "features": [
         { "text": "25 team members" },
         { "text": "Commercial automation" },
@@ -89,7 +92,7 @@
     "inheritsLabel": "Also includes everything in the previous plan.",
     "trialTitle": "How the 7-day trial works",
     "trialLines": [
-      { "text": "During the trial you get temporary access to the Escala tier." },
+      { "text": "During the trial you get temporary access to the Scale tier." },
       { "text": "To start it you register a credit card in the CRM (crm.pawwerapp.com). This site does not capture or store card data." },
       { "text": "When the 7 days end, this plan's subscription starts automatically and the card is charged at the price shown." },
       { "text": "You can cancel your subscription at any time from the CRM. If you cancel before the 7 days end, no charge is made." },
@@ -182,7 +185,7 @@
       "items": [
         { "icon": "target", "h3": "A place for every lead", "p": "Centralize contacts and opportunities to work from a shared view." },
         { "icon": "calendar", "h3": "A clear next step", "p": "Connect meetings and follow-up to keep the commercial rhythm." },
-        { "icon": "chart", "h3": "A measurable read", "p": "Understand what works and what needs attention from Crecimiento and Escala." }
+        { "icon": "chart", "h3": "A measurable read", "p": "Understand what works and what needs attention from Growth and Scale." }
       ]
     },
     {
@@ -198,7 +201,7 @@
       "eyebrow": "Plans & pricing",
       "h2a": "Choose the pace",
       "h2b": "of your growth.",
-      "intro": "7-day trial with access to the Escala tier. A card is registered in the CRM and the subscription starts when the trial ends; cancel anytime. Prices in USD.",
+      "intro": "7-day trial with access to the Scale tier. A card is registered in the CRM and the subscription starts when the trial ends; cancel anytime. Prices in USD.",
       "priceUnit": "USD / mo",
       "mostPopular": "Most popular",
       "cta": "Get started",
@@ -213,7 +216,7 @@
       "eyebrow": "PAWWER Agencia",
       "h2a": "The system and the team",
       "h2b": "to make it grow.",
-      "body": "Everything in Escala plus strategy, content, paid media, operations and support from PAWWER / Creativo Coyote MKT. Always by proposal and contract, never auto-charged.",
+      "body": "Everything in Scale plus strategy, content, paid media, operations and support from PAWWER / Creativo Coyote MKT. Always by proposal and contract, never auto-charged.",
       "cta": "Request a proposal"
     },
     {

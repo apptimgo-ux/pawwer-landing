@@ -26,6 +26,7 @@
   },
   "plans": [
     {
+      "slug": "esencial",
       "name": "Esencial",
       "summary": "Pon orden en tu operación comercial.",
       "inherits": "Lo esencial para comenzar",
@@ -40,6 +41,7 @@
       "note": ""
     },
     {
+      "slug": "crecimiento",
       "name": "Crecimiento",
       "summary": "Conecta tus contenidos con tus oportunidades.",
       "inherits": "Todo Esencial, más",
@@ -54,6 +56,7 @@
       "note": ""
     },
     {
+      "slug": "escala",
       "name": "Escala",
       "summary": "Amplía el alcance de tu equipo.",
       "inherits": "Todo Crecimiento, más",

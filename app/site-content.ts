@@ -25,6 +25,7 @@ export type Block =
   | { type: 'cta'; anchor?: string; eyebrow: string; h2a: string; h2b: string; buttonLabel: string };
 
 export type Plan = {
+  slug: string;
   name: string;
   price: string;
   summary: string;
@@ -67,18 +68,15 @@ export const OG_IMAGE = settings.media.ogImage || '/hero.jpg';
 
 export const PLAN_SLUGS = ['esencial', 'crecimiento', 'escala'];
 
-export const planSlug = (name: string): string => {
-  const map: Record<string, string> = { Esencial: 'esencial', Crecimiento: 'crecimiento', Escala: 'escala' };
-  return map[name] ?? name.toLowerCase();
-};
-
+// El plan se identifica por `slug` (estable en los dos idiomas). El `name`
+// es texto localizado — en inglés es Essential / Growth / Scale.
 export const planHref = (locale: Locale, slug: string) =>
   locale === 'es' ? `/planes/${slug}` : `/en/plans/${slug}`;
 
 export const CHECKOUT_URLS: Record<string, string> = {
-  Esencial: settings.checkout.esencial,
-  Crecimiento: settings.checkout.crecimiento,
-  Escala: settings.checkout.escala,
+  esencial: settings.checkout.esencial,
+  crecimiento: settings.checkout.crecimiento,
+  escala: settings.checkout.escala,
 };
 
 const PRICE_BY_SLUG: Record<string, string> = settings.prices;
@@ -87,7 +85,7 @@ function assemble(data: unknown): Content {
   const d = data as Content;
   return {
     ...d,
-    plans: d.plans.map(p => ({ ...p, price: PRICE_BY_SLUG[planSlug(p.name)] ?? '' })),
+    plans: d.plans.map(p => ({ ...p, price: PRICE_BY_SLUG[p.slug] ?? '' })),
   };
 }
 

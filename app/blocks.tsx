@@ -4,7 +4,7 @@ import {
 } from 'lucide-react';
 import HeroMedia from './hero-media';
 import {
-  content, mailFor, planHref, planSlug, type Block, type Content, type Locale,
+  content, mailFor, planHref, type Block, type Content, type Locale,
   EMAIL, PHONE_HREF, PHONE_LABEL, ADDRESS_LINES,
 } from './site-content';
 
@@ -210,10 +210,10 @@ function BlockView({ block, locale, t }: { block: Block; locale: Locale; t: Cont
             </div>
             <div className="plans">
               {t.plans.map(plan => {
-                const featured = plan.name === 'Crecimiento';
-                const href = planHref(locale, planSlug(plan.name));
+                const featured = plan.slug === 'crecimiento';
+                const href = planHref(locale, plan.slug);
                 return (
-                  <article className={'plan' + (featured ? ' plan--featured' : '')} key={plan.name} data-reveal>
+                  <article className={'plan' + (featured ? ' plan--featured' : '')} key={plan.slug} data-reveal>
                     {featured && <span className="plan__banner">{block.mostPopular}</span>}
                     <h3>{plan.name}</h3>
                     <p className="plan__summary">{plan.summary}</p>

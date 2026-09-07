@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import PlanDetail from '../../../plan-detail';
-import { content, planSlug, PLAN_SLUGS } from '../../../site-content';
+import { content, PLAN_SLUGS } from '../../../site-content';
 
 export const dynamicParams = false;
 
@@ -11,7 +11,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const plan = content.en.plans.find(p => planSlug(p.name) === slug);
+  const plan = content.en.plans.find(p => p.slug === slug);
   if (!plan) return {};
   const title = `${plan.name} plan | PAWWER`;
   return {
@@ -27,6 +27,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  if (!content.en.plans.some(p => planSlug(p.name) === slug)) notFound();
+  if (!content.en.plans.some(p => p.slug === slug)) notFound();
   return <PlanDetail locale="en" slug={slug} />;
 }

@@ -1,12 +1,12 @@
 import { ArrowUpRight, Check } from 'lucide-react';
 import { Header, Footer } from './site-ui';
-import { content, mailFor, planSlug, CHECKOUT_URLS, CRM_URL, type Locale } from './site-content';
+import { content, mailFor, CHECKOUT_URLS, CRM_URL, type Locale } from './site-content';
 
 export default function PlanDetail({ locale, slug }: { locale: Locale; slug: string }) {
   const t = content[locale];
   const c = t.planDetail;
   const contact = mailFor(locale);
-  const plan = t.plans.find(p => planSlug(p.name) === slug);
+  const plan = t.plans.find(p => p.slug === slug);
   const homeHref = locale === 'es' ? '/' : '/en';
   const altHref = locale === 'es' ? `/en/plans/${slug}` : `/planes/${slug}`;
 
@@ -28,7 +28,7 @@ export default function PlanDetail({ locale, slug }: { locale: Locale; slug: str
     );
   }
 
-  const checkout = CHECKOUT_URLS[plan.name];
+  const checkout = CHECKOUT_URLS[plan.slug];
   const primaryHref = checkout || CRM_URL;
   const primaryLabel = checkout ? c.ctaCheckout : c.ctaTrial;
   const cta = (
@@ -51,7 +51,7 @@ export default function PlanDetail({ locale, slug }: { locale: Locale; slug: str
 
         <section className="plan-detail__block">
           <h2>{c.includesTitle}</h2>
-          {plan.name !== 'Esencial' && <p className="plan-detail__inherits">{c.inheritsLabel}</p>}
+          {plan.slug !== 'esencial' && <p className="plan-detail__inherits">{c.inheritsLabel}</p>}
           <ul className="plan-detail__list">
             {plan.features.map(f => <li key={f.text}><Check size={16} />{f.text}</li>)}
           </ul>
