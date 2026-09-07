@@ -1,6 +1,6 @@
 import { ArrowUpRight, Check, CalendarDays, ChartNoAxesCombined, MessageSquare, Target } from 'lucide-react';
 import { Header, HeroMedia, Footer } from './site-ui';
-import { content, mailFor, type Locale, EMAIL, PHONE_HREF, PHONE_LABEL, ADDRESS_LINES } from './site-content';
+import { content, mailFor, planHref, planSlug, type Locale, EMAIL, PHONE_HREF, PHONE_LABEL, ADDRESS_LINES } from './site-content';
 
 const SOLUTION_ICONS = [MessageSquare, CalendarDays, ChartNoAxesCombined];
 const BENEFIT_ICONS = [Target, CalendarDays, ChartNoAxesCombined];
@@ -131,8 +131,8 @@ export default function Landing({ locale }: { locale: Locale }) {
                   {highlight && <span className="plan-banner">{t.pricing.mostPopular}</span>}
                   <h3>{plan.name}</h3>
                   <p className="plan-summary">{plan.summary}</p>
-                  <div className="price">{plan.price}<span>{t.pricing.priceUnit}</span></div>
-                  <a href={contact.plan(plan.name)} className={'button ' + (highlight ? 'primary' : 'outline')}>{t.pricing.cta} <ArrowUpRight size={15} /></a>
+                  <a className="price" href={planHref(locale, planSlug(plan.name))}>{plan.price}<span>{t.pricing.priceUnit}</span></a>
+                  <a href={planHref(locale, planSlug(plan.name))} className={'button ' + (highlight ? 'primary' : 'outline')}>{t.pricing.cta} <ArrowUpRight size={15} /></a>
                   <p className="includes">{plan.inherits}</p>
                   <ul>{plan.features.map(f => <li key={f}><Check size={15} />{f}</li>)}</ul>
                   {plan.note && <p className="activation"><span>{t.pricing.activationLabel}</span> {plan.note}</p>}

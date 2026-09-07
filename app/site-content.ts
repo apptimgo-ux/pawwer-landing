@@ -151,7 +151,7 @@ export const content: Record<Locale, Content> = {
     pricing: {
       label: 'Planes y precios',
       h2: ['Elige el ritmo', 'de tu crecimiento.'],
-      intro: '7 días sin cargo con acceso temporal al nivel Escala. Precios en dólares estadounidenses (USD).',
+      intro: 'Prueba de 7 días con acceso al nivel Escala. Se registra una tarjeta en el CRM y la suscripción se activa al terminar; cancela cuando quieras. Precios en USD.',
       priceUnit: 'USD / mes',
       mostPopular: 'Más elegido',
       cta: 'Empezar',
@@ -187,7 +187,7 @@ export const content: Record<Locale, Content> = {
       },
       notes: [
         { lead: 'La mensualidad cubre PAWWER.', body: 'No incluye inversión publicitaria, cargos de Meta, Google o TikTok, números, SMS, plantillas de WhatsApp, consumo de mensajería ni servicios de terceros.' },
-        { body: 'No se capturan tarjetas dentro de PAWWER. El cobro se habilitará mediante checkout alojado. IVA, renovación de créditos y condiciones al término de la prueba: por confirmar con PAWWER.' },
+        { body: 'La tarjeta se registra en el CRM, no en este sitio. Al terminar los 7 días de prueba, la suscripción del plan se activa automáticamente; puedes cancelarla en cualquier momento y, si cancelas antes de que terminen, no se genera cargo. IVA y condiciones de renovación: por confirmar con PAWWER.' },
       ],
     },
     contact: {
@@ -272,7 +272,7 @@ export const content: Record<Locale, Content> = {
     pricing: {
       label: 'Plans & pricing',
       h2: ['Choose the pace', 'of your growth.'],
-      intro: '7 days free with temporary access to the Escala tier. Prices in US dollars (USD).',
+      intro: '7-day trial with access to the Escala tier. A card is registered in the CRM and the subscription starts when the trial ends; cancel anytime. Prices in USD.',
       priceUnit: 'USD / mo',
       mostPopular: 'Most popular',
       cta: 'Get started',
@@ -308,7 +308,7 @@ export const content: Record<Locale, Content> = {
       },
       notes: [
         { lead: 'The monthly fee covers PAWWER.', body: 'It does not include ad spend, Meta, Google or TikTok charges, phone numbers, SMS, WhatsApp templates, messaging usage or third-party services.' },
-        { body: 'No card details are captured inside PAWWER. Billing will be enabled through hosted checkout. Tax treatment, credit renewal and end-of-trial conditions: to be confirmed with PAWWER.' },
+        { body: 'The card is registered in the CRM, not on this site. When the 7-day trial ends, the plan subscription starts automatically; you can cancel it at any time and, if you cancel before it ends, no charge is made. Tax and renewal conditions: to be confirmed with PAWWER.' },
       ],
     },
     contact: {
@@ -318,5 +318,62 @@ export const content: Record<Locale, Content> = {
       addressLabel: 'Office',
     },
     footer: { privacy: 'Privacy policy', privacyHref: '/en/privacy', rights: 'PAWWER' },
+  },
+};
+
+// --- Páginas de detalle de plan / plan detail pages ---
+export const PLAN_SLUGS = ['esencial', 'crecimiento', 'escala'];
+
+export const planSlug = (name: string): string => {
+  const map: Record<string, string> = { Esencial: 'esencial', Crecimiento: 'crecimiento', Escala: 'escala' };
+  return map[name] ?? name.toLowerCase();
+};
+
+export const planHref = (locale: Locale, slug: string) =>
+  locale === 'es' ? `/planes/${slug}` : `/en/plans/${slug}`;
+
+// Enlaces de checkout alojado (Stripe / Mercado Pago / etc.).
+// Vacío = el botón inicia la prueba de 7 días en el CRM. Rellenar cuando exista la cuenta de pagos.
+// Empty = the button starts the 7-day trial in the CRM. Fill in when the payments account exists.
+export const CHECKOUT_URLS: Record<string, string> = { Esencial: '', Crecimiento: '', Escala: '' };
+
+export const planDetailCopy = {
+  es: {
+    back: '← Volver a planes',
+    includesTitle: 'Qué incluye',
+    inheritsLabel: 'Incluye además todo lo del plan anterior.',
+    trialTitle: 'Cómo funciona la prueba de 7 días',
+    trialLines: [
+      'Durante la prueba tienes acceso temporal al nivel Escala.',
+      'Para iniciarla registras una tarjeta de crédito en el CRM (crm.pawwerapp.com). Este sitio no captura ni almacena datos de tarjeta.',
+      'Al terminar los 7 días, la suscripción de este plan se activa automáticamente y la tarjeta se cobra según el precio mostrado.',
+      'Puedes cancelar tu suscripción en cualquier momento desde el CRM. Si cancelas antes de que terminen los 7 días, no se genera ningún cargo.',
+      'IVA, prorrateo y condiciones de renovación de créditos: por confirmar con PAWWER.',
+    ],
+    activationTitle: 'En activación',
+    exclusionsTitle: 'Qué no cubre la mensualidad',
+    ctaTrial: 'Iniciar prueba de 7 días',
+    ctaCheckout: 'Continuar al pago',
+    ctaSales: 'Hablar con ventas',
+    priceUnit: 'USD / mes',
+  },
+  en: {
+    back: '← Back to plans',
+    includesTitle: "What's included",
+    inheritsLabel: 'Also includes everything in the previous plan.',
+    trialTitle: 'How the 7-day trial works',
+    trialLines: [
+      'During the trial you get temporary access to the Escala tier.',
+      'To start it you register a credit card in the CRM (crm.pawwerapp.com). This site does not capture or store card data.',
+      'When the 7 days end, this plan’s subscription starts automatically and the card is charged at the price shown.',
+      'You can cancel your subscription at any time from the CRM. If you cancel before the 7 days end, no charge is made.',
+      'Tax, proration and credit renewal conditions: to be confirmed with PAWWER.',
+    ],
+    activationTitle: 'In activation',
+    exclusionsTitle: 'What the monthly fee does not cover',
+    ctaTrial: 'Start the 7-day trial',
+    ctaCheckout: 'Continue to payment',
+    ctaSales: 'Talk to sales',
+    priceUnit: 'USD / mo',
   },
 };

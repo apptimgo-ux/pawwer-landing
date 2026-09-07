@@ -43,7 +43,7 @@ function esContent() {
         h2: 'CRM, pagos y servicios externos',
         ps: [
           <>El enlace Sign in / Login conduce a <a href={CRM_URL}>crm.pawwerapp.com</a>. El tratamiento de datos dentro del CRM debe detallarse en su propio aviso. Esta landing no accede a tus contactos ni a tus conversaciones del CRM.</>,
-          'PAWWER prevé habilitar pagos mediante checkout alojado de Stripe o Mercado Pago. Esta landing no procesa pagos ni captura tarjetas. Cuando se habilite el pago, deberán informarse el proveedor aplicable y sus condiciones antes de continuar.',
+          'La prueba de 7 días se inicia desde el CRM (crm.pawwerapp.com) y requiere registrar una tarjeta de crédito, que se cobra automáticamente al terminar la prueba salvo que canceles antes. Esa captura de tarjeta y ese cobro ocurren en el CRM y en su proveedor de pagos (por ejemplo Stripe o Mercado Pago), no en esta landing, que no procesa pagos ni almacena tarjetas. El proveedor de pagos definitivo y sus condiciones deben informarse en el aviso del CRM antes de su activación.',
           'Los servicios de correo y alojamiento que intervengan en la atención de solicitudes deben identificarse en la versión definitiva. Cualquier transferencia que requiera consentimiento deberá informarse y gestionarse antes de realizarse.',
         ],
       },
@@ -103,7 +103,7 @@ function enContent() {
         h2: 'CRM, payments and external services',
         ps: [
           <>The Sign in / Login link leads to <a href={CRM_URL}>crm.pawwerapp.com</a>. Data processing inside the CRM must be detailed in its own notice. This landing page does not access your contacts or your CRM conversations.</>,
-          'PAWWER plans to enable payments through Stripe or Mercado Pago hosted checkout. This landing page does not process payments or capture cards. When payment is enabled, the applicable provider and its terms must be disclosed before proceeding.',
+          'The 7-day trial is started from the CRM (crm.pawwerapp.com) and requires registering a credit card, which is charged automatically when the trial ends unless you cancel first. That card capture and charge happen in the CRM and its payment provider (for example Stripe or Mercado Pago), not on this landing page, which does not process payments or store cards. The final payment provider and its terms must be disclosed in the CRM notice before activation.',
           'The email and hosting services involved in handling requests must be identified in the final version. Any transfer requiring consent must be disclosed and managed before it takes place.',
         ],
       },
