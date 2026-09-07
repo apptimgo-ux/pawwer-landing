@@ -37,7 +37,10 @@ function esContent() {
       },
       {
         h2: 'Cookies y recursos del sitio',
-        ps: ['El código de esta landing no incorpora analítica publicitaria, píxeles de seguimiento ni almacenamiento de datos personales en el navegador. Las imágenes y el video se sirven desde el mismo sitio. Una vista privada puede requerir cookies del proveedor de acceso; ese acceso se rige por su propio aviso.'],
+        ps: [
+          'El código de esta landing no incorpora analítica publicitaria ni píxeles de seguimiento. Las imágenes y el video se sirven desde el mismo sitio. Una vista privada puede requerir cookies del proveedor de acceso; ese acceso se rige por su propio aviso.',
+          'Se guarda una cookie funcional llamada «locale» con tu preferencia de idioma (español o inglés): la que eliges con el selector o la que se deduce de tu país en la primera visita. No se usa para publicidad ni seguimiento y puedes borrarla desde tu navegador.',
+        ],
       },
       {
         h2: 'CRM, pagos y servicios externos',
@@ -97,7 +100,10 @@ function enContent() {
       },
       {
         h2: 'Cookies and site resources',
-        ps: ["This landing page's code does not include advertising analytics, tracking pixels or storage of personal data in the browser. Images and video are served from the same site. A private view may require cookies from the access provider; that access is governed by its own notice."],
+        ps: [
+          "This landing page's code does not include advertising analytics or tracking pixels. Images and video are served from the same site. A private view may require cookies from the access provider; that access is governed by its own notice.",
+          'A functional cookie named "locale" stores your language preference (Spanish or English): the one you pick with the switcher or the one inferred from your country on the first visit. It is not used for advertising or tracking and you can clear it from your browser.',
+        ],
       },
       {
         h2: 'CRM, payments and external services',

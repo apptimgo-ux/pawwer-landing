@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { Menu, X, ArrowUpRight, PawPrint } from 'lucide-react';
 import { content, type Locale, CRM_URL } from './site-content';
 
 export function Header({ locale, homeHref, altHref }: { locale: Locale; homeHref: string; altHref: string }) {
@@ -11,7 +11,7 @@ export function Header({ locale, homeHref, altHref }: { locale: Locale; homeHref
       <a className="skip" href="#contenido">{t.skip}</a>
       <header className="site-header">
         <div className="wrap site-header__inner">
-          <a className="brand" href={homeHref} aria-label="PAWWER">pawwer<span>✳</span></a>
+          <a className="brand" href={homeHref} aria-label="PAWWER">pawwer<PawPrint aria-hidden strokeWidth={2.25} /></a>
           <button
             className="menu-btn"
             aria-expanded={open}
@@ -39,7 +39,7 @@ export function Footer({ locale, homeHref }: { locale: Locale; homeHref: string 
   return (
     <footer className="site-footer">
       <div className="wrap site-footer__inner">
-        <a href={homeHref} className="brand" aria-label="PAWWER">pawwer<span>✳</span></a>
+        <a href={homeHref} className="brand" aria-label="PAWWER">pawwer<PawPrint aria-hidden strokeWidth={2.25} /></a>
         <a href={t.privacyHref}>{t.privacy}</a>
         <a href={CRM_URL}>{content[locale].nav.login} <ArrowUpRight size={13} /></a>
         <p className="site-footer__spacer">© {new Date().getFullYear()} {t.rights}</p>

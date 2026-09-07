@@ -1,6 +1,6 @@
-import { ArrowUpRight, Check, CalendarDays, ChartNoAxesCombined, MessageSquare, Target } from 'lucide-react';
+import { ArrowUpRight, Check, CalendarDays, ChartNoAxesCombined, MessageSquare, Target, PawPrint } from 'lucide-react';
 import { Header, Footer } from './site-ui';
-import { content, mailFor, planHref, planSlug, type Locale, EMAIL, PHONE_HREF, PHONE_LABEL, ADDRESS_LINES } from './site-content';
+import { content, media, mailFor, planHref, planSlug, type Locale, EMAIL, PHONE_HREF, PHONE_LABEL, ADDRESS_LINES } from './site-content';
 
 const PILLAR_ICONS = [MessageSquare, CalendarDays, ChartNoAxesCombined];
 const BENEFIT_ICONS = [Target, CalendarDays, ChartNoAxesCombined];
@@ -42,6 +42,11 @@ export default function Landing({ locale }: { locale: Locale }) {
               <span>{t.hero.bottomRight}</span>
             </div>
           </div>
+          {media.heroImage && (
+            <div className="wrap hero__figure" data-reveal>
+              <img src={media.heroImage} alt="" />
+            </div>
+          )}
         </section>
 
         {/* Statement */}
@@ -102,9 +107,12 @@ export default function Landing({ locale }: { locale: Locale }) {
               <h2>{m.h3}</h2>
               <p>{t.chapter.p}</p>
             </div>
+            {media.showcaseImage ? (
+              <img className="mock mock--img" src={media.showcaseImage} alt="" data-reveal />
+            ) : (
             <div className="mock" data-reveal>
               <div className="mock__bar">
-                <span className="mock__brand">pawwer<span>✳</span></span>
+                <span className="mock__brand">pawwer<PawPrint size={15} aria-hidden /></span>
                 <span>{m.bar}</span>
                 <span className="mock__avatar">P</span>
               </div>
@@ -128,6 +136,7 @@ export default function Landing({ locale }: { locale: Locale }) {
               </div>
               <p className="mock__cap">{m.caption}</p>
             </div>
+            )}
           </div>
         </section>
 

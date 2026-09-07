@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
-import { Bricolage_Grotesque } from 'next/font/google';
+import { Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import { content } from './site-content';
 import Reveal from './reveal';
 
-const display = Bricolage_Grotesque({
+// Fuente del sistema PAWWER (misma que el CRM).
+const display = Space_Grotesk({
   subsets: ['latin'],
   weight: ['500', '600', '700'],
   variable: '--font-display',

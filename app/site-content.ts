@@ -10,6 +10,15 @@ export const PHONE_HREF = 'tel:+526678002000';
 export const PHONE_LABEL = '667 800 2000';
 export const CRM_URL = 'https://crm.pawwerapp.com';
 export const ADDRESS_LINES = ['Torre B, Blvd. Pedro Infante 2550-Piso 1,', 'Los Álamos, 80100 Culiacán Rosales, Sin.'];
+
+// --- Imágenes del sitio ---
+// Sube el archivo a /public/img/ y escribe aquí su ruta (ej. '/img/hero.jpg').
+// Deja el string vacío ('') para NO mostrar esa imagen.
+export const media = {
+  heroImage: '',      // Franja de imagen bajo el titular del hero. Recomendado 2400×1200.
+  showcaseImage: '',   // Screenshot real del producto; si está vacío se muestra la maqueta dibujada.
+  ogImage: '',         // Imagen al compartir en redes, 1200×630. Vacío = /hero.jpg
+};
 // Fecha de revisión de la política de privacidad.
 export const PRIVACY_REVIEW = { es: '6 de septiembre de 2026', en: 'September 6, 2026' };
 

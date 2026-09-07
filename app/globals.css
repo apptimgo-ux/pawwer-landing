@@ -2,19 +2,29 @@
 
 /* ---------- Tokens ---------- */
 :root {
-  --paper: #f4f1e8;
-  --paper-2: #ece6d7;
-  --ink: #17150f;
-  --ink-2: #443f36;
-  --muted: #736b5c;
-  --line: #d9d2c0;
-  --accent: #1f4fd8;
-  --dark: #17150f;
-  --on-dark: #f4f1e8;
-  --on-dark-2: #b3ab9b;
-  --line-dark: #38332a;
+  /* Paleta del sistema PAWWER (coyote-hub-deploy/src/lib/design.js). El
+     coral es el único color que pide acción: úsalo con moderación. */
+  --paper: #faf9f6;       /* fondo cálido */
+  --paper-2: #f3f1eb;     /* superficie hundida */
+  --surface: #ffffff;
+  --ink: #14161f;         /* tinta */
+  --ink-2: #4b4d57;       /* texto */
+  --muted: #8b8d98;       /* apagado */
+  --faint: #b7b9c2;       /* tenue */
+  --line: #e7e5df;
+  --line-soft: #edebe4;
+  --accent: #ff5a3c;      /* marca / coral */
+  --accent-soft: #fff1ec;
+  --accent-border: #ffd8cc;
+  --dark: #14161f;
+  --on-dark: #faf9f6;
+  --on-dark-2: #b7b9c2;
+  --line-dark: #2e2f38;
   --font-sans: 'Segoe UI', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
-  --font-display: 'Segoe UI', Arial, sans-serif;
+  --font-display: 'Space Grotesk', 'Segoe UI', Arial, sans-serif;
+  --r-control: 10px;
+  --r-card: 16px;
+  --shadow-float: 0 8px 24px rgba(20, 22, 31, .12);
   --wrap: 1200px;
   --gut: clamp(28px, 7vw, 120px);
   --band-y: clamp(72px, 11vw, 148px);
@@ -72,7 +82,7 @@ a:focus-visible, button:focus-visible {
   color: var(--accent);
   margin: 0 0 22px;
 }
-.band--dark .eyebrow { color: #7ea0ff; }
+.band--dark .eyebrow { color: #ff8266; }
 .section-label { /* legacy alias used by privacy */
   font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
   color: var(--accent); margin: 0 0 18px;
@@ -88,7 +98,7 @@ a:focus-visible, button:focus-visible {
   font-weight: 600;
   line-height: 1;
   padding: 16px 22px;
-  border-radius: 4px;
+  border-radius: var(--r-control);
   border: 1px solid var(--ink);
   color: var(--ink);
   background: transparent;
@@ -115,8 +125,9 @@ a:focus-visible, button:focus-visible {
 .skip:focus { top: 12px; }
 .site-header { position: relative; z-index: 20; background: var(--paper); }
 .site-header__inner { display: flex; align-items: center; justify-content: space-between; height: 78px; }
-.brand { display: inline-flex; align-items: baseline; gap: 2px; font-family: var(--font-display), var(--font-sans); font-weight: 700; font-size: 26px; letter-spacing: -0.03em; color: var(--ink); }
+.brand { display: inline-flex; align-items: center; gap: 3px; font-family: var(--font-display), var(--font-sans); font-weight: 700; font-size: 26px; letter-spacing: -0.03em; color: var(--ink); }
 .brand span { color: var(--accent); font-weight: 500; }
+.brand svg { width: 0.82em; height: 0.82em; color: var(--accent); transform: translateY(1px); }
 .site-nav { display: flex; align-items: center; gap: 30px; font-size: 14px; font-weight: 600; }
 .site-nav a:hover { color: var(--accent); }
 .site-nav .lang-switch { letter-spacing: 0.08em; opacity: 0.65; }
