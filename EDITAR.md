@@ -92,8 +92,26 @@ Para cambiar la lista de países, edita `SPANISH_COUNTRIES` en ese archivo.
 
 ---
 
-## Edición visual tipo WordPress (opcional, pendiente)
+## Panel visual — `pawwerapp.com/admin`
 
-Si quieres un panel `/admin` con formularios y subida de imágenes que
-escriba en el repo, se puede añadir **Decap CMS** o **Sveltia CMS**. Necesita
-una app OAuth de GitHub. Pídelo y se configura.
+Editor con formularios y subida de imágenes (Decap CMS). Cada vez que
+guardas, hace *commit* al repo y Vercel republica. Los formularios escriben
+en `content/es.json`, `content/en.json` y `content/settings.json` — los
+mismos archivos de arriba.
+
+Para que funcione hace falta, una sola vez:
+
+1. **GitHub → Settings → Developer settings → OAuth Apps → New OAuth App**
+   (en la cuenta `apptimgo-ux`):
+   - Application name: `PAWWER Editor`
+   - Homepage URL: `https://pawwer-landing.vercel.app`
+   - Authorization callback URL: `https://pawwer-landing.vercel.app/api/oauth/callback`
+   - Al crearla te da un **Client ID** y puedes generar un **Client Secret**.
+2. **Vercel → proyecto `pawwer-landing` → Settings → Environment Variables**:
+   - `OAUTH_CLIENT_ID` = el Client ID
+   - `OAUTH_CLIENT_SECRET` = el Client Secret
+   - Redeploy.
+3. Entra a `https://pawwer-landing.vercel.app/admin`, botón *Login with GitHub*.
+
+Si usas el dominio final `pawwerapp.com`, cambia las tres URLs (OAuth App y
+`base_url`/`site_url` en `public/admin/config.yml`) por ese dominio.
