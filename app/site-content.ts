@@ -1,14 +1,30 @@
-// Cargador de contenido. El contenido editable vive en /content/*.json
-// (lo que edita el panel /admin). Aquí solo se ensambla y se le pone tipo.
+// Cargador de contenido. Lo editable vive en /content/*.json (lo que escribe
+// el panel /admin). Aquí solo se ensambla y se le pone tipo.
 import esData from '../content/es.json';
 import enData from '../content/en.json';
 import settings from '../content/settings.json';
 
 export type Locale = 'es' | 'en';
 
-type TwoLine = { a: string; b: string };
-type Item = { h3: string; p: string };
-type Plan = {
+type Item = { icon?: string; h3: string; p: string };
+type Phase = { name: string; line: string };
+type Lead = { stage: string; initials: string; name: string; role: string; status: string };
+type Note = { lead: string; body: string };
+
+export type Block =
+  | { type: 'hero'; anchor?: string; kicker: string; h1a: string; h1b: string; sub: string; ctaPrimary: string; ctaSecondary: string; metaLeft: string; metaRight: string; mediaType: 'none' | 'image' | 'video'; image: string; video: string; poster: string }
+  | { type: 'statement'; anchor?: string; label: string; h2a: string; h2b: string; body: string }
+  | { type: 'process'; anchor?: string; label: string; h2a: string; h2b: string; phases: Phase[] }
+  | { type: 'pillars'; anchor?: string; eyebrow: string; h2a: string; h2b: string; items: Item[] }
+  | { type: 'showcase'; anchor?: string; eyebrow: string; h2: string; body: string; image: string; mock: { bar: string; eyebrow: string; h3: string; leads: Lead[]; context: string; caption: string } }
+  | { type: 'benefits'; anchor?: string; eyebrow: string; h2a: string; h2b: string; items: Item[] }
+  | { type: 'logos'; anchor?: string; eyebrow: string; title: string; items: { image: string; alt: string; url?: string }[] }
+  | { type: 'pricing'; anchor?: string; eyebrow: string; h2a: string; h2b: string; intro: string; priceUnit: string; mostPopular: string; cta: string; activationLabel: string; compareTitle: string; compareFeatureCol: string; showComparison: boolean }
+  | { type: 'agency'; anchor?: string; eyebrow: string; h2a: string; h2b: string; body: string; cta: string }
+  | { type: 'notes'; anchor?: string; items: Note[] }
+  | { type: 'cta'; anchor?: string; eyebrow: string; h2a: string; h2b: string; buttonLabel: string };
+
+export type Plan = {
   name: string;
   price: string;
   summary: string;
@@ -16,7 +32,14 @@ type Plan = {
   features: { text: string }[];
   note: string;
 };
-type CompareRow = { label: string; esencial: string; crecimiento: string; escala: string };
+export type CompareRow = { label: string; esencial: string; crecimiento: string; escala: string };
+
+export type PlanDetailCopy = {
+  back: string; includesTitle: string; inheritsLabel: string; trialTitle: string;
+  trialLines: { text: string }[];
+  activationTitle: string; exclusionsTitle: string;
+  ctaTrial: string; ctaCheckout: string; ctaSales: string; priceUnit: string;
+};
 
 export type Content = {
   htmlLang: string;
@@ -26,40 +49,11 @@ export type Content = {
     skip: string; links: { label: string; hash: string }[]; login: string;
     menuOpen: string; menuClose: string; langLabel: string; langAria: string;
   };
-  hero: {
-    kicker: string; h1: TwoLine; sub: string;
-    ctaPrimary: string; ctaSecondary: string; bottomLeft: string; bottomRight: string;
-  };
-  chapter: { label: string; h2: TwoLine; p: string };
-  solutions: {
-    label: string; h2: TwoLine; phases: { name: string; line: string }[];
-    pillarsEyebrow: string; pillarsTitle: TwoLine; showcaseEyebrow: string;
-    items: Item[];
-    mock: {
-      bar: string; eyebrow: string; h3: string;
-      leads: { stage: string; initials: string; name: string; role: string; status: string }[];
-      context: string; caption: string;
-    };
-  };
-  benefits: { label: string; h2: TwoLine; items: Item[] };
-  pricing: {
-    label: string; h2: TwoLine; intro: string; priceUnit: string;
-    mostPopular: string; cta: string; activationLabel: string; compareFeatureCol: string;
-    plans: Plan[];
-    compareTitle: string;
-    comparison: CompareRow[];
-    agency: { label: string; h3: TwoLine; p: string; cta: string };
-    notes: { lead: string; body: string }[];
-  };
-  contact: { label: string; h2: TwoLine; cta: string; addressLabel: string };
   footer: { privacy: string; privacyHref: string; rights: string };
-};
-
-export type PlanDetailCopy = {
-  back: string; includesTitle: string; inheritsLabel: string; trialTitle: string;
-  trialLines: { text: string }[];
-  activationTitle: string; exclusionsTitle: string;
-  ctaTrial: string; ctaCheckout: string; ctaSales: string; priceUnit: string;
+  plans: Plan[];
+  comparison: CompareRow[];
+  planDetail: PlanDetailCopy;
+  blocks: Block[];
 };
 
 // --- Contacto y ajustes ---
@@ -69,7 +63,7 @@ export const PHONE_LABEL = settings.contact.phoneLabel;
 export const CRM_URL = settings.contact.crmUrl;
 export const ADDRESS_LINES = [settings.contact.addressLine1, settings.contact.addressLine2];
 export const PRIVACY_REVIEW = settings.privacyReview as { es: string; en: string };
-export const media = settings.media as { heroImage: string; showcaseImage: string; ogImage: string };
+export const OG_IMAGE = settings.media.ogImage || '/hero.jpg';
 
 export const PLAN_SLUGS = ['esencial', 'crecimiento', 'escala'];
 
@@ -81,8 +75,6 @@ export const planSlug = (name: string): string => {
 export const planHref = (locale: Locale, slug: string) =>
   locale === 'es' ? `/planes/${slug}` : `/en/plans/${slug}`;
 
-// Enlaces de checkout alojado (Stripe / Mercado Pago). Vacío = el botón inicia
-// la prueba en el CRM. Se editan en /admin → Ajustes.
 export const CHECKOUT_URLS: Record<string, string> = {
   Esencial: settings.checkout.esencial,
   Crecimiento: settings.checkout.crecimiento,
@@ -95,21 +87,13 @@ function assemble(data: unknown): Content {
   const d = data as Content;
   return {
     ...d,
-    pricing: {
-      ...d.pricing,
-      plans: d.pricing.plans.map(p => ({ ...p, price: PRICE_BY_SLUG[planSlug(p.name)] ?? '' })),
-    },
+    plans: d.plans.map(p => ({ ...p, price: PRICE_BY_SLUG[planSlug(p.name)] ?? '' })),
   };
 }
 
 export const content: Record<Locale, Content> = {
   es: assemble(esData),
   en: assemble(enData),
-};
-
-export const planDetailCopy: Record<Locale, PlanDetailCopy> = {
-  es: (esData as unknown as { planDetail: PlanDetailCopy }).planDetail,
-  en: (enData as unknown as { planDetail: PlanDetailCopy }).planDetail,
 };
 
 // --- Correos ---

@@ -11,7 +11,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const plan = content.es.pricing.plans.find(p => planSlug(p.name) === slug);
+  const plan = content.es.plans.find(p => planSlug(p.name) === slug);
   if (!plan) return {};
   const title = `Plan ${plan.name} | PAWWER`;
   return {
@@ -27,6 +27,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  if (!content.es.pricing.plans.some(p => planSlug(p.name) === slug)) notFound();
+  if (!content.es.plans.some(p => planSlug(p.name) === slug)) notFound();
   return <PlanDetail locale="es" slug={slug} />;
 }

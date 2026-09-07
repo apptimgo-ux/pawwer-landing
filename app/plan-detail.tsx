@@ -1,14 +1,19 @@
 import { ArrowUpRight, Check } from 'lucide-react';
 import { Header, Footer } from './site-ui';
-import { content, mailFor, planSlug, planDetailCopy, CHECKOUT_URLS, CRM_URL, type Locale } from './site-content';
+import { content, mailFor, planSlug, CHECKOUT_URLS, CRM_URL, type Locale } from './site-content';
 
 export default function PlanDetail({ locale, slug }: { locale: Locale; slug: string }) {
   const t = content[locale];
-  const c = planDetailCopy[locale];
+  const c = t.planDetail;
   const contact = mailFor(locale);
-  const plan = t.pricing.plans.find(p => planSlug(p.name) === slug);
+  const plan = t.plans.find(p => planSlug(p.name) === slug);
   const homeHref = locale === 'es' ? '/' : '/en';
   const altHref = locale === 'es' ? `/en/plans/${slug}` : `/planes/${slug}`;
+
+  const pricingBlock = t.blocks.find(b => b.type === 'pricing');
+  const eyebrow = pricingBlock && pricingBlock.type === 'pricing' ? pricingBlock.eyebrow : '';
+  const notesBlock = t.blocks.find(b => b.type === 'notes');
+  const notes = notesBlock && notesBlock.type === 'notes' ? notesBlock.items : [];
 
   if (!plan) {
     return (
@@ -38,7 +43,7 @@ export default function PlanDetail({ locale, slug }: { locale: Locale; slug: str
       <Header locale={locale} homeHref={homeHref} altHref={altHref} />
       <main id="contenido" className="plan-detail" lang={locale === 'en' ? 'en' : undefined}>
         <a className="back" href={`${homeHref}#planes`}>{c.back}</a>
-        <p className="eyebrow">{t.pricing.label}</p>
+        {eyebrow && <p className="eyebrow">{eyebrow}</p>}
         <h1>{plan.name}</h1>
         <p className="plan-detail__summary">{plan.summary}</p>
         <div className="plan-detail__price">{plan.price}<span>{c.priceUnit}</span></div>
@@ -60,12 +65,14 @@ export default function PlanDetail({ locale, slug }: { locale: Locale; slug: str
           </ul>
         </section>
 
-        <section className="plan-detail__block">
-          <h2>{c.exclusionsTitle}</h2>
-          {t.pricing.notes.map((n, i) => (
-            <p key={i} className="plan-detail__note">{n.lead && <strong>{n.lead} </strong>}{n.body}</p>
-          ))}
-        </section>
+        {notes.length > 0 && (
+          <section className="plan-detail__block">
+            <h2>{c.exclusionsTitle}</h2>
+            {notes.map((n, i) => (
+              <p key={i} className="plan-detail__note">{n.lead && <strong>{n.lead} </strong>}{n.body}</p>
+            ))}
+          </section>
+        )}
 
         {cta}
       </main>

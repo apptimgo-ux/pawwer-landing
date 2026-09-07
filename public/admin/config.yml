@@ -16,23 +16,21 @@ collections:
     delete: false
     files:
       - name: settings
-        label: "Imágenes, contacto y precios"
+        label: "Contacto, precios e imagen para redes"
         file: "content/settings.json"
         fields:
           - name: media
-            label: "Imágenes"
+            label: "Imagen para compartir en redes"
             widget: object
             fields:
-              - { name: heroImage, label: "Imagen del hero (franja bajo el titular)", widget: image, required: false }
-              - { name: showcaseImage, label: "Screenshot del producto (reemplaza la maqueta dibujada)", widget: image, required: false }
-              - { name: ogImage, label: "Imagen para compartir en redes (1200×630)", widget: image, required: false }
+              - { name: ogImage, label: "Imagen Open Graph (1200×630)", widget: image, required: false }
           - name: contact
             label: "Contacto"
             widget: object
             fields:
               - { name: email, label: "Correo", widget: string }
               - { name: phoneLabel, label: "Teléfono (como se muestra)", widget: string }
-              - { name: phoneHref, label: "Teléfono (enlace, formato tel:+52...)", widget: string }
+              - { name: phoneHref, label: "Teléfono (enlace, tel:+52...)", widget: string }
               - { name: addressLine1, label: "Dirección · línea 1", widget: string }
               - { name: addressLine2, label: "Dirección · línea 2", widget: string }
               - { name: crmUrl, label: "URL del CRM (botón Sign in)", widget: string }
@@ -64,7 +62,7 @@ collections:
       - name: es
         label: "Página en español"
         file: "content/es.json"
-        fields: &content_fields
+        fields: &page_fields
           - { name: htmlLang, widget: hidden }
           - { name: ogLocale, widget: hidden }
           - name: meta
@@ -91,172 +89,6 @@ collections:
               - { name: menuClose, label: "Cerrar menú (accesibilidad)", widget: string }
               - { name: langLabel, label: "Etiqueta del botón de idioma", widget: string }
               - { name: langAria, label: "Descripción del botón de idioma", widget: string }
-          - name: hero
-            label: "Hero (portada)"
-            widget: object
-            fields:
-              - { name: kicker, label: "Texto pequeño de arriba", widget: string }
-              - name: h1
-                label: "Titular (2 líneas)"
-                widget: object
-                fields:
-                  - { name: a, label: "Línea 1", widget: string }
-                  - { name: b, label: "Línea 2", widget: string }
-              - { name: sub, label: "Frase de apoyo", widget: text }
-              - { name: ctaPrimary, label: "Botón principal", widget: string }
-              - { name: ctaSecondary, label: "Enlace secundario", widget: string }
-              - { name: bottomLeft, label: "Pie · izquierda", widget: string }
-              - { name: bottomRight, label: "Pie · derecha", widget: string }
-          - name: chapter
-            label: "Bloque de transición"
-            widget: object
-            fields:
-              - { name: label, label: "Etiqueta", widget: string }
-              - name: h2
-                label: "Titular (2 líneas)"
-                widget: object
-                fields:
-                  - { name: a, label: "Línea 1", widget: string }
-                  - { name: b, label: "Línea 2", widget: string }
-              - { name: p, label: "Párrafo", widget: text }
-          - name: solutions
-            label: "Proceso y soluciones"
-            widget: object
-            fields:
-              - { name: label, label: "Etiqueta", widget: string }
-              - name: h2
-                label: "Titular del proceso (2 líneas)"
-                widget: object
-                fields:
-                  - { name: a, label: "Línea 1", widget: string }
-                  - { name: b, label: "Línea 2", widget: string }
-              - name: phases
-                label: "Fases (Captar…Medir)"
-                widget: list
-                fields:
-                  - { name: name, label: "Nombre", widget: string }
-                  - { name: line, label: "Descripción", widget: text }
-              - { name: pillarsEyebrow, label: "Etiqueta de los 3 pilares", widget: string }
-              - name: pillarsTitle
-                label: "Titular de los 3 pilares (2 líneas)"
-                widget: object
-                fields:
-                  - { name: a, label: "Línea 1", widget: string }
-                  - { name: b, label: "Línea 2", widget: string }
-              - { name: showcaseEyebrow, label: "Etiqueta de la maqueta", widget: string }
-              - name: items
-                label: "Los 3 pilares"
-                widget: list
-                fields:
-                  - { name: h3, label: "Título", widget: string }
-                  - { name: p, label: "Texto", widget: text }
-              - name: mock
-                label: "Maqueta del producto (textos de ejemplo)"
-                widget: object
-                collapsed: true
-                fields:
-                  - { name: bar, label: "Barra superior", widget: string }
-                  - { name: eyebrow, label: "Fecha/hora", widget: string }
-                  - { name: h3, label: "Título", widget: string }
-                  - name: leads
-                    label: "Tarjetas de ejemplo"
-                    widget: list
-                    fields:
-                      - { name: stage, label: "Etapa", widget: string }
-                      - { name: initials, label: "Iniciales", widget: string }
-                      - { name: name, label: "Nombre", widget: string }
-                      - { name: role, label: "Detalle", widget: string }
-                      - { name: status, label: "Estado", widget: string }
-                  - { name: context, label: "Franja de contexto", widget: string }
-                  - { name: caption, label: "Pie", widget: string }
-          - name: benefits
-            label: "Beneficios"
-            widget: object
-            fields:
-              - { name: label, label: "Etiqueta", widget: string }
-              - name: h2
-                label: "Titular (2 líneas)"
-                widget: object
-                fields:
-                  - { name: a, label: "Línea 1", widget: string }
-                  - { name: b, label: "Línea 2", widget: string }
-              - name: items
-                label: "Los 3 beneficios"
-                widget: list
-                fields:
-                  - { name: h3, label: "Título", widget: string }
-                  - { name: p, label: "Texto", widget: text }
-          - name: pricing
-            label: "Planes y precios"
-            widget: object
-            fields:
-              - { name: label, label: "Etiqueta", widget: string }
-              - name: h2
-                label: "Titular (2 líneas)"
-                widget: object
-                fields:
-                  - { name: a, label: "Línea 1", widget: string }
-                  - { name: b, label: "Línea 2", widget: string }
-              - { name: intro, label: "Párrafo de introducción", widget: text }
-              - { name: priceUnit, label: "Unidad de precio (USD / mes)", widget: string }
-              - { name: mostPopular, label: "Etiqueta 'más elegido'", widget: string }
-              - { name: cta, label: "Botón de los planes", widget: string }
-              - { name: activationLabel, label: "Etiqueta 'En activación'", widget: string }
-              - { name: compareFeatureCol, label: "Encabezado 1ª columna de la tabla", widget: string }
-              - name: plans
-                label: "Planes (el precio se edita en Ajustes)"
-                widget: list
-                fields:
-                  - { name: name, label: "Nombre", widget: string }
-                  - { name: summary, label: "Resumen", widget: string }
-                  - { name: inherits, label: "Texto 'incluye…'", widget: string }
-                  - name: features
-                    label: "Características"
-                    widget: list
-                    fields:
-                      - { name: text, label: "Característica", widget: string }
-                  - { name: note, label: "Nota 'En activación' (opcional)", widget: text, required: false }
-              - { name: compareTitle, label: "Título de la tabla comparativa", widget: string }
-              - name: comparison
-                label: "Tabla comparativa"
-                widget: list
-                fields:
-                  - { name: label, label: "Característica", widget: string }
-                  - { name: esencial, label: "Esencial", widget: string }
-                  - { name: crecimiento, label: "Crecimiento", widget: string }
-                  - { name: escala, label: "Escala", widget: string }
-              - name: agency
-                label: "PAWWER Agencia"
-                widget: object
-                fields:
-                  - { name: label, label: "Etiqueta", widget: string }
-                  - name: h3
-                    label: "Titular (2 líneas)"
-                    widget: object
-                    fields:
-                      - { name: a, label: "Línea 1", widget: string }
-                      - { name: b, label: "Línea 2", widget: string }
-                  - { name: p, label: "Texto", widget: text }
-                  - { name: cta, label: "Botón", widget: string }
-              - name: notes
-                label: "Letra chica de precios"
-                widget: list
-                fields:
-                  - { name: lead, label: "Frase en negrita (opcional)", widget: string, required: false }
-                  - { name: body, label: "Texto", widget: text }
-          - name: contact
-            label: "Bloque final de contacto"
-            widget: object
-            fields:
-              - { name: label, label: "Etiqueta", widget: string }
-              - name: h2
-                label: "Titular (2 líneas)"
-                widget: object
-                fields:
-                  - { name: a, label: "Línea 1", widget: string }
-                  - { name: b, label: "Línea 2", widget: string }
-              - { name: cta, label: "Botón", widget: string }
-              - { name: addressLabel, label: "Etiqueta de dirección", widget: string }
           - name: footer
             label: "Pie de página"
             widget: object
@@ -265,6 +97,29 @@ collections:
               - { name: privacy, label: "Texto del enlace de privacidad", widget: string }
               - { name: privacyHref, label: "Ruta de la política", widget: string }
               - { name: rights, label: "Texto de derechos", widget: string }
+          - name: plans
+            label: "Planes (el precio se edita en Ajustes)"
+            widget: list
+            collapsed: true
+            fields:
+              - { name: name, label: "Nombre", widget: string }
+              - { name: summary, label: "Resumen", widget: string }
+              - { name: inherits, label: "Texto 'incluye…'", widget: string }
+              - name: features
+                label: "Características"
+                widget: list
+                fields:
+                  - { name: text, label: "Característica", widget: string }
+              - { name: note, label: "Nota 'En activación' (opcional)", widget: text, required: false }
+          - name: comparison
+            label: "Tabla comparativa"
+            widget: list
+            collapsed: true
+            fields:
+              - { name: label, label: "Característica", widget: string }
+              - { name: esencial, label: "Esencial", widget: string }
+              - { name: crecimiento, label: "Crecimiento", widget: string }
+              - { name: escala, label: "Escala", widget: string }
           - name: planDetail
             label: "Páginas de cada plan"
             widget: object
@@ -285,6 +140,181 @@ collections:
               - { name: ctaCheckout, label: "Botón · pago", widget: string }
               - { name: ctaSales, label: "Enlace · ventas", widget: string }
               - { name: priceUnit, label: "Unidad de precio", widget: string }
+          - name: blocks
+            label: "Bloques de la página (arrastra para reordenar)"
+            label_singular: "bloque"
+            widget: list
+            types:
+              - name: hero
+                label: "Hero (portada)"
+                widget: object
+                summary: "Hero · {{fields.h1a}} {{fields.h1b}}"
+                fields:
+                  - { name: anchor, label: "Ancla opcional", widget: string, required: false }
+                  - { name: kicker, label: "Texto pequeño de arriba", widget: string }
+                  - { name: h1a, label: "Titular · línea 1", widget: string }
+                  - { name: h1b, label: "Titular · línea 2", widget: string }
+                  - { name: sub, label: "Frase de apoyo", widget: text }
+                  - { name: ctaPrimary, label: "Botón principal", widget: string }
+                  - { name: ctaSecondary, label: "Enlace secundario", widget: string, required: false }
+                  - { name: metaLeft, label: "Pie · izquierda", widget: string }
+                  - { name: metaRight, label: "Pie · derecha", widget: string }
+                  - { name: mediaType, label: "Medio", widget: select, options: ["none", "image", "video"], default: "none" }
+                  - { name: image, label: "Imagen (si Medio = image)", widget: image, required: false }
+                  - { name: video, label: "Video mp4 (si Medio = video)", widget: file, required: false }
+                  - { name: poster, label: "Imagen de portada del video", widget: image, required: false }
+              - name: statement
+                label: "Frase destacada"
+                widget: object
+                summary: "Frase · {{fields.h2a}} {{fields.h2b}}"
+                fields:
+                  - { name: anchor, label: "Ancla opcional", widget: string, required: false }
+                  - { name: label, label: "Etiqueta", widget: string }
+                  - { name: h2a, label: "Titular · línea 1", widget: string }
+                  - { name: h2b, label: "Titular · línea 2", widget: string }
+                  - { name: body, label: "Párrafo", widget: text }
+              - name: process
+                label: "Proceso (fases)"
+                widget: object
+                summary: "Proceso · {{fields.h2a}} {{fields.h2b}}"
+                fields:
+                  - { name: anchor, label: "Ancla opcional (por defecto: soluciones)", widget: string, required: false }
+                  - { name: label, label: "Etiqueta", widget: string }
+                  - { name: h2a, label: "Titular · línea 1", widget: string }
+                  - { name: h2b, label: "Titular · línea 2", widget: string }
+                  - name: phases
+                    label: "Fases"
+                    widget: list
+                    fields:
+                      - { name: name, label: "Nombre", widget: string }
+                      - { name: line, label: "Descripción", widget: text }
+              - name: pillars
+                label: "Características (3 columnas)"
+                widget: object
+                summary: "Características · {{fields.h2a}} {{fields.h2b}}"
+                fields:
+                  - { name: anchor, label: "Ancla opcional", widget: string, required: false }
+                  - { name: eyebrow, label: "Etiqueta", widget: string }
+                  - { name: h2a, label: "Titular · línea 1", widget: string }
+                  - { name: h2b, label: "Titular · línea 2", widget: string }
+                  - name: items
+                    label: "Columnas"
+                    widget: list
+                    fields:
+                      - { name: icon, label: "Icono", widget: select, required: false, options: ["chat", "calendar", "chart", "target", "users", "spark", "zap", "compass", "layers", "shield"] }
+                      - { name: h3, label: "Título", widget: string }
+                      - { name: p, label: "Texto", widget: text }
+              - name: showcase
+                label: "Vista del producto"
+                widget: object
+                summary: "Vista del producto · {{fields.h2}}"
+                fields:
+                  - { name: anchor, label: "Ancla opcional", widget: string, required: false }
+                  - { name: eyebrow, label: "Etiqueta", widget: string }
+                  - { name: h2, label: "Titular", widget: string }
+                  - { name: body, label: "Texto", widget: text }
+                  - { name: image, label: "Screenshot real (si lo subes, reemplaza la maqueta)", widget: image, required: false }
+                  - name: mock
+                    label: "Maqueta dibujada (se usa si no subes screenshot)"
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - { name: bar, label: "Barra superior", widget: string }
+                      - { name: eyebrow, label: "Fecha/hora", widget: string }
+                      - { name: h3, label: "Título", widget: string }
+                      - name: leads
+                        label: "Tarjetas de ejemplo"
+                        widget: list
+                        fields:
+                          - { name: stage, label: "Etapa", widget: string }
+                          - { name: initials, label: "Iniciales", widget: string }
+                          - { name: name, label: "Nombre", widget: string }
+                          - { name: role, label: "Detalle", widget: string }
+                          - { name: status, label: "Estado", widget: string }
+                      - { name: context, label: "Franja de contexto", widget: string }
+                      - { name: caption, label: "Pie", widget: string }
+              - name: benefits
+                label: "Beneficios (3 columnas)"
+                widget: object
+                summary: "Beneficios · {{fields.h2a}} {{fields.h2b}}"
+                fields:
+                  - { name: anchor, label: "Ancla opcional (por defecto: beneficios)", widget: string, required: false }
+                  - { name: eyebrow, label: "Etiqueta", widget: string }
+                  - { name: h2a, label: "Titular · línea 1", widget: string }
+                  - { name: h2b, label: "Titular · línea 2", widget: string }
+                  - name: items
+                    label: "Columnas"
+                    widget: list
+                    fields:
+                      - { name: icon, label: "Icono", widget: select, required: false, options: ["chat", "calendar", "chart", "target", "users", "spark", "zap", "compass", "layers", "shield"] }
+                      - { name: h3, label: "Título", widget: string }
+                      - { name: p, label: "Texto", widget: text }
+              - name: logos
+                label: "Logos / Confían en nosotros"
+                widget: object
+                summary: "Logos ({{fields.items.length}})"
+                fields:
+                  - { name: anchor, label: "Ancla opcional", widget: string, required: false }
+                  - { name: eyebrow, label: "Etiqueta (opcional)", widget: string, required: false }
+                  - { name: title, label: "Título (opcional)", widget: string, required: false }
+                  - name: items
+                    label: "Logos"
+                    label_singular: "logo"
+                    widget: list
+                    fields:
+                      - { name: image, label: "Imagen del logo (PNG/SVG)", widget: image }
+                      - { name: alt, label: "Nombre (texto alternativo)", widget: string }
+                      - { name: url, label: "Enlace (opcional)", widget: string, required: false }
+              - name: pricing
+                label: "Paquetes / precios"
+                widget: object
+                summary: "Paquetes · {{fields.h2a}} {{fields.h2b}}"
+                fields:
+                  - { name: anchor, label: "Ancla opcional (por defecto: planes)", widget: string, required: false }
+                  - { name: eyebrow, label: "Etiqueta", widget: string }
+                  - { name: h2a, label: "Titular · línea 1", widget: string }
+                  - { name: h2b, label: "Titular · línea 2", widget: string }
+                  - { name: intro, label: "Párrafo de introducción", widget: text }
+                  - { name: priceUnit, label: "Unidad de precio (USD / mes)", widget: string }
+                  - { name: mostPopular, label: "Etiqueta 'más elegido'", widget: string }
+                  - { name: cta, label: "Botón de los planes", widget: string }
+                  - { name: activationLabel, label: "Etiqueta 'En activación'", widget: string }
+                  - { name: compareTitle, label: "Título de la tabla comparativa", widget: string }
+                  - { name: compareFeatureCol, label: "Encabezado 1ª columna de la tabla", widget: string }
+                  - { name: showComparison, label: "Mostrar tabla comparativa", widget: boolean, default: true }
+              - name: agency
+                label: "PAWWER Agencia"
+                widget: object
+                summary: "Agencia · {{fields.h2a}} {{fields.h2b}}"
+                fields:
+                  - { name: anchor, label: "Ancla opcional", widget: string, required: false }
+                  - { name: eyebrow, label: "Etiqueta", widget: string }
+                  - { name: h2a, label: "Titular · línea 1", widget: string }
+                  - { name: h2b, label: "Titular · línea 2", widget: string }
+                  - { name: body, label: "Texto", widget: text }
+                  - { name: cta, label: "Botón", widget: string }
+              - name: notes
+                label: "Letra chica de precios"
+                widget: object
+                summary: "Letra chica ({{fields.items.length}})"
+                fields:
+                  - { name: anchor, label: "Ancla opcional", widget: string, required: false }
+                  - name: items
+                    label: "Notas"
+                    widget: list
+                    fields:
+                      - { name: lead, label: "Frase en negrita (opcional)", widget: string, required: false }
+                      - { name: body, label: "Texto", widget: text }
+              - name: cta
+                label: "Llamado final + contacto"
+                widget: object
+                summary: "Llamado final · {{fields.h2a}} {{fields.h2b}}"
+                fields:
+                  - { name: anchor, label: "Ancla opcional (por defecto: contacto)", widget: string, required: false }
+                  - { name: eyebrow, label: "Etiqueta", widget: string }
+                  - { name: h2a, label: "Titular · línea 1", widget: string }
+                  - { name: h2b, label: "Titular · línea 2", widget: string }
+                  - { name: buttonLabel, label: "Botón", widget: string }
 
   - name: contenido_en
     label: "Contenido · English"
@@ -293,4 +323,4 @@ collections:
       - name: en
         label: "English page"
         file: "content/en.json"
-        fields: *content_fields
+        fields: *page_fields

@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import Landing from './landing';
-import { content, media } from './site-content';
+import { content, OG_IMAGE } from './site-content';
 
 const t = content.es;
-const ogImage = media.ogImage || '/hero.jpg';
+const ogImage = OG_IMAGE;
 
 export const metadata: Metadata = {
   title: t.meta.title,

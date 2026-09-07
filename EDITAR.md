@@ -1,117 +1,83 @@
 # Editar la landing de PAWWER
 
-Todo el contenido visible vive en **`app/site-content.ts`**. No hace falta
-tocar el diseño para cambiar textos, precios o imágenes.
+La forma normal de editar es el **panel visual**:
+**https://www.pawwerapp.com/admin** → *Login with GitHub*.
 
-Flujo: editas un archivo → *commit* → *push* a `main` → Vercel publica solo
-en 1–2 minutos. Puedes editar desde GitHub en el navegador (botón lápiz en
-cada archivo) sin instalar nada.
-
----
-
-## Textos
-
-`app/site-content.ts` → objeto `content`, con dos bloques: `es` (español) y
-`en` (inglés). Cambia el mismo texto en los dos para mantener las versiones
-al día. Dentro de cada idioma:
-
-| Clave | Qué es |
-|---|---|
-| `meta` | Título y descripción para Google y redes |
-| `nav` | Menú, botón de idioma, "Sign in" |
-| `hero` | Titular grande, frase de apoyo, botones |
-| `chapter` | Bloque "Cuando todo lo que importa está conectado" |
-| `solutions.phases` | Las 5 fases (Captar…Medir): `name` + `line` |
-| `solutions.items` | Los 3 pilares (icono + título + texto) |
-| `solutions.mock` | Textos de la maqueta del producto |
-| `benefits` | Bloque "Menos memoria. Más impulso." |
-| `pricing.plans` | Los 3 planes: precio, resumen, lista de features |
-| `pricing.comparison` | Tabla comparativa (`'✓'`, `'—'` o texto) |
-| `pricing.agency` | Bloque PAWWER Agencia |
-| `pricing.notes` | Letra chica de precios |
-| `contact` | Bloque final y CTA |
-| `footer` | Enlaces del pie |
-
-Las páginas de cada plan (`/planes/esencial`, etc.) toman su texto de
-`pricing.plans` + el bloque `planDetailCopy` del mismo archivo.
+Cada "Publish" hace *commit* al repo y Vercel republica solo en 1–2 min.
+También puedes editar los archivos a mano desde GitHub (botón lápiz); el
+panel y los archivos son lo mismo.
 
 ---
 
-## Imágenes
+## El panel por dentro
 
-1. Sube el archivo a **`public/img/`**.
-2. En `app/site-content.ts`, objeto **`media`**, escribe la ruta:
+Tres secciones:
 
-```ts
-export const media = {
-  heroImage: '/img/hero.jpg',       // franja de imagen bajo el titular
-  showcaseImage: '/img/producto.png', // screenshot real; reemplaza la maqueta
-  ogImage: '/img/compartir.jpg',    // imagen al compartir en redes (1200×630)
-};
-```
+### Ajustes generales — `content/settings.json`
+Correo, teléfono y dirección · **precios** de los 3 planes (con símbolo, ej.
+`$99`) · enlaces de pago Stripe / Mercado Pago · imagen para compartir en
+redes · fecha de la política de privacidad.
 
-Deja `''` para no mostrar esa imagen. La ruta empieza en `/img/`.
+### Contenido · Español / Contenido · English — `content/es.json` / `content/en.json`
+Cada uno tiene:
+- **SEO**, **Menú**, **Pie**, **Planes**, **Tabla comparativa**, **Páginas
+  de cada plan** (arriba, plegados).
+- **Bloques de la página** — la lista que arma la portada. Arrastra para
+  reordenar, botón `+` para añadir, papelera para quitar. Tipos:
 
----
+  | Bloque | Para qué |
+  |---|---|
+  | Hero (portada) | Titular + botones + **imagen o video** opcional |
+  | Frase destacada | Una frase grande con etiqueta |
+  | Proceso (fases) | Lista numerada de fases |
+  | Características (3 columnas) | Icono + título + texto ×3 |
+  | Vista del producto | Screenshot real o la maqueta dibujada |
+  | Beneficios (3 columnas) | Igual que Características |
+  | Logos / Confían en nosotros | Fila de logos (vacío = no se muestra) |
+  | Paquetes / precios | Las 3 tarjetas + tabla comparativa |
+  | PAWWER Agencia | Bloque de agencia |
+  | Letra chica de precios | Notas legales de precios |
+  | Llamado final + contacto | CTA final + correo/teléfono/dirección |
 
-## Colores
-
-`app/globals.css`, bloque `:root` al inicio. Es la paleta del sistema PAWWER
-(coral `#FF5A3C`). Cambia un valor y se actualiza todo el sitio:
-
-- `--accent` coral de la marca · `--accent-soft` / `--accent-border` tintes
-- `--paper` fondo · `--paper-2` fondo hundido · `--surface` blanco
-- `--ink` títulos · `--ink-2` texto · `--muted` texto tenue
-- `--dark` bandas oscuras · `--on-dark` texto sobre oscuro
-
-## Tipografía
-
-`app/layout.tsx` → `Space_Grotesk` (la del CRM). Para otra fuente, cámbiala
-por cualquier familia de `next/font/google`.
-
-## Logo
-
-La huella del logo es el icono `PawPrint` de lucide, en `app/site-ui.tsx`
-(header y footer). Para usar una imagen propia, sustituye `<PawPrint … />`
-por `<img src="/img/logo.svg" alt="PAWWER" />`.
+  Edita el **mismo orden y textos en Español y en English** para que las dos
+  versiones coincidan.
 
 ---
 
-## Precios y pago
+## Imágenes y video
 
-- Montos y features: `pricing.plans` y `pricing.comparison` en `site-content.ts`.
-- Cuando exista la cuenta de Stripe / Mercado Pago, pega el enlace de pago en
-  **`CHECKOUT_URLS`** (mismo archivo). El botón de cada plan pasa solo de
-  "Iniciar prueba" a "Continuar al pago".
-
-## Idioma automático
-
-`middleware.ts` manda a `/en` a quien entra desde un país que no es de habla
-hispana. La elección con el selector ES/EN se recuerda y manda por encima.
-Para cambiar la lista de países, edita `SPANISH_COUNTRIES` en ese archivo.
+Dentro de un bloque, los campos de imagen tienen botón para **subir archivo**
+(va a `public/img/`). El Hero acepta imagen **o** video: pon *Medio* en
+`image` o `video` y sube el archivo correspondiente (para video, un `.mp4`
++ una imagen de portada).
 
 ---
 
-## Panel visual — `pawwerapp.com/admin`
+## Ajustes que se tocan en el código (no en el panel)
 
-Editor con formularios y subida de imágenes (Decap CMS). Cada vez que
-guardas, hace *commit* al repo y Vercel republica. Los formularios escriben
-en `content/es.json`, `content/en.json` y `content/settings.json` — los
-mismos archivos de arriba.
+- **Colores** — `app/globals.css`, bloque `:root`. Paleta del sistema PAWWER
+  (coral `#FF5A3C`). Cambia un valor y se actualiza todo.
+- **Tipografía** — `app/layout.tsx` → `Space_Grotesk`.
+- **Logo** — la huella es `PawPrint` de lucide en `app/site-ui.tsx`. Para un
+  logo en imagen, cámbialo por `<img src="/img/logo.svg" alt="PAWWER" />`.
+- **Idioma automático** — `middleware.ts`: manda a `/en` a quien entra desde
+  un país que no es de habla hispana; el selector ES/EN se recuerda y manda
+  por encima. Lista de países en `SPANISH_COUNTRIES`.
 
-Para que funcione hace falta, una sola vez:
+---
 
-1. **GitHub → Settings → Developer settings → OAuth Apps → New OAuth App**
-   (en la cuenta `apptimgo-ux`):
+## Configurar el panel (una sola vez)
+
+1. **GitHub → https://github.com/settings/applications/new** (nueva OAuth App):
    - Application name: `PAWWER Editor`
-   - Homepage URL: `https://pawwer-landing.vercel.app`
-   - Authorization callback URL: `https://pawwer-landing.vercel.app/api/oauth/callback`
-   - Al crearla te da un **Client ID** y puedes generar un **Client Secret**.
+   - Homepage URL: `https://www.pawwerapp.com`
+   - Authorization callback URL: `https://www.pawwerapp.com/api/oauth/callback`
+   - Desmarca *Expire user access tokens*.
+   - Register → copia el **Client ID** → *Generate a new client secret*.
 2. **Vercel → proyecto `pawwer-landing` → Settings → Environment Variables**:
    - `OAUTH_CLIENT_ID` = el Client ID
    - `OAUTH_CLIENT_SECRET` = el Client Secret
    - Redeploy.
-3. Entra a `https://pawwer-landing.vercel.app/admin`, botón *Login with GitHub*.
 
-Si usas el dominio final `pawwerapp.com`, cambia las tres URLs (OAuth App y
-`base_url`/`site_url` en `public/admin/config.yml`) por ese dominio.
+Si cambia el dominio, actualiza esas dos URLs en la OAuth App y
+`base_url` / `site_url` en `public/admin/config.yml`.
