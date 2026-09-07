@@ -13,7 +13,7 @@ const display = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://pawwerapp.com'),
+  metadataBase: new URL('https://www.pawwerapp.com'),
   title: content.es.meta.title,
   description: content.es.meta.description,
   applicationName: 'PAWWER',

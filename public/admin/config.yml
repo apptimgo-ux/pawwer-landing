@@ -2,10 +2,10 @@ backend:
   name: github
   repo: apptimgo-ux/pawwer-landing
   branch: main
-  base_url: https://pawwer-landing.vercel.app
+  base_url: https://www.pawwerapp.com
   auth_endpoint: api/oauth
 
-site_url: https://pawwer-landing.vercel.app
+site_url: https://www.pawwerapp.com
 media_folder: "public/img"
 public_folder: "/img"
 locale: es
