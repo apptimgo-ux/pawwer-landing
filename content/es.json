@@ -3,7 +3,7 @@
   "ogLocale": "es_MX",
   "meta": {
     "title": "PAWWER | CRM comercial y de marketing",
-    "description": "Organiza tus leads, centraliza la atención y convierte el seguimiento comercial en un sistema medible. Conoce los planes PAWWER desde $99 USD al mes."
+    "description": "Organiza tus leads, centraliza la atención y convierte el seguimiento comercial en un sistema medible. Conoce los planes PAWWER desde $1,490 MXN al mes."
   },
   "nav": {
     "skip": "Saltar al contenido",
@@ -93,8 +93,8 @@
     "trialTitle": "Cómo funciona la prueba de 7 días",
     "trialLines": [
       { "text": "Durante la prueba tienes acceso temporal al nivel Escala." },
-      { "text": "Para iniciarla registras una tarjeta de crédito en el CRM (crm.pawwerapp.com). Este sitio no captura ni almacena datos de tarjeta." },
-      { "text": "Al terminar los 7 días, la suscripción de este plan se activa automáticamente y la tarjeta se cobra según el precio mostrado." },
+      { "text": "La prueba de 7 días se habilita desde el CRM (crm.pawwerapp.com). Este sitio no captura ni almacena datos de tarjeta." },
+      { "text": "El cobro se habilitará mediante checkout alojado de Stripe o Mercado Pago cuando la integración esté activa." },
       { "text": "Puedes cancelar tu suscripción en cualquier momento desde el CRM. Si cancelas antes de que terminen los 7 días, no se genera ningún cargo." },
       { "text": "IVA, prorrateo y condiciones de renovación de créditos: por confirmar con PAWWER." }
     ],
@@ -103,7 +103,7 @@
     "ctaTrial": "Iniciar prueba de 7 días",
     "ctaCheckout": "Continuar al pago",
     "ctaSales": "Hablar con ventas",
-    "priceUnit": "USD / mes"
+    "priceUnit": "MXN / mes"
   },
   "blocks": [
     {
@@ -201,8 +201,8 @@
       "eyebrow": "Planes y precios",
       "h2a": "Elige el ritmo",
       "h2b": "de tu crecimiento.",
-      "intro": "Prueba de 7 días con acceso al nivel Escala. Se registra una tarjeta en el CRM y la suscripción se activa al terminar; cancela cuando quieras. Precios en USD.",
-      "priceUnit": "USD / mes",
+      "intro": "Prueba de 7 días con acceso temporal al nivel Escala. No se captura tarjeta dentro de PAWWER; el cobro se habilitará mediante checkout alojado. Precios en MXN.",
+      "priceUnit": "MXN / mes",
       "mostPopular": "Más elegido",
       "cta": "Empezar",
       "activationLabel": "En activación",
@@ -224,7 +224,7 @@
       "anchor": "",
       "items": [
         { "lead": "La mensualidad cubre PAWWER.", "body": "No incluye inversión publicitaria, cargos de Meta, Google o TikTok, números, SMS, plantillas de WhatsApp, consumo de mensajería ni servicios de terceros." },
-        { "lead": "", "body": "La tarjeta se registra en el CRM, no en este sitio. Al terminar los 7 días de prueba, la suscripción del plan se activa automáticamente; puedes cancelarla en cualquier momento y, si cancelas antes de que terminen, no se genera cargo. IVA y condiciones de renovación: por confirmar con PAWWER." }
+        { "lead": "", "body": "No se captura tarjeta dentro de este sitio. La prueba se habilita desde el CRM y el cobro se realizará mediante checkout alojado cuando la integración esté activa. IVA y condiciones de renovación: por confirmar con PAWWER." }
       ]
     },
     {

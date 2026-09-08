@@ -11,9 +11,9 @@
     "crmUrl": "https://crm.pawwerapp.com"
   },
   "prices": {
-    "esencial": "$99",
-    "crecimiento": "$199",
-    "escala": "$349"
+    "esencial": "$1,490",
+    "crecimiento": "$2,990",
+    "escala": "$5,490"
   },
   "checkout": {
     "esencial": "",

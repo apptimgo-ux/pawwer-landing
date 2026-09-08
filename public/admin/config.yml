@@ -9,6 +9,9 @@ site_url: https://www.pawwerapp.com
 media_folder: "public/img"
 public_folder: "/img"
 locale: es
+publish_mode: editorial_workflow
+editor:
+  preview: true
 
 collections:
   - name: ajustes
@@ -35,7 +38,7 @@ collections:
               - { name: addressLine2, label: "Dirección · línea 2", widget: string }
               - { name: crmUrl, label: "URL del CRM (botón Sign in)", widget: string }
           - name: prices
-            label: "Precios (USD, con símbolo, ej. $99)"
+            label: "Precios (MXN, con símbolo, ej. $1,490)"
             widget: object
             fields:
               - { name: esencial, label: "Esencial", widget: string }
@@ -164,6 +167,14 @@ collections:
                   - { name: image, label: "Imagen (si Medio = image)", widget: image, required: false }
                   - { name: video, label: "Video mp4 (si Medio = video)", widget: file, required: false }
                   - { name: poster, label: "Imagen de portada del video", widget: image, required: false }
+                  - { name: mediaPlacement, label: "¿Dónde aparece?", widget: select, options: [{ label: "Debajo del texto", value: "below" }, { label: "De fondo, detrás del texto", value: "background" }], default: "below", required: false }
+                  - { name: focalX, label: "Encuadre horizontal (0 izquierda · 100 derecha)", widget: number, value_type: int, min: 0, max: 100, default: 50, required: false }
+                  - { name: focalY, label: "Encuadre vertical (0 arriba · 100 abajo)", widget: number, value_type: int, min: 0, max: 100, default: 50, required: false }
+                  - { name: overlay, label: "Oscurecer fondo (0 a 85 %)", widget: number, value_type: int, min: 0, max: 85, default: 45, required: false }
+                  - { name: mediaHeight, label: "Altura de imagen/video o portada (320 a 1000 px)", widget: number, value_type: int, min: 320, max: 1000, default: 640, required: false }
+                  - { name: mediaFit, label: "Ajuste de la imagen o video", widget: select, options: [{ label: "Llenar el espacio (recorta bordes)", value: "cover" }, { label: "Mostrar completo (puede dejar márgenes)", value: "contain" }], default: "cover", required: false }
+                  - { name: textTone, label: "Color del texto sobre el fondo", widget: select, options: [{ label: "Claro", value: "light" }, { label: "Oscuro", value: "dark" }], default: "light", required: false }
+                  - { name: imageAlt, label: "Descripción de la imagen para accesibilidad", widget: string, required: false }
               - name: statement
                 label: "Frase destacada"
                 widget: object
@@ -276,7 +287,7 @@ collections:
                   - { name: h2a, label: "Titular · línea 1", widget: string }
                   - { name: h2b, label: "Titular · línea 2", widget: string }
                   - { name: intro, label: "Párrafo de introducción", widget: text }
-                  - { name: priceUnit, label: "Unidad de precio (USD / mes)", widget: string }
+                  - { name: priceUnit, label: "Unidad de precio (MXN / mes)", widget: string }
                   - { name: mostPopular, label: "Etiqueta 'más elegido'", widget: string }
                   - { name: cta, label: "Botón de los planes", widget: string }
                   - { name: activationLabel, label: "Etiqueta 'En activación'", widget: string }

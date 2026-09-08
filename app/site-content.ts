@@ -12,7 +12,7 @@ type Lead = { stage: string; initials: string; name: string; role: string; statu
 type Note = { lead: string; body: string };
 
 export type Block =
-  | { type: 'hero'; anchor?: string; kicker: string; h1a: string; h1b: string; sub: string; ctaPrimary: string; ctaSecondary: string; metaLeft: string; metaRight: string; mediaType: 'none' | 'image' | 'video'; image: string; video: string; poster: string }
+  | { type: 'hero'; anchor?: string; kicker: string; h1a: string; h1b: string; sub: string; ctaPrimary: string; ctaSecondary: string; metaLeft: string; metaRight: string; mediaType: 'none' | 'image' | 'video'; image: string; video: string; poster: string; mediaPlacement?: 'below' | 'background'; focalX?: number; focalY?: number; overlay?: number; mediaHeight?: number; mediaFit?: 'cover' | 'contain'; textTone?: 'light' | 'dark'; imageAlt?: string }
   | { type: 'statement'; anchor?: string; label: string; h2a: string; h2b: string; body: string }
   | { type: 'process'; anchor?: string; label: string; h2a: string; h2b: string; phases: Phase[] }
   | { type: 'pillars'; anchor?: string; eyebrow: string; h2a: string; h2b: string; items: Item[] }
@@ -81,11 +81,14 @@ export const CHECKOUT_URLS: Record<string, string> = {
 
 const PRICE_BY_SLUG: Record<string, string> = settings.prices;
 
-function assemble(data: unknown): Content {
+export type SiteSettings = typeof settings;
+export const siteSettings = settings;
+
+export function assemble(data: unknown, prices: Record<string, string> = PRICE_BY_SLUG): Content {
   const d = data as Content;
   return {
     ...d,
-    plans: d.plans.map(p => ({ ...p, price: PRICE_BY_SLUG[p.slug] ?? '' })),
+    plans: d.plans.map(p => ({ ...p, price: prices[p.slug] ?? '' })),
   };
 }
 

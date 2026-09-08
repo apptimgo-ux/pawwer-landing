@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Space_Grotesk } from 'next/font/google';
 import './globals.css';
+import './editor-media.css';
 import { content } from './site-content';
 import Reveal from './reveal';
 

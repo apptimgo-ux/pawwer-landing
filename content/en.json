@@ -3,7 +3,7 @@
   "ogLocale": "en_US",
   "meta": {
     "title": "PAWWER | Commercial & marketing CRM",
-    "description": "Organize your leads, centralize attention and turn commercial follow-up into a measurable system. See the PAWWER plans from $99 USD per month."
+    "description": "Organize your leads, centralize attention and turn commercial follow-up into a measurable system. See PAWWER plans from $1,490 MXN per month."
   },
   "nav": {
     "skip": "Skip to content",
@@ -93,8 +93,8 @@
     "trialTitle": "How the 7-day trial works",
     "trialLines": [
       { "text": "During the trial you get temporary access to the Scale tier." },
-      { "text": "To start it you register a credit card in the CRM (crm.pawwerapp.com). This site does not capture or store card data." },
-      { "text": "When the 7 days end, this plan's subscription starts automatically and the card is charged at the price shown." },
+      { "text": "The 7-day trial is enabled from the CRM (crm.pawwerapp.com). This site does not capture or store card data." },
+      { "text": "Billing will be enabled through a hosted Stripe or Mercado Pago checkout when the integration is active." },
       { "text": "You can cancel your subscription at any time from the CRM. If you cancel before the 7 days end, no charge is made." },
       { "text": "Tax, proration and credit renewal conditions: to be confirmed with PAWWER." }
     ],
@@ -103,7 +103,7 @@
     "ctaTrial": "Start the 7-day trial",
     "ctaCheckout": "Continue to payment",
     "ctaSales": "Talk to sales",
-    "priceUnit": "USD / mo"
+    "priceUnit": "MXN / mo"
   },
   "blocks": [
     {
@@ -201,8 +201,8 @@
       "eyebrow": "Plans & pricing",
       "h2a": "Choose the pace",
       "h2b": "of your growth.",
-      "intro": "7-day trial with access to the Scale tier. A card is registered in the CRM and the subscription starts when the trial ends; cancel anytime. Prices in USD.",
-      "priceUnit": "USD / mo",
+      "intro": "7-day trial with temporary access to the Scale tier. No card is captured inside PAWWER; billing will be enabled through hosted checkout. Prices in MXN.",
+      "priceUnit": "MXN / mo",
       "mostPopular": "Most popular",
       "cta": "Get started",
       "activationLabel": "In activation",
@@ -224,7 +224,7 @@
       "anchor": "",
       "items": [
         { "lead": "The monthly fee covers PAWWER.", "body": "It does not include ad spend, Meta, Google or TikTok charges, phone numbers, SMS, WhatsApp templates, messaging usage or third-party services." },
-        { "lead": "", "body": "The card is registered in the CRM, not on this site. When the 7-day trial ends, the plan subscription starts automatically; you can cancel it at any time and, if you cancel before it ends, no charge is made. Tax and renewal conditions: to be confirmed with PAWWER." }
+        { "lead": "", "body": "No card is captured on this site. The trial is enabled from the CRM and billing will use a hosted checkout when the integration is active. Tax and renewal conditions: to be confirmed with PAWWER." }
       ]
     },
     {

@@ -1,0 +1,15 @@
+/* Shared by the public page and its live editor preview. */
+.hero--background { isolation: isolate; display: flex; align-items: center; }
+.hero--background .hero__inner { position: relative; z-index: 1; }
+.hero__backdrop { position: absolute; inset: 0; z-index: -1; background: #17202a; }
+.hero__backdrop > img, .hero__backdrop > video { display: block; width: 100%; height: 100%; }
+.hero__media-shade { position: absolute; inset: 0; pointer-events: none; }
+.hero__backdrop .hero__playbtn { z-index: 2; left: auto; right: 20px; bottom: 16px; }
+.hero--light { color: white; }
+.hero--light .hero__kicker, .hero--light .hero__lead, .hero--light .hero__meta, .hero--light .textlink { color: white; }
+.hero--light .rule { border-color: #ffffff66; }
+.hero--dark { color: #151720; }
+.hero--dark .hero__kicker, .hero--dark .hero__lead, .hero--dark .hero__meta, .hero--dark .textlink { color: #151720; }
+.editor-preview [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
+.editor-preview-empty { padding: 40px; font: 16px/1.6 system-ui; background: #f4f5f8; min-height: 100vh; }
+.editor-preview-error { padding: 24px; background: #fff4e5; color: #623c12; font: 16px/1.6 system-ui; }

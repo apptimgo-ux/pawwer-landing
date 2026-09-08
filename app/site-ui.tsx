@@ -1,11 +1,11 @@
 'use client';
 import { useState } from 'react';
 import { Menu, X, ArrowUpRight, PawPrint } from 'lucide-react';
-import { content, type Locale, CRM_URL } from './site-content';
+import { content, type Content, type Locale, CRM_URL } from './site-content';
 
-export function Header({ locale, homeHref, altHref }: { locale: Locale; homeHref: string; altHref: string }) {
+export function Header({ locale, homeHref, altHref, draft, crmUrl = CRM_URL }: { locale: Locale; homeHref: string; altHref: string; draft?: Content; crmUrl?: string }) {
   const [open, setOpen] = useState(false);
-  const t = content[locale].nav;
+  const t = (draft || content[locale]).nav;
   return (
     <>
       <a className="skip" href="#contenido">{t.skip}</a>
@@ -26,7 +26,7 @@ export function Header({ locale, homeHref, altHref }: { locale: Locale; homeHref
               <a key={l.hash} onClick={() => setOpen(false)} href={`${homeHref}${l.hash}`}>{l.label}</a>
             ))}
             <a className="lang-switch" href={altHref} aria-label={t.langAria} hrefLang={locale === 'es' ? 'en' : 'es'}>{t.langLabel}</a>
-            <a className="login" href={CRM_URL}>{t.login}<ArrowUpRight size={15} /></a>
+            <a className="login" href={crmUrl}>{t.login}<ArrowUpRight size={15} /></a>
           </nav>
         </div>
       </header>
@@ -34,14 +34,14 @@ export function Header({ locale, homeHref, altHref }: { locale: Locale; homeHref
   );
 }
 
-export function Footer({ locale, homeHref }: { locale: Locale; homeHref: string }) {
-  const t = content[locale].footer;
+export function Footer({ locale, homeHref, draft, crmUrl = CRM_URL }: { locale: Locale; homeHref: string; draft?: Content; crmUrl?: string }) {
+  const t = (draft || content[locale]).footer;
   return (
     <footer className="site-footer">
       <div className="wrap site-footer__inner">
         <a href={homeHref} className="brand" aria-label="PAWWER">pawwer<PawPrint aria-hidden strokeWidth={2.25} /></a>
         <a href={t.privacyHref}>{t.privacy}</a>
-        <a href={CRM_URL}>{content[locale].nav.login} <ArrowUpRight size={13} /></a>
+        <a href={crmUrl}>{(draft || content[locale]).nav.login} <ArrowUpRight size={13} /></a>
         <p className="site-footer__spacer">© {new Date().getFullYear()} {t.rights}</p>
       </div>
     </footer>

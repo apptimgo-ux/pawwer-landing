@@ -5,7 +5,7 @@ import {
 import HeroMedia from './hero-media';
 import {
   content, mailFor, planHref, type Block, type Content, type Locale,
-  EMAIL, PHONE_HREF, PHONE_LABEL, ADDRESS_LINES,
+  siteSettings, type SiteSettings,
 } from './site-content';
 
 const ICONS: Record<string, LucideIcon> = {
@@ -29,19 +29,19 @@ function Cell({ value }: { value: string }) {
   return <>{value}</>;
 }
 
-export function BlockList({ locale }: { locale: Locale }) {
-  const t = content[locale];
-  return <>{t.blocks.map((b, i) => <BlockView key={i} block={b} locale={locale} t={t} />)}</>;
+export function BlockList({ locale, draft, settings = siteSettings }: { locale: Locale; draft?: Content; settings?: SiteSettings }) {
+  const t = draft || content[locale];
+  return <>{t.blocks.map((b, i) => <BlockView key={i} block={b} locale={locale} t={t} settings={settings} />)}</>;
 }
 
-function BlockView({ block, locale, t }: { block: Block; locale: Locale; t: Content }) {
+function BlockView({ block, locale, t, settings }: { block: Block; locale: Locale; t: Content; settings: SiteSettings }) {
   const contact = mailFor(locale);
   const id = anchorOf(block);
 
   switch (block.type) {
     case 'hero':
       return (
-        <section className="hero" id={id}>
+        <section className={`hero${block.mediaPlacement === 'background' && block.mediaType !== 'none' && (block.image || block.video) ? ` hero--background hero--${block.textTone || 'light'}` : ''}`} id={id} style={block.mediaPlacement === 'background' ? { minHeight: `${Math.min(1000, Math.max(320, block.mediaHeight || 640))}px` } : undefined}>
           <div className="wrap hero__inner">
             <p className="hero__kicker"><i /> {block.kicker}</p>
             <h1>{block.h1a} {block.h1b}</h1>
@@ -58,7 +58,7 @@ function BlockView({ block, locale, t }: { block: Block; locale: Locale; t: Cont
               <span>{block.metaRight}</span>
             </div>
           </div>
-          <HeroMedia type={block.mediaType} image={block.image} video={block.video} poster={block.poster} />
+          <HeroMedia type={block.mediaType} image={block.image} video={block.video} poster={block.poster} placement={block.mediaPlacement} focalX={block.focalX} focalY={block.focalY} overlay={block.overlay} height={block.mediaHeight} fit={block.mediaFit} alt={block.imageAlt} />
         </section>
       );
 
@@ -297,9 +297,9 @@ function BlockView({ block, locale, t }: { block: Block; locale: Locale; t: Cont
               </div>
             </div>
             <div className="contact-list" data-reveal>
-              <a href={`mailto:${EMAIL}`}>{EMAIL} <ArrowUpRight size={16} /></a>
-              <a href={PHONE_HREF}>{PHONE_LABEL} <ArrowUpRight size={16} /></a>
-              <address>{ADDRESS_LINES[0]}<br />{ADDRESS_LINES[1]}</address>
+              <a href={`mailto:${settings.contact.email}`}>{settings.contact.email} <ArrowUpRight size={16} /></a>
+              <a href={settings.contact.phoneHref}>{settings.contact.phoneLabel} <ArrowUpRight size={16} /></a>
+              <address>{settings.contact.addressLine1}<br />{settings.contact.addressLine2}</address>
             </div>
           </div>
         </section>
