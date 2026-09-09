@@ -255,6 +255,19 @@ function BlockView({ block, locale, t, settings }: { block: Block; locale: Local
                     </tbody>
                   </table>
                 </div>
+                <div className="compare-mobile" aria-label={block.compareTitle}>
+                  {t.plans.map(plan => (
+                    <details key={plan.slug} className="compare-mobile__plan" open={plan.slug === 'esencial'}>
+                      <summary>{plan.name}<span aria-hidden="true">＋</span></summary>
+                      <div className="compare-mobile__rows">
+                        {t.comparison.map(row => {
+                          const value = plan.slug === 'esencial' ? row.esencial : plan.slug === 'crecimiento' ? row.crecimiento : row.escala;
+                          return <div className="compare-mobile__row" key={row.label}><span>{row.label}</span><b><Cell value={value} /></b></div>;
+                        })}
+                      </div>
+                    </details>
+                  ))}
+                </div>
               </div>
             )}
           </div>
