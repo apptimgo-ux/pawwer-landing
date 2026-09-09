@@ -181,6 +181,47 @@
 @media (max-width: 899px) {
   .hero:not(.hero--background) .hero__media { position: relative; }
 }
+
+/* Mobile hero: let the content determine the height so nothing is clipped. */
+@media (max-width: 700px) {
+  .hero--background {
+    min-height: max(740px, 100svh) !important;
+    height: auto !important;
+    padding-top: 42px !important;
+    padding-bottom: 96px !important;
+  }
+  .hero--background .hero__inner {
+    width: min(100% - 32px, 620px);
+    gap: 22px;
+  }
+  .hero--background h1 {
+    max-width: 12ch;
+    font-size: clamp(42px, 11vw, 58px);
+    line-height: .98;
+  }
+  .hero--background .hero__body { gap: 22px; }
+  .hero--background .hero__lead {
+    max-width: 34ch;
+    font-size: clamp(18px, 5vw, 22px);
+    line-height: 1.45;
+  }
+  .hero--background .hero__meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    width: 100%;
+    line-height: 1.45;
+  }
+  .hero--background .hero__meta .rule { display: none; }
+  .hero--background .hero__backdrop > img,
+  .hero--background .hero__backdrop > video { object-position: 68% center !important; }
+  .hero--background .hero__carousel-controls {
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 28px;
+    gap: 5px;
+  }
+}
 .plan .btn { width: 100%; justify-content: space-between; margin: 18px 0 20px; }
 .plan__inherits { font-size: 13px; font-weight: 600; color: var(--ink); padding-top: 18px; border-top: 1px solid var(--line); }
 .plan__list { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 10px; }
