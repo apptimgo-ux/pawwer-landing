@@ -118,6 +118,8 @@
       "metaLeft": "Scroll to explore",
       "metaRight": "CRM / Marketing / Follow-up",
       "mediaType": "image",
+      "mediaPlacement": "background",
+      "textTone": "dark",
       "image": "",
       "video": "",
       "poster": "",

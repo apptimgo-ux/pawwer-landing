@@ -41,7 +41,7 @@ function BlockView({ block, locale, t, settings }: { block: Block; locale: Local
   switch (block.type) {
     case 'hero':
       return (
-        <section className={`hero${block.mediaPlacement === 'background' && block.mediaType !== 'none' && (block.image || block.video) ? ` hero--background hero--${block.textTone || 'light'}` : ''}`} id={id} style={block.mediaPlacement === 'background' ? { minHeight: `${Math.min(1000, Math.max(320, block.mediaHeight || 640))}px` } : undefined}>
+        <section className={`hero${block.mediaPlacement === 'background' && block.mediaType !== 'none' && (block.image || block.video || block.slides?.length) ? ` hero--background hero--${block.textTone || 'light'}` : ''}`} id={id} style={block.mediaPlacement === 'background' ? { minHeight: `${Math.min(1000, Math.max(320, block.mediaHeight || 640))}px` } : undefined}>
           <div className="wrap hero__inner">
             <p className="hero__kicker"><i /> {block.kicker}</p>
             <h1>{block.h1a} {block.h1b}</h1>
