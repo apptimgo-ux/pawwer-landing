@@ -3,7 +3,7 @@
   "ogLocale": "es_MX",
   "meta": {
     "title": "PAWWER | CRM comercial y de marketing",
-    "description": "Organiza tus leads, centraliza la atención y convierte el seguimiento comercial en un sistema medible. Conoce los planes PAWWER desde $1,490 MXN al mes."
+    "description": "Organiza tus leads, centraliza la atención y convierte el seguimiento comercial en un sistema medible. Conoce los planes PAWWER desde $89 al mes."
   },
   "nav": {
     "skip": "Saltar al contenido",
@@ -103,7 +103,7 @@
     "ctaTrial": "Iniciar prueba de 7 días",
     "ctaCheckout": "Continuar al pago",
     "ctaSales": "Hablar con ventas",
-    "priceUnit": "MXN / mes"
+    "priceUnit": "USD / mes"
   },
   "blocks": [
     {
@@ -208,8 +208,8 @@
       "eyebrow": "Planes y precios",
       "h2a": "Elige el ritmo",
       "h2b": "de tu crecimiento.",
-      "intro": "Prueba de 7 días con acceso temporal al nivel Escala. No se captura tarjeta dentro de PAWWER; el cobro se habilitará mediante checkout alojado. Precios en MXN.",
-      "priceUnit": "MXN / mes",
+      "intro": "Prueba de 7 días con acceso temporal al nivel Escala. No se captura tarjeta dentro de PAWWER; el cobro se habilitará mediante checkout alojado. Precios en USD.",
+      "priceUnit": "USD / mes",
       "mostPopular": "Más elegido",
       "cta": "Empezar",
       "activationLabel": "En activación",

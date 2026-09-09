@@ -139,6 +139,48 @@
 .plan__price { display: block; font-family: var(--font-display), sans-serif; font-weight: 600; font-size: 40px; letter-spacing: -0.04em; color: var(--ink); margin: 20px 0 4px; }
 .plan__price span { font-family: var(--font-sans); font-size: 13px; font-weight: 400; letter-spacing: 0; color: var(--muted); margin-left: 8px; }
 .plan__price:hover { color: var(--accent); }
+
+/* Pricing header: keep the editorial heading and intro together across the canvas. */
+.pricing__head {
+  display: block;
+  max-width: none;
+  margin-bottom: clamp(26px, 4vw, 42px);
+}
+.pricing__head .eyebrow { margin-bottom: 24px; }
+.pricing__head h2 {
+  max-width: 18ch;
+  margin: 0;
+  font-size: clamp(42px, 6vw, 82px);
+  line-height: .98;
+}
+.pricing__head p:last-child {
+  max-width: 78ch;
+  margin: 24px 0 0;
+  line-height: 1.65;
+}
+@media (max-width: 680px) {
+  .pricing__head h2 { max-width: 14ch; font-size: clamp(38px, 12vw, 58px); }
+  .pricing__head p:last-child { margin-top: 18px; }
+}
+
+/* Keep the hero visual in the first viewport on desktop. Video and image carousels
+   use the same slot; background heroes keep their own backdrop treatment. */
+@media (min-width: 900px) {
+  .hero:not(.hero--background) { min-height: clamp(680px, 48vw, 820px); }
+  .hero:not(.hero--background) .hero__inner { padding-right: min(44vw, 600px); }
+  .hero:not(.hero--background) .hero__media {
+    position: absolute;
+    top: clamp(148px, 12vw, 196px);
+    right: clamp(28px, 6vw, 110px);
+    width: min(40vw, 560px);
+    margin-top: 0;
+  }
+  .hero:not(.hero--background) .hero__media img,
+  .hero:not(.hero--background) .hero__media video { height: min(54vh, 520px); }
+}
+@media (max-width: 899px) {
+  .hero:not(.hero--background) .hero__media { position: relative; }
+}
 .plan .btn { width: 100%; justify-content: space-between; margin: 18px 0 20px; }
 .plan__inherits { font-size: 13px; font-weight: 600; color: var(--ink); padding-top: 18px; border-top: 1px solid var(--line); }
 .plan__list { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 10px; }
