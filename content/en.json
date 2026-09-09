@@ -8,22 +8,10 @@
   "nav": {
     "skip": "Skip to content",
     "links": [
-      {
-        "label": "Solutions",
-        "hash": "#soluciones"
-      },
-      {
-        "label": "Benefits",
-        "hash": "#beneficios"
-      },
-      {
-        "label": "Plans",
-        "hash": "#planes"
-      },
-      {
-        "label": "Contact",
-        "hash": "#contacto"
-      }
+      { "label": "Solutions", "hash": "#soluciones" },
+      { "label": "Benefits", "hash": "#beneficios" },
+      { "label": "Plans", "hash": "#planes" },
+      { "label": "Contact", "hash": "#contacto" }
     ],
     "login": "Sign in / Login",
     "menuOpen": "Open menu",
@@ -43,24 +31,12 @@
       "summary": "Bring order to your commercial operation.",
       "inherits": "The essentials to get started",
       "features": [
-        {
-          "text": "Leads, contacts and follow-up CRM"
-        },
-        {
-          "text": "Appointment calendar"
-        },
-        {
-          "text": "Brand, library and content preparation"
-        },
-        {
-          "text": "3 team members"
-        },
-        {
-          "text": "Up to 2 channels with official connection"
-        },
-        {
-          "text": "60 operational credits"
-        }
+        { "text": "Leads, contacts and follow-up CRM" },
+        { "text": "Appointment calendar" },
+        { "text": "Brand, library and content preparation" },
+        { "text": "3 team members" },
+        { "text": "Up to 2 channels with official connection" },
+        { "text": "60 operational credits" }
       ],
       "note": ""
     },
@@ -70,24 +46,12 @@
       "summary": "Connect your content with your opportunities.",
       "inherits": "Everything in Essential, plus",
       "features": [
-        {
-          "text": "10 team members"
-        },
-        {
-          "text": "Content planner"
-        },
-        {
-          "text": "Lead map and source"
-        },
-        {
-          "text": "Results, quotes and contracts"
-        },
-        {
-          "text": "Up to 4 channels with official connection"
-        },
-        {
-          "text": "180 operational credits"
-        }
+        { "text": "10 team members" },
+        { "text": "Content planner" },
+        { "text": "Lead map and source" },
+        { "text": "Results, quotes and contracts" },
+        { "text": "Up to 4 channels with official connection" },
+        { "text": "180 operational credits" }
       ],
       "note": ""
     },
@@ -97,107 +61,30 @@
       "summary": "Extend your team's reach.",
       "inherits": "Everything in Growth, plus",
       "features": [
-        {
-          "text": "25 team members"
-        },
-        {
-          "text": "Commercial automation"
-        },
-        {
-          "text": "Priority support"
-        },
-        {
-          "text": "Operational analytics"
-        },
-        {
-          "text": "Up to 8 channels with official connection"
-        },
-        {
-          "text": "400 operational credits"
-        }
+        { "text": "25 team members" },
+        { "text": "Commercial automation" },
+        { "text": "Priority support" },
+        { "text": "Operational analytics" },
+        { "text": "Up to 8 channels with official connection" },
+        { "text": "400 operational credits" }
       ],
       "note": "AI agent with human handoff and multichannel automations, pending completion of integration testing."
     }
   ],
   "comparison": [
-    {
-      "label": "Team members",
-      "esencial": "3",
-      "crecimiento": "10",
-      "escala": "25"
-    },
-    {
-      "label": "Channels with official connection",
-      "esencial": "Up to 2",
-      "crecimiento": "Up to 4",
-      "escala": "Up to 8"
-    },
-    {
-      "label": "Operational credits / mo",
-      "esencial": "60",
-      "crecimiento": "180",
-      "escala": "400"
-    },
-    {
-      "label": "Leads, contacts and follow-up CRM",
-      "esencial": "✓",
-      "crecimiento": "✓",
-      "escala": "✓"
-    },
-    {
-      "label": "Appointment calendar",
-      "esencial": "✓",
-      "crecimiento": "✓",
-      "escala": "✓"
-    },
-    {
-      "label": "Brand, library and content preparation",
-      "esencial": "✓",
-      "crecimiento": "✓",
-      "escala": "✓"
-    },
-    {
-      "label": "Content planner",
-      "esencial": "—",
-      "crecimiento": "✓",
-      "escala": "✓"
-    },
-    {
-      "label": "Lead map and source",
-      "esencial": "—",
-      "crecimiento": "✓",
-      "escala": "✓"
-    },
-    {
-      "label": "Results, quotes and contracts",
-      "esencial": "—",
-      "crecimiento": "✓",
-      "escala": "✓"
-    },
-    {
-      "label": "Commercial automation",
-      "esencial": "—",
-      "crecimiento": "—",
-      "escala": "✓"
-    },
-    {
-      "label": "Priority support",
-      "esencial": "—",
-      "crecimiento": "—",
-      "escala": "✓"
-    },
-    {
-      "label": "Operational analytics",
-      "esencial": "—",
-      "crecimiento": "—",
-      "escala": "✓"
-    },
-    {
-      "label": "AI agent with human handoff",
-      "esencial": "—",
-      "crecimiento": "—",
-      "escala": "In activation"
-    }
+    { "label": "Team members", "esencial": "3", "crecimiento": "10", "escala": "25" },
+    { "label": "Channels with official connection", "esencial": "Up to 2", "crecimiento": "Up to 4", "escala": "Up to 8" },
+    { "label": "Operational credits / mo", "esencial": "60", "crecimiento": "180", "escala": "400" },
+    { "label": "Leads, contacts and follow-up CRM", "esencial": "✓", "crecimiento": "✓", "escala": "✓" },
+    { "label": "Appointment calendar", "esencial": "✓", "crecimiento": "✓", "escala": "✓" },
+    { "label": "Brand, library and content preparation", "esencial": "✓", "crecimiento": "✓", "escala": "✓" },
+    { "label": "Content planner", "esencial": "—", "crecimiento": "✓", "escala": "✓" },
+    { "label": "Lead map and source", "esencial": "—", "crecimiento": "✓", "escala": "✓" },
+    { "label": "Results, quotes and contracts", "esencial": "—", "crecimiento": "✓", "escala": "✓" },
+    { "label": "Commercial automation", "esencial": "—", "crecimiento": "—", "escala": "✓" },
+    { "label": "Priority support", "esencial": "—", "crecimiento": "—", "escala": "✓" },
+    { "label": "Operational analytics", "esencial": "—", "crecimiento": "—", "escala": "✓" },
+    { "label": "AI agent with human handoff", "esencial": "—", "crecimiento": "—", "escala": "In activation" }
   ],
   "planDetail": {
     "back": "← Back to plans",
@@ -205,21 +92,11 @@
     "inheritsLabel": "Also includes everything in the previous plan.",
     "trialTitle": "How the 7-day trial works",
     "trialLines": [
-      {
-        "text": "During the trial you get temporary access to the Scale tier."
-      },
-      {
-        "text": "The 7-day trial is enabled from the CRM (crm.pawwerapp.com). This site does not capture or store card data."
-      },
-      {
-        "text": "Billing will be enabled through a hosted Stripe or Mercado Pago checkout when the integration is active."
-      },
-      {
-        "text": "You can cancel your subscription at any time from the CRM. If you cancel before the 7 days end, no charge is made."
-      },
-      {
-        "text": "Tax, proration and credit renewal conditions: to be confirmed with PAWWER."
-      }
+      { "text": "During the trial you get temporary access to the Scale tier." },
+      { "text": "The 7-day trial is enabled from the CRM (crm.pawwerapp.com). This site does not capture or store card data." },
+      { "text": "Billing will be enabled through a hosted Stripe or Mercado Pago checkout when the integration is active." },
+      { "text": "You can cancel your subscription at any time from the CRM. If you cancel before the 7 days end, no charge is made." },
+      { "text": "Tax, proration and credit renewal conditions: to be confirmed with PAWWER." }
     ],
     "activationTitle": "In activation",
     "exclusionsTitle": "What the monthly fee does not cover",
@@ -233,36 +110,21 @@
       "type": "hero",
       "anchor": "",
       "kicker": "Commercial & marketing CRM",
-      "h1a": "Every lead has",
-      "h1b": "a story.",
-      "sub": "Organize your leads, centralize conversations and make sales follow-up measurable.",
-      "ctaPrimary": "Try PAWWER for 7 days",
+      "h1a": "Data makes",
+      "h1b": "momentum.",
+      "sub": "Your leads are already talking. PAWWER turns every conversation into context, and every context into action.",
+      "ctaPrimary": "Build your system",
       "ctaSecondary": "Explore the process",
       "metaLeft": "Scroll to explore",
       "metaRight": "CRM / Marketing / Follow-up",
       "mediaType": "image",
-      "image": "/img/hero-inmobiliario-clientes.png",
+      "image": "",
       "video": "",
       "poster": "",
-      "mediaPlacement": "background",
-      "focalX": 62,
-      "focalY": 45,
-      "overlay": 0,
-      "mediaHeight": 740,
-      "textTone": "dark",
       "slides": [
-        {
-          "image": "/img/hero-inmobiliario-clientes.png",
-          "alt": "Clientes visitan una propiedad"
-        },
-        {
-          "image": "/img/autos-01.jpg",
-          "alt": "Atención a una cliente en agencia de autos"
-        },
-        {
-          "image": "/img/recepcion-01.jpg",
-          "alt": "Atención y bienvenida en recepción"
-        }
+        { "image": "/img/inmobiliario-01.jpg", "alt": "Real estate team helping a family" },
+        { "image": "/img/autos-01.jpg", "alt": "Advisor helping a car dealership customer" },
+        { "image": "/img/recepcion-01.jpg", "alt": "Customer service at reception" }
       ]
     },
     {
@@ -271,7 +133,9 @@
       "label": "PAWWER for teams on the move",
       "h2a": "When everything that",
       "h2b": "matters is connected.",
-      "body": "One read on your commercial operation: capture, engage, convert and measure without losing the thread."
+      "body": "One read on your commercial operation: capture, engage, convert and measure without losing the thread.",
+      "image": "/img/crm-seguimiento.png",
+      "imageAlt": "Lead follow-up in PAWWER"
     },
     {
       "type": "process",
@@ -280,26 +144,11 @@
       "h2a": "From the first signal",
       "h2b": "to the next step.",
       "phases": [
-        {
-          "name": "Capture",
-          "line": "Every lead arrives with its source and context, whatever the channel."
-        },
-        {
-          "name": "Understand",
-          "line": "See the full history before you reply: what they asked, when and through which channel."
-        },
-        {
-          "name": "Engage",
-          "line": "Conversations, meetings and tasks in one place, with the next step always visible."
-        },
-        {
-          "name": "Convert",
-          "line": "Quotes, proposals and closing connected to follow-up, with no loose ends."
-        },
-        {
-          "name": "Measure",
-          "line": "Source, results and team activity to decide where to invest energy."
-        }
+        { "name": "Capture", "line": "Every lead arrives with its source and context, whatever the channel." },
+        { "name": "Understand", "line": "See the full history before you reply: what they asked, when and through which channel." },
+        { "name": "Engage", "line": "Conversations, meetings and tasks in one place, with the next step always visible." },
+        { "name": "Convert", "line": "Quotes, proposals and closing connected to follow-up, with no loose ends." },
+        { "name": "Measure", "line": "Source, results and team activity to decide where to invest energy." }
       ]
     },
     {
@@ -309,86 +158,30 @@
       "h2a": "One system,",
       "h2b": "three moves.",
       "items": [
-        {
-          "icon": "chat",
-          "h3": "Engage with context",
-          "p": "Leads, contacts and follow-up in one place so every conversation keeps its continuity."
-        },
-        {
-          "icon": "calendar",
-          "h3": "Turn interest into action",
-          "p": "Connect your calendar with follow-up and give every opportunity a next step."
-        },
-        {
-          "icon": "chart",
-          "h3": "Measure what moves the team",
-          "p": "Source, results and operational analytics to decide where to invest energy."
-        }
+        { "icon": "chat", "h3": "Engage with context", "p": "Leads, contacts and follow-up in one place so every conversation keeps its continuity." },
+        { "icon": "calendar", "h3": "Turn interest into action", "p": "Connect your calendar with follow-up and give every opportunity a next step." },
+        { "icon": "chart", "h3": "Measure what moves the team", "p": "Source, results and operational analytics to decide where to invest energy." }
       ]
     },
     {
       "type": "showcase",
       "anchor": "",
       "eyebrow": "Product view",
-      "h2": "Your operation, at a glance.",
-      "body": "See your pipeline, appointments and your team’s next steps. This is an actual PAWWER screenshot.",
-      "image": "/img/crm-dashboard.png",
+      "h2": "The next step is clear.",
+      "body": "One read on your commercial operation: capture, engage, convert and measure without losing the thread.",
+      "image": "",
       "mock": {
         "bar": "Commercial operating system",
         "eyebrow": "Today · 09:42",
         "h3": "The next step is clear.",
         "leads": [
-          {
-            "stage": "New lead",
-            "initials": "AC",
-            "name": "Andrea C.",
-            "role": "Service inquiry",
-            "status": "Next step defined"
-          },
-          {
-            "stage": "Following up",
-            "initials": "LM",
-            "name": "Luis M.",
-            "role": "Proposal in review",
-            "status": "Meeting booked"
-          },
-          {
-            "stage": "Proposal",
-            "initials": "SR",
-            "name": "Sofía R.",
-            "role": "Commercial project",
-            "status": "Next step defined"
-          }
+          { "stage": "New lead", "initials": "AC", "name": "Andrea C.", "role": "Service inquiry", "status": "Next step defined" },
+          { "stage": "Following up", "initials": "LM", "name": "Luis M.", "role": "Proposal in review", "status": "Meeting booked" },
+          { "stage": "Proposal", "initials": "SR", "name": "Sofía R.", "role": "Commercial project", "status": "Next step defined" }
         ],
         "context": "One history that keeps things moving.",
         "caption": "Conceptual view · fictional data"
       }
-    },
-    {
-      "type": "gallery",
-      "anchor": "casos",
-      "h2": "Follow-up becomes real encounters.",
-      "body": "For teams that sell, schedule and guide decisions.",
-      "items": [
-        {
-          "image": "/img/portrait-autos-cliente.png",
-          "alt": "Customer receives car keys",
-          "title": "Car dealerships",
-          "caption": "From an inquiry to a test drive."
-        },
-        {
-          "image": "/img/inmobiliaria-entrega-llaves-portrait.png",
-          "alt": "Couple receives house keys",
-          "title": "Real estate",
-          "caption": "Every visit and proposal, in context."
-        },
-        {
-          "image": "/img/spa-proxima-cita-portrait.png",
-          "alt": "Customer schedules her next appointment",
-          "title": "Services and wellness",
-          "caption": "A next appointment with follow-up."
-        }
-      ]
     },
     {
       "type": "benefits",
@@ -397,21 +190,9 @@
       "h2a": "Less memory.",
       "h2b": "More momentum.",
       "items": [
-        {
-          "icon": "target",
-          "h3": "A place for every lead",
-          "p": "Centralize contacts and opportunities to work from a shared view."
-        },
-        {
-          "icon": "calendar",
-          "h3": "A clear next step",
-          "p": "Connect meetings and follow-up to keep the commercial rhythm."
-        },
-        {
-          "icon": "chart",
-          "h3": "A measurable read",
-          "p": "Understand what works and what needs attention from Growth and Scale."
-        }
+        { "icon": "target", "h3": "A place for every lead", "p": "Centralize contacts and opportunities to work from a shared view." },
+        { "icon": "calendar", "h3": "A clear next step", "p": "Connect meetings and follow-up to keep the commercial rhythm." },
+        { "icon": "chart", "h3": "A measurable read", "p": "Understand what works and what needs attention from Growth and Scale." }
       ]
     },
     {
@@ -449,14 +230,8 @@
       "type": "notes",
       "anchor": "",
       "items": [
-        {
-          "lead": "The monthly fee covers PAWWER.",
-          "body": "It does not include ad spend, Meta, Google or TikTok charges, phone numbers, SMS, WhatsApp templates, messaging usage or third-party services."
-        },
-        {
-          "lead": "",
-          "body": "No card is captured on this site. The trial is enabled from the CRM and billing will use a hosted checkout when the integration is active. Tax and renewal conditions: to be confirmed with PAWWER."
-        }
+        { "lead": "The monthly fee covers PAWWER.", "body": "It does not include ad spend, Meta, Google or TikTok charges, phone numbers, SMS, WhatsApp templates, messaging usage or third-party services." },
+        { "lead": "", "body": "No card is captured on this site. The trial is enabled from the CRM and billing will use a hosted checkout when the integration is active. Tax and renewal conditions: to be confirmed with PAWWER." }
       ]
     },
     {

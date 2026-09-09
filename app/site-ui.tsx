@@ -35,7 +35,9 @@ export function Header({ locale, homeHref, altHref, draft, crmUrl = CRM_URL }: {
 }
 
 export function Footer({ locale, homeHref, draft, crmUrl = CRM_URL }: { locale: Locale; homeHref: string; draft?: Content; crmUrl?: string }) {
-  const t = (draft || content[locale]).footer;
+  const current = draft || content[locale];
+  const t = current.footer;
+  const notes = current.blocks.find(block => block.type === 'notes');
   return (
     <footer className="site-footer">
       <div className="wrap site-footer__inner">
@@ -43,6 +45,7 @@ export function Footer({ locale, homeHref, draft, crmUrl = CRM_URL }: { locale: 
         <a href={t.privacyHref}>{t.privacy}</a>
         <a href={crmUrl}>{(draft || content[locale]).nav.login} <ArrowUpRight size={13} /></a>
         <p className="site-footer__spacer">© {new Date().getFullYear()} {t.rights}</p>
+        {notes?.type === 'notes' && <div className="site-footer__disclaimer">{notes.items.map((note, i) => <p key={i}>{note.lead && <strong>{note.lead} </strong>}{note.body}</p>)}</div>}
       </div>
     </footer>
   );

@@ -156,6 +156,9 @@ a:focus-visible, button:focus-visible {
 .site-footer .brand { color: var(--on-dark); }
 .site-footer a:hover { color: #fff; }
 .site-footer__spacer { margin-left: auto; }
+.site-footer__disclaimer { flex: 0 0 100%; border-top: 1px solid var(--line-dark); margin-top: 24px; padding-top: 18px; font-size: 12.5px; line-height: 1.6; color: var(--on-dark-2); }
+.site-footer__disclaimer p { margin: 0 0 8px; max-width: none; }
+@media (max-width: 640px) { .site-footer__spacer { margin-left: 0; width: 100%; } .site-footer__disclaimer { margin-top: 12px; } }
 
 /* ---------- Reveal ---------- */
 [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
