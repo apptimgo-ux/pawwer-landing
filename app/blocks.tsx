@@ -31,7 +31,7 @@ function Cell({ value }: { value: string }) {
 
 export function BlockList({ locale, draft, settings = siteSettings }: { locale: Locale; draft?: Content; settings?: SiteSettings }) {
   const t = draft || content[locale];
-  return <>{t.blocks.map((b, i) => <BlockView key={i} block={b} locale={locale} t={t} settings={settings} />)}</>;
+  return <>{t.blocks.map((b, i) => <div key={i} data-block-index={i} data-block-type={b.type} style={{ display: "contents" }}><BlockView block={b} locale={locale} t={t} settings={settings} /></div>)}</>;
 }
 
 function BlockView({ block, locale, t, settings }: { block: Block; locale: Locale; t: Content; settings: SiteSettings }) {
@@ -41,16 +41,16 @@ function BlockView({ block, locale, t, settings }: { block: Block; locale: Local
   switch (block.type) {
     case 'hero':
       return (
-        <section className={`hero${block.mediaPlacement === 'background' && block.mediaType !== 'none' && (block.image || block.video) ? ` hero--background hero--${block.textTone || 'light'}` : ''}`} id={id} style={block.mediaPlacement === 'background' ? { minHeight: `${Math.min(1000, Math.max(320, block.mediaHeight || 640))}px` } : undefined}>
+        <section className={`hero${block.mediaPlacement === 'background' && block.mediaType !== 'none' && (block.image || block.video || block.slides?.length) ? ` hero--background hero--${block.textTone || 'light'}` : ''}`} id={id} style={block.mediaPlacement === 'background' ? { minHeight: `${Math.min(1000, Math.max(320, block.mediaHeight || 640))}px` } : undefined}>
           <div className="wrap hero__inner">
             <p className="hero__kicker"><i /> {block.kicker}</p>
-            <h1>{block.h1a} {block.h1b}</h1>
+            <h1><span data-edit="h1a">{block.h1a}</span> <span data-edit="h1b">{block.h1b}</span></h1>
             <div className="hero__body">
               <div className="hero__actions">
                 <a className="btn btn--solid" href={contact.trial}>{block.ctaPrimary} <ArrowUpRight size={17} /></a>
                 {block.ctaSecondary && <a className="textlink" href="#soluciones">{block.ctaSecondary}</a>}
               </div>
-              <p className="hero__lead">{block.sub}</p>
+              <p className="hero__lead" data-edit="sub">{block.sub}</p>
             </div>
             <div className="hero__meta">
               <span>{block.metaLeft}</span>
@@ -58,17 +58,25 @@ function BlockView({ block, locale, t, settings }: { block: Block; locale: Local
               <span>{block.metaRight}</span>
             </div>
           </div>
-          <HeroMedia type={block.mediaType} image={block.image} video={block.video} poster={block.poster} placement={block.mediaPlacement} focalX={block.focalX} focalY={block.focalY} overlay={block.overlay} height={block.mediaHeight} fit={block.mediaFit} alt={block.imageAlt} />
+          <HeroMedia slides={block.slides} type={block.mediaType} image={block.image} video={block.video} poster={block.poster} placement={block.mediaPlacement} focalX={block.focalX} focalY={block.focalY} overlay={block.overlay} height={block.mediaHeight} fit={block.mediaFit} alt={block.imageAlt} />
         </section>
       );
+
+    case 'gallery':
+      return <section className="band customer-gallery" id={id}><div className="wrap">
+        <h2 data-edit="h2">{block.h2}</h2><p data-edit="body">{block.body}</p>
+        <div className="customer-gallery__grid">{block.items.map((item,i)=><figure key={i}>
+          <img src={item.image} alt={item.alt} loading="lazy" />
+          <figcaption><h3>{item.title}</h3><p>{item.caption}</p></figcaption>
+        </figure>)}</div></div></section>;
 
     case 'statement':
       return (
         <section className="band statement" id={id}>
           <div className="wrap" data-reveal>
             <p className="eyebrow">{block.label}</p>
-            <h2>{block.h2a} {block.h2b}</h2>
-            <p>{block.body}</p>
+            <h2><span data-edit="h2a">{block.h2a}</span> <span data-edit="h2b">{block.h2b}</span></h2>
+            <p data-edit="body">{block.body}</p>
           </div>
         </section>
       );
@@ -79,7 +87,7 @@ function BlockView({ block, locale, t, settings }: { block: Block; locale: Local
           <div className="wrap">
             <div className="process__head" data-reveal>
               <p className="eyebrow">{block.label}</p>
-              <h2>{block.h2a} {block.h2b}</h2>
+              <h2><span data-edit="h2a">{block.h2a}</span> <span data-edit="h2b">{block.h2b}</span></h2>
             </div>
             {block.phases.map((phase, i) => (
               <div className="phase" key={phase.name + i} data-reveal>
@@ -100,7 +108,7 @@ function BlockView({ block, locale, t, settings }: { block: Block; locale: Local
           <div className="wrap">
             <div className="pillars__head" data-reveal>
               <p className="eyebrow">{block.eyebrow}</p>
-              <h2>{block.h2a} {block.h2b}</h2>
+              <h2><span data-edit="h2a">{block.h2a}</span> <span data-edit="h2b">{block.h2b}</span></h2>
             </div>
             <div className="pillars__grid">
               {block.items.map((item, i) => (
@@ -121,8 +129,8 @@ function BlockView({ block, locale, t, settings }: { block: Block; locale: Local
           <div className="wrap showcase__inner">
             <div className="showcase__copy" data-reveal>
               <p className="eyebrow">{block.eyebrow}</p>
-              <h2>{block.h2}</h2>
-              <p>{block.body}</p>
+              <h2 data-edit="h2">{block.h2}</h2>
+              <p data-edit="body">{block.body}</p>
             </div>
             {block.image ? (
               <img className="mock mock--img" src={block.image} alt="" data-reveal />
@@ -164,7 +172,7 @@ function BlockView({ block, locale, t, settings }: { block: Block; locale: Local
           <div className="wrap">
             <div className="benefits__head" data-reveal>
               <p className="eyebrow">{block.eyebrow}</p>
-              <h2>{block.h2a} {block.h2b}</h2>
+              <h2><span data-edit="h2a">{block.h2a}</span> <span data-edit="h2b">{block.h2b}</span></h2>
             </div>
             <div className="benefits__grid">
               {block.items.map((item, i) => (
@@ -205,7 +213,7 @@ function BlockView({ block, locale, t, settings }: { block: Block; locale: Local
           <div className="wrap">
             <div className="pricing__head" data-reveal>
               <p className="eyebrow">{block.eyebrow}</p>
-              <h2>{block.h2a} {block.h2b}</h2>
+              <h2><span data-edit="h2a">{block.h2a}</span> <span data-edit="h2b">{block.h2b}</span></h2>
               <p>{block.intro}</p>
             </div>
             <div className="plans">
@@ -264,8 +272,8 @@ function BlockView({ block, locale, t, settings }: { block: Block; locale: Local
           <div className="wrap agency__inner" data-reveal>
             <div>
               <p className="eyebrow">{block.eyebrow}</p>
-              <h2>{block.h2a} {block.h2b}</h2>
-              <p>{block.body}</p>
+              <h2><span data-edit="h2a">{block.h2a}</span> <span data-edit="h2b">{block.h2b}</span></h2>
+              <p data-edit="body">{block.body}</p>
             </div>
             <a className="btn btn--solid" href={contact.agency}>{block.cta} <ArrowUpRight size={16} /></a>
           </div>
@@ -291,7 +299,7 @@ function BlockView({ block, locale, t, settings }: { block: Block; locale: Local
           <div className="wrap cta__grid">
             <div data-reveal>
               <p className="eyebrow">{block.eyebrow}</p>
-              <h2>{block.h2a} {block.h2b}</h2>
+              <h2><span data-edit="h2a">{block.h2a}</span> <span data-edit="h2b">{block.h2b}</span></h2>
               <div className="cta__actions">
                 <a className="btn btn--solid" href={contact.trial}>{block.buttonLabel} <ArrowUpRight size={17} /></a>
               </div>

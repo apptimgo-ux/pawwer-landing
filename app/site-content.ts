@@ -12,7 +12,8 @@ type Lead = { stage: string; initials: string; name: string; role: string; statu
 type Note = { lead: string; body: string };
 
 export type Block =
-  | { type: 'hero'; anchor?: string; kicker: string; h1a: string; h1b: string; sub: string; ctaPrimary: string; ctaSecondary: string; metaLeft: string; metaRight: string; mediaType: 'none' | 'image' | 'video'; image: string; video: string; poster: string; mediaPlacement?: 'below' | 'background'; focalX?: number; focalY?: number; overlay?: number; mediaHeight?: number; mediaFit?: 'cover' | 'contain'; textTone?: 'light' | 'dark'; imageAlt?: string }
+  | { type: 'gallery'; anchor?: string; h2: string; body: string; items: { image: string; alt: string; title: string; caption: string }[] }
+  | { type: 'hero'; anchor?: string; kicker: string; h1a: string; h1b: string; sub: string; ctaPrimary: string; ctaSecondary: string; metaLeft: string; metaRight: string; mediaType: 'none' | 'image' | 'video'; slides?: { image: string; alt?: string }[]; image: string; video: string; poster: string; mediaPlacement?: 'below' | 'background'; focalX?: number; focalY?: number; overlay?: number; mediaHeight?: number; mediaFit?: 'cover' | 'contain'; textTone?: 'light' | 'dark'; imageAlt?: string }
   | { type: 'statement'; anchor?: string; label: string; h2a: string; h2b: string; body: string }
   | { type: 'process'; anchor?: string; label: string; h2a: string; h2b: string; phases: Phase[] }
   | { type: 'pillars'; anchor?: string; eyebrow: string; h2a: string; h2b: string; items: Item[] }

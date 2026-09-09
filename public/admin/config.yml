@@ -14,50 +14,6 @@ editor:
   preview: true
 
 collections:
-  - name: ajustes
-    label: "Ajustes generales"
-    delete: false
-    files:
-      - name: settings
-        label: "Contacto, precios e imagen para redes"
-        file: "content/settings.json"
-        fields:
-          - name: media
-            label: "Imagen para compartir en redes"
-            widget: object
-            fields:
-              - { name: ogImage, label: "Imagen Open Graph (1200×630)", widget: image, required: false }
-          - name: contact
-            label: "Contacto"
-            widget: object
-            fields:
-              - { name: email, label: "Correo", widget: string }
-              - { name: phoneLabel, label: "Teléfono (como se muestra)", widget: string }
-              - { name: phoneHref, label: "Teléfono (enlace, tel:+52...)", widget: string }
-              - { name: addressLine1, label: "Dirección · línea 1", widget: string }
-              - { name: addressLine2, label: "Dirección · línea 2", widget: string }
-              - { name: crmUrl, label: "URL del CRM (botón Sign in)", widget: string }
-          - name: prices
-            label: "Precios (MXN, con símbolo, ej. $1,490)"
-            widget: object
-            fields:
-              - { name: esencial, label: "Esencial", widget: string }
-              - { name: crecimiento, label: "Crecimiento", widget: string }
-              - { name: escala, label: "Escala", widget: string }
-          - name: checkout
-            label: "Enlaces de pago (Stripe / Mercado Pago). Vacío = inicia la prueba en el CRM"
-            widget: object
-            fields:
-              - { name: esencial, label: "Esencial", widget: string, required: false }
-              - { name: crecimiento, label: "Crecimiento", widget: string, required: false }
-              - { name: escala, label: "Escala", widget: string, required: false }
-          - name: privacyReview
-            label: "Fecha de revisión de la política de privacidad"
-            widget: object
-            fields:
-              - { name: es, label: "Español", widget: string }
-              - { name: en, label: "Inglés", widget: string }
-
   - name: contenido_es
     label: "Contenido · Español"
     delete: false
@@ -145,9 +101,9 @@ collections:
               - { name: ctaSales, label: "Enlace · ventas", widget: string }
               - { name: priceUnit, label: "Unidad de precio", widget: string }
           - name: blocks
-            label: "Bloques de la página (arrastra para reordenar)"
+            label: "Editor visual de la página"
             label_singular: "bloque"
-            widget: list
+            widget: pawwer-visual
             types:
               - name: hero
                 label: "Hero (portada)"
@@ -164,7 +120,14 @@ collections:
                   - { name: metaLeft, label: "Pie · izquierda", widget: string }
                   - { name: metaRight, label: "Pie · derecha", widget: string }
                   - { name: mediaType, label: "Medio", widget: select, options: ["none", "image", "video"], default: "none" }
-                  - { name: image, label: "Imagen (si Medio = image)", widget: image, required: false }
+                  - name: slides
+                    label: "Carrusel de imágenes (solo en modo image; arrastra para ordenar)"
+                    widget: list
+                    required: false
+                    fields:
+                      - { name: image, label: "Fotografía", widget: image }
+                      - { name: alt, label: "Descripción", widget: string, required: false }
+                  - { name: image, label: "Imagen alternativa (si el carrusel está vacío)", widget: image, required: false }
                   - { name: video, label: "Video mp4 (si Medio = video)", widget: file, required: false }
                   - { name: poster, label: "Imagen de portada del video", widget: image, required: false }
                   - { name: mediaPlacement, label: "¿Dónde aparece?", widget: select, options: [{ label: "Debajo del texto", value: "below" }, { label: "De fondo, detrás del texto", value: "background" }], default: "below", required: false }
@@ -175,6 +138,21 @@ collections:
                   - { name: mediaFit, label: "Ajuste de la imagen o video", widget: select, options: [{ label: "Llenar el espacio (recorta bordes)", value: "cover" }, { label: "Mostrar completo (puede dejar márgenes)", value: "contain" }], default: "cover", required: false }
                   - { name: textTone, label: "Color del texto sobre el fondo", widget: select, options: [{ label: "Claro", value: "light" }, { label: "Oscuro", value: "dark" }], default: "light", required: false }
                   - { name: imageAlt, label: "Descripción de la imagen para accesibilidad", widget: string, required: false }
+              - name: gallery
+                label: "Fotos y casos de uso"
+                widget: object
+                fields:
+                  - { name: anchor, label: "Ancla", widget: string, required: false }
+                  - { name: h2, label: "Título", widget: string }
+                  - { name: body, label: "Descripción", widget: text }
+                  - name: items
+                    label: "Fotografías"
+                    widget: list
+                    fields:
+                      - { name: image, label: "Imagen", widget: image }
+                      - { name: alt, label: "Descripción accesible", widget: string }
+                      - { name: title, label: "Título", widget: string }
+                      - { name: caption, label: "Texto", widget: text }
               - name: statement
                 label: "Frase destacada"
                 widget: object
@@ -327,6 +305,50 @@ collections:
                   - { name: h2a, label: "Titular · línea 1", widget: string }
                   - { name: h2b, label: "Titular · línea 2", widget: string }
                   - { name: buttonLabel, label: "Botón", widget: string }
+
+  - name: ajustes
+    label: "Ajustes generales"
+    delete: false
+    files:
+      - name: settings
+        label: "Contacto, precios e imagen para redes"
+        file: "content/settings.json"
+        fields:
+          - name: media
+            label: "Imagen para compartir en redes"
+            widget: object
+            fields:
+              - { name: ogImage, label: "Imagen Open Graph (1200×630)", widget: image, required: false }
+          - name: contact
+            label: "Contacto"
+            widget: object
+            fields:
+              - { name: email, label: "Correo", widget: string }
+              - { name: phoneLabel, label: "Teléfono (como se muestra)", widget: string }
+              - { name: phoneHref, label: "Teléfono (enlace, tel:+52...)", widget: string }
+              - { name: addressLine1, label: "Dirección · línea 1", widget: string }
+              - { name: addressLine2, label: "Dirección · línea 2", widget: string }
+              - { name: crmUrl, label: "URL del CRM (botón Sign in)", widget: string }
+          - name: prices
+            label: "Precios (MXN, con símbolo, ej. $1,490)"
+            widget: object
+            fields:
+              - { name: esencial, label: "Esencial", widget: string }
+              - { name: crecimiento, label: "Crecimiento", widget: string }
+              - { name: escala, label: "Escala", widget: string }
+          - name: checkout
+            label: "Enlaces de pago (Stripe / Mercado Pago). Vacío = inicia la prueba en el CRM"
+            widget: object
+            fields:
+              - { name: esencial, label: "Esencial", widget: string, required: false }
+              - { name: crecimiento, label: "Crecimiento", widget: string, required: false }
+              - { name: escala, label: "Escala", widget: string, required: false }
+          - name: privacyReview
+            label: "Fecha de revisión de la política de privacidad"
+            widget: object
+            fields:
+              - { name: es, label: "Español", widget: string }
+              - { name: en, label: "Inglés", widget: string }
 
   - name: contenido_en
     label: "Contenido · English"
