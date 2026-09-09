@@ -185,10 +185,13 @@
 /* Mobile hero: let the content determine the height so nothing is clipped. */
 @media (max-width: 700px) {
   .hero--background {
-    min-height: max(740px, 100svh) !important;
+    display: block !important;
+    min-height: 0 !important;
     height: auto !important;
     padding-top: 42px !important;
-    padding-bottom: 96px !important;
+    padding-bottom: 0 !important;
+    background: var(--paper) !important;
+    color: var(--ink) !important;
   }
   .hero--background .hero__inner {
     width: min(100% - 32px, 620px);
@@ -213,8 +216,24 @@
     line-height: 1.45;
   }
   .hero--background .hero__meta .rule { display: none; }
+  .hero--background .hero__backdrop {
+    position: relative;
+    inset: auto;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    margin-top: 28px;
+    background: var(--paper-2);
+  }
   .hero--background .hero__backdrop > img,
-  .hero--background .hero__backdrop > video { object-position: 68% center !important; }
+  .hero--background .hero__backdrop > video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: 68% center !important;
+  }
+  .hero--background .hero__media-shade { background: linear-gradient(180deg, rgba(20,22,31,.03), rgba(20,22,31,.22)) !important; }
   .hero--background .hero__carousel-controls {
     right: 50%;
     transform: translateX(50%);
