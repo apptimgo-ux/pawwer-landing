@@ -35,8 +35,9 @@
         { "text": "Appointment calendar" },
         { "text": "Brand, library and content preparation" },
         { "text": "3 team members" },
+        { "text": "AI sales agent that answers your leads" },
         { "text": "Up to 2 channels with official connection" },
-        { "text": "60 operational credits" }
+        { "text": "150 AI credits per month" }
       ],
       "note": ""
     },
@@ -51,7 +52,7 @@
         { "text": "Lead map and source" },
         { "text": "Results, quotes and contracts" },
         { "text": "Up to 4 channels with official connection" },
-        { "text": "180 operational credits" }
+        { "text": "500 AI credits per month" }
       ],
       "note": ""
     },
@@ -66,15 +67,15 @@
         { "text": "Priority support" },
         { "text": "Operational analytics" },
         { "text": "Up to 8 channels with official connection" },
-        { "text": "400 operational credits" }
+        { "text": "1,500 AI credits per month" }
       ],
-      "note": "AI agent with human handoff and multichannel automations, pending completion of integration testing."
+      "note": "Multichannel automations are enabled per channel once its official connection is complete."
     }
   ],
   "comparison": [
     { "label": "Team members", "esencial": "3", "crecimiento": "10", "escala": "25" },
     { "label": "Channels with official connection", "esencial": "Up to 2", "crecimiento": "Up to 4", "escala": "Up to 8" },
-    { "label": "Operational credits / mo", "esencial": "60", "crecimiento": "180", "escala": "400" },
+    { "label": "AI credits / mo", "esencial": "150", "crecimiento": "500", "escala": "1,500" },
     { "label": "Leads, contacts and follow-up CRM", "esencial": "✓", "crecimiento": "✓", "escala": "✓" },
     { "label": "Appointment calendar", "esencial": "✓", "crecimiento": "✓", "escala": "✓" },
     { "label": "Brand, library and content preparation", "esencial": "✓", "crecimiento": "✓", "escala": "✓" },
@@ -84,7 +85,7 @@
     { "label": "Commercial automation", "esencial": "—", "crecimiento": "—", "escala": "✓" },
     { "label": "Priority support", "esencial": "—", "crecimiento": "—", "escala": "✓" },
     { "label": "Operational analytics", "esencial": "—", "crecimiento": "—", "escala": "✓" },
-    { "label": "AI agent with human handoff", "esencial": "—", "crecimiento": "—", "escala": "In activation" }
+    { "label": "AI sales agent with human handoff", "esencial": "✓", "crecimiento": "✓", "escala": "✓" }
   ],
   "planDetail": {
     "back": "← Back to plans",
@@ -93,15 +94,15 @@
     "trialTitle": "How the 7-day trial works",
     "trialLines": [
       { "text": "During the trial you get temporary access to the Scale tier." },
-      { "text": "The 7-day trial is enabled from the CRM (crm.pawwerapp.com). This site does not capture or store card data." },
-      { "text": "Billing will be enabled through a hosted Stripe or Mercado Pago checkout when the integration is active." },
+      { "text": "You create your account in the CRM (crm.pawwerapp.com) and add your card in Paddle's secure checkout. This site does not capture or store card data." },
+      { "text": "Nothing is charged during the 7 days. If you don't cancel, your plan is charged in USD on day 8 and renews monthly." },
       { "text": "You can cancel your subscription at any time from the CRM. If you cancel before the 7 days end, no charge is made." },
-      { "text": "Tax, proration and credit renewal conditions: to be confirmed with PAWWER." }
+      { "text": "Paddle processes the payment as PAWWER's authorized reseller and calculates any applicable taxes at checkout. AI credits renew on the 1st of each month." }
     ],
     "activationTitle": "In activation",
     "exclusionsTitle": "What the monthly fee does not cover",
     "ctaTrial": "Start the 7-day trial",
-    "ctaCheckout": "Continue to payment",
+    "ctaCheckout": "Start the 7-day trial",
     "ctaSales": "Talk to sales",
     "priceUnit": "USD / mo"
   },
@@ -210,7 +211,7 @@
       "eyebrow": "Plans & pricing",
       "h2a": "Choose the pace",
       "h2b": "of your growth.",
-      "intro": "7-day trial with temporary access to the Scale tier. No card is captured inside PAWWER; billing will be enabled through hosted checkout. Prices in USD.",
+      "intro": "7-day trial with temporary access to the Scale tier. You add your card in Paddle's secure checkout and nothing is charged until day 8. Prices in USD.",
       "priceUnit": "USD / mo",
       "mostPopular": "Most popular",
       "cta": "Get started",
@@ -233,7 +234,7 @@
       "anchor": "",
       "items": [
         { "lead": "The monthly fee covers PAWWER.", "body": "It does not include ad spend, Meta, Google or TikTok charges, phone numbers, SMS, WhatsApp templates, messaging usage or third-party services." },
-        { "lead": "", "body": "No card is captured on this site. The trial is enabled from the CRM and billing will use a hosted checkout when the integration is active. Tax and renewal conditions: to be confirmed with PAWWER." }
+        { "lead": "", "body": "This site does not capture card data: payment happens in Paddle's secure checkout from the CRM, and Paddle calculates any applicable taxes. AI credits renew on the 1st of each month and do not roll over." }
       ]
     },
     {

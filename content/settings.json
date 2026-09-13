@@ -16,12 +16,12 @@
     "escala": "$329"
   },
   "checkout": {
-    "esencial": "",
-    "crecimiento": "",
-    "escala": ""
+    "esencial": "https://crm.pawwerapp.com/?plan=starter",
+    "crecimiento": "https://crm.pawwerapp.com/?plan=growth",
+    "escala": "https://crm.pawwerapp.com/?plan=pro"
   },
   "privacyReview": {
-    "es": "6 de septiembre de 2026",
-    "en": "September 6, 2026"
+    "es": "13 de septiembre de 2026",
+    "en": "September 13, 2026"
   }
 }

@@ -35,8 +35,9 @@
         { "text": "Calendario de citas" },
         { "text": "Marca, biblioteca y preparación de contenidos" },
         { "text": "3 integrantes" },
+        { "text": "Agente de ventas IA que contesta a tus leads" },
         { "text": "Hasta 2 canales con conexión oficial" },
-        { "text": "60 créditos operativos" }
+        { "text": "150 créditos de IA al mes" }
       ],
       "note": ""
     },
@@ -51,7 +52,7 @@
         { "text": "Mapa y origen de leads" },
         { "text": "Resultados, cotizaciones y contratos" },
         { "text": "Hasta 4 canales con conexión oficial" },
-        { "text": "180 créditos operativos" }
+        { "text": "500 créditos de IA al mes" }
       ],
       "note": ""
     },
@@ -66,15 +67,15 @@
         { "text": "Atención prioritaria" },
         { "text": "Analítica operativa" },
         { "text": "Hasta 8 canales con conexión oficial" },
-        { "text": "400 créditos operativos" }
+        { "text": "1,500 créditos de IA al mes" }
       ],
-      "note": "Agente IA con traspaso humano y automatizaciones multicanal, sujetos a concluir pruebas de integración."
+      "note": "Las automatizaciones multicanal se habilitan por canal al terminar su conexión oficial."
     }
   ],
   "comparison": [
     { "label": "Integrantes", "esencial": "3", "crecimiento": "10", "escala": "25" },
     { "label": "Canales con conexión oficial", "esencial": "Hasta 2", "crecimiento": "Hasta 4", "escala": "Hasta 8" },
-    { "label": "Créditos operativos / mes", "esencial": "60", "crecimiento": "180", "escala": "400" },
+    { "label": "Créditos de IA / mes", "esencial": "150", "crecimiento": "500", "escala": "1,500" },
     { "label": "CRM de leads, contactos y seguimiento", "esencial": "✓", "crecimiento": "✓", "escala": "✓" },
     { "label": "Calendario de citas", "esencial": "✓", "crecimiento": "✓", "escala": "✓" },
     { "label": "Marca, biblioteca y preparación de contenidos", "esencial": "✓", "crecimiento": "✓", "escala": "✓" },
@@ -84,7 +85,7 @@
     { "label": "Automatización comercial", "esencial": "—", "crecimiento": "—", "escala": "✓" },
     { "label": "Atención prioritaria", "esencial": "—", "crecimiento": "—", "escala": "✓" },
     { "label": "Analítica operativa", "esencial": "—", "crecimiento": "—", "escala": "✓" },
-    { "label": "Agente IA con traspaso humano", "esencial": "—", "crecimiento": "—", "escala": "En activación" }
+    { "label": "Agente de ventas IA con traspaso humano", "esencial": "✓", "crecimiento": "✓", "escala": "✓" }
   ],
   "planDetail": {
     "back": "← Volver a planes",
@@ -93,15 +94,15 @@
     "trialTitle": "Cómo funciona la prueba de 7 días",
     "trialLines": [
       { "text": "Durante la prueba tienes acceso temporal al nivel Escala." },
-      { "text": "La prueba de 7 días se habilita desde el CRM (crm.pawwerapp.com). Este sitio no captura ni almacena datos de tarjeta." },
-      { "text": "El cobro se habilitará mediante checkout alojado de Stripe o Mercado Pago cuando la integración esté activa." },
+      { "text": "Creas tu cuenta en el CRM (crm.pawwerapp.com) y registras tu tarjeta en el checkout seguro de Paddle. Este sitio no captura ni almacena datos de tarjeta." },
+      { "text": "No se cobra nada durante los 7 días. Si no cancelas, el día 8 se cobra tu plan en USD y se renueva cada mes." },
       { "text": "Puedes cancelar tu suscripción en cualquier momento desde el CRM. Si cancelas antes de que terminen los 7 días, no se genera ningún cargo." },
-      { "text": "IVA, prorrateo y condiciones de renovación de créditos: por confirmar con PAWWER." }
+      { "text": "Paddle procesa el pago como revendedor autorizado de PAWWER y calcula en el checkout los impuestos que apliquen. Los créditos de IA se renuevan el día 1 de cada mes." }
     ],
     "activationTitle": "En activación",
     "exclusionsTitle": "Qué no cubre la mensualidad",
     "ctaTrial": "Iniciar prueba de 7 días",
-    "ctaCheckout": "Continuar al pago",
+    "ctaCheckout": "Empezar prueba de 7 días",
     "ctaSales": "Hablar con ventas",
     "priceUnit": "USD / mes"
   },
@@ -210,7 +211,7 @@
       "eyebrow": "Planes y precios",
       "h2a": "Elige el ritmo",
       "h2b": "de tu crecimiento.",
-      "intro": "Prueba de 7 días con acceso temporal al nivel Escala. No se captura tarjeta dentro de PAWWER; el cobro se habilitará mediante checkout alojado. Precios en USD.",
+      "intro": "Prueba de 7 días con acceso temporal al nivel Escala. Registras tu tarjeta en el checkout seguro de Paddle y no se cobra nada hasta el día 8. Precios en USD.",
       "priceUnit": "USD / mes",
       "mostPopular": "Más elegido",
       "cta": "Empezar",
@@ -233,7 +234,7 @@
       "anchor": "",
       "items": [
         { "lead": "La mensualidad cubre PAWWER.", "body": "No incluye inversión publicitaria, cargos de Meta, Google o TikTok, números, SMS, plantillas de WhatsApp, consumo de mensajería ni servicios de terceros." },
-        { "lead": "", "body": "No se captura tarjeta dentro de este sitio. La prueba se habilita desde el CRM y el cobro se realizará mediante checkout alojado cuando la integración esté activa. IVA y condiciones de renovación: por confirmar con PAWWER." }
+        { "lead": "", "body": "Este sitio no captura datos de tarjeta: el pago se hace en el checkout seguro de Paddle desde el CRM, y Paddle calcula los impuestos que apliquen. Los créditos de IA se renuevan el día 1 de cada mes y no se acumulan." }
       ]
     },
     {
