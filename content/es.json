@@ -91,18 +91,18 @@
     "back": "← Volver a planes",
     "includesTitle": "Qué incluye",
     "inheritsLabel": "Incluye además todo lo del plan anterior.",
-    "trialTitle": "Cómo funciona la prueba de 7 días",
+    "trialTitle": "Cómo funciona la prueba de 3 días",
     "trialLines": [
       { "text": "Durante la prueba tienes acceso temporal al nivel Escala." },
       { "text": "Creas tu cuenta en el CRM (crm.pawwerapp.com) y registras tu tarjeta en el checkout seguro de Paddle. Este sitio no captura ni almacena datos de tarjeta." },
-      { "text": "No se cobra nada durante los 7 días. Si no cancelas, el día 8 se cobra tu plan en USD y se renueva cada mes." },
-      { "text": "Puedes cancelar tu suscripción en cualquier momento desde el CRM. Si cancelas antes de que terminen los 7 días, no se genera ningún cargo." },
+      { "text": "No se cobra nada durante los 3 días. Si no cancelas, el día 4 se cobra tu plan en USD y se renueva cada mes." },
+      { "text": "Puedes cancelar tu suscripción en cualquier momento desde el CRM. Si cancelas antes de que terminen los 3 días, no se genera ningún cargo." },
       { "text": "Paddle procesa el pago como revendedor autorizado de PAWWER y calcula en el checkout los impuestos que apliquen. Los créditos de IA se renuevan el día 1 de cada mes." }
     ],
     "activationTitle": "En activación",
     "exclusionsTitle": "Qué no cubre la mensualidad",
-    "ctaTrial": "Iniciar prueba de 7 días",
-    "ctaCheckout": "Empezar prueba de 7 días",
+    "ctaTrial": "Iniciar prueba de 3 días",
+    "ctaCheckout": "Empezar prueba de 3 días",
     "ctaSales": "Hablar con ventas",
     "priceUnit": "USD / mes"
   },
@@ -211,7 +211,7 @@
       "eyebrow": "Planes y precios",
       "h2a": "Elige el ritmo",
       "h2b": "de tu crecimiento.",
-      "intro": "Prueba de 7 días con acceso temporal al nivel Escala. Registras tu tarjeta en el checkout seguro de Paddle y no se cobra nada hasta el día 8. Precios en USD.",
+      "intro": "Prueba de 3 días con acceso temporal al nivel Escala. Registras tu tarjeta en el checkout seguro de Paddle y no se cobra nada hasta el día 4. Precios en USD.",
       "priceUnit": "USD / mes",
       "mostPopular": "Más elegido",
       "cta": "Empezar",
@@ -243,7 +243,7 @@
       "eyebrow": "Empecemos juntos",
       "h2a": "Haz que cada",
       "h2b": "lead avance.",
-      "buttonLabel": "Solicitar prueba de 7 días"
+      "buttonLabel": "Solicitar prueba de 3 días"
     }
   ]
 }

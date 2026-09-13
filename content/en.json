@@ -91,18 +91,18 @@
     "back": "← Back to plans",
     "includesTitle": "What's included",
     "inheritsLabel": "Also includes everything in the previous plan.",
-    "trialTitle": "How the 7-day trial works",
+    "trialTitle": "How the 3-day trial works",
     "trialLines": [
       { "text": "During the trial you get temporary access to the Scale tier." },
       { "text": "You create your account in the CRM (crm.pawwerapp.com) and add your card in Paddle's secure checkout. This site does not capture or store card data." },
-      { "text": "Nothing is charged during the 7 days. If you don't cancel, your plan is charged in USD on day 8 and renews monthly." },
-      { "text": "You can cancel your subscription at any time from the CRM. If you cancel before the 7 days end, no charge is made." },
+      { "text": "Nothing is charged during the 3 days. If you don't cancel, your plan is charged in USD on day 4 and renews monthly." },
+      { "text": "You can cancel your subscription at any time from the CRM. If you cancel before the 3 days end, no charge is made." },
       { "text": "Paddle processes the payment as PAWWER's authorized reseller and calculates any applicable taxes at checkout. AI credits renew on the 1st of each month." }
     ],
     "activationTitle": "In activation",
     "exclusionsTitle": "What the monthly fee does not cover",
-    "ctaTrial": "Start the 7-day trial",
-    "ctaCheckout": "Start the 7-day trial",
+    "ctaTrial": "Start the 3-day trial",
+    "ctaCheckout": "Start the 3-day trial",
     "ctaSales": "Talk to sales",
     "priceUnit": "USD / mo"
   },
@@ -211,7 +211,7 @@
       "eyebrow": "Plans & pricing",
       "h2a": "Choose the pace",
       "h2b": "of your growth.",
-      "intro": "7-day trial with temporary access to the Scale tier. You add your card in Paddle's secure checkout and nothing is charged until day 8. Prices in USD.",
+      "intro": "3-day trial with temporary access to the Scale tier. You add your card in Paddle's secure checkout and nothing is charged until day 4. Prices in USD.",
       "priceUnit": "USD / mo",
       "mostPopular": "Most popular",
       "cta": "Get started",
@@ -243,7 +243,7 @@
       "eyebrow": "Start building with us",
       "h2a": "Make every",
       "h2b": "lead move forward.",
-      "buttonLabel": "Request the 7-day trial"
+      "buttonLabel": "Request the 3-day trial"
     }
   ]
 }

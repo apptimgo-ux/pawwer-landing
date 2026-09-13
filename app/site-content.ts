@@ -100,12 +100,12 @@ export const content: Record<Locale, Content> = {
 // --- Correos ---
 const MAIL_SUBJECTS = {
   es: {
-    trial: 'Quiero solicitar la prueba de 7 días de PAWWER',
+    trial: 'Quiero solicitar la prueba de 3 días de PAWWER',
     agency: 'Quiero una propuesta de PAWWER Agencia',
     plan: (name: string) => `Me interesa el plan ${name} de PAWWER`,
   },
   en: {
-    trial: 'I would like to request the PAWWER 7-day trial',
+    trial: 'I would like to request the PAWWER 3-day trial',
     agency: 'I would like a PAWWER Agencia proposal',
     plan: (name: string) => `I'm interested in the PAWWER ${name} plan`,
   },

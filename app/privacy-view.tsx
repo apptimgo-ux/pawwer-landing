@@ -46,7 +46,7 @@ function esContent() {
         h2: 'CRM, pagos y servicios externos',
         ps: [
           <>El enlace Sign in / Login conduce a <a href={CRM_URL}>crm.pawwerapp.com</a>. El tratamiento de datos dentro del CRM debe detallarse en su propio aviso. Esta landing no accede a tus contactos ni a tus conversaciones del CRM.</>,
-          'La prueba de 7 días se inicia desde el CRM (crm.pawwerapp.com) y requiere registrar una tarjeta de crédito, que se cobra automáticamente al terminar la prueba salvo que canceles antes. Esa captura de tarjeta y ese cobro ocurren en el checkout de Paddle (Paddle.com Market Limited), que actúa como revendedor autorizado de PAWWER, no en esta landing, que no procesa pagos ni almacena tarjetas. Paddle trata los datos de pago conforme a su propio aviso de privacidad; PAWWER recibe el estado de la suscripción, no los datos de la tarjeta.',
+          'La prueba de 3 días se inicia desde el CRM (crm.pawwerapp.com) y requiere registrar una tarjeta de crédito, que se cobra automáticamente al terminar la prueba salvo que canceles antes. Esa captura de tarjeta y ese cobro ocurren en el checkout de Paddle (Paddle.com Market Limited), que actúa como revendedor autorizado de PAWWER, no en esta landing, que no procesa pagos ni almacena tarjetas. Paddle trata los datos de pago conforme a su propio aviso de privacidad; PAWWER recibe el estado de la suscripción, no los datos de la tarjeta.',
           'Los servicios de correo y alojamiento que intervengan en la atención de solicitudes deben identificarse en la versión definitiva. Cualquier transferencia que requiera consentimiento deberá informarse y gestionarse antes de realizarse.',
         ],
       },
@@ -109,7 +109,7 @@ function enContent() {
         h2: 'CRM, payments and external services',
         ps: [
           <>The Sign in / Login link leads to <a href={CRM_URL}>crm.pawwerapp.com</a>. Data processing inside the CRM must be detailed in its own notice. This landing page does not access your contacts or your CRM conversations.</>,
-          'The 7-day trial is started from the CRM (crm.pawwerapp.com) and requires registering a credit card, which is charged automatically when the trial ends unless you cancel first. That card capture and charge happen in Paddle’s checkout (Paddle.com Market Limited), which acts as PAWWER’s authorized reseller, not on this landing page, which does not process payments or store cards. Paddle handles payment data under its own privacy notice; PAWWER receives the subscription status, not the card details.',
+          'The 3-day trial is started from the CRM (crm.pawwerapp.com) and requires registering a credit card, which is charged automatically when the trial ends unless you cancel first. That card capture and charge happen in Paddle’s checkout (Paddle.com Market Limited), which acts as PAWWER’s authorized reseller, not on this landing page, which does not process payments or store cards. Paddle handles payment data under its own privacy notice; PAWWER receives the subscription status, not the card details.',
           'The email and hosting services involved in handling requests must be identified in the final version. Any transfer requiring consent must be disclosed and managed before it takes place.',
         ],
       },

@@ -45,7 +45,7 @@ collections:
               - { name: crecimiento, label: "Crecimiento", widget: string }
               - { name: escala, label: "Escala", widget: string }
           - name: checkout
-            label: "Enlaces de pago (Stripe / Mercado Pago). Vacío = inicia la prueba en el CRM"
+            label: "Enlace de cada plan: el registro del CRM con ?plan=. Vacío = inicia la prueba en el CRM"
             widget: object
             fields:
               - { name: esencial, label: "Esencial", widget: string, required: false }
