@@ -97,7 +97,7 @@
       { "text": "Creas tu cuenta en el CRM (crm.pawwerapp.com) y registras tu tarjeta en el checkout seguro de Paddle. Este sitio no captura ni almacena datos de tarjeta." },
       { "text": "No se cobra nada durante los 3 días. Si no cancelas, el día 4 se cobra tu plan en USD y se renueva cada mes." },
       { "text": "Puedes cancelar tu suscripción en cualquier momento desde el CRM. Si cancelas antes de que terminen los 3 días, no se genera ningún cargo." },
-      { "text": "Paddle procesa el pago como revendedor autorizado de PAWWER y calcula en el checkout los impuestos que apliquen. Los créditos de IA se renuevan el día 1 de cada mes." }
+      { "text": "Los precios no incluyen impuestos: Paddle, como revendedor autorizado de PAWWER, suma en el checkout los que apliquen —en México, el IVA— y los verás antes de pagar. Los créditos de IA se renuevan el día 1 de cada mes." }
     ],
     "activationTitle": "En activación",
     "exclusionsTitle": "Qué no cubre la mensualidad",
@@ -211,7 +211,7 @@
       "eyebrow": "Planes y precios",
       "h2a": "Elige el ritmo",
       "h2b": "de tu crecimiento.",
-      "intro": "Prueba de 3 días con acceso temporal al nivel Escala. Registras tu tarjeta en el checkout seguro de Paddle y no se cobra nada hasta el día 4. Precios en USD.",
+      "intro": "Prueba de 3 días con acceso temporal al nivel Escala. Registras tu tarjeta en el checkout seguro de Paddle y no se cobra nada hasta el día 4. Precios en USD, sin impuestos: se suman en el checkout.",
       "priceUnit": "USD / mes",
       "mostPopular": "Más elegido",
       "cta": "Empezar",
@@ -234,7 +234,7 @@
       "anchor": "",
       "items": [
         { "lead": "La mensualidad cubre PAWWER.", "body": "No incluye inversión publicitaria, cargos de Meta, Google o TikTok, números, SMS, plantillas de WhatsApp, consumo de mensajería ni servicios de terceros." },
-        { "lead": "", "body": "Este sitio no captura datos de tarjeta: el pago se hace en el checkout seguro de Paddle desde el CRM, y Paddle calcula los impuestos que apliquen. Los créditos de IA se renuevan el día 1 de cada mes y no se acumulan." }
+        { "lead": "", "body": "Este sitio no captura datos de tarjeta: el pago se hace en el checkout seguro de Paddle desde el CRM, y Paddle suma ahí los impuestos que apliquen, que no están incluidos en el precio. Los créditos de IA se renuevan el día 1 de cada mes y no se acumulan." }
       ]
     },
     {

@@ -97,7 +97,7 @@
       { "text": "You create your account in the CRM (crm.pawwerapp.com) and add your card in Paddle's secure checkout. This site does not capture or store card data." },
       { "text": "Nothing is charged during the 3 days. If you don't cancel, your plan is charged in USD on day 4 and renews monthly." },
       { "text": "You can cancel your subscription at any time from the CRM. If you cancel before the 3 days end, no charge is made." },
-      { "text": "Paddle processes the payment as PAWWER's authorized reseller and calculates any applicable taxes at checkout. AI credits renew on the 1st of each month." }
+      { "text": "Prices exclude tax: Paddle, as PAWWER's authorized reseller, adds any applicable tax at checkout and you see it before paying. AI credits renew on the 1st of each month." }
     ],
     "activationTitle": "In activation",
     "exclusionsTitle": "What the monthly fee does not cover",
@@ -211,7 +211,7 @@
       "eyebrow": "Plans & pricing",
       "h2a": "Choose the pace",
       "h2b": "of your growth.",
-      "intro": "3-day trial with temporary access to the Scale tier. You add your card in Paddle's secure checkout and nothing is charged until day 4. Prices in USD.",
+      "intro": "3-day trial with temporary access to the Scale tier. You add your card in Paddle's secure checkout and nothing is charged until day 4. Prices in USD, excluding tax: it is added at checkout.",
       "priceUnit": "USD / mo",
       "mostPopular": "Most popular",
       "cta": "Get started",
@@ -234,7 +234,7 @@
       "anchor": "",
       "items": [
         { "lead": "The monthly fee covers PAWWER.", "body": "It does not include ad spend, Meta, Google or TikTok charges, phone numbers, SMS, WhatsApp templates, messaging usage or third-party services." },
-        { "lead": "", "body": "This site does not capture card data: payment happens in Paddle's secure checkout from the CRM, and Paddle calculates any applicable taxes. AI credits renew on the 1st of each month and do not roll over." }
+        { "lead": "", "body": "This site does not capture card data: payment happens in Paddle's secure checkout from the CRM, where Paddle adds any applicable tax, which is not included in the price. AI credits renew on the 1st of each month and do not roll over." }
       ]
     },
     {
