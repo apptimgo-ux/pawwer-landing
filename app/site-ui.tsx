@@ -43,6 +43,8 @@ export function Footer({ locale, homeHref, draft, crmUrl = CRM_URL }: { locale: 
       <div className="wrap site-footer__inner">
         <a href={homeHref} className="brand" aria-label="PAWWER">pawwer<PawPrint aria-hidden strokeWidth={2.25} /></a>
         <a href={t.privacyHref}>{t.privacy}</a>
+        {t.terms && t.termsHref && <a href={t.termsHref}>{t.terms}</a>}
+        {t.refunds && t.refundsHref && <a href={t.refundsHref}>{t.refunds}</a>}
         <a href={crmUrl}>{(draft || content[locale]).nav.login} <ArrowUpRight size={13} /></a>
         <p className="site-footer__spacer">© {new Date().getFullYear()} {t.rights}</p>
         {notes?.type === 'notes' && <div className="site-footer__disclaimer">{notes.items.map((note, i) => <p key={i}>{note.lead && <strong>{note.lead} </strong>}{note.body}</p>)}</div>}

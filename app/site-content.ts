@@ -50,7 +50,7 @@ export type Content = {
     skip: string; links: { label: string; hash: string }[]; login: string;
     menuOpen: string; menuClose: string; langLabel: string; langAria: string;
   };
-  footer: { privacy: string; privacyHref: string; rights: string };
+  footer: { privacy: string; privacyHref: string; rights: string; terms?: string; termsHref?: string; refunds?: string; refundsHref?: string };
   plans: Plan[];
   comparison: CompareRow[];
   planDetail: PlanDetailCopy;

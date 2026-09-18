@@ -99,6 +99,10 @@ collections:
             fields:
               - { name: privacy, label: "Texto del enlace de privacidad", widget: string }
               - { name: privacyHref, label: "Ruta de la política", widget: string }
+              - { name: terms, label: "Texto del enlace de términos", widget: string, required: false }
+              - { name: termsHref, label: "Ruta de los términos", widget: string, required: false }
+              - { name: refunds, label: "Texto del enlace de reembolsos", widget: string, required: false }
+              - { name: refundsHref, label: "Ruta de la política de reembolso", widget: string, required: false }
               - { name: rights, label: "Texto de derechos", widget: string }
           - name: plans
             label: "Planes (el precio se edita en Ajustes)"

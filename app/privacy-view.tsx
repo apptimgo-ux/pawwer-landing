@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { Header, Footer } from './site-ui';
 import { content, type Locale, EMAIL, PHONE_HREF, PHONE_LABEL, ADDRESS_LINES, CRM_URL, PRIVACY_REVIEW } from './site-content';
+import { EMPRESA } from './legal-docs';
 
 const mailTo = (subject?: string) => (subject ? `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}` : `mailto:${EMAIL}`);
 
@@ -12,23 +13,24 @@ function esContent() {
     back: '← Volver a PAWWER',
     label: 'Privacidad',
     h1: 'Tu información merece claridad.',
-    lead: `Política de privacidad de la landing de PAWWER. Versión de revisión: ${PRIVACY_REVIEW.es}.`,
+    lead: `Política de privacidad de PAWWER. Vigente desde el ${PRIVACY_REVIEW.es}.`,
     legalNote: (
-      <><strong>Documento preliminar.</strong> Antes de su publicación definitiva, PAWWER debe confirmar la identidad legal del responsable, sus proveedores y los plazos de conservación. Esta política describe el alcance de esta landing; no sustituye el aviso del CRM.</>
+      <>Esta política cubre <strong>este sitio y el CRM</strong> de <a href={CRM_URL}>crm.pawwerapp.com</a>. Los datos de tus contactos y conversaciones dentro del CRM son tuyos: PAWWER los trata para prestarte el servicio y siguiendo tus instrucciones.</>
     ),
     blocks: [
       {
         h2: 'Contacto y responsable',
         ps: [
-          'PAWWER es el nombre comercial presentado en este sitio. La razón social o nombre legal del responsable está pendiente de confirmación.',
-          <>Domicilio de contacto proporcionado: {address} Puedes escribir a <a href={mailTo()}>{EMAIL}</a> o llamar al <a href={PHONE_HREF}>{PHONE_LABEL}</a>.</>,
+          <>El responsable del tratamiento es <strong>{EMPRESA}</strong>, que opera el servicio bajo la marca PAWWER.</>,
+          <>Domicilio: {address} Puedes escribir a <a href={mailTo()}>{EMAIL}</a> o llamar al <a href={PHONE_HREF}>{PHONE_LABEL}</a>.</>,
         ],
       },
       {
         h2: 'Qué información se utiliza',
         ps: [
           'Esta landing no contiene formularios de registro ni solicita tarjetas. Si decides contactarnos por correo o teléfono, compartes los datos que incluyas en tu comunicación, por ejemplo tu nombre, correo, empresa y necesidades comerciales. Evita enviar contraseñas, tarjetas o información sensible.',
-          'El servicio de alojamiento puede procesar datos técnicos, como dirección IP, fecha de acceso e información del navegador, para entregar el sitio y gestionar su seguridad. Los proveedores y condiciones definitivas de alojamiento deben confirmarse antes de la publicación pública.',
+          'El alojamiento procesa datos técnicos —dirección IP, fecha de acceso e información del navegador— para entregar el sitio y cuidar su seguridad.',
+          'Dentro del CRM se tratan además los datos de tu cuenta y de tu equipo (nombre, correo, teléfono, rol y los equipos desde los que entras) y la información que tú cargas sobre tus contactos: nombre, teléfono, correo, lo que contestaron en tus formularios y las conversaciones de los canales que conectes. Esa información es tuya; PAWWER la trata para prestarte el servicio.',
         ],
       },
       {
@@ -47,19 +49,24 @@ function esContent() {
         ps: [
           <>El enlace Sign in / Login conduce a <a href={CRM_URL}>crm.pawwerapp.com</a>. El tratamiento de datos dentro del CRM debe detallarse en su propio aviso. Esta landing no accede a tus contactos ni a tus conversaciones del CRM.</>,
           'La prueba de 3 días se inicia desde el CRM (crm.pawwerapp.com) y requiere registrar una tarjeta de crédito, que se cobra automáticamente al terminar la prueba salvo que canceles antes. Esa captura de tarjeta y ese cobro ocurren en el checkout de Paddle (Paddle.com Market Limited), que actúa como revendedor autorizado de PAWWER, no en esta landing, que no procesa pagos ni almacena tarjetas. Paddle trata los datos de pago conforme a su propio aviso de privacidad; PAWWER recibe el estado de la suscripción, no los datos de la tarjeta.',
-          'Los servicios de correo y alojamiento que intervengan en la atención de solicitudes deben identificarse en la versión definitiva. Cualquier transferencia que requiera consentimiento deberá informarse y gestionarse antes de realizarse.',
+          'Los proveedores que hacen funcionar el servicio, cada uno con su propio contrato y aviso: Vercel (alojamiento, Estados Unidos), Supabase (base de datos y autenticación, Estados Unidos), Paddle (cobro, Reino Unido e Irlanda), Anthropic (el modelo de inteligencia artificial que redacta las respuestas, Estados Unidos), Zernio (puente con WhatsApp, Instagram y Messenger), Higgsfield (generación de imágenes, solo si usas esa función) y OpenFreeMap (mosaicos del mapa, sin datos de tus leads).',
+          'Al asistente de inteligencia artificial se le mandan los mensajes de la conversación que va a contestar; al asistente de estrategia, solo números agregados —cuántos leads y de qué canal—, nunca nombres ni teléfonos de tus prospectos. Ningún proveedor usa tus datos para entrenar modelos por cuenta de PAWWER.',
+          'Estas transferencias son internacionales y necesarias para prestarte el servicio que contratas.',
         ],
       },
       {
         h2: 'Tus derechos y solicitudes',
         ps: [
           <>Puedes solicitar acceso, rectificación, cancelación u oposición al tratamiento de tus datos, así como revocar tu consentimiento o limitar su uso, escribiendo a <a href={mailTo('Solicitud de privacidad')}>{EMAIL}</a> con el asunto «Solicitud de privacidad». Indica qué deseas solicitar y un medio para responderte. La verificación de identidad deberá realizarse por un canal adecuado; no adjuntes documentos sensibles a tu primer mensaje.</>,
-          'El procedimiento operativo y los plazos aplicables deben validarse antes de utilizar este documento como aviso definitivo.',
+          'Contestamos en un máximo de 20 días hábiles. Si eres cliente de PAWWER y la solicitud viene de uno de TUS contactos, la atiendes tú: esos datos son tuyos y nosotros solo los procesamos por encargo; podemos ayudarte a localizarlos o a eliminarlos.',
         ],
       },
       {
         h2: 'Conservación y protección',
-        ps: ['Los periodos de conservación, eliminación y las medidas aplicables a la atención de consultas deben documentarse según la operación real de PAWWER. Esta landing no acredita ni audita las medidas de seguridad del CRM.'],
+        ps: [
+          'Los datos de tu cuenta y de tus contactos se conservan mientras la cuenta esté activa. Al cerrarla se eliminan dentro de los 90 días siguientes, salvo lo que la ley obligue a conservar —los comprobantes de pago, que además emite Paddle— y salvo que nos pidas borrarlos antes.',
+          'El CRM exige verificación en dos pasos, cada equipo se aprueba antes de poder leer datos y la base separa la información de cada negocio con reglas a nivel de renglón. Quién abrió una ficha, exportó la lista o entró a tu panel queda registrado, y lo consultas en «Quién ha visto tus datos» dentro de tu cuenta.',
+        ],
       },
       {
         h2: 'Cambios a esta política',
@@ -75,23 +82,24 @@ function enContent() {
     back: '← Back to PAWWER',
     label: 'Privacy',
     h1: 'Your information deserves clarity.',
-    lead: `Privacy policy for the PAWWER landing page. Review version: ${PRIVACY_REVIEW.en}.`,
+    lead: `PAWWER privacy policy. In force since ${PRIVACY_REVIEW.en}.`,
     legalNote: (
-      <><strong>Preliminary document.</strong> Before its final publication, PAWWER must confirm the legal identity of the controller, its providers and the retention periods. This policy describes the scope of this landing page; it does not replace the CRM&rsquo;s own notice.</>
+      <>This policy covers <strong>this site and the CRM</strong> at <a href={CRM_URL}>crm.pawwerapp.com</a>. The data of your contacts and conversations inside the CRM is yours: PAWWER processes it to provide the service and on your instructions.</>
     ),
     blocks: [
       {
         h2: 'Contact and controller',
         ps: [
-          'PAWWER is the commercial name shown on this site. The company or legal name of the controller is pending confirmation.',
-          <>Contact address provided: {address} You can write to <a href={mailTo()}>{EMAIL}</a> or call <a href={PHONE_HREF}>{PHONE_LABEL}</a>.</>,
+          <>The data controller is <strong>{EMPRESA}</strong>, a Mexican company that operates the service under the PAWWER brand.</>,
+          <>Address: {address} You can write to <a href={mailTo()}>{EMAIL}</a> or call <a href={PHONE_HREF}>{PHONE_LABEL}</a>.</>,
         ],
       },
       {
         h2: 'What information is used',
         ps: [
           'This landing page has no registration forms and does not request card details. If you choose to contact us by email or phone, you share the data you include in your message, such as your name, email, company and commercial needs. Avoid sending passwords, cards or sensitive information.',
-          'The hosting provider may process technical data, such as IP address, access date and browser information, to deliver the site and manage its security. The final hosting providers and terms must be confirmed before public publication.',
+          'The hosting provider processes technical data —IP address, access date and browser information— to deliver the site and keep it secure.',
+          'Inside the CRM we also process your account and team data (name, email, phone, role and the devices you sign in from) and the information you upload about your contacts: name, phone, email, what they answered in your forms and the conversations from the channels you connect. That information is yours; PAWWER processes it to provide the service.',
         ],
       },
       {
@@ -110,19 +118,24 @@ function enContent() {
         ps: [
           <>The Sign in / Login link leads to <a href={CRM_URL}>crm.pawwerapp.com</a>. Data processing inside the CRM must be detailed in its own notice. This landing page does not access your contacts or your CRM conversations.</>,
           'The 3-day trial is started from the CRM (crm.pawwerapp.com) and requires registering a credit card, which is charged automatically when the trial ends unless you cancel first. That card capture and charge happen in Paddle’s checkout (Paddle.com Market Limited), which acts as PAWWER’s authorized reseller, not on this landing page, which does not process payments or store cards. Paddle handles payment data under its own privacy notice; PAWWER receives the subscription status, not the card details.',
-          'The email and hosting services involved in handling requests must be identified in the final version. Any transfer requiring consent must be disclosed and managed before it takes place.',
+          'The providers that make the service work, each under its own contract and notice: Vercel (hosting, United States), Supabase (database and authentication, United States), Paddle (billing, United Kingdom and Ireland), Anthropic (the AI model that drafts replies, United States), Zernio (bridge with WhatsApp, Instagram and Messenger), Higgsfield (image generation, only if you use that feature) and OpenFreeMap (map tiles, with no lead data).',
+          'The AI assistant receives the messages of the conversation it is about to answer; the strategy assistant only gets aggregated numbers —how many leads and from which channel—, never your prospects\u2019 names or phone numbers. No provider uses your data to train models on PAWWER\u2019s behalf.',
+          'These transfers are international and necessary to provide the service you purchase.',
         ],
       },
       {
         h2: 'Your rights and requests',
         ps: [
           <>You may request access, rectification, cancellation or objection to the processing of your data, as well as revoke your consent or limit its use, by writing to <a href={mailTo('Privacy request')}>{EMAIL}</a> with the subject &ldquo;Privacy request&rdquo;. State what you wish to request and a means to reply to you. Identity verification must be carried out through an appropriate channel; do not attach sensitive documents to your first message.</>,
-          'The operational procedure and applicable timeframes must be validated before using this document as a final notice.',
+          'We reply within 20 business days at most. If you are a PAWWER customer and the request comes from one of YOUR contacts, you handle it: that data is yours and we only process it on your behalf; we can help you find or delete it.',
         ],
       },
       {
         h2: 'Retention and protection',
-        ps: ["Retention and deletion periods and the measures applicable to handling queries must be documented according to PAWWER's actual operation. This landing page does not certify or audit the CRM's security measures."],
+        ps: [
+          'Your account and contact data is kept while the account is active. When you close it, the data is deleted within the following 90 days, except for what the law requires us to keep —payment records, which Paddle also issues— and unless you ask us to delete it sooner.',
+          'The CRM requires two-step verification, every device is approved before it can read data, and the database separates each business information with row-level rules. Who opened a contact, exported the list or entered your panel is recorded, and you can review it under \u201cWho has seen your data\u201d inside your account.',
+        ],
       },
       {
         h2: 'Changes to this policy',

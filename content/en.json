@@ -22,6 +22,10 @@
   "footer": {
     "privacy": "Privacy policy",
     "privacyHref": "/en/privacy",
+    "terms": "Terms and conditions",
+    "termsHref": "/en/terms",
+    "refunds": "Refunds and cancellation",
+    "refundsHref": "/en/refunds",
     "rights": "PAWWER"
   },
   "plans": [
