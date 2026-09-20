@@ -8,18 +8,24 @@ import type { Documento } from './legal-view';
  * QUÉ DECIDIÓ LA PERSONA DUEÑA (18 de septiembre de 2026)
  *
  * · Quien vende y responde es **PAWWER S.A.S. de C.V.**, con domicilio en
- *   Culiacán. Paddle es el revendedor autorizado que cobra (merchant of
- *   record): la tarjeta nunca toca a PAWWER.
+ *   Culiacán. Dodo Payments es el revendedor autorizado que cobra
+ *   (merchant of record): la tarjeta nunca toca a PAWWER.
+ *
+ *   ⚠️ Decía Paddle hasta el 19 de septiembre de 2026, cuando Paddle
+ *   rechazó la cuenta y el cobro se rehízo sobre Dodo. Aquí va el nombre
+ *   comercial y NO una razón social inventada: la entidad exacta que
+ *   factura es la que aparece en el comprobante que Dodo emite, y ese
+ *   dato se confirma con la primera factura real, no antes.
  * · **No hay reembolsos discrecionales.** Se cancela cuando se quiera y el
  *   servicio sigue hasta que termina el periodo ya pagado. Lo que la ley
- *   obliga a devolver —o lo que Paddle devuelva por su cuenta como
+ *   obliga a devolver —o lo que Dodo devuelva por su cuenta como
  *   vendedor— no se puede quitar con una política, y aquí se dice.
  *
  * ============================================================
  * POR QUÉ ESTÁ ESCRITO ASÍ
  *
  * Estos textos los lee un cliente y los lee quien verifica la cuenta de
- * Paddle. Nada de «pendiente de confirmar»: lo que no se sabe no se
+ * Dodo. Nada de «pendiente de confirmar»: lo que no se sabe no se
  * promete, y lo que se promete es lo que el producto hace hoy. Los precios
  * y el contacto salen de `content/settings.json`, para que cambiarlos en un
  * lugar los cambie en todas partes.
@@ -75,14 +81,14 @@ export const terminos: Record<'es' | 'en', Documento> = {
         ps: [
           <>Los planes se cobran por mes en dólares estadounidenses: Esencial {PRECIOS.esencial}, Crecimiento {PRECIOS.crecimiento} y Escala {PRECIOS.escala}. <strong>Los precios no incluyen impuestos</strong>: en el checkout se suman los que apliquen a tu país —en México, el IVA— y los ves antes de pagar.</>,
           'La suscripción se renueva sola cada mes hasta que la canceles. Si cambiamos el precio de tu plan te avisamos con al menos 30 días de anticipación y el precio nuevo aplica hasta tu siguiente renovación.',
-          'Si un cobro no pasa, Paddle lo reintenta durante unos días. Mientras tanto sigues entrando con un aviso en pantalla; si no se resuelve, la cuenta queda sin acceso al servicio de paga y tus datos se conservan según la política de privacidad.',
+          'Si un cobro no pasa, Dodo lo reintenta durante unos días. Mientras tanto sigues entrando con un aviso en pantalla; si no se resuelve, la cuenta queda sin acceso al servicio de paga y tus datos se conservan según la política de privacidad.',
         ],
       },
       {
-        h2: 'Quién cobra: Paddle',
+        h2: 'Quién cobra: Dodo Payments',
         ps: [
-          <>El pago lo procesa <strong>Paddle.com Market Limited</strong> como revendedor autorizado (<em>merchant of record</em>) de PAWWER. Paddle te vende la suscripción, emite el comprobante y trata los datos de tu tarjeta bajo sus propios términos; PAWWER nunca ve ni guarda el número de tu tarjeta.</>,
-          <>Tus recibos y facturas viven en el portal de Paddle, al que entras desde Mi empresa → Tu plan y créditos. Si necesitas los datos fiscales de tu negocio en el comprobante, agrégalos en el checkout antes de pagar.</>,
+          <>El pago lo procesa <strong>Dodo Payments</strong> como revendedor autorizado (<em>merchant of record</em>) de PAWWER. Dodo te vende la suscripción, emite el comprobante y trata los datos de tu tarjeta bajo sus propios términos; PAWWER nunca ve ni guarda el número de tu tarjeta. La entidad que factura y sus datos fiscales son los que aparecen en ese comprobante.</>,
+          <>Tus recibos y facturas viven en el portal de Dodo, al que entras desde Mi empresa → Tu plan y créditos. Si la factura va a nombre de tu empresa, marca <em>«Purchasing as a business»</em> en el checkout y escribe tu RFC y tu razón social <strong>antes de pagar</strong>: después del cobro ya no se pueden cambiar en esa factura.</>,
         ],
       },
       {
@@ -95,7 +101,7 @@ export const terminos: Record<'es' | 'en', Documento> = {
       {
         h2: 'Cancelación y reembolsos',
         ps: [
-          <>Puedes cancelar cuando quieras desde Mi empresa → Tu plan y créditos, y sigues usando PAWWER hasta que termina el periodo que ya pagaste. <strong>No hacemos reembolsos por periodos ya cobrados</strong>, salvo lo que la ley te dé o lo que Paddle resuelva como vendedor. El detalle está en la <a href="/reembolsos">política de reembolso y cancelación</a>.</>,
+          <>Puedes cancelar cuando quieras desde Mi empresa → Tu plan y créditos, y sigues usando PAWWER hasta que termina el periodo que ya pagaste. <strong>No hacemos reembolsos por periodos ya cobrados</strong>, salvo lo que la ley te dé o lo que Dodo resuelva como vendedor. El detalle está en la <a href="/reembolsos">política de reembolso y cancelación</a>.</>,
         ],
       },
       {
@@ -188,14 +194,14 @@ export const terminos: Record<'es' | 'en', Documento> = {
         ps: [
           <>Plans are billed monthly in US dollars: Essential {PRECIOS.esencial}, Growth {PRECIOS.crecimiento} and Scale {PRECIOS.escala}. <strong>Prices exclude taxes</strong>: any taxes that apply in your country are added at checkout and shown before you pay.</>,
           'The subscription renews automatically every month until you cancel. If we change the price of your plan we will tell you at least 30 days in advance and the new price applies from your next renewal.',
-          'If a charge fails, Paddle retries it over a few days. Meanwhile you keep signing in with a notice on screen; if it is not resolved, the account loses access to the paid service and your data is kept as described in the privacy policy.',
+          'If a charge fails, Dodo retries it over a few days. Meanwhile you keep signing in with a notice on screen; if it is not resolved, the account loses access to the paid service and your data is kept as described in the privacy policy.',
         ],
       },
       {
-        h2: 'Who charges you: Paddle',
+        h2: 'Who charges you: Dodo Payments',
         ps: [
-          <>Payments are processed by <strong>Paddle.com Market Limited</strong> as PAWWER&rsquo;s authorized reseller and merchant of record. Paddle sells you the subscription, issues the receipt and handles your card data under its own terms; PAWWER never sees or stores your card number.</>,
-          'Your receipts and invoices live in Paddle&rsquo;s portal, which you open from My company → Your plan and credits. If you need your business tax details on the receipt, add them at checkout before paying.',
+          <>Payments are processed by <strong>Dodo Payments</strong> as PAWWER&rsquo;s authorized reseller and merchant of record. Dodo sells you the subscription, issues the receipt and handles your card data under its own terms; PAWWER never sees or stores your card number. The invoicing entity and its tax details are the ones shown on that receipt.</>,
+          'Your receipts and invoices live in Dodo’s portal, which you open from My company → Your plan and credits. If the invoice has to be in your company’s name, tick “Purchasing as a business” at checkout and enter your tax ID and legal name before paying: once the charge goes through they cannot be changed on that invoice.',
         ],
       },
       {
@@ -208,7 +214,7 @@ export const terminos: Record<'es' | 'en', Documento> = {
       {
         h2: 'Cancellation and refunds',
         ps: [
-          <>You can cancel any time from My company → Your plan and credits, and you keep using PAWWER until the period you already paid for ends. <strong>We do not refund periods already charged</strong>, except where the law gives you that right or Paddle decides otherwise as the seller. The detail is in the <a href="/en/refunds">refund and cancellation policy</a>.</>,
+          <>You can cancel any time from My company → Your plan and credits, and you keep using PAWWER until the period you already paid for ends. <strong>We do not refund periods already charged</strong>, except where the law gives you that right or Dodo decides otherwise as the seller. The detail is in the <a href="/en/refunds">refund and cancellation policy</a>.</>,
         ],
       },
       {
@@ -222,7 +228,7 @@ export const terminos: Record<'es' | 'en', Documento> = {
         h2: 'Acceptable use',
         ps: [
           'You agree to message only people who gave you their consent, to respect the rules of every channel you connect — especially WhatsApp and Meta — and not to use PAWWER for spam, deception, abusive collection practices, illegal content or to process sensitive data (health, third-party financial data, biometrics) without a legal basis to do so.',
-          'You also may not resell access, attempt to reach other accounts, extract other businesses&rsquo; data, or load the service beyond your plan limits in an automated way.',
+          'You also may not resell access, attempt to reach other accounts, extract other businesses’ data, or load the service beyond your plan limits in an automated way.',
         ],
       },
       {
@@ -294,7 +300,7 @@ export const reembolsos: Record<'es' | 'en', Documento> = {
       {
         h2: 'Cómo cancelar',
         ps: [
-          <>Dentro de PAWWER: Mi empresa → Tu plan y créditos → Cancelar suscripción. También puedes hacerlo desde el portal de Paddle, al que entras desde esa misma pantalla, o escribiéndonos a <Correo asunto="Cancelar suscripción" /> desde el correo con el que administras la cuenta.</>,
+          <>Dentro de PAWWER: Mi empresa → Tu plan y créditos → Cancelar suscripción. También puedes hacerlo desde el portal de Dodo, al que entras desde esa misma pantalla, o escribiéndonos a <Correo asunto="Cancelar suscripción" /> desde el correo con el que administras la cuenta.</>,
           'La cancelación surte efecto al final del periodo que ya pagaste. No hay penalización, ni permanencia, ni llamada de retención.',
         ],
       },
@@ -310,7 +316,7 @@ export const reembolsos: Record<'es' | 'en', Documento> = {
         ps: [
           <><strong>No devolvemos periodos ya cobrados</strong>, ni completos ni en proporción, incluyendo el caso de que no hayas usado el servicio durante ese mes. El modelo es mensual y sin permanencia: si algo no te sirve, cancelas y dejas de pagar el mes siguiente.</>,
           'Sí corregimos lo que salió mal: un cobro duplicado, un cargo después de haber cancelado, un cobro a una cuenta que no es tuya o un cobro por un monto distinto al del plan contratado. Escríbenos y lo resolvemos.',
-          <>Paddle, como vendedor de la transacción, puede resolver una solicitud o una disputa conforme a sus propias condiciones, incluso cuando nuestra política diga otra cosa.</>,
+          <>Dodo Payments, como vendedor de la transacción, puede resolver una solicitud o una disputa conforme a sus propias condiciones, incluso cuando nuestra política diga otra cosa.</>,
         ],
       },
       {
@@ -323,7 +329,7 @@ export const reembolsos: Record<'es' | 'en', Documento> = {
       {
         h2: 'Cambios de plan',
         ps: [
-          'Puedes subir o bajar de plan cuando quieras desde Mi empresa. Al subir se cobra hoy la diferencia proporcional por lo que queda del mes; al bajar, el saldo a favor se aplica a los siguientes cobros. El monto exacto lo calcula Paddle y se te muestra antes de confirmar.',
+          'Puedes subir o bajar de plan cuando quieras desde Mi empresa. Al subir se cobra hoy la diferencia proporcional por lo que queda del mes; al bajar, el saldo a favor se aplica a los siguientes cobros. El monto exacto lo calcula Dodo y se te muestra antes de confirmar.',
         ],
       },
       {
@@ -353,7 +359,7 @@ export const reembolsos: Record<'es' | 'en', Documento> = {
       {
         h2: 'How to cancel',
         ps: [
-          <>Inside PAWWER: My company → Your plan and credits → Cancel subscription. You can also do it from Paddle&rsquo;s portal, which you open from that same screen, or by writing to <Correo asunto="Cancel subscription" /> from the email that administers the account.</>,
+          <>Inside PAWWER: My company → Your plan and credits → Cancel subscription. You can also do it from Dodo&rsquo;s portal, which you open from that same screen, or by writing to <Correo asunto="Cancel subscription" /> from the email that administers the account.</>,
           'Cancellation takes effect at the end of the period you already paid for. There is no penalty, no minimum term and no retention call.',
         ],
       },
@@ -369,20 +375,20 @@ export const reembolsos: Record<'es' | 'en', Documento> = {
         ps: [
           <><strong>We do not refund periods already charged</strong>, in full or pro rata, including where you did not use the service during that month. The model is monthly with no minimum term: if something does not work for you, cancel and you stop paying from the next month.</>,
           'We do fix what went wrong: a duplicate charge, a charge after you cancelled, a charge to an account that is not yours, or a charge for an amount different from your plan. Write to us and we will sort it out.',
-          'Paddle, as the seller of record for the transaction, may resolve a request or a dispute under its own terms, even where our policy says otherwise.',
+          'Dodo Payments, as the seller of record for the transaction, may resolve a request or a dispute under its own terms, even where our policy says otherwise.',
         ],
       },
       {
         h2: 'This policy does not remove your statutory rights',
         ps: [
-          'If the law in your country gives you a right of withdrawal, cancellation or refund — for example Mexico&rsquo;s consumer protection law or EU and UK consumer rules — that right prevails over this policy and you can exercise it by writing to us.',
+          'If the law in your country gives you a right of withdrawal, cancellation or refund — for example Mexico’s consumer protection law or EU and UK consumer rules — that right prevails over this policy and you can exercise it by writing to us.',
           'We also do not limit what is due when the service was not provided, was charged without your authorisation, or where there was an error on our side.',
         ],
       },
       {
         h2: 'Plan changes',
         ps: [
-          'You can upgrade or downgrade at any time from My company. On an upgrade, the prorated difference for the rest of the month is charged today; on a downgrade, the credit is applied to your next charges. Paddle calculates the exact amount and shows it to you before you confirm.',
+          'You can upgrade or downgrade at any time from My company. On an upgrade, the prorated difference for the rest of the month is charged today; on a downgrade, the credit is applied to your next charges. Dodo calculates the exact amount and shows it to you before you confirm.',
         ],
       },
       {

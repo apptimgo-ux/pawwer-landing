@@ -48,8 +48,8 @@ function esContent() {
         h2: 'CRM, pagos y servicios externos',
         ps: [
           <>El enlace Sign in / Login conduce a <a href={CRM_URL}>crm.pawwerapp.com</a>. El tratamiento de datos dentro del CRM debe detallarse en su propio aviso. Esta landing no accede a tus contactos ni a tus conversaciones del CRM.</>,
-          'La prueba de 3 días se inicia desde el CRM (crm.pawwerapp.com) y requiere registrar una tarjeta de crédito, que se cobra automáticamente al terminar la prueba salvo que canceles antes. Esa captura de tarjeta y ese cobro ocurren en el checkout de Paddle (Paddle.com Market Limited), que actúa como revendedor autorizado de PAWWER, no en esta landing, que no procesa pagos ni almacena tarjetas. Paddle trata los datos de pago conforme a su propio aviso de privacidad; PAWWER recibe el estado de la suscripción, no los datos de la tarjeta.',
-          'Los proveedores que hacen funcionar el servicio, cada uno con su propio contrato y aviso: Vercel (alojamiento, Estados Unidos), Supabase (base de datos y autenticación, Estados Unidos), Paddle (cobro, Reino Unido e Irlanda), Anthropic (el modelo de inteligencia artificial que redacta las respuestas, Estados Unidos), Zernio (puente con WhatsApp, Instagram y Messenger), Higgsfield (generación de imágenes, solo si usas esa función) y OpenFreeMap (mosaicos del mapa, sin datos de tus leads).',
+          'La prueba de 3 días se inicia desde el CRM (crm.pawwerapp.com) y requiere registrar una tarjeta de crédito, que se cobra automáticamente al terminar la prueba salvo que canceles antes. Esa captura de tarjeta y ese cobro ocurren en el checkout de Dodo Payments, que actúa como revendedor autorizado de PAWWER (merchant of record), no en esta landing, que no procesa pagos ni almacena tarjetas. Dodo trata los datos de pago conforme a su propio aviso de privacidad; PAWWER recibe el estado de la suscripción, no los datos de la tarjeta.',
+          'Los proveedores que hacen funcionar el servicio, cada uno con su propio contrato y aviso: Vercel (alojamiento, Estados Unidos), Supabase (base de datos y autenticación, Estados Unidos), Dodo Payments (cobro, India), Anthropic (el modelo de inteligencia artificial que redacta las respuestas, Estados Unidos), Zernio (puente con WhatsApp, Instagram y Messenger), Higgsfield (generación de imágenes, solo si usas esa función) y OpenFreeMap (mosaicos del mapa, sin datos de tus leads).',
           'Al asistente de inteligencia artificial se le mandan los mensajes de la conversación que va a contestar; al asistente de estrategia, solo números agregados —cuántos leads y de qué canal—, nunca nombres ni teléfonos de tus prospectos. Ningún proveedor usa tus datos para entrenar modelos por cuenta de PAWWER.',
           'Estas transferencias son internacionales y necesarias para prestarte el servicio que contratas.',
         ],
@@ -64,7 +64,7 @@ function esContent() {
       {
         h2: 'Conservación y protección',
         ps: [
-          'Los datos de tu cuenta y de tus contactos se conservan mientras la cuenta esté activa. Al cerrarla se eliminan dentro de los 90 días siguientes, salvo lo que la ley obligue a conservar —los comprobantes de pago, que además emite Paddle— y salvo que nos pidas borrarlos antes.',
+          'Los datos de tu cuenta y de tus contactos se conservan mientras la cuenta esté activa. Al cerrarla se eliminan dentro de los 90 días siguientes, salvo lo que la ley obligue a conservar —los comprobantes de pago, que además emite Dodo Payments— y salvo que nos pidas borrarlos antes.',
           'El CRM exige verificación en dos pasos, cada equipo se aprueba antes de poder leer datos y la base separa la información de cada negocio con reglas a nivel de renglón. Quién abrió una ficha, exportó la lista o entró a tu panel queda registrado, y lo consultas en «Quién ha visto tus datos» dentro de tu cuenta.',
         ],
       },
@@ -117,8 +117,8 @@ function enContent() {
         h2: 'CRM, payments and external services',
         ps: [
           <>The Sign in / Login link leads to <a href={CRM_URL}>crm.pawwerapp.com</a>. Data processing inside the CRM must be detailed in its own notice. This landing page does not access your contacts or your CRM conversations.</>,
-          'The 3-day trial is started from the CRM (crm.pawwerapp.com) and requires registering a credit card, which is charged automatically when the trial ends unless you cancel first. That card capture and charge happen in Paddle’s checkout (Paddle.com Market Limited), which acts as PAWWER’s authorized reseller, not on this landing page, which does not process payments or store cards. Paddle handles payment data under its own privacy notice; PAWWER receives the subscription status, not the card details.',
-          'The providers that make the service work, each under its own contract and notice: Vercel (hosting, United States), Supabase (database and authentication, United States), Paddle (billing, United Kingdom and Ireland), Anthropic (the AI model that drafts replies, United States), Zernio (bridge with WhatsApp, Instagram and Messenger), Higgsfield (image generation, only if you use that feature) and OpenFreeMap (map tiles, with no lead data).',
+          'The 3-day trial is started from the CRM (crm.pawwerapp.com) and requires registering a credit card, which is charged automatically when the trial ends unless you cancel first. That card capture and charge happen in Dodo Payments’ checkout, which acts as PAWWER’s authorized reseller and merchant of record, not on this landing page, which does not process payments or store cards. Dodo handles payment data under its own privacy notice; PAWWER receives the subscription status, not the card details.',
+          'The providers that make the service work, each under its own contract and notice: Vercel (hosting, United States), Supabase (database and authentication, United States), Dodo Payments (billing, India), Anthropic (the AI model that drafts replies, United States), Zernio (bridge with WhatsApp, Instagram and Messenger), Higgsfield (image generation, only if you use that feature) and OpenFreeMap (map tiles, with no lead data).',
           'The AI assistant receives the messages of the conversation it is about to answer; the strategy assistant only gets aggregated numbers —how many leads and from which channel—, never your prospects\u2019 names or phone numbers. No provider uses your data to train models on PAWWER\u2019s behalf.',
           'These transfers are international and necessary to provide the service you purchase.',
         ],
@@ -133,7 +133,7 @@ function enContent() {
       {
         h2: 'Retention and protection',
         ps: [
-          'Your account and contact data is kept while the account is active. When you close it, the data is deleted within the following 90 days, except for what the law requires us to keep —payment records, which Paddle also issues— and unless you ask us to delete it sooner.',
+          'Your account and contact data is kept while the account is active. When you close it, the data is deleted within the following 90 days, except for what the law requires us to keep —payment records, which Dodo Payments also issues— and unless you ask us to delete it sooner.',
           'The CRM requires two-step verification, every device is approved before it can read data, and the database separates each business information with row-level rules. Who opened a contact, exported the list or entered your panel is recorded, and you can review it under \u201cWho has seen your data\u201d inside your account.',
         ],
       },
