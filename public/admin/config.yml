@@ -103,6 +103,8 @@ collections:
               - { name: termsHref, label: "Ruta de los términos", widget: string, required: false }
               - { name: refunds, label: "Texto del enlace de reembolsos", widget: string, required: false }
               - { name: refundsHref, label: "Ruta de la política de reembolso", widget: string, required: false }
+              - { name: dataProcessing, label: "Texto del enlace del encargo de datos", widget: string, required: false }
+              - { name: dataProcessingHref, label: "Ruta del contrato de encargo de datos", widget: string, required: false }
               - { name: rights, label: "Texto de derechos", widget: string }
           - name: plans
             label: "Planes (el precio se edita en Ajustes)"

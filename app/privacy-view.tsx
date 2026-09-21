@@ -15,7 +15,7 @@ function esContent() {
     h1: 'Tu información merece claridad.',
     lead: `Política de privacidad de PAWWER. Vigente desde el ${PRIVACY_REVIEW.es}.`,
     legalNote: (
-      <>Esta política cubre <strong>este sitio y el CRM</strong> de <a href={CRM_URL}>crm.pawwerapp.com</a>. Los datos de tus contactos y conversaciones dentro del CRM son tuyos: PAWWER los trata para prestarte el servicio y siguiendo tus instrucciones.</>
+      <>Esta política cubre <strong>este sitio y el CRM</strong> de <a href={CRM_URL}>crm.pawwerapp.com</a>. Los datos de tus contactos y conversaciones dentro del CRM son tuyos: PAWWER los trata para prestarte el servicio y siguiendo tus instrucciones, como dice el <a href="/tratamiento-de-datos">contrato de encargo de tratamiento de datos</a>.</>
     ),
     blocks: [
       {
@@ -47,9 +47,10 @@ function esContent() {
       {
         h2: 'CRM, pagos y servicios externos',
         ps: [
-          <>El enlace Sign in / Login conduce a <a href={CRM_URL}>crm.pawwerapp.com</a>. El tratamiento de datos dentro del CRM debe detallarse en su propio aviso. Esta landing no accede a tus contactos ni a tus conversaciones del CRM.</>,
+          <>El enlace Sign in / Login conduce a <a href={CRM_URL}>crm.pawwerapp.com</a>. Cómo tratamos por tu cuenta los datos de tus contactos dentro del CRM está en el <a href="/tratamiento-de-datos">contrato de encargo de tratamiento de datos</a>. Esta landing no accede a tus contactos ni a tus conversaciones del CRM.</>,
           'La prueba de 3 días se inicia desde el CRM (crm.pawwerapp.com) y requiere registrar una tarjeta de crédito, que se cobra automáticamente al terminar la prueba salvo que canceles antes. Esa captura de tarjeta y ese cobro ocurren en el checkout de Dodo Payments, que actúa como revendedor autorizado de PAWWER (merchant of record), no en esta landing, que no procesa pagos ni almacena tarjetas. Dodo trata los datos de pago conforme a su propio aviso de privacidad; PAWWER recibe el estado de la suscripción, no los datos de la tarjeta.',
-          'Los proveedores que hacen funcionar el servicio, cada uno con su propio contrato y aviso: Vercel (alojamiento, Estados Unidos), Supabase (base de datos y autenticación, Estados Unidos), Dodo Payments (cobro, India), Anthropic (el modelo de inteligencia artificial que redacta las respuestas, Estados Unidos), Zernio (puente con WhatsApp, Instagram y Messenger), Higgsfield (generación de imágenes, solo si usas esa función) y OpenFreeMap (mosaicos del mapa, sin datos de tus leads).',
+          <>Los negocios invitados a la beta entran con un código y sin registrar tarjeta; si al terminar eligen un plan, lo pagan en ese mismo checkout. Las reglas están en los <a href="/programa-beta">términos del programa beta</a>.</>,
+          'Los proveedores que hacen funcionar el servicio, cada uno con su propio contrato y aviso: Vercel (alojamiento, Estados Unidos), Supabase (base de datos y autenticación, Estados Unidos), Dodo Payments (cobro, India), Anthropic (el modelo de inteligencia artificial que redacta las respuestas y lee las imágenes de inspiración que subes, Estados Unidos), Zernio (puente con WhatsApp, Instagram y Messenger), Kie.ai (generación de imágenes con la instrucción y las fotos que tú eliges, solo si usas esa función), Resend (los correos del sistema, como autorizar un equipo nuevo, Estados Unidos) y OpenFreeMap (mosaicos del mapa, sin datos de tus leads).',
           'Al asistente de inteligencia artificial se le mandan los mensajes de la conversación que va a contestar; al asistente de estrategia, solo números agregados —cuántos leads y de qué canal—, nunca nombres ni teléfonos de tus prospectos. Ningún proveedor usa tus datos para entrenar modelos por cuenta de PAWWER.',
           'Estas transferencias son internacionales y necesarias para prestarte el servicio que contratas.',
         ],
@@ -84,7 +85,7 @@ function enContent() {
     h1: 'Your information deserves clarity.',
     lead: `PAWWER privacy policy. In force since ${PRIVACY_REVIEW.en}.`,
     legalNote: (
-      <>This policy covers <strong>this site and the CRM</strong> at <a href={CRM_URL}>crm.pawwerapp.com</a>. The data of your contacts and conversations inside the CRM is yours: PAWWER processes it to provide the service and on your instructions.</>
+      <>This policy covers <strong>this site and the CRM</strong> at <a href={CRM_URL}>crm.pawwerapp.com</a>. The data of your contacts and conversations inside the CRM is yours: PAWWER processes it to provide the service and on your instructions, as set out in the <a href="/en/data-processing">data processing agreement</a>.</>
     ),
     blocks: [
       {
@@ -116,9 +117,10 @@ function enContent() {
       {
         h2: 'CRM, payments and external services',
         ps: [
-          <>The Sign in / Login link leads to <a href={CRM_URL}>crm.pawwerapp.com</a>. Data processing inside the CRM must be detailed in its own notice. This landing page does not access your contacts or your CRM conversations.</>,
+          <>The Sign in / Login link leads to <a href={CRM_URL}>crm.pawwerapp.com</a>. How we process your contacts’ data inside the CRM on your behalf is in the <a href="/en/data-processing">data processing agreement</a>. This landing page does not access your contacts or your CRM conversations.</>,
           'The 3-day trial is started from the CRM (crm.pawwerapp.com) and requires registering a credit card, which is charged automatically when the trial ends unless you cancel first. That card capture and charge happen in Dodo Payments’ checkout, which acts as PAWWER’s authorized reseller and merchant of record, not on this landing page, which does not process payments or store cards. Dodo handles payment data under its own privacy notice; PAWWER receives the subscription status, not the card details.',
-          'The providers that make the service work, each under its own contract and notice: Vercel (hosting, United States), Supabase (database and authentication, United States), Dodo Payments (billing, India), Anthropic (the AI model that drafts replies, United States), Zernio (bridge with WhatsApp, Instagram and Messenger), Higgsfield (image generation, only if you use that feature) and OpenFreeMap (map tiles, with no lead data).',
+          <>Businesses invited to the beta get in with a code and without registering a card; if they choose a plan when it ends, they pay for it in that same checkout. The rules are in the <a href="/en/beta-program">beta program terms</a>.</>,
+          'The providers that make the service work, each under its own contract and notice: Vercel (hosting, United States), Supabase (database and authentication, United States), Dodo Payments (billing, India), Anthropic (the AI model that drafts replies and reads the inspiration images you upload, United States), Zernio (bridge with WhatsApp, Instagram and Messenger), Kie.ai (image generation from the instruction and the photos you choose, only if you use that feature), Resend (system emails, such as authorizing a new device, United States) and OpenFreeMap (map tiles, with no lead data).',
           'The AI assistant receives the messages of the conversation it is about to answer; the strategy assistant only gets aggregated numbers —how many leads and from which channel—, never your prospects\u2019 names or phone numbers. No provider uses your data to train models on PAWWER\u2019s behalf.',
           'These transfers are international and necessary to provide the service you purchase.',
         ],

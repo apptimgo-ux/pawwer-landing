@@ -3,11 +3,12 @@ import { Header, Footer } from './site-ui';
 import type { Locale } from './site-content';
 
 /**
- * La página de un documento legal: términos y política de reembolso.
+ * La página de un documento legal: términos, reembolsos, encargo de datos
+ * y programa beta.
  *
  * Es la misma cáscara que `privacy-view.tsx` (encabezado, prosa y pie), sacada
- * aparte para que los tres documentos se lean igual y no haya tres maquetas
- * distintas que mantener. El contenido vive en `legal-docs.tsx`.
+ * aparte para que todos los documentos se lean igual y no haya una maqueta
+ * por documento que mantener. El contenido vive en `legal-docs.tsx`.
  */
 
 export type Bloque = { h2: string; ps: ReactNode[] };

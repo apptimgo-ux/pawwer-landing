@@ -45,6 +45,7 @@ export function Footer({ locale, homeHref, draft, crmUrl = CRM_URL }: { locale: 
         <a href={t.privacyHref}>{t.privacy}</a>
         {t.terms && t.termsHref && <a href={t.termsHref}>{t.terms}</a>}
         {t.refunds && t.refundsHref && <a href={t.refundsHref}>{t.refunds}</a>}
+        {t.dataProcessing && t.dataProcessingHref && <a href={t.dataProcessingHref}>{t.dataProcessing}</a>}
         <a href={crmUrl}>{(draft || content[locale]).nav.login} <ArrowUpRight size={13} /></a>
         <p className="site-footer__spacer">© {new Date().getFullYear()} {t.rights}</p>
         {notes?.type === 'notes' && <div className="site-footer__disclaimer">{notes.items.map((note, i) => <p key={i}>{note.lead && <strong>{note.lead} </strong>}{note.body}</p>)}</div>}

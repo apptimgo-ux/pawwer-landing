@@ -26,6 +26,8 @@
     "termsHref": "/en/terms",
     "refunds": "Refunds and cancellation",
     "refundsHref": "/en/refunds",
+    "dataProcessing": "Data processing",
+    "dataProcessingHref": "/en/data-processing",
     "rights": "PAWWER"
   },
   "plans": [

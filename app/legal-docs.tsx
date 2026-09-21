@@ -2,7 +2,7 @@ import { EMAIL, PHONE_HREF, PHONE_LABEL, ADDRESS_LINES, CRM_URL, siteSettings } 
 import type { Documento } from './legal-view';
 
 /**
- * TÉRMINOS Y REEMBOLSOS, EN LOS DOS IDIOMAS
+ * TÉRMINOS, REEMBOLSOS, ENCARGO DE DATOS Y BETA, EN LOS DOS IDIOMAS
  *
  * ============================================================
  * QUÉ DECIDIÓ LA PERSONA DUEÑA (18 de septiembre de 2026)
@@ -33,7 +33,7 @@ import type { Documento } from './legal-view';
  */
 
 export const EMPRESA = 'PAWWER S.A.S. de C.V.';
-export const REVISION = { es: '18 de septiembre de 2026', en: 'September 18, 2026' };
+export const REVISION = { es: '21 de septiembre de 2026', en: 'September 21, 2026' };
 
 const DIRECCION = `${ADDRESS_LINES[0]} ${ADDRESS_LINES[1]}`;
 const PRECIOS = siteSettings.prices as Record<string, string>;
@@ -96,6 +96,7 @@ export const terminos: Record<'es' | 'en', Documento> = {
         ps: [
           'Una cuenta nueva puede empezar con una prueba de 3 días que requiere registrar una tarjeta. Durante la prueba no se cobra nada y usas las herramientas del plan más completo, con los créditos de IA del plan que contrataste.',
           'Al terminar la prueba se cobra automáticamente el primer mes, salvo que canceles antes desde tu cuenta. Es una prueba por negocio: quien ya tuvo la suya paga desde el primer día.',
+          <>Los negocios invitados a la beta entran con un código, <strong>sin tarjeta</strong>, por el tiempo que diga el código. Al terminar eligen su plan y lo pagan; la beta cuenta como su prueba. Las reglas completas están en los <a href="/programa-beta">términos del programa beta</a>.</>,
         ],
       },
       {
@@ -107,7 +108,8 @@ export const terminos: Record<'es' | 'en', Documento> = {
       {
         h2: 'Tus datos son tuyos',
         ps: [
-          'Los contactos, conversaciones, archivos y demás información que entras a PAWWER son tuyos. Los tratamos para prestarte el servicio y para lo que nos pidas, conforme a la <a href="/privacidad">política de privacidad</a>. No los vendemos ni los usamos para publicidad de terceros.',
+          <>Los contactos, conversaciones, archivos y demás información que entras a PAWWER son tuyos. Los tratamos para prestarte el servicio y para lo que nos pidas, conforme a la <a href="/privacidad">política de privacidad</a>. No los vendemos ni los usamos para publicidad de terceros.</>,
+          <>Sobre los datos de <strong>tus</strong> contactos, tú eres el responsable y PAWWER el encargado que los trata por tu cuenta. Cómo lo hacemos —con qué proveedores, qué medidas de seguridad y qué pasa si algo falla— está en el <a href="/tratamiento-de-datos">contrato de encargo de tratamiento de datos</a>, que forma parte de estos términos.</>,
           'Puedes exportar tus contactos desde la propia aplicación mientras tu cuenta esté activa. Si cierras la cuenta, expórtalos antes: después se eliminan en los plazos de la política de privacidad.',
         ],
       },
@@ -209,6 +211,7 @@ export const terminos: Record<'es' | 'en', Documento> = {
         ps: [
           'A new account can start with a 3-day trial that requires registering a card. Nothing is charged during the trial and you use the tools of the most complete plan, with the AI credits of the plan you signed up for.',
           'When the trial ends, the first month is charged automatically unless you cancel before that. It is one trial per business: whoever already had theirs pays from day one.',
+          <>Businesses invited to the beta get in with a code, <strong>without a card</strong>, for the time the code states. When it ends they choose their plan and pay for it; the beta counts as their trial. The full rules are in the <a href="/en/beta-program">beta program terms</a>.</>,
         ],
       },
       {
@@ -220,7 +223,8 @@ export const terminos: Record<'es' | 'en', Documento> = {
       {
         h2: 'Your data is yours',
         ps: [
-          'The contacts, conversations, files and other information you put into PAWWER are yours. We process them to provide the service and to do what you ask us, as described in the <a href="/en/privacy">privacy policy</a>. We do not sell them and do not use them for third-party advertising.',
+          <>The contacts, conversations, files and other information you put into PAWWER are yours. We process them to provide the service and to do what you ask us, as described in the <a href="/en/privacy">privacy policy</a>. We do not sell them and do not use them for third-party advertising.</>,
+          <>For <strong>your</strong> contacts' data, you are the controller and PAWWER is the processor that handles it on your behalf. How we do it —with which providers, which security measures and what happens if something fails— is in the <a href="/en/data-processing">data processing agreement</a>, which is part of these terms.</>,
           'You can export your contacts from the application while your account is active. If you close the account, export them first: afterwards they are deleted within the periods stated in the privacy policy.',
         ],
       },
@@ -395,6 +399,333 @@ export const reembolsos: Record<'es' | 'en', Documento> = {
         h2: 'How to get help',
         ps: [
           <>Write to <Correo asunto="Billing and refunds" /> or call <Telefono />. We reply during business hours in Sinaloa, Mexico, usually the same day. Include the email that administers the account and the date of the charge: that is how we find it fastest.</>,
+        ],
+      },
+    ],
+  },
+};
+
+/* ------------------------------------------------------------------ */
+/*  Contrato de encargo de tratamiento de datos (21 sep 2026)           */
+/* ------------------------------------------------------------------ */
+
+/*
+ * POR QUÉ EXISTE: cada negocio mete a PAWWER los datos de SUS prospectos y
+ * clientes. Frente a ellos, el negocio es el responsable y PAWWER el
+ * encargado (Ley Federal de Protección de Datos Personales en Posesión de
+ * los Particulares). Un negocio serio —un despacho, una clínica— pide este
+ * documento antes de cargar su cartera, y con razón.
+ *
+ * Lo que dice aquí es lo que el producto hace HOY: aislamiento por negocio,
+ * segundo factor obligatorio, equipos autorizados, bitácora de accesos. Si
+ * algo de eso cambia, cambia este texto.
+ */
+export const REVISION_TRATAMIENTO = { es: '21 de septiembre de 2026', en: 'September 21, 2026' };
+
+export const tratamiento: Record<'es' | 'en', Documento> = {
+  es: {
+    back: '← Volver a PAWWER',
+    label: 'Encargo de datos',
+    h1: 'Tus contactos, cuidados como si fueran nuestros.',
+    lead: `Contrato de encargo de tratamiento de datos personales entre tu negocio y ${EMPRESA}. Vigente desde el ${REVISION_TRATAMIENTO.es}.`,
+    blocks: [
+      {
+        h2: 'Quién es quién',
+        ps: [
+          <>Cuando cargas a PAWWER los datos de tus prospectos y clientes —o llegan por los canales que conectas—, <strong>tu negocio es el responsable</strong> de esos datos y <strong>{EMPRESA} es el encargado</strong>: los trata por tu cuenta, siguiendo tus instrucciones y solo para prestarte el servicio, conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares y su normativa.</>,
+          <>Este contrato forma parte de los <a href="/terminos">términos y condiciones</a> y lo aceptas al crear tu cuenta. Los datos de tu propia cuenta —tu nombre, tu correo, tu plan— los trata PAWWER como responsable, según el <a href="/privacidad">aviso de privacidad</a>.</>,
+        ],
+      },
+      {
+        h2: 'Qué datos y para qué',
+        ps: [
+          'Los datos de tus contactos que entran a PAWWER: nombre, teléfono, correo, ubicación aproximada, respuestas de formularios, mensajes y conversaciones de tus canales, notas de tu equipo, citas, visitas, cotizaciones, contratos y los archivos que subas.',
+          'Los tratamos para: recibir y contestar los mensajes de tus canales conectados, organizarlos en tu CRM, agendar citas, preparar cotizaciones y contratos, medir tus resultados y —solo si tú lo enciendes— que el asistente de inteligencia artificial conteste y califique a tus prospectos.',
+          'PAWWER no usa los datos de tus contactos para fines propios: no los vende, no los comparte para publicidad, no los usa para escribirles por su cuenta ni para entrenar modelos de inteligencia artificial.',
+        ],
+      },
+      {
+        h2: 'Tus instrucciones',
+        ps: [
+          'Tú decides qué canales conectas, qué contactos cargas, qué automatizaciones enciendes y quién de tu equipo ve qué. Esas decisiones, hechas desde la aplicación, son tus instrucciones.',
+          'Si una instrucción nos parece contraria a la ley, te lo decimos antes de seguirla. Tú respondes de tener el consentimiento o la base legal para tratar los datos de tus contactos y para escribirles por cada canal.',
+        ],
+      },
+      {
+        h2: 'Confidencialidad y quién puede entrar',
+        ps: [
+          'Solo el personal de PAWWER que opera el servicio puede entrar a una cuenta, y lo hace para dar soporte, corregir fallas o cumplir la ley. El personal de servicio a clientes entra únicamente mientras atiende un ticket tuyo que tú verificaste con un código.',
+          'Toda persona de PAWWER con acceso está obligada a guardar confidencialidad, también después de dejar de trabajar con nosotros. Cada entrada a tu cuenta queda registrada, y la puedes consultar en «Quién ha visto tus datos».',
+        ],
+      },
+      {
+        h2: 'Cómo los protegemos',
+        ps: [
+          'Verificación en dos pasos obligatoria para cada persona; solo entran los equipos que la cuenta autorizó; cada negocio está aislado de los demás en la base de datos, de modo que ninguna cuenta puede leer los datos de otra; los archivos viven en almacenamiento privado y se comparten con enlaces que caducan; la conexión va cifrada y los datos se guardan cifrados por nuestro proveedor de base de datos.',
+          'Revisamos estas medidas cuando cambia el producto o aparece un riesgo nuevo. Ninguna medida es infalible: por eso existe la sección de vulneraciones, más abajo.',
+        ],
+      },
+      {
+        h2: 'Proveedores que tratan datos por nosotros (subencargados)',
+        ps: [
+          'Supabase — base de datos, inicio de sesión y archivos (Estados Unidos).',
+          'Vercel — alojamiento de la aplicación (Estados Unidos).',
+          'Anthropic — el modelo de inteligencia artificial que redacta las respuestas del asistente y lee las imágenes de inspiración, solo cuando usas esas funciones (Estados Unidos). Conforme a sus términos comerciales, no usa lo que le mandamos para entrenar sus modelos.',
+          'Zernio — el puente con WhatsApp, Instagram, Messenger y las demás redes que conectes: los mensajes de esos canales pasan por su servicio.',
+          'Kie.ai — la generación de imágenes con IA: recibe la instrucción del diseño y las fotos que tú eliges, no los datos de tus contactos.',
+          'Resend — los correos del sistema, como autorizar un equipo nuevo; se mandan a las personas de tu equipo, no a tus contactos (Estados Unidos).',
+          'OpenFreeMap — los mosaicos del mapa; no recibe datos de tus contactos.',
+          'Dodo Payments — cobra tu suscripción como revendedor autorizado; no recibe datos de tus contactos.',
+          'Las plataformas que conectas (Meta, WhatsApp, Google, TikTok y otras) no son subencargados de PAWWER: son servicios tuyos, con sus propios términos y su propia responsabilidad sobre lo que tratan.',
+          <>Si agregamos o cambiamos un subencargado, lo publicamos en esta página con su fecha al menos 15 días antes de que empiece a tratar datos. Si tienes una objeción razonable, escríbenos a <Correo asunto="Subencargados" />: lo resolvemos contigo o puedes cancelar sin penalización.</>,
+        ],
+      },
+      {
+        h2: 'Transferencias fuera de México',
+        ps: [
+          'Varios subencargados están fuera de México, principalmente en Estados Unidos. Esas transferencias son necesarias para prestarte el servicio que contratas, y a cada proveedor le exigimos por contrato un nivel de protección equivalente al de este documento.',
+        ],
+      },
+      {
+        h2: 'Derechos de tus contactos',
+        ps: [
+          'Si alguno de tus contactos ejerce sus derechos de acceso, rectificación, cancelación u oposición, o revoca su consentimiento, eres tú quien le responde. Desde PAWWER puedes consultar, corregir, exportar y eliminar sus datos.',
+          <>Si la solicitud nos llega a nosotros, te la pasamos sin contestarla por nuestra cuenta. Y si necesitas ayuda para atenderla, escríbenos a <Correo asunto="Derechos ARCO" />: respondemos dentro de 20 días hábiles.</>,
+        ],
+      },
+      {
+        h2: 'Si algo falla: vulneraciones de seguridad',
+        ps: [
+          'Si confirmamos una vulneración que afecte los datos de tus contactos, te avisamos sin demora y a más tardar 72 horas después de confirmarla: qué pasó, qué datos se afectaron, qué hicimos y qué te recomendamos. Así puedes avisar a tus contactos cuando la ley te lo pida.',
+          'Documentamos cada incidente y lo que cambiamos para que no se repita.',
+        ],
+      },
+      {
+        h2: 'Cuánto tiempo los guardamos',
+        ps: [
+          'Mientras tu cuenta esté activa. Si la cierras, los datos de tus contactos se eliminan dentro de los 90 días siguientes, salvo lo que la ley obligue a conservar. Antes de cerrarla puedes exportarlos desde la aplicación.',
+          'Si nos pides borrar algo antes, lo hacemos, salvo que la ley nos obligue a conservarlo.',
+        ],
+      },
+      {
+        h2: 'Revisiones y rendición de cuentas',
+        ps: [
+          <>Te damos la información razonable que necesites para comprobar que cumplimos este contrato: una vez al año, o cuando lo pida una autoridad, sin afectar la operación ni la confidencialidad de otros negocios. Escríbenos a <Correo asunto="Revisión de tratamiento de datos" />.</>,
+        ],
+      },
+      {
+        h2: 'Vigencia',
+        ps: [
+          'Este contrato dura lo que dure tu uso de PAWWER. Las obligaciones de confidencialidad y de borrado siguen vigentes después de que termine.',
+        ],
+      },
+    ],
+  },
+  en: {
+    back: '← Back to PAWWER',
+    label: 'Data processing',
+    h1: 'Your contacts, protected as if they were ours.',
+    lead: `Data processing agreement between your business and ${EMPRESA}. In force since ${REVISION_TRATAMIENTO.en}.`,
+    blocks: [
+      {
+        h2: 'Who is who',
+        ps: [
+          <>When you load your prospects’ and customers’ data into PAWWER —or it arrives through the channels you connect—, <strong>your business is the controller</strong> of that data and <strong>{EMPRESA} is the processor</strong>: it handles the data on your behalf, following your instructions and only to provide the service, under Mexico’s Federal Law on the Protection of Personal Data Held by Private Parties and its regulations.</>,
+          <>This agreement is part of the <a href="/en/terms">terms and conditions</a> and you accept it when you create your account. The data of your own account —your name, your email, your plan— is handled by PAWWER as controller, as described in the <a href="/en/privacy">privacy policy</a>.</>,
+        ],
+      },
+      {
+        h2: 'Which data and what for',
+        ps: [
+          'The data of your contacts that enters PAWWER: name, phone, email, approximate location, form answers, messages and conversations from your channels, your team’s notes, appointments, visits, quotes, contracts and the files you upload.',
+          'We process it to: receive and reply to messages from your connected channels, organize them in your CRM, schedule appointments, prepare quotes and contracts, measure your results and —only if you turn it on— let the AI assistant reply to and qualify your prospects.',
+          'PAWWER does not use your contacts’ data for its own purposes: it does not sell it, does not share it for advertising, does not use it to write to them on its own and does not use it to train artificial intelligence models.',
+        ],
+      },
+      {
+        h2: 'Your instructions',
+        ps: [
+          'You decide which channels you connect, which contacts you load, which automations you turn on and who on your team sees what. Those decisions, made in the application, are your instructions.',
+          'If an instruction seems unlawful to us, we tell you before following it. You are responsible for having the consent or legal basis to process your contacts’ data and to write to them on each channel.',
+        ],
+      },
+      {
+        h2: 'Confidentiality and who can get in',
+        ps: [
+          'Only the PAWWER staff who operate the service can enter an account, and they do so to give support, fix failures or comply with the law. Customer service staff enter only while handling a ticket of yours that you verified with a code.',
+          'Everyone at PAWWER with access is bound by confidentiality, also after they stop working with us. Every entry into your account is logged, and you can check it in “Who has seen your data”.',
+        ],
+      },
+      {
+        h2: 'How we protect it',
+        ps: [
+          'Mandatory two-step verification for every person; only the devices the account authorized can get in; each business is isolated from the others in the database, so no account can read another’s data; files live in private storage and are shared through links that expire; connections are encrypted and the data is stored encrypted by our database provider.',
+          'We review these measures when the product changes or a new risk appears. No measure is infallible: that is why the security breach section below exists.',
+        ],
+      },
+      {
+        h2: 'Providers that process data for us (sub-processors)',
+        ps: [
+          'Supabase — database, sign-in and files (United States).',
+          'Vercel — application hosting (United States).',
+          'Anthropic — the artificial intelligence model that drafts the assistant’s replies and reads inspiration images, only when you use those features (United States). Under its commercial terms, it does not use what we send it to train its models.',
+          'Zernio — the bridge with WhatsApp, Instagram, Messenger and the other networks you connect: messages from those channels go through its service.',
+          'Kie.ai — AI image generation: it receives the design instruction and the photos you choose, not your contacts’ data.',
+          'Resend — system emails, such as authorizing a new device; they go to the people on your team, not to your contacts (United States).',
+          'OpenFreeMap — map tiles; it receives no data about your contacts.',
+          'Dodo Payments — bills your subscription as authorized reseller; it receives no data about your contacts.',
+          'The platforms you connect (Meta, WhatsApp, Google, TikTok and others) are not PAWWER sub-processors: they are your services, with their own terms and their own responsibility for what they process.',
+          <>If we add or change a sub-processor, we publish it on this page with its date at least 15 days before it starts processing data. If you have a reasonable objection, write to <Correo asunto="Sub-processors" />: we work it out with you or you can cancel without penalty.</>,
+        ],
+      },
+      {
+        h2: 'Transfers outside Mexico',
+        ps: [
+          'Several sub-processors are outside Mexico, mainly in the United States. Those transfers are necessary to provide the service you purchase, and we contractually require each provider to offer a level of protection equivalent to this agreement.',
+        ],
+      },
+      {
+        h2: 'Your contacts’ rights',
+        ps: [
+          'If one of your contacts exercises their rights of access, rectification, cancellation or objection, or withdraws consent, you are the one who answers them. From PAWWER you can look up, correct, export and delete their data.',
+          <>If the request reaches us, we pass it on to you without answering it on our own. And if you need help handling it, write to <Correo asunto="Data subject rights" />: we reply within 20 business days.</>,
+        ],
+      },
+      {
+        h2: 'If something fails: security breaches',
+        ps: [
+          'If we confirm a breach affecting your contacts’ data, we notify you without delay and no later than 72 hours after confirming it: what happened, which data was affected, what we did and what we recommend. That way you can notify your contacts when the law requires it.',
+          'We document every incident and what we changed so it does not happen again.',
+        ],
+      },
+      {
+        h2: 'How long we keep it',
+        ps: [
+          'While your account is active. If you close it, your contacts’ data is deleted within the following 90 days, except what the law requires us to keep. Before closing it you can export it from the application.',
+          'If you ask us to delete something sooner, we do it, unless the law requires us to keep it.',
+        ],
+      },
+      {
+        h2: 'Reviews and accountability',
+        ps: [
+          <>We give you the reasonable information you need to verify that we comply with this agreement: once a year, or when an authority requires it, without affecting operations or the confidentiality of other businesses. Write to <Correo asunto="Data processing review" />.</>,
+        ],
+      },
+      {
+        h2: 'Term',
+        ps: [
+          'This agreement lasts as long as you use PAWWER. The confidentiality and deletion obligations remain in force after it ends.',
+        ],
+      },
+    ],
+  },
+};
+
+/* ------------------------------------------------------------------ */
+/*  Términos del programa beta (21 sep 2026)                            */
+/* ------------------------------------------------------------------ */
+
+/*
+ * La beta: un código abre la cuenta SIN tarjeta por 15 días, con todo lo
+ * de Escala y los créditos de IA a cuenta de PAWWER (decisión de la
+ * persona dueña). Al terminar se elige plan y se paga en Dodo. Lo que dice
+ * aquí es lo que hace `canjear_codigo_beta()` en el CRM (migración 65).
+ */
+export const REVISION_BETA = { es: '21 de septiembre de 2026', en: 'September 21, 2026' };
+
+export const programaBeta: Record<'es' | 'en', Documento> = {
+  es: {
+    back: '← Volver a PAWWER',
+    label: 'Programa beta',
+    h1: 'Entra antes que nadie, sin tarjeta.',
+    lead: `Términos del programa beta de PAWWER. Vigentes desde el ${REVISION_BETA.es}.`,
+    blocks: [
+      {
+        h2: 'Qué es la beta',
+        ps: [
+          <>Es acceso anticipado a PAWWER para negocios invitados. Entras con un código de beta que te da {EMPRESA} y lo escribes en la pantalla de planes de <Crm />, en «¿Tienes un código de beta?».</>,
+          'Cada negocio puede activar la beta una sola vez. El código es para quien lo recibió: no se vende ni se cambia por dinero.',
+        ],
+      },
+      {
+        h2: 'Qué incluye',
+        ps: [
+          <><strong>Sin tarjeta</strong> y sin ningún cargo, por los días que diga tu código —normalmente 15, contados desde que lo activas—, con las herramientas del plan que incluye tu código, normalmente Escala.</>,
+          'Los créditos de inteligencia artificial de la beta los paga PAWWER: tienes los del plan Escala, con los mismos límites de uso que cualquier cuenta. Las funciones que se venden aparte aparecen solo si tu código las incluye.',
+        ],
+      },
+      {
+        h2: 'Cuando termina',
+        ps: [
+          'Dentro de la aplicación ves cuántos días te quedan y qué día termina. Para seguir usando PAWWER después, eliges tu plan y lo pagas con tarjeta en el checkout de Dodo Payments. La beta cuenta como tu prueba: el cobro empieza el día que activas tu plan, también si lo activas antes de que la beta termine.',
+          <><strong>No hay cobro automático al terminar la beta</strong>: como no registraste tarjeta, nada se cobra si no eliges un plan. Tu cuenta queda en pausa y tus contactos, conversaciones y ajustes se conservan para cuando elijas uno. Si no lo eliges en 90 días podemos cerrarla, y sus datos se borran en los plazos del <a href="/privacidad">aviso de privacidad</a>; si prefieres que la cerremos antes, escríbenos a <Correo asunto="Cerrar mi cuenta" />.</>,
+        ],
+      },
+      {
+        h2: 'Es una beta',
+        ps: [
+          'Algunas funciones pueden cambiar, tardar o fallar mientras las afinamos. Lo que todavía no está conectado lo decimos en pantalla en vez de simularlo. Durante la beta no ofrecemos un nivel de servicio garantizado.',
+          'Puede que te pidamos tu opinión. Si nos compartes ideas o comentarios, podemos usarlos para mejorar PAWWER sin que eso nos obligue a nada contigo.',
+        ],
+      },
+      {
+        h2: 'Cambios y cierre de la beta',
+        ps: [
+          'Podemos revocar códigos que no se hayan usado, cambiar lo que incluye la beta para quienes todavía no la activan, o terminarla antes con un aviso razonable. Si terminamos tu beta antes de tiempo, te avisamos y conservas tus datos.',
+        ],
+      },
+      {
+        h2: 'Todo lo demás',
+        ps: [
+          <>Durante la beta aplican los <a href="/terminos">términos y condiciones</a>, el <a href="/privacidad">aviso de privacidad</a> y el <a href="/tratamiento-de-datos">contrato de encargo de tratamiento de datos</a>. Si algo de este documento choca con ellos, para la beta manda este documento. Dudas: <Correo asunto="Beta de PAWWER" />.</>,
+        ],
+      },
+    ],
+  },
+  en: {
+    back: '← Back to PAWWER',
+    label: 'Beta program',
+    h1: 'Get in before anyone else, no card needed.',
+    lead: `PAWWER beta program terms. In force since ${REVISION_BETA.en}.`,
+    blocks: [
+      {
+        h2: 'What the beta is',
+        ps: [
+          <>It is early access to PAWWER for invited businesses. You get in with a beta code that {EMPRESA} gives you, and you type it on the plans screen at <Crm />, under “Do you have a beta code?”.</>,
+          'Each business can activate the beta only once. The code is for whoever received it: it cannot be sold or exchanged for money.',
+        ],
+      },
+      {
+        h2: 'What it includes',
+        ps: [
+          <><strong>No card</strong> and no charge at all, for the days your code states —usually 15, counted from when you activate it—, with the tools of the plan your code includes, usually Scale.</>,
+          'The beta’s artificial intelligence credits are paid by PAWWER: you get the Scale plan’s credits, with the same usage limits as any account. Features sold separately appear only if your code includes them.',
+        ],
+      },
+      {
+        h2: 'When it ends',
+        ps: [
+          'Inside the application you see how many days you have left and the day it ends. To keep using PAWWER afterwards, you choose your plan and pay for it by card in the Dodo Payments checkout. The beta counts as your trial: billing starts the day you activate your plan, also if you activate it before the beta ends.',
+          <><strong>There is no automatic charge when the beta ends</strong>: since you did not register a card, nothing is charged if you do not choose a plan. Your account is paused and your contacts, conversations and settings are kept for when you choose one. If you do not choose one within 90 days we may close it, and its data is deleted within the periods of the <a href="/en/privacy">privacy policy</a>; if you would rather have us close it sooner, write to <Correo asunto="Close my account" />.</>,
+        ],
+      },
+      {
+        h2: 'It is a beta',
+        ps: [
+          'Some features may change, be slow or fail while we fine-tune them. What is not connected yet we say on screen instead of faking it. During the beta we do not offer a guaranteed service level.',
+          'We may ask for your opinion. If you share ideas or feedback, we may use them to improve PAWWER without that creating any obligation to you.',
+        ],
+      },
+      {
+        h2: 'Changes and end of the beta',
+        ps: [
+          'We may revoke codes that have not been used, change what the beta includes for those who have not activated it yet, or end it early with reasonable notice. If we end your beta early, we let you know and you keep your data.',
+        ],
+      },
+      {
+        h2: 'Everything else',
+        ps: [
+          <>During the beta, the <a href="/en/terms">terms and conditions</a>, the <a href="/en/privacy">privacy policy</a> and the <a href="/en/data-processing">data processing agreement</a> apply. If anything in this document conflicts with them, this document governs for the beta. Questions: <Correo asunto="PAWWER beta" />.</>,
         ],
       },
     ],
