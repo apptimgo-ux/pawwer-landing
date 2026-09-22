@@ -651,7 +651,8 @@ export const programaBeta: Record<'es' | 'en', Documento> = {
         h2: 'Qué incluye',
         ps: [
           <><strong>Sin tarjeta</strong> y sin ningún cargo, por los días que diga tu código —normalmente 15, contados desde que lo activas—, con las herramientas del plan que incluye tu código, normalmente Escala.</>,
-          'Los créditos de inteligencia artificial de la beta los paga PAWWER: tienes los del plan Escala, con los mismos límites de uso que cualquier cuenta. Las funciones que se venden aparte aparecen solo si tu código las incluye.',
+          'El asistente de inteligencia artificial está incluido y sus créditos los paga PAWWER: tienes los del plan Escala, con los mismos límites de uso que cualquier cuenta.',
+          <>Con inteligencia artificial puedes crear <strong>una imagen y un video</strong> en toda la beta —el video, en cuanto esté disponible en PAWWER—. Una generación que falla no cuenta. Para crear más, eliges tu plan. Las funciones que se venden aparte aparecen solo si tu código las incluye.</>,
         ],
       },
       {
@@ -699,7 +700,8 @@ export const programaBeta: Record<'es' | 'en', Documento> = {
         h2: 'What it includes',
         ps: [
           <><strong>No card</strong> and no charge at all, for the days your code states —usually 15, counted from when you activate it—, with the tools of the plan your code includes, usually Scale.</>,
-          'The beta’s artificial intelligence credits are paid by PAWWER: you get the Scale plan’s credits, with the same usage limits as any account. Features sold separately appear only if your code includes them.',
+          'The artificial intelligence assistant is included and PAWWER pays for its credits: you get the Scale plan’s credits, with the same usage limits as any account.',
+          <>With artificial intelligence you can create <strong>one image and one video</strong> during the whole beta —the video as soon as it is available in PAWWER—. A generation that fails does not count. To create more, you choose your plan. Features sold separately appear only if your code includes them.</>,
         ],
       },
       {
