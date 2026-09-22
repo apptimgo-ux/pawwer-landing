@@ -33,7 +33,7 @@ import type { Documento } from './legal-view';
  */
 
 export const EMPRESA = 'PAWWER S.A.S. de C.V.';
-export const REVISION = { es: '21 de septiembre de 2026', en: 'September 21, 2026' };
+export const REVISION = { es: '22 de septiembre de 2026', en: 'September 22, 2026' };
 
 const DIRECCION = `${ADDRESS_LINES[0]} ${ADDRESS_LINES[1]}`;
 const PRECIOS = siteSettings.prices as Record<string, string>;
@@ -66,6 +66,7 @@ export const terminos: Record<'es' | 'en', Documento> = {
         ps: [
           'PAWWER es un CRM con automatización de marketing para pequeñas y medianas empresas: concentra los mensajes de tus canales conectados, guarda a tus contactos y su conversación, agenda citas, arma cotizaciones y contratos, mide resultados y ofrece un asistente de inteligencia artificial que contesta y califica prospectos.',
           'Lo que cada plan incluye —integrantes del equipo, canales y créditos de IA— se muestra en la página de planes y dentro de tu cuenta. Algunas funciones se venden aparte como complementos y aparecen solo si están dados de alta.',
+          <>Si se te acaban los créditos de IA del mes, quien administra la cuenta puede comprar <strong>paquetes de créditos extra</strong> en Mi empresa → Tu plan y créditos: son de pago único con tarjeta en el checkout de Dodo Payments, más impuestos; se usan después de los del mes y no caducan mientras tu cuenta esté activa.</>,
           'PAWWER es una herramienta: no garantiza ventas, resultados comerciales ni la aprobación de ninguna plataforma de terceros (Meta, Google, WhatsApp u otras), cuyas reglas y disponibilidad no controlamos.',
         ],
       },
@@ -181,6 +182,7 @@ export const terminos: Record<'es' | 'en', Documento> = {
         ps: [
           'PAWWER is a CRM with marketing automation for small and medium businesses: it brings together the messages from your connected channels, keeps your contacts and their conversation, books appointments, builds quotes and contracts, measures results, and offers an AI assistant that replies to and qualifies prospects.',
           'What each plan includes — team members, channels and AI credits — is shown on the plans page and inside your account. Some features are sold separately as add-ons and only appear once they are enabled for your account.',
+          <>If you run out of AI credits for the month, whoever administers the account can buy <strong>extra credit packs</strong> in My company → Your plan and credits: they are a one-time card payment in the Dodo Payments checkout, plus taxes; they are used after the monthly ones and do not expire while your account is active.</>,
           'PAWWER is a tool: it does not guarantee sales, business results or approval by any third-party platform (Meta, Google, WhatsApp or others), whose rules and availability we do not control.',
         ],
       },
@@ -319,6 +321,7 @@ export const reembolsos: Record<'es' | 'en', Documento> = {
         h2: 'Reembolsos',
         ps: [
           <><strong>No devolvemos periodos ya cobrados</strong>, ni completos ni en proporción, incluyendo el caso de que no hayas usado el servicio durante ese mes. El modelo es mensual y sin permanencia: si algo no te sirve, cancelas y dejas de pagar el mes siguiente.</>,
+          'Los paquetes de créditos extra son de pago único y tampoco se reembolsan, se hayan usado o no. No caducan mientras tu cuenta esté activa; si la cierras, los que no usaste se pierden.',
           'Sí corregimos lo que salió mal: un cobro duplicado, un cargo después de haber cancelado, un cobro a una cuenta que no es tuya o un cobro por un monto distinto al del plan contratado. Escríbenos y lo resolvemos.',
           <>Dodo Payments, como vendedor de la transacción, puede resolver una solicitud o una disputa conforme a sus propias condiciones, incluso cuando nuestra política diga otra cosa.</>,
         ],
@@ -378,6 +381,7 @@ export const reembolsos: Record<'es' | 'en', Documento> = {
         h2: 'Refunds',
         ps: [
           <><strong>We do not refund periods already charged</strong>, in full or pro rata, including where you did not use the service during that month. The model is monthly with no minimum term: if something does not work for you, cancel and you stop paying from the next month.</>,
+          'Extra credit packs are one-time payments and are not refunded either, whether or not you used them. They do not expire while your account is active; if you close it, unused credits are lost.',
           'We do fix what went wrong: a duplicate charge, a charge after you cancelled, a charge to an account that is not yours, or a charge for an amount different from your plan. Write to us and we will sort it out.',
           'Dodo Payments, as the seller of record for the transaction, may resolve a request or a dispute under its own terms, even where our policy says otherwise.',
         ],
