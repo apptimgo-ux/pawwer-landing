@@ -1,17 +1,23 @@
 {
-  "htmlLang": "es-MX",
-  "ogLocale": "es_MX",
-  "meta": {
-    "title": "PAWWER | CRM comercial y de marketing",
-    "description": "Organiza tus leads, centraliza la atención y convierte el seguimiento comercial en un sistema medible. Conoce los planes PAWWER desde $89 al mes."
-  },
   "nav": {
     "skip": "Saltar al contenido",
     "links": [
-      { "label": "Soluciones", "hash": "#soluciones" },
-      { "label": "Beneficios", "hash": "#beneficios" },
-      { "label": "Planes", "hash": "#planes" },
-      { "label": "Contacto", "hash": "#contacto" }
+      {
+        "label": "Soluciones",
+        "hash": "#soluciones"
+      },
+      {
+        "label": "Beneficios",
+        "hash": "#beneficios"
+      },
+      {
+        "label": "Planes",
+        "hash": "#planes"
+      },
+      {
+        "label": "Contacto",
+        "hash": "#contacto"
+      }
     ],
     "login": "Sign in / Login",
     "menuOpen": "Abrir menú",
@@ -19,122 +25,42 @@
     "langLabel": "EN",
     "langAria": "View this page in English"
   },
-  "footer": {
-    "privacy": "Política de privacidad",
-    "privacyHref": "/privacidad",
-    "terms": "Términos y condiciones",
-    "termsHref": "/terminos",
-    "refunds": "Reembolsos y cancelación",
-    "refundsHref": "/reembolsos",
-    "dataProcessing": "Encargo de datos",
-    "dataProcessingHref": "/tratamiento-de-datos",
-    "rights": "PAWWER"
-  },
-  "plans": [
-    {
-      "slug": "esencial",
-      "name": "Esencial",
-      "summary": "Pon orden en tu operación comercial.",
-      "inherits": "Lo esencial para comenzar",
-      "features": [
-        { "text": "CRM de leads, contactos y seguimiento" },
-        { "text": "Calendario de citas" },
-        { "text": "Marca, biblioteca y preparación de contenidos" },
-        { "text": "3 integrantes" },
-        { "text": "Agente de ventas IA que contesta a tus leads" },
-        { "text": "Hasta 2 canales con conexión oficial" },
-        { "text": "150 créditos de IA al mes" }
-      ],
-      "note": ""
-    },
-    {
-      "slug": "crecimiento",
-      "name": "Crecimiento",
-      "summary": "Conecta tus contenidos con tus oportunidades.",
-      "inherits": "Todo Esencial, más",
-      "features": [
-        { "text": "10 integrantes" },
-        { "text": "Planner de contenidos" },
-        { "text": "Mapa y origen de leads" },
-        { "text": "Resultados, cotizaciones y contratos" },
-        { "text": "Hasta 4 canales con conexión oficial" },
-        { "text": "500 créditos de IA al mes" }
-      ],
-      "note": ""
-    },
-    {
-      "slug": "escala",
-      "name": "Escala",
-      "summary": "Amplía el alcance de tu equipo.",
-      "inherits": "Todo Crecimiento, más",
-      "features": [
-        { "text": "25 integrantes" },
-        { "text": "Automatización comercial" },
-        { "text": "Atención prioritaria" },
-        { "text": "Analítica operativa" },
-        { "text": "Hasta 8 canales con conexión oficial" },
-        { "text": "1,500 créditos de IA al mes" }
-      ],
-      "note": "Las automatizaciones multicanal se habilitan por canal al terminar su conexión oficial."
-    }
-  ],
-  "comparison": [
-    { "label": "Integrantes", "esencial": "3", "crecimiento": "10", "escala": "25" },
-    { "label": "Canales con conexión oficial", "esencial": "Hasta 2", "crecimiento": "Hasta 4", "escala": "Hasta 8" },
-    { "label": "Créditos de IA / mes", "esencial": "150", "crecimiento": "500", "escala": "1,500" },
-    { "label": "CRM de leads, contactos y seguimiento", "esencial": "✓", "crecimiento": "✓", "escala": "✓" },
-    { "label": "Calendario de citas", "esencial": "✓", "crecimiento": "✓", "escala": "✓" },
-    { "label": "Marca, biblioteca y preparación de contenidos", "esencial": "✓", "crecimiento": "✓", "escala": "✓" },
-    { "label": "Planner de contenidos", "esencial": "—", "crecimiento": "✓", "escala": "✓" },
-    { "label": "Mapa y origen de leads", "esencial": "—", "crecimiento": "✓", "escala": "✓" },
-    { "label": "Resultados, cotizaciones y contratos", "esencial": "—", "crecimiento": "✓", "escala": "✓" },
-    { "label": "Automatización comercial", "esencial": "—", "crecimiento": "—", "escala": "✓" },
-    { "label": "Atención prioritaria", "esencial": "—", "crecimiento": "—", "escala": "✓" },
-    { "label": "Analítica operativa", "esencial": "—", "crecimiento": "—", "escala": "✓" },
-    { "label": "Agente de ventas IA con traspaso humano", "esencial": "✓", "crecimiento": "✓", "escala": "✓" }
-  ],
-  "planDetail": {
-    "back": "← Volver a planes",
-    "includesTitle": "Qué incluye",
-    "inheritsLabel": "Incluye además todo lo del plan anterior.",
-    "trialTitle": "Cómo funciona la prueba de 3 días",
-    "trialLines": [
-      { "text": "Durante la prueba tienes acceso temporal al nivel Escala." },
-      { "text": "Creas tu cuenta en el CRM (crm.pawwerapp.com) y registras tu tarjeta en el checkout seguro de Dodo Payments. Este sitio no captura ni almacena datos de tarjeta." },
-      { "text": "No se cobra nada durante los 3 días. Si no cancelas, el día 4 se cobra tu plan en USD y se renueva cada mes." },
-      { "text": "Puedes cancelar tu suscripción en cualquier momento desde el CRM. Si cancelas antes de que terminen los 3 días, no se genera ningún cargo." },
-      { "text": "Los precios no incluyen impuestos: Dodo Payments, como revendedor autorizado de PAWWER, suma en el checkout los que apliquen —en México, el IVA— y los verás antes de pagar. Los créditos de IA se renuevan el día 1 de cada mes." }
-    ],
-    "activationTitle": "En activación",
-    "exclusionsTitle": "Qué no cubre la mensualidad",
-    "ctaTrial": "Iniciar prueba de 3 días",
-    "ctaCheckout": "Empezar prueba de 3 días",
-    "ctaSales": "Hablar con ventas",
-    "priceUnit": "USD / mes"
+  "meta": {
+    "title": "PAWWER | Sistema de marketing y ventas con IA que convierte cada conversación en clientes para PyMEs y freelancers",
+    "description": "Organiza tus leads, centraliza la atención y convierte el seguimiento comercial en un sistema medible. Conoce los planes PAWWER desde $89 al mes."
   },
   "blocks": [
     {
-      "type": "hero",
-      "anchor": "",
-      "kicker": "Sistema operativo comercial impulsado por IA para pequeñas empresas",
-      "h1a": "Los datos",
-      "h1b": "crean impulso.",
       "sub": "Tus leads ya están hablando. PAWWER convierte cada conversación en contexto, y cada contexto en acción.",
-      "ctaPrimary": "Construye tu sistema",
+      "mediaPlacement": "background",
+      "slides": [
+        {
+          "image": "/img/inmobiliario-01.jpg",
+          "alt": "Equipo inmobiliario atendiendo a una familia"
+        },
+        {
+          "image": "/img/autos-01.jpg",
+          "alt": "Asesoría en una agencia de autos"
+        },
+        {
+          "image": "/img/recepcion-01.jpg",
+          "alt": "Atención de clientes en recepción"
+        }
+      ],
       "ctaSecondary": "Explorar el proceso",
       "metaLeft": "Desliza para explorar",
-      "metaRight": "CRM / Marketing / Seguimiento",
-      "mediaType": "image",
-      "mediaPlacement": "background",
-      "textTone": "dark",
-      "image": "",
-      "video": "",
       "poster": "",
-      "slides": [
-        { "image": "/img/inmobiliario-01.jpg", "alt": "Equipo inmobiliario atendiendo a una familia" },
-        { "image": "/img/autos-01.jpg", "alt": "Asesoría en una agencia de autos" },
-        { "image": "/img/recepcion-01.jpg", "alt": "Atención de clientes en recepción" }
-      ]
+      "ctaPrimary": "Construye tu sistema",
+      "kicker": "Sistema operativo comercial impulsado por IA para pequeñas empresas",
+      "anchor": "",
+      "metaRight": "CRM / Marketing / Seguimiento",
+      "h1a": "Los datos",
+      "h1b": "crean impulso.",
+      "type": "hero",
+      "video": "",
+      "image": "",
+      "mediaType": "image",
+      "textTone": "dark"
     },
     {
       "type": "statement",
@@ -153,11 +79,26 @@
       "h2a": "De la primera señal",
       "h2b": "al siguiente paso.",
       "phases": [
-        { "name": "Captar", "line": "Cada lead entra con su origen y su contexto, venga del canal que venga." },
-        { "name": "Entender", "line": "Ves el historial completo antes de responder: qué pidió, cuándo y por dónde." },
-        { "name": "Atender", "line": "Conversaciones, citas y tareas en un mismo lugar, con el próximo paso siempre visible." },
-        { "name": "Convertir", "line": "Cotizaciones, propuestas y cierre conectados al seguimiento, sin cabos sueltos." },
-        { "name": "Medir", "line": "Origen, resultados y actividad del equipo para decidir dónde invertir energía." }
+        {
+          "name": "Captar",
+          "line": "Cada lead entra con su origen y su contexto, venga del canal que venga."
+        },
+        {
+          "name": "Entender",
+          "line": "Ves el historial completo antes de responder: qué pidió, cuándo y por dónde."
+        },
+        {
+          "name": "Atender",
+          "line": "Conversaciones, citas y tareas en un mismo lugar, con el próximo paso siempre visible."
+        },
+        {
+          "name": "Convertir",
+          "line": "Cotizaciones, propuestas y cierre conectados al seguimiento, sin cabos sueltos."
+        },
+        {
+          "name": "Medir",
+          "line": "Origen, resultados y actividad del equipo para decidir dónde invertir energía."
+        }
       ]
     },
     {
@@ -167,9 +108,21 @@
       "h2a": "Un sistema,",
       "h2b": "tres movimientos.",
       "items": [
-        { "icon": "chat", "h3": "Atiende con contexto", "p": "Leads, contactos y seguimiento en un mismo lugar para que cada conversación tenga continuidad." },
-        { "icon": "calendar", "h3": "Convierte interés en acción", "p": "Relaciona tu calendario con el seguimiento y da a cada oportunidad un próximo paso." },
-        { "icon": "chart", "h3": "Mide lo que mueve al equipo", "p": "Origen, resultados y analítica operativa para decidir dónde invertir energía." }
+        {
+          "icon": "chat",
+          "h3": "Atiende con contexto",
+          "p": "Leads, contactos y seguimiento en un mismo lugar para que cada conversación tenga continuidad."
+        },
+        {
+          "icon": "calendar",
+          "h3": "Convierte interés en acción",
+          "p": "Relaciona tu calendario con el seguimiento y da a cada oportunidad un próximo paso."
+        },
+        {
+          "icon": "chart",
+          "h3": "Mide lo que mueve al equipo",
+          "p": "Origen, resultados y analítica operativa para decidir dónde invertir energía."
+        }
       ]
     },
     {
@@ -184,9 +137,27 @@
         "eyebrow": "Hoy · 09:42",
         "h3": "El siguiente paso es claro.",
         "leads": [
-          { "stage": "Nuevo lead", "initials": "AC", "name": "Andrea C.", "role": "Consulta de servicio", "status": "Próximo paso definido" },
-          { "stage": "En seguimiento", "initials": "LM", "name": "Luis M.", "role": "Propuesta en revisión", "status": "Cita agendada" },
-          { "stage": "Propuesta", "initials": "SR", "name": "Sofía R.", "role": "Proyecto comercial", "status": "Próximo paso definido" }
+          {
+            "stage": "Nuevo lead",
+            "initials": "AC",
+            "name": "Andrea C.",
+            "role": "Consulta de servicio",
+            "status": "Próximo paso definido"
+          },
+          {
+            "stage": "En seguimiento",
+            "initials": "LM",
+            "name": "Luis M.",
+            "role": "Propuesta en revisión",
+            "status": "Cita agendada"
+          },
+          {
+            "stage": "Propuesta",
+            "initials": "SR",
+            "name": "Sofía R.",
+            "role": "Proyecto comercial",
+            "status": "Próximo paso definido"
+          }
         ],
         "context": "Un historial para dar continuidad.",
         "caption": "Vista conceptual · datos ficticios"
@@ -199,9 +170,21 @@
       "h2a": "Menos memoria.",
       "h2b": "Más impulso.",
       "items": [
-        { "icon": "target", "h3": "Un lugar para cada lead", "p": "Centraliza contactos y oportunidades para trabajar con una visión compartida." },
-        { "icon": "calendar", "h3": "Un próximo paso claro", "p": "Conecta citas y seguimiento para mantener el ritmo comercial." },
-        { "icon": "chart", "h3": "Una lectura medible", "p": "Entiende qué funciona y qué necesita atención desde Crecimiento y Escala." }
+        {
+          "icon": "target",
+          "h3": "Un lugar para cada lead",
+          "p": "Centraliza contactos y oportunidades para trabajar con una visión compartida."
+        },
+        {
+          "icon": "calendar",
+          "h3": "Un próximo paso claro",
+          "p": "Conecta citas y seguimiento para mantener el ritmo comercial."
+        },
+        {
+          "icon": "chart",
+          "h3": "Una lectura medible",
+          "p": "Entiende qué funciona y qué necesita atención desde Crecimiento y Escala."
+        }
       ]
     },
     {
@@ -212,19 +195,19 @@
       "items": []
     },
     {
-      "type": "pricing",
-      "anchor": "planes",
+      "showComparison": true,
       "eyebrow": "Planes y precios",
-      "h2a": "Elige el ritmo",
-      "h2b": "de tu crecimiento.",
       "intro": "Prueba de 3 días con acceso temporal al nivel Escala. Registras tu tarjeta en el checkout seguro de Dodo Payments y no se cobra nada hasta el día 4. Precios en USD, sin impuestos: se suman en el checkout.",
       "priceUnit": "USD / mes",
-      "mostPopular": "Más elegido",
-      "cta": "Empezar",
-      "activationLabel": "En activación",
-      "compareTitle": "Comparar los planes",
       "compareFeatureCol": "Incluye",
-      "showComparison": true
+      "cta": "Empezar",
+      "compareTitle": "Comparar los planes",
+      "anchor": "planes",
+      "mostPopular": "Más elegido",
+      "h2a": "Elige el ritmo",
+      "h2b": "de tu crecimiento.",
+      "type": "pricing",
+      "activationLabel": "En activación"
     },
     {
       "type": "agency",
@@ -239,8 +222,14 @@
       "type": "notes",
       "anchor": "",
       "items": [
-        { "lead": "La mensualidad cubre PAWWER.", "body": "No incluye inversión publicitaria, cargos de Meta, Google o TikTok, números, SMS, plantillas de WhatsApp, consumo de mensajería ni servicios de terceros." },
-        { "lead": "", "body": "Este sitio no captura datos de tarjeta: el pago se hace en el checkout seguro de Dodo Payments desde el CRM, y Dodo suma ahí los impuestos que apliquen, que no están incluidos en el precio. Los créditos de IA se renuevan el día 1 de cada mes y no se acumulan." }
+        {
+          "lead": "La mensualidad cubre PAWWER.",
+          "body": "No incluye inversión publicitaria, cargos de Meta, Google o TikTok, números, SMS, plantillas de WhatsApp, consumo de mensajería ni servicios de terceros."
+        },
+        {
+          "lead": "",
+          "body": "Este sitio no captura datos de tarjeta: el pago se hace en el checkout seguro de Dodo Payments desde el CRM, y Dodo suma ahí los impuestos que apliquen, que no están incluidos en el precio. Los créditos de IA se renuevan el día 1 de cada mes y no se acumulan."
+        }
       ]
     },
     {
@@ -251,5 +240,213 @@
       "h2b": "lead avance.",
       "buttonLabel": "Solicitar prueba de 3 días"
     }
-  ]
+  ],
+  "comparison": [
+    {
+      "label": "Integrantes",
+      "esencial": "3",
+      "crecimiento": "10",
+      "escala": "25"
+    },
+    {
+      "label": "Canales con conexión oficial",
+      "esencial": "Hasta 2",
+      "crecimiento": "Hasta 4",
+      "escala": "Hasta 8"
+    },
+    {
+      "label": "Créditos de IA / mes",
+      "esencial": "150",
+      "crecimiento": "500",
+      "escala": "1,500"
+    },
+    {
+      "label": "CRM de leads, contactos y seguimiento",
+      "esencial": "✓",
+      "crecimiento": "✓",
+      "escala": "✓"
+    },
+    {
+      "label": "Calendario de citas",
+      "esencial": "✓",
+      "crecimiento": "✓",
+      "escala": "✓"
+    },
+    {
+      "label": "Marca, biblioteca y preparación de contenidos",
+      "esencial": "✓",
+      "crecimiento": "✓",
+      "escala": "✓"
+    },
+    {
+      "label": "Planner de contenidos",
+      "esencial": "—",
+      "crecimiento": "✓",
+      "escala": "✓"
+    },
+    {
+      "label": "Mapa y origen de leads",
+      "esencial": "—",
+      "crecimiento": "✓",
+      "escala": "✓"
+    },
+    {
+      "label": "Resultados, cotizaciones y contratos",
+      "esencial": "—",
+      "crecimiento": "✓",
+      "escala": "✓"
+    },
+    {
+      "label": "Automatización comercial",
+      "esencial": "—",
+      "crecimiento": "—",
+      "escala": "✓"
+    },
+    {
+      "label": "Atención prioritaria",
+      "esencial": "—",
+      "crecimiento": "—",
+      "escala": "✓"
+    },
+    {
+      "label": "Analítica operativa",
+      "esencial": "—",
+      "crecimiento": "—",
+      "escala": "✓"
+    },
+    {
+      "label": "Agente de ventas IA con traspaso humano",
+      "esencial": "✓",
+      "crecimiento": "✓",
+      "escala": "✓"
+    }
+  ],
+  "plans": [
+    {
+      "slug": "esencial",
+      "name": "Esencial",
+      "summary": "Pon orden en tu operación comercial.",
+      "inherits": "Lo esencial para comenzar",
+      "features": [
+        {
+          "text": "CRM de leads, contactos y seguimiento"
+        },
+        {
+          "text": "Calendario de citas"
+        },
+        {
+          "text": "Marca, biblioteca y preparación de contenidos"
+        },
+        {
+          "text": "3 integrantes"
+        },
+        {
+          "text": "Agente de ventas IA que contesta a tus leads"
+        },
+        {
+          "text": "Hasta 2 canales con conexión oficial"
+        },
+        {
+          "text": "150 créditos de IA al mes"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "slug": "crecimiento",
+      "name": "Crecimiento",
+      "summary": "Conecta tus contenidos con tus oportunidades.",
+      "inherits": "Todo Esencial, más",
+      "features": [
+        {
+          "text": "10 integrantes"
+        },
+        {
+          "text": "Planner de contenidos"
+        },
+        {
+          "text": "Mapa y origen de leads"
+        },
+        {
+          "text": "Resultados, cotizaciones y contratos"
+        },
+        {
+          "text": "Hasta 4 canales con conexión oficial"
+        },
+        {
+          "text": "500 créditos de IA al mes"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "slug": "escala",
+      "name": "Escala",
+      "summary": "Amplía el alcance de tu equipo.",
+      "inherits": "Todo Crecimiento, más",
+      "features": [
+        {
+          "text": "25 integrantes"
+        },
+        {
+          "text": "Automatización comercial"
+        },
+        {
+          "text": "Atención prioritaria"
+        },
+        {
+          "text": "Analítica operativa"
+        },
+        {
+          "text": "Hasta 8 canales con conexión oficial"
+        },
+        {
+          "text": "1,500 créditos de IA al mes"
+        }
+      ],
+      "note": "Las automatizaciones multicanal se habilitan por canal al terminar su conexión oficial."
+    }
+  ],
+  "ogLocale": "es_MX",
+  "htmlLang": "es-MX",
+  "planDetail": {
+    "trialTitle": "Cómo funciona la prueba de 3 días",
+    "activationTitle": "En activación",
+    "ctaTrial": "Iniciar prueba de 3 días",
+    "back": "← Volver a planes",
+    "trialLines": [
+      {
+        "text": "Durante la prueba tienes acceso temporal al nivel Escala."
+      },
+      {
+        "text": "Creas tu cuenta en el CRM (crm.pawwerapp.com) y registras tu tarjeta en el checkout seguro de Dodo Payments. Este sitio no captura ni almacena datos de tarjeta."
+      },
+      {
+        "text": "No se cobra nada durante los 3 días. Si no cancelas, el día 4 se cobra tu plan en USD y se renueva cada mes."
+      },
+      {
+        "text": "Puedes cancelar tu suscripción en cualquier momento desde el CRM. Si cancelas antes de que terminen los 3 días, no se genera ningún cargo."
+      },
+      {
+        "text": "Los precios no incluyen impuestos: Dodo Payments, como revendedor autorizado de PAWWER, suma en el checkout los que apliquen —en México, el IVA— y los verás antes de pagar. Los créditos de IA se renuevan el día 1 de cada mes."
+      }
+    ],
+    "includesTitle": "Qué incluye",
+    "priceUnit": "USD / mes",
+    "exclusionsTitle": "Qué no cubre la mensualidad",
+    "ctaCheckout": "Empezar prueba de 3 días",
+    "ctaSales": "Hablar con ventas",
+    "inheritsLabel": "Incluye además todo lo del plan anterior."
+  },
+  "footer": {
+    "refundsHref": "/reembolsos",
+    "terms": "Términos y condiciones",
+    "dataProcessingHref": "/tratamiento-de-datos",
+    "privacy": "Política de privacidad",
+    "termsHref": "/terminos",
+    "privacyHref": "/privacidad",
+    "rights": "PAWWER",
+    "refunds": "Reembolsos y cancelación",
+    "dataProcessing": "Encargo de datos"
+  }
 }
