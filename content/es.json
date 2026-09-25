@@ -76,22 +76,37 @@
         { "text": "1,500 créditos de IA al mes" }
       ],
       "note": "Las automatizaciones multicanal se habilitan por canal al terminar su conexión oficial."
+    },
+    {
+      "slug": "empresarial",
+      "name": "Empresarial",
+      "summary": "Toda tu operación conectada, con más equipo y capacidad.",
+      "inherits": "Todo lo de Escala, más",
+      "features": [
+        { "text": "50 integrantes y 10 perfiles de negocio" },
+        { "text": "5,000 créditos de IA al mes" },
+        { "text": "Los 9 canales disponibles, sujetos a conexión oficial" },
+        { "text": "Módulos disponibles incluidos, sujetos a configuración" },
+        { "text": "Videollamadas, contexto e inteligencia de campañas" },
+        { "text": "Atención prioritaria y analítica de operación" }
+      ],
+      "note": "US$1,999 al mes más impuestos. Pauta, excedentes e integraciones ERP a medida se cotizan aparte. No incluye servicios de agencia ni funciones aún no conectadas."
     }
   ],
   "comparison": [
-    { "label": "Integrantes", "esencial": "3", "crecimiento": "10", "escala": "25" },
-    { "label": "Canales con conexión oficial", "esencial": "Hasta 2", "crecimiento": "Hasta 4", "escala": "Hasta 8" },
-    { "label": "Créditos de IA / mes", "esencial": "150", "crecimiento": "500", "escala": "1,500" },
-    { "label": "CRM de leads, contactos y seguimiento", "esencial": "✓", "crecimiento": "✓", "escala": "✓" },
-    { "label": "Calendario de citas", "esencial": "✓", "crecimiento": "✓", "escala": "✓" },
-    { "label": "Marca, biblioteca y preparación de contenidos", "esencial": "✓", "crecimiento": "✓", "escala": "✓" },
-    { "label": "Planner de contenidos", "esencial": "—", "crecimiento": "✓", "escala": "✓" },
-    { "label": "Mapa y origen de leads", "esencial": "—", "crecimiento": "✓", "escala": "✓" },
-    { "label": "Resultados, cotizaciones y contratos", "esencial": "—", "crecimiento": "✓", "escala": "✓" },
-    { "label": "Automatización comercial", "esencial": "—", "crecimiento": "—", "escala": "✓" },
-    { "label": "Atención prioritaria", "esencial": "—", "crecimiento": "—", "escala": "✓" },
-    { "label": "Analítica operativa", "esencial": "—", "crecimiento": "—", "escala": "✓" },
-    { "label": "Agente de ventas IA con traspaso humano", "esencial": "✓", "crecimiento": "✓", "escala": "✓" }
+    { "label": "Integrantes", "esencial": "3", "crecimiento": "10", "escala": "25", "empresarial": "50" },
+    { "label": "Canales con conexión oficial", "esencial": "Hasta 2", "crecimiento": "Hasta 4", "escala": "Hasta 8", "empresarial": "Hasta 9" },
+    { "label": "Créditos de IA / mes", "esencial": "150", "crecimiento": "500", "escala": "1,500", "empresarial": "5,000" },
+    { "label": "CRM de leads, contactos y seguimiento", "esencial": "✓", "crecimiento": "✓", "escala": "✓", "empresarial": "✓" },
+    { "label": "Calendario de citas", "esencial": "✓", "crecimiento": "✓", "escala": "✓", "empresarial": "✓" },
+    { "label": "Marca, biblioteca y preparación de contenidos", "esencial": "✓", "crecimiento": "✓", "escala": "✓", "empresarial": "✓" },
+    { "label": "Planner de contenidos", "esencial": "—", "crecimiento": "✓", "escala": "✓", "empresarial": "✓" },
+    { "label": "Mapa y origen de leads", "esencial": "—", "crecimiento": "✓", "escala": "✓", "empresarial": "✓" },
+    { "label": "Resultados, cotizaciones y contratos", "esencial": "—", "crecimiento": "✓", "escala": "✓", "empresarial": "✓" },
+    { "label": "Automatización comercial", "esencial": "—", "crecimiento": "—", "escala": "✓", "empresarial": "✓" },
+    { "label": "Atención prioritaria", "esencial": "—", "crecimiento": "—", "escala": "✓", "empresarial": "✓" },
+    { "label": "Analítica operativa", "esencial": "—", "crecimiento": "—", "escala": "✓", "empresarial": "✓" },
+    { "label": "Agente de ventas IA con traspaso humano", "esencial": "✓", "crecimiento": "✓", "escala": "✓", "empresarial": "✓" }
   ],
   "planDetail": {
     "back": "← Volver a planes",
@@ -99,7 +114,7 @@
     "inheritsLabel": "Incluye además todo lo del plan anterior.",
     "trialTitle": "Cómo funciona la prueba de 3 días",
     "trialLines": [
-      { "text": "Durante la prueba tienes acceso temporal al nivel Escala." },
+      { "text": "Durante la prueba tienes acceso temporal al nivel Escala, o Empresarial si eliges ese plan." },
       { "text": "Creas tu cuenta en el CRM (crm.pawwerapp.com) y registras tu tarjeta en el checkout seguro de Dodo Payments. Este sitio no captura ni almacena datos de tarjeta." },
       { "text": "No se cobra nada durante los 3 días. Si no cancelas, el día 4 se cobra tu plan en USD y se renueva cada mes." },
       { "text": "Puedes cancelar tu suscripción en cualquier momento desde el CRM. Si cancelas antes de que terminen los 3 días, no se genera ningún cargo." },

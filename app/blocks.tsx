@@ -247,7 +247,7 @@ function BlockView({ block, locale, t, settings }: { block: Block; locale: Local
                       {t.comparison.map(row => (
                         <tr key={row.label}>
                           <th scope="row">{row.label}</th>
-                          {[row.esencial, row.crecimiento, row.escala].map((v, i) => (
+                          {t.plans.map(p => row[p.slug as keyof typeof row] || '—').map((v, i) => (
                             <td key={i}><Cell value={v} /></td>
                           ))}
                         </tr>
@@ -261,7 +261,7 @@ function BlockView({ block, locale, t, settings }: { block: Block; locale: Local
                       <summary>{plan.name}<span aria-hidden="true">＋</span></summary>
                       <div className="compare-mobile__rows">
                         {t.comparison.map(row => {
-                          const value = plan.slug === 'esencial' ? row.esencial : plan.slug === 'crecimiento' ? row.crecimiento : row.escala;
+                          const value = row[plan.slug as keyof typeof row] || '—';
                           return <div className="compare-mobile__row" key={row.label}><span>{row.label}</span><b><Cell value={value} /></b></div>;
                         })}
                       </div>

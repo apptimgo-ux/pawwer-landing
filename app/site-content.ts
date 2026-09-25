@@ -33,7 +33,7 @@ export type Plan = {
   features: { text: string }[];
   note: string;
 };
-export type CompareRow = { label: string; esencial: string; crecimiento: string; escala: string };
+export type CompareRow = { label: string; esencial: string; crecimiento: string; escala: string; empresarial?: string };
 
 export type PlanDetailCopy = {
   back: string; includesTitle: string; inheritsLabel: string; trialTitle: string;
@@ -70,7 +70,7 @@ export const ADDRESS_LINES = [settings.contact.addressLine1, settings.contact.ad
 export const PRIVACY_REVIEW = settings.privacyReview as { es: string; en: string };
 export const OG_IMAGE = settings.media.ogImage || '/hero.jpg';
 
-export const PLAN_SLUGS = ['esencial', 'crecimiento', 'escala'];
+export const PLAN_SLUGS = ['esencial', 'crecimiento', 'escala', 'empresarial'];
 
 // El plan se identifica por `slug` (estable en los dos idiomas). El `name`
 // es texto localizado — en inglés es Essential / Growth / Scale.
@@ -81,6 +81,7 @@ export const CHECKOUT_URLS: Record<string, string> = {
   esencial: settings.checkout.esencial,
   crecimiento: settings.checkout.crecimiento,
   escala: settings.checkout.escala,
+  empresarial: settings.checkout.empresarial,
 };
 
 const PRICE_BY_SLUG: Record<string, string> = settings.prices;

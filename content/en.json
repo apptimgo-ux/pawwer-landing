@@ -76,22 +76,37 @@
         { "text": "1,500 AI credits per month" }
       ],
       "note": "Multichannel automations are enabled per channel once its official connection is complete."
+    },
+    {
+      "slug": "empresarial",
+      "name": "Enterprise",
+      "summary": "Your entire operation, connected—with more team capacity.",
+      "inherits": "Everything in Scale, plus",
+      "features": [
+        { "text": "50 team members and 10 business profiles" },
+        { "text": "5,000 AI credits per month" },
+        { "text": "All 9 available channels, subject to official connection" },
+        { "text": "Available modules included, subject to setup" },
+        { "text": "Video calls, customer context and campaign intelligence" },
+        { "text": "Priority support and operational analytics" }
+      ],
+      "note": "US$1,999 per month plus tax. Ad spend, overages and custom ERP integrations are quoted separately. Agency services and features not yet connected are excluded."
     }
   ],
   "comparison": [
-    { "label": "Team members", "esencial": "3", "crecimiento": "10", "escala": "25" },
-    { "label": "Channels with official connection", "esencial": "Up to 2", "crecimiento": "Up to 4", "escala": "Up to 8" },
-    { "label": "AI credits / mo", "esencial": "150", "crecimiento": "500", "escala": "1,500" },
-    { "label": "Leads, contacts and follow-up CRM", "esencial": "✓", "crecimiento": "✓", "escala": "✓" },
-    { "label": "Appointment calendar", "esencial": "✓", "crecimiento": "✓", "escala": "✓" },
-    { "label": "Brand, library and content preparation", "esencial": "✓", "crecimiento": "✓", "escala": "✓" },
-    { "label": "Content planner", "esencial": "—", "crecimiento": "✓", "escala": "✓" },
-    { "label": "Lead map and source", "esencial": "—", "crecimiento": "✓", "escala": "✓" },
-    { "label": "Results, quotes and contracts", "esencial": "—", "crecimiento": "✓", "escala": "✓" },
-    { "label": "Commercial automation", "esencial": "—", "crecimiento": "—", "escala": "✓" },
-    { "label": "Priority support", "esencial": "—", "crecimiento": "—", "escala": "✓" },
-    { "label": "Operational analytics", "esencial": "—", "crecimiento": "—", "escala": "✓" },
-    { "label": "AI sales agent with human handoff", "esencial": "✓", "crecimiento": "✓", "escala": "✓" }
+    { "label": "Team members", "esencial": "3", "crecimiento": "10", "escala": "25", "empresarial": "50" },
+    { "label": "Channels with official connection", "esencial": "Up to 2", "crecimiento": "Up to 4", "escala": "Up to 8", "empresarial": "Up to 9" },
+    { "label": "AI credits / mo", "esencial": "150", "crecimiento": "500", "escala": "1,500", "empresarial": "5,000" },
+    { "label": "Leads, contacts and follow-up CRM", "esencial": "✓", "crecimiento": "✓", "escala": "✓", "empresarial": "✓" },
+    { "label": "Appointment calendar", "esencial": "✓", "crecimiento": "✓", "escala": "✓", "empresarial": "✓" },
+    { "label": "Brand, library and content preparation", "esencial": "✓", "crecimiento": "✓", "escala": "✓", "empresarial": "✓" },
+    { "label": "Content planner", "esencial": "—", "crecimiento": "✓", "escala": "✓", "empresarial": "✓" },
+    { "label": "Lead map and source", "esencial": "—", "crecimiento": "✓", "escala": "✓", "empresarial": "✓" },
+    { "label": "Results, quotes and contracts", "esencial": "—", "crecimiento": "✓", "escala": "✓", "empresarial": "✓" },
+    { "label": "Commercial automation", "esencial": "—", "crecimiento": "—", "escala": "✓", "empresarial": "✓" },
+    { "label": "Priority support", "esencial": "—", "crecimiento": "—", "escala": "✓", "empresarial": "✓" },
+    { "label": "Operational analytics", "esencial": "—", "crecimiento": "—", "escala": "✓", "empresarial": "✓" },
+    { "label": "AI sales agent with human handoff", "esencial": "✓", "crecimiento": "✓", "escala": "✓", "empresarial": "✓" }
   ],
   "planDetail": {
     "back": "← Back to plans",
@@ -99,7 +114,7 @@
     "inheritsLabel": "Also includes everything in the previous plan.",
     "trialTitle": "How the 3-day trial works",
     "trialLines": [
-      { "text": "During the trial you get temporary access to the Scale tier." },
+      { "text": "During the trial you get temporary access to Scale, or Enterprise if you choose that plan." },
       { "text": "You create your account in the CRM (crm.pawwerapp.com) and add your card in Dodo Payments' secure checkout. This site does not capture or store card data." },
       { "text": "Nothing is charged during the 3 days. If you don't cancel, your plan is charged in USD on day 4 and renews monthly." },
       { "text": "You can cancel your subscription at any time from the CRM. If you cancel before the 3 days end, no charge is made." },

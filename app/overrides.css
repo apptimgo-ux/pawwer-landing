@@ -130,7 +130,7 @@
 .pricing__head { margin-bottom: clamp(36px, 6vw, 64px); max-width: 40ch; }
 .pricing__head h2 { font-size: clamp(30px, 4.4vw, 58px); }
 .pricing__head p { margin-top: 20px; color: var(--ink-2); }
-.plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 18px; }
 .plan { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-card); padding: 30px 26px; position: relative; display: flex; flex-direction: column; }
 .plan--featured { border: 1.5px solid var(--ink); }
 .plan__banner { position: absolute; top: -12px; left: 26px; background: var(--ink); color: var(--paper); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 10px; border-radius: 3px; }

@@ -13,12 +13,14 @@
   "prices": {
     "esencial": "$89",
     "crecimiento": "$179",
-    "escala": "$329"
+    "escala": "$329",
+    "empresarial": "$1,999"
   },
   "checkout": {
     "esencial": "https://crm.pawwerapp.com/?plan=starter",
     "crecimiento": "https://crm.pawwerapp.com/?plan=growth",
-    "escala": "https://crm.pawwerapp.com/?plan=pro"
+    "escala": "https://crm.pawwerapp.com/?plan=pro",
+    "empresarial": "https://crm.pawwerapp.com/?plan=enterprise"
   },
   "privacyReview": {
     "es": "21 de septiembre de 2026",

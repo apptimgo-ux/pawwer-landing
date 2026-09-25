@@ -44,6 +44,7 @@ collections:
               - { name: esencial, label: "Esencial", widget: string }
               - { name: crecimiento, label: "Crecimiento", widget: string }
               - { name: escala, label: "Escala", widget: string }
+              - { name: empresarial, label: "Empresarial", widget: string }
           - name: checkout
             label: "Enlace de cada plan: el registro del CRM con ?plan=. Vacío = inicia la prueba en el CRM"
             widget: object
@@ -51,6 +52,7 @@ collections:
               - { name: esencial, label: "Esencial", widget: string, required: false }
               - { name: crecimiento, label: "Crecimiento", widget: string, required: false }
               - { name: escala, label: "Escala", widget: string, required: false }
+              - { name: empresarial, label: "Empresarial", widget: string, required: false }
           - name: privacyReview
             label: "Fecha de revisión de la política de privacidad"
             widget: object
@@ -130,6 +132,7 @@ collections:
               - { name: esencial, label: "Esencial", widget: string }
               - { name: crecimiento, label: "Crecimiento", widget: string }
               - { name: escala, label: "Escala", widget: string }
+              - { name: empresarial, label: "Empresarial", widget: string }
           - name: planDetail
             label: "Páginas de cada plan"
             widget: object
