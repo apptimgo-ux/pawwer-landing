@@ -43,7 +43,9 @@ function BlockView({ block, locale, t, settings }: { block: Block; locale: Local
       return (
         <section className={`hero${block.mediaPlacement === 'background' && block.mediaType !== 'none' && (block.image || block.video || block.slides?.length) ? ` hero--background hero--${block.textTone || 'light'}` : ''}`} id={id} style={block.mediaPlacement === 'background' ? { minHeight: `${Math.min(1000, Math.max(320, block.mediaHeight || 640))}px` } : undefined}>
           <div className="wrap hero__inner">
-            <p className="hero__kicker"><i /> {block.kicker}</p>
+            {/* Sin kicker no se pinta el renglón: el <i/> es un punto
+                decorativo y solo, sin texto al lado, queda flotando. */}
+            {block.kicker && <p className="hero__kicker"><i /> {block.kicker}</p>}
             <h1>{block.h1a} {block.h1b}</h1>
             <div className="hero__body">
               <div className="hero__actions">

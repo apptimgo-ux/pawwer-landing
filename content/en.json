@@ -8,10 +8,22 @@
   "nav": {
     "skip": "Skip to content",
     "links": [
-      { "label": "Solutions", "hash": "#soluciones" },
-      { "label": "Benefits", "hash": "#beneficios" },
-      { "label": "Plans", "hash": "#planes" },
-      { "label": "Contact", "hash": "#contacto" }
+      {
+        "label": "Solutions",
+        "hash": "#soluciones"
+      },
+      {
+        "label": "Benefits",
+        "hash": "#beneficios"
+      },
+      {
+        "label": "Plans",
+        "hash": "#planes"
+      },
+      {
+        "label": "Contact",
+        "hash": "#contacto"
+      }
     ],
     "login": "Sign in / Login",
     "menuOpen": "Open menu",
@@ -37,13 +49,27 @@
       "summary": "Bring order to your commercial operation.",
       "inherits": "The essentials to get started",
       "features": [
-        { "text": "Leads, contacts and follow-up CRM" },
-        { "text": "Appointment calendar" },
-        { "text": "Brand, library and content preparation" },
-        { "text": "3 team members" },
-        { "text": "AI sales agent that answers your leads" },
-        { "text": "Up to 2 channels with official connection" },
-        { "text": "150 AI credits per month" }
+        {
+          "text": "Leads, contacts and follow-up CRM"
+        },
+        {
+          "text": "Appointment calendar"
+        },
+        {
+          "text": "Brand, library and content preparation"
+        },
+        {
+          "text": "3 team members"
+        },
+        {
+          "text": "AI sales agent that answers your leads"
+        },
+        {
+          "text": "Up to 2 channels with official connection"
+        },
+        {
+          "text": "150 AI credits per month"
+        }
       ],
       "note": ""
     },
@@ -53,12 +79,24 @@
       "summary": "Connect your content with your opportunities.",
       "inherits": "Everything in Essential, plus",
       "features": [
-        { "text": "10 team members" },
-        { "text": "Content planner" },
-        { "text": "Lead map and source" },
-        { "text": "Results, quotes and contracts" },
-        { "text": "Up to 4 channels with official connection" },
-        { "text": "500 AI credits per month" }
+        {
+          "text": "10 team members"
+        },
+        {
+          "text": "Content planner"
+        },
+        {
+          "text": "Lead map and source"
+        },
+        {
+          "text": "Results, quotes and contracts"
+        },
+        {
+          "text": "Up to 4 channels with official connection"
+        },
+        {
+          "text": "500 AI credits per month"
+        }
       ],
       "note": ""
     },
@@ -68,12 +106,24 @@
       "summary": "Extend your team's reach.",
       "inherits": "Everything in Growth, plus",
       "features": [
-        { "text": "25 team members" },
-        { "text": "Commercial automation" },
-        { "text": "Priority support" },
-        { "text": "Operational analytics" },
-        { "text": "Up to 8 channels with official connection" },
-        { "text": "1,500 AI credits per month" }
+        {
+          "text": "25 team members"
+        },
+        {
+          "text": "Commercial automation"
+        },
+        {
+          "text": "Priority support"
+        },
+        {
+          "text": "Operational analytics"
+        },
+        {
+          "text": "Up to 8 channels with official connection"
+        },
+        {
+          "text": "1,500 AI credits per month"
+        }
       ],
       "note": "Multichannel automations are enabled per channel once its official connection is complete."
     },
@@ -83,30 +133,120 @@
       "summary": "Your entire operation, connected—with more team capacity.",
       "inherits": "Everything in Scale, plus",
       "features": [
-        { "text": "50 team members and 10 business profiles" },
-        { "text": "5,000 AI credits per month" },
-        { "text": "All 9 available channels, subject to official connection" },
-        { "text": "Available modules included, subject to setup" },
-        { "text": "Video calls, customer context and campaign intelligence" },
-        { "text": "Priority support and operational analytics" }
+        {
+          "text": "50 team members and 10 business profiles"
+        },
+        {
+          "text": "5,000 AI credits per month"
+        },
+        {
+          "text": "All 9 available channels, subject to official connection"
+        },
+        {
+          "text": "Available modules included, subject to setup"
+        },
+        {
+          "text": "Video calls, customer context and campaign intelligence"
+        },
+        {
+          "text": "Priority support and operational analytics"
+        }
       ],
       "note": "US$1,999 per month plus tax. Ad spend, overages and custom ERP integrations are quoted separately. Agency services and features not yet connected are excluded."
     }
   ],
   "comparison": [
-    { "label": "Team members", "esencial": "3", "crecimiento": "10", "escala": "25", "empresarial": "50" },
-    { "label": "Channels with official connection", "esencial": "Up to 2", "crecimiento": "Up to 4", "escala": "Up to 8", "empresarial": "Up to 9" },
-    { "label": "AI credits / mo", "esencial": "150", "crecimiento": "500", "escala": "1,500", "empresarial": "5,000" },
-    { "label": "Leads, contacts and follow-up CRM", "esencial": "✓", "crecimiento": "✓", "escala": "✓", "empresarial": "✓" },
-    { "label": "Appointment calendar", "esencial": "✓", "crecimiento": "✓", "escala": "✓", "empresarial": "✓" },
-    { "label": "Brand, library and content preparation", "esencial": "✓", "crecimiento": "✓", "escala": "✓", "empresarial": "✓" },
-    { "label": "Content planner", "esencial": "—", "crecimiento": "✓", "escala": "✓", "empresarial": "✓" },
-    { "label": "Lead map and source", "esencial": "—", "crecimiento": "✓", "escala": "✓", "empresarial": "✓" },
-    { "label": "Results, quotes and contracts", "esencial": "—", "crecimiento": "✓", "escala": "✓", "empresarial": "✓" },
-    { "label": "Commercial automation", "esencial": "—", "crecimiento": "—", "escala": "✓", "empresarial": "✓" },
-    { "label": "Priority support", "esencial": "—", "crecimiento": "—", "escala": "✓", "empresarial": "✓" },
-    { "label": "Operational analytics", "esencial": "—", "crecimiento": "—", "escala": "✓", "empresarial": "✓" },
-    { "label": "AI sales agent with human handoff", "esencial": "✓", "crecimiento": "✓", "escala": "✓", "empresarial": "✓" }
+    {
+      "label": "Team members",
+      "esencial": "3",
+      "crecimiento": "10",
+      "escala": "25",
+      "empresarial": "50"
+    },
+    {
+      "label": "Channels with official connection",
+      "esencial": "Up to 2",
+      "crecimiento": "Up to 4",
+      "escala": "Up to 8",
+      "empresarial": "Up to 9"
+    },
+    {
+      "label": "AI credits / mo",
+      "esencial": "150",
+      "crecimiento": "500",
+      "escala": "1,500",
+      "empresarial": "5,000"
+    },
+    {
+      "label": "Leads, contacts and follow-up CRM",
+      "esencial": "✓",
+      "crecimiento": "✓",
+      "escala": "✓",
+      "empresarial": "✓"
+    },
+    {
+      "label": "Appointment calendar",
+      "esencial": "✓",
+      "crecimiento": "✓",
+      "escala": "✓",
+      "empresarial": "✓"
+    },
+    {
+      "label": "Brand, library and content preparation",
+      "esencial": "✓",
+      "crecimiento": "✓",
+      "escala": "✓",
+      "empresarial": "✓"
+    },
+    {
+      "label": "Content planner",
+      "esencial": "—",
+      "crecimiento": "✓",
+      "escala": "✓",
+      "empresarial": "✓"
+    },
+    {
+      "label": "Lead map and source",
+      "esencial": "—",
+      "crecimiento": "✓",
+      "escala": "✓",
+      "empresarial": "✓"
+    },
+    {
+      "label": "Results, quotes and contracts",
+      "esencial": "—",
+      "crecimiento": "✓",
+      "escala": "✓",
+      "empresarial": "✓"
+    },
+    {
+      "label": "Commercial automation",
+      "esencial": "—",
+      "crecimiento": "—",
+      "escala": "✓",
+      "empresarial": "✓"
+    },
+    {
+      "label": "Priority support",
+      "esencial": "—",
+      "crecimiento": "—",
+      "escala": "✓",
+      "empresarial": "✓"
+    },
+    {
+      "label": "Operational analytics",
+      "esencial": "—",
+      "crecimiento": "—",
+      "escala": "✓",
+      "empresarial": "✓"
+    },
+    {
+      "label": "AI sales agent with human handoff",
+      "esencial": "✓",
+      "crecimiento": "✓",
+      "escala": "✓",
+      "empresarial": "✓"
+    }
   ],
   "planDetail": {
     "back": "← Back to plans",
@@ -114,11 +254,21 @@
     "inheritsLabel": "Also includes everything in the previous plan.",
     "trialTitle": "How the 3-day trial works",
     "trialLines": [
-      { "text": "During the trial you get temporary access to Scale, or Enterprise if you choose that plan." },
-      { "text": "You create your account in the CRM (crm.pawwerapp.com) and add your card in Dodo Payments' secure checkout. This site does not capture or store card data." },
-      { "text": "Nothing is charged during the 3 days. If you don't cancel, your plan is charged in USD on day 4 and renews monthly." },
-      { "text": "You can cancel your subscription at any time from the CRM. If you cancel before the 3 days end, no charge is made." },
-      { "text": "Prices exclude tax: Dodo Payments, as PAWWER's authorized reseller, adds any applicable tax at checkout and you see it before paying. AI credits renew on the 1st of each month." }
+      {
+        "text": "During the trial you get temporary access to Scale, or Enterprise if you choose that plan."
+      },
+      {
+        "text": "You create your account in the CRM (crm.pawwerapp.com) and add your card in Dodo Payments' secure checkout. This site does not capture or store card data."
+      },
+      {
+        "text": "Nothing is charged during the 3 days. If you don't cancel, your plan is charged in USD on day 4 and renews monthly."
+      },
+      {
+        "text": "You can cancel your subscription at any time from the CRM. If you cancel before the 3 days end, no charge is made."
+      },
+      {
+        "text": "Prices exclude tax: Dodo Payments, as PAWWER's authorized reseller, adds any applicable tax at checkout and you see it before paying. AI credits renew on the 1st of each month."
+      }
     ],
     "activationTitle": "In activation",
     "exclusionsTitle": "What the monthly fee does not cover",
@@ -131,10 +281,10 @@
     {
       "type": "hero",
       "anchor": "",
-      "kicker": "AI-powered commercial operating system for small businesses",
-      "h1a": "Data makes",
-      "h1b": "momentum.",
-      "sub": "Your leads are already talking. PAWWER turns every conversation into context, and every context into action.",
+      "kicker": "",
+      "h1a": "Your AI marketing agency,",
+      "h1b": "right at your fingertips.",
+      "sub": "Create content, analyze campaigns, and turn leads into long-term customers.",
       "ctaPrimary": "Build your system",
       "ctaSecondary": "Explore the process",
       "metaLeft": "Scroll to explore",
@@ -146,9 +296,18 @@
       "video": "",
       "poster": "",
       "slides": [
-        { "image": "/img/inmobiliario-01.jpg", "alt": "Real estate team helping a family" },
-        { "image": "/img/autos-01.jpg", "alt": "Advisor helping a car dealership customer" },
-        { "image": "/img/recepcion-01.jpg", "alt": "Customer service at reception" }
+        {
+          "image": "/img/inmobiliario-01.jpg",
+          "alt": "Real estate team helping a family"
+        },
+        {
+          "image": "/img/autos-01.jpg",
+          "alt": "Advisor helping a car dealership customer"
+        },
+        {
+          "image": "/img/recepcion-01.jpg",
+          "alt": "Customer service at reception"
+        }
       ]
     },
     {
@@ -168,11 +327,26 @@
       "h2a": "From the first signal",
       "h2b": "to the next step.",
       "phases": [
-        { "name": "Capture", "line": "Every lead arrives with its source and context, whatever the channel." },
-        { "name": "Understand", "line": "See the full history before you reply: what they asked, when and through which channel." },
-        { "name": "Engage", "line": "Conversations, meetings and tasks in one place, with the next step always visible." },
-        { "name": "Convert", "line": "Quotes, proposals and closing connected to follow-up, with no loose ends." },
-        { "name": "Measure", "line": "Source, results and team activity to decide where to invest energy." }
+        {
+          "name": "Capture",
+          "line": "Every lead arrives with its source and context, whatever the channel."
+        },
+        {
+          "name": "Understand",
+          "line": "See the full history before you reply: what they asked, when and through which channel."
+        },
+        {
+          "name": "Engage",
+          "line": "Conversations, meetings and tasks in one place, with the next step always visible."
+        },
+        {
+          "name": "Convert",
+          "line": "Quotes, proposals and closing connected to follow-up, with no loose ends."
+        },
+        {
+          "name": "Measure",
+          "line": "Source, results and team activity to decide where to invest energy."
+        }
       ]
     },
     {
@@ -182,9 +356,21 @@
       "h2a": "One system,",
       "h2b": "three moves.",
       "items": [
-        { "icon": "chat", "h3": "Engage with context", "p": "Leads, contacts and follow-up in one place so every conversation keeps its continuity." },
-        { "icon": "calendar", "h3": "Turn interest into action", "p": "Connect your calendar with follow-up and give every opportunity a next step." },
-        { "icon": "chart", "h3": "Measure what moves the team", "p": "Source, results and operational analytics to decide where to invest energy." }
+        {
+          "icon": "chat",
+          "h3": "Engage with context",
+          "p": "Leads, contacts and follow-up in one place so every conversation keeps its continuity."
+        },
+        {
+          "icon": "calendar",
+          "h3": "Turn interest into action",
+          "p": "Connect your calendar with follow-up and give every opportunity a next step."
+        },
+        {
+          "icon": "chart",
+          "h3": "Measure what moves the team",
+          "p": "Source, results and operational analytics to decide where to invest energy."
+        }
       ]
     },
     {
@@ -199,9 +385,27 @@
         "eyebrow": "Today · 09:42",
         "h3": "The next step is clear.",
         "leads": [
-          { "stage": "New lead", "initials": "AC", "name": "Andrea C.", "role": "Service inquiry", "status": "Next step defined" },
-          { "stage": "Following up", "initials": "LM", "name": "Luis M.", "role": "Proposal in review", "status": "Meeting booked" },
-          { "stage": "Proposal", "initials": "SR", "name": "Sofía R.", "role": "Commercial project", "status": "Next step defined" }
+          {
+            "stage": "New lead",
+            "initials": "AC",
+            "name": "Andrea C.",
+            "role": "Service inquiry",
+            "status": "Next step defined"
+          },
+          {
+            "stage": "Following up",
+            "initials": "LM",
+            "name": "Luis M.",
+            "role": "Proposal in review",
+            "status": "Meeting booked"
+          },
+          {
+            "stage": "Proposal",
+            "initials": "SR",
+            "name": "Sofía R.",
+            "role": "Commercial project",
+            "status": "Next step defined"
+          }
         ],
         "context": "One history that keeps things moving.",
         "caption": "Conceptual view · fictional data"
@@ -214,9 +418,21 @@
       "h2a": "Less memory.",
       "h2b": "More momentum.",
       "items": [
-        { "icon": "target", "h3": "A place for every lead", "p": "Centralize contacts and opportunities to work from a shared view." },
-        { "icon": "calendar", "h3": "A clear next step", "p": "Connect meetings and follow-up to keep the commercial rhythm." },
-        { "icon": "chart", "h3": "A measurable read", "p": "Understand what works and what needs attention from Growth and Scale." }
+        {
+          "icon": "target",
+          "h3": "A place for every lead",
+          "p": "Centralize contacts and opportunities to work from a shared view."
+        },
+        {
+          "icon": "calendar",
+          "h3": "A clear next step",
+          "p": "Connect meetings and follow-up to keep the commercial rhythm."
+        },
+        {
+          "icon": "chart",
+          "h3": "A measurable read",
+          "p": "Understand what works and what needs attention from Growth and Scale."
+        }
       ]
     },
     {
@@ -254,8 +470,14 @@
       "type": "notes",
       "anchor": "",
       "items": [
-        { "lead": "The monthly fee covers PAWWER.", "body": "It does not include ad spend, Meta, Google or TikTok charges, phone numbers, SMS, WhatsApp templates, messaging usage or third-party services." },
-        { "lead": "", "body": "This site does not capture card data: payment happens in Dodo Payments' secure checkout from the CRM, where Dodo adds any applicable tax, which is not included in the price. AI credits renew on the 1st of each month and do not roll over." }
+        {
+          "lead": "The monthly fee covers PAWWER.",
+          "body": "It does not include ad spend, Meta, Google or TikTok charges, phone numbers, SMS, WhatsApp templates, messaging usage or third-party services."
+        },
+        {
+          "lead": "",
+          "body": "This site does not capture card data: payment happens in Dodo Payments' secure checkout from the CRM, where Dodo adds any applicable tax, which is not included in the price. AI credits renew on the 1st of each month and do not roll over."
+        }
       ]
     },
     {
