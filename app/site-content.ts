@@ -19,7 +19,7 @@ export type Block =
   | { type: 'showcase'; anchor?: string; eyebrow: string; h2: string; body: string; image: string; mock: { bar: string; eyebrow: string; h3: string; leads: Lead[]; context: string; caption: string } }
   | { type: 'benefits'; anchor?: string; eyebrow: string; h2a: string; h2b: string; items: Item[] }
   | { type: 'logos'; anchor?: string; eyebrow: string; title: string; items: { image: string; alt: string; url?: string }[] }
-  | { type: 'pricing'; anchor?: string; eyebrow: string; h2a: string; h2b: string; intro: string; priceUnit: string; mostPopular: string; cta: string; activationLabel: string; compareTitle: string; compareFeatureCol: string; showComparison: boolean }
+  | { type: 'pricing'; anchor?: string; eyebrow: string; h2a: string; h2b: string; intro: string; priceUnit: string; mostPopular: string; cta: string; activationLabel: string; compareTitle: string; compareFeatureCol: string; showComparison: boolean; /* Mes o año. Opcionales para que un contenido viejo siga compilando: sin ellos el selector usa sus textos de respaldo y el precio mensual. */ priceUnitAnual?: string; labelMensual?: string; labelAnual?: string; descuentoAnual?: string; ahorroTexto?: string }
   | { type: 'agency'; anchor?: string; eyebrow: string; h2a: string; h2b: string; body: string; cta: string }
   | { type: 'notes'; anchor?: string; items: Note[] }
   | { type: 'cta'; anchor?: string; eyebrow: string; h2a: string; h2b: string; buttonLabel: string };
@@ -27,7 +27,14 @@ export type Block =
 export type Plan = {
   slug: string;
   name: string;
+  /** El precio mensual, tal como se enseña. Sale de `settings.prices`. */
   price: string;
+  /** El del año pagado por adelantado —12 meses menos 15%— y lo que se
+   *  ahorra. Los mismos números que `planes.config.js` del CRM: si se
+   *  separan, la landing promete un precio y el checkout cobra otro, y
+   *  el CRM ni siquiera abre el pago (compara contra Dodo al centavo). */
+  priceAnual: string;
+  ahorroAnual: string;
   summary: string;
   inherits: string;
   features: { text: string }[];
@@ -40,6 +47,8 @@ export type PlanDetailCopy = {
   trialLines: { text: string }[];
   activationTitle: string; exclusionsTitle: string;
   ctaTrial: string; ctaCheckout: string; ctaSales: string; priceUnit: string;
+  /* Mes o año en el detalle. Opcionales: sin ellos se enseña el mensual. */
+  priceUnitAnual?: string; ahorroTexto?: string;
 };
 
 export type Content = {
@@ -85,6 +94,8 @@ export const CHECKOUT_URLS: Record<string, string> = {
 };
 
 const PRICE_BY_SLUG: Record<string, string> = settings.prices;
+const PRICE_ANUAL_BY_SLUG: Record<string, string> = settings.pricesAnual;
+const AHORRO_BY_SLUG: Record<string, string> = settings.ahorroAnual;
 
 export type SiteSettings = typeof settings;
 export const siteSettings = settings;
@@ -93,7 +104,12 @@ export function assemble(data: unknown, prices: Record<string, string> = PRICE_B
   const d = data as Content;
   return {
     ...d,
-    plans: d.plans.map(p => ({ ...p, price: prices[p.slug] ?? '' })),
+    plans: d.plans.map(p => ({
+      ...p,
+      price: prices[p.slug] ?? '',
+      priceAnual: PRICE_ANUAL_BY_SLUG[p.slug] ?? '',
+      ahorroAnual: AHORRO_BY_SLUG[p.slug] ?? '',
+    })),
   };
 }
 

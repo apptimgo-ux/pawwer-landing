@@ -25,5 +25,17 @@
   "privacyReview": {
     "es": "21 de septiembre de 2026",
     "en": "September 21, 2026"
+  },
+  "pricesAnual": {
+    "esencial": "$907.80",
+    "crecimiento": "$1,825.80",
+    "escala": "$3,355.80",
+    "empresarial": "$20,389.80"
+  },
+  "ahorroAnual": {
+    "esencial": "$160.20",
+    "crecimiento": "$322.20",
+    "escala": "$592.20",
+    "empresarial": "$3,598.20"
   }
 }

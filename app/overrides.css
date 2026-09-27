@@ -316,3 +316,36 @@
 .plan-detail__list.plain li { display: list-item; list-style: disc; margin-left: 20px; color: var(--ink-2); }
 .plan-detail__note { font-size: 13px; color: var(--muted); margin-top: 12px; }
 .plan-detail__note b { color: var(--ink); text-transform: uppercase; letter-spacing: 0.06em; font-size: 11px; }
+
+/* ── Mes o año (27 de septiembre de 2026) ───────────────────────────────
+   El selector va ARRIBA de las tarjetas y no dentro de cada una: es una
+   sola decisión para toda la compra, y repetirla cuatro veces invita a
+   elegir distinto en cada tarjeta. Usa las mismas variables que el resto
+   de la sección, así que sigue al tema sin tocar nada más. */
+.plans__switch {
+  display: flex; justify-content: center; gap: 4px; margin: 0 auto 26px;
+  padding: 4px; width: max-content; max-width: 100%;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 999px;
+}
+.plans__switch button {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 9px 18px; border-radius: 999px; border: 0; cursor: pointer;
+  font-family: var(--font-sans); font-size: 14px; font-weight: 700;
+  background: transparent; color: var(--muted);
+  transition: background .18s ease, color .18s ease;
+}
+.plans__switch button.is-on { background: var(--ink); color: var(--paper); }
+.plans__off {
+  padding: 2px 7px; border-radius: 999px;
+  font-size: 11px; font-weight: 800; letter-spacing: 0.01em;
+  background: var(--accent); color: #fff;
+}
+.plans__switch button.is-on .plans__off { background: var(--paper); color: var(--ink); }
+.plan__ahorro { font-size: 12.5px; font-weight: 700; color: var(--accent); margin: 0 0 4px; }
+
+@media (max-width: 420px) {
+  /* En un teléfono angosto los dos botones no caben con el globo del
+     descuento al lado; se deja que el selector ocupe el ancho. */
+  .plans__switch { width: 100%; }
+  .plans__switch button { flex: 1; justify-content: center; padding: 9px 10px; font-size: 13px; }
+}

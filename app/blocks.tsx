@@ -1,3 +1,4 @@
+import PlanesConPeriodo from './planes-con-periodo';
 import {
   ArrowUpRight, Check, CalendarDays, ChartNoAxesCombined, MessageSquare, Target,
   Users, Sparkles, Zap, Compass, Layers, ShieldCheck, PawPrint, type LucideIcon,
@@ -213,26 +214,22 @@ function BlockView({ block, locale, t, settings }: { block: Block; locale: Local
               <h2>{block.h2a} {block.h2b}</h2>
               <p>{block.intro}</p>
             </div>
-            <div className="plans">
-              {t.plans.map(plan => {
-                const featured = plan.slug === 'crecimiento';
-                const href = planHref(locale, plan.slug);
-                return (
-                  <article className={'plan' + (featured ? ' plan--featured' : '')} key={plan.slug} data-reveal>
-                    {featured && <span className="plan__banner">{block.mostPopular}</span>}
-                    <h3>{plan.name}</h3>
-                    <p className="plan__summary">{plan.summary}</p>
-                    <a className="plan__price" href={href}>{plan.price}<span>{block.priceUnit}</span></a>
-                    <a className={'btn' + (featured ? ' btn--solid' : '')} href={href}>{block.cta} <ArrowUpRight size={15} /></a>
-                    <p className="plan__inherits">{plan.inherits}</p>
-                    <ul className="plan__list">
-                      {plan.features.map(f => <li key={f.text}><Check size={15} />{f.text}</li>)}
-                    </ul>
-                    {plan.note && <p className="plan__note"><b>{block.activationLabel}</b>{plan.note}</p>}
-                  </article>
-                );
-              })}
-            </div>
+            {/* Las tarjetas se mudaron a un componente de cliente: el
+                selector de mes/año necesita estado y esta sección es de
+                servidor. Se pintan igual, con las mismas clases. */}
+            <PlanesConPeriodo
+              plans={t.plans}
+              locale={locale}
+              mostPopular={block.mostPopular}
+              cta={block.cta}
+              priceUnit={block.priceUnit}
+              priceUnitAnual={block.priceUnitAnual || block.priceUnit}
+              labelMensual={block.labelMensual || 'Al mes'}
+              labelAnual={block.labelAnual || 'Al año'}
+              descuento={block.descuentoAnual || '−15%'}
+              ahorroTexto={block.ahorroTexto || 'Te ahorras {0} al año'}
+              activationLabel={block.activationLabel}
+            />
 
             {block.showComparison && (
               <div className="compare" data-reveal>

@@ -1,4 +1,5 @@
-import { ArrowUpRight, Check } from 'lucide-react';
+import { Check } from 'lucide-react';
+import PrecioDelPlan from './precio-del-plan';
 import { Header, Footer } from './site-ui';
 import { content, mailFor, CHECKOUT_URLS, CRM_URL, type Locale } from './site-content';
 
@@ -31,11 +32,21 @@ export default function PlanDetail({ locale, slug }: { locale: Locale; slug: str
   const checkout = CHECKOUT_URLS[plan.slug];
   const primaryHref = checkout || CRM_URL;
   const primaryLabel = checkout ? c.ctaCheckout : c.ctaTrial;
-  const cta = (
-    <div className="plan-detail__actions">
-      <a className="btn btn--solid" href={primaryHref}>{primaryLabel} <ArrowUpRight size={18} /></a>
-      <a className="textlink" href={contact.plan(plan.name)}>{c.ctaSales}</a>
-    </div>
+  // El precio y el botón salen de un componente de cliente: el periodo
+  // (mes o año) viaja en la dirección y esta página es estática.
+  const precioYCta = (
+    <PrecioDelPlan
+      precio={plan.price}
+      precioAnual={plan.priceAnual}
+      ahorro={plan.ahorroAnual}
+      unidad={c.priceUnit}
+      unidadAnual={c.priceUnitAnual || c.priceUnit}
+      ahorroTexto={c.ahorroTexto || 'Te ahorras {0} al año'}
+      href={primaryHref}
+      etiqueta={primaryLabel}
+      hrefVentas={contact.plan(plan.name)}
+      etiquetaVentas={c.ctaSales}
+    />
   );
 
   return (
@@ -46,8 +57,7 @@ export default function PlanDetail({ locale, slug }: { locale: Locale; slug: str
         {eyebrow && <p className="eyebrow">{eyebrow}</p>}
         <h1>{plan.name}</h1>
         <p className="plan-detail__summary">{plan.summary}</p>
-        <div className="plan-detail__price">{plan.price}<span>{c.priceUnit}</span></div>
-        {cta}
+        {precioYCta}
 
         <section className="plan-detail__block">
           <h2>{c.includesTitle}</h2>
@@ -74,7 +84,19 @@ export default function PlanDetail({ locale, slug }: { locale: Locale; slug: str
           </section>
         )}
 
-        {cta}
+        <PrecioDelPlan
+          sinPrecio
+          precio={plan.price}
+          precioAnual={plan.priceAnual}
+          ahorro={plan.ahorroAnual}
+          unidad={c.priceUnit}
+          unidadAnual={c.priceUnitAnual || c.priceUnit}
+          ahorroTexto={c.ahorroTexto || ''}
+          href={primaryHref}
+          etiqueta={primaryLabel}
+          hrefVentas={contact.plan(plan.name)}
+          etiquetaVentas={c.ctaSales}
+        />
       </main>
       <Footer locale={locale} homeHref={homeHref} />
     </>

@@ -275,7 +275,9 @@
     "ctaTrial": "Start the 3-day trial",
     "ctaCheckout": "Start the 3-day trial",
     "ctaSales": "Talk to sales",
-    "priceUnit": "USD / mo"
+    "priceUnit": "USD / mo",
+    "priceUnitAnual": "USD / year",
+    "ahorroTexto": "You save {0} a year"
   },
   "blocks": [
     {
@@ -448,14 +450,19 @@
       "eyebrow": "Plans & pricing",
       "h2a": "Choose the pace",
       "h2b": "of your growth.",
-      "intro": "3-day trial with temporary access to the Scale tier. You add your card in Dodo Payments' secure checkout and nothing is charged until day 4. Prices in USD, excluding tax: it is added at checkout.",
+      "intro": "3-day trial with temporary access to the Scale tier. You add your card in Dodo Payments' secure checkout and nothing is charged until day 4. Pay yearly and you get twelve months with 15% off, in a single charge. Prices in USD, excluding taxes:",
       "priceUnit": "USD / mo",
       "mostPopular": "Most popular",
       "cta": "Get started",
       "activationLabel": "In activation",
       "compareTitle": "Compare the plans",
       "compareFeatureCol": "Included",
-      "showComparison": true
+      "showComparison": true,
+      "priceUnitAnual": "USD / year",
+      "labelMensual": "Monthly",
+      "labelAnual": "Yearly",
+      "descuentoAnual": "−15%",
+      "ahorroTexto": "You save {0} a year"
     },
     {
       "type": "agency",

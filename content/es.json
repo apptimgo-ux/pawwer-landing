@@ -275,7 +275,9 @@
     "ctaTrial": "Iniciar prueba de 3 días",
     "ctaCheckout": "Empezar prueba de 3 días",
     "ctaSales": "Hablar con ventas",
-    "priceUnit": "USD / mes"
+    "priceUnit": "USD / mes",
+    "priceUnitAnual": "USD / año",
+    "ahorroTexto": "Te ahorras {0} al año"
   },
   "blocks": [
     {
@@ -448,14 +450,19 @@
       "eyebrow": "Planes y precios",
       "h2a": "Elige el ritmo",
       "h2b": "de tu crecimiento.",
-      "intro": "Prueba de 3 días con acceso temporal al nivel Escala. Registras tu tarjeta en el checkout seguro de Dodo Payments y no se cobra nada hasta el día 4. Precios en USD, sin impuestos: se suman en el checkout.",
+      "intro": "Prueba de 3 días con acceso temporal al nivel Escala. Registras tu tarjeta en el checkout seguro de Dodo Payments y no se cobra nada hasta el día 4. Al año pagas doce meses con 15% de descuento, en un solo cargo. Precios en USD, sin impuestos:",
       "priceUnit": "USD / mes",
       "mostPopular": "Más elegido",
       "cta": "Empezar",
       "activationLabel": "En activación",
       "compareTitle": "Comparar los planes",
       "compareFeatureCol": "Incluye",
-      "showComparison": true
+      "showComparison": true,
+      "priceUnitAnual": "USD / año",
+      "labelMensual": "Al mes",
+      "labelAnual": "Al año",
+      "descuentoAnual": "−15%",
+      "ahorroTexto": "Te ahorras {0} al año"
     },
     {
       "type": "agency",
