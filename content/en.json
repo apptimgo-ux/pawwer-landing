@@ -123,6 +123,9 @@
         },
         {
           "text": "1,500 AI credits per month"
+        },
+        {
+          "text": "BrandForge: 3 on-brand design options in one click"
         }
       ],
       "note": "Multichannel automations are enabled per channel once its official connection is complete."
@@ -150,6 +153,9 @@
         },
         {
           "text": "Priority support and operational analytics"
+        },
+        {
+          "text": "BrandForge: 3 on-brand design options in one click"
         }
       ],
       "note": "US$1,999 per month plus tax. Ad spend, overages and custom ERP integrations are quoted separately. Agency services and features not yet connected are excluded."
@@ -246,6 +252,13 @@
       "crecimiento": "✓",
       "escala": "✓",
       "empresarial": "✓"
+    },
+    {
+      "label": "BrandForge (3 options per design)",
+      "esencial": "—",
+      "crecimiento": "—",
+      "escala": "Included",
+      "empresarial": "Included"
     }
   ],
   "planDetail": {
@@ -434,6 +447,11 @@
           "icon": "chart",
           "h3": "A measurable read",
           "p": "Understand what works and what needs attention from Growth and Scale."
+        },
+        {
+          "icon": "spark",
+          "h3": "BrandForge: three options, your brand",
+          "p": "You write what you need and PAWWER creates three different designs with your colours, your tone and your industry — pick the one that works and it lands in your library. Included from the Scale plan up."
         }
       ]
     },

@@ -123,6 +123,9 @@
         },
         {
           "text": "1,500 créditos de IA al mes"
+        },
+        {
+          "text": "BrandForge: 3 opciones de diseño con tu marca en un clic"
         }
       ],
       "note": "Las automatizaciones multicanal se habilitan por canal al terminar su conexión oficial."
@@ -150,6 +153,9 @@
         },
         {
           "text": "Atención prioritaria y analítica de operación"
+        },
+        {
+          "text": "BrandForge: 3 opciones de diseño con tu marca en un clic"
         }
       ],
       "note": "US$1,999 al mes más impuestos. Pauta, excedentes e integraciones ERP a medida se cotizan aparte. No incluye servicios de agencia ni funciones aún no conectadas."
@@ -246,6 +252,13 @@
       "crecimiento": "✓",
       "escala": "✓",
       "empresarial": "✓"
+    },
+    {
+      "label": "BrandForge (3 opciones por diseño)",
+      "esencial": "—",
+      "crecimiento": "—",
+      "escala": "Incluido",
+      "empresarial": "Incluido"
     }
   ],
   "planDetail": {
@@ -434,6 +447,11 @@
           "icon": "chart",
           "h3": "Una lectura medible",
           "p": "Entiende qué funciona y qué necesita atención desde Crecimiento y Escala."
+        },
+        {
+          "icon": "spark",
+          "h3": "BrandForge: tres opciones, tu marca",
+          "p": "Escribes qué necesitas y PAWWER crea tres diseños distintos con tus colores, tu tono y tu giro — eliges el que sirve y queda en tu biblioteca. Incluido desde el plan Escala."
         }
       ]
     },
