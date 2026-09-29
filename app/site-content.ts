@@ -121,18 +121,36 @@ export const content: Record<Locale, Content> = {
 // --- Correos ---
 const MAIL_SUBJECTS = {
   es: {
-    trial: 'Quiero solicitar la prueba de 3 días de PAWWER',
     agency: 'Quiero una propuesta de PAWWER Agencia',
     plan: (name: string) => `Me interesa el plan ${name} de PAWWER`,
   },
   en: {
-    trial: 'I would like to request the PAWWER 3-day trial',
     agency: 'I would like a PAWWER Agencia proposal',
     plan: (name: string) => `I'm interested in the PAWWER ${name} plan`,
   },
 };
 const mail = (subject: string) => `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}`;
+
+/**
+ * A dónde manda el botón principal de la landing.
+ *
+ * ⚠️ Hasta el 28 de septiembre de 2026 era un `mailto:`, y por eso
+ * «Construye tu sistema» NO HACÍA NADA para casi todo el mundo: en un
+ * navegador sin cliente de correo configurado —que es lo normal en
+ * Chrome de escritorio— un `mailto:` no abre nada y no avisa. El botón
+ * más importante de la página se veía roto sin dar un solo error.
+ *
+ * Y aunque abriera, ya no corresponde: desde que crear cuenta es
+ * autoservicio —y desde que «Crear cuenta» vive arriba del todo en la
+ * pantalla de entrar— pedirle a alguien que escriba un correo para
+ * empezar es un paso de más que solo pierde gente.
+ *
+ * `agency` sí se queda en correo: PAWWER Agencia va por propuesta, no
+ * por checkout, y ahí la conversación es el producto.
+ */
+export const SIGNUP_URL = CRM_URL;
+
 export function mailFor(locale: Locale) {
   const s = MAIL_SUBJECTS[locale];
-  return { trial: mail(s.trial), agency: mail(s.agency), plan: (name: string) => mail(s.plan(name)) };
+  return { trial: SIGNUP_URL, agency: mail(s.agency), plan: (name: string) => mail(s.plan(name)) };
 }
