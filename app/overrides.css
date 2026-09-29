@@ -103,8 +103,15 @@
 @media (max-width: 820px) { .benefits__grid { grid-template-columns: 1fr; gap: 28px; } }
 
 /* Editorial layout refinements: use the wide canvas for product context and lists. */
-.statement__layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, 360px); gap: clamp(36px, 8vw, 120px); align-items: center; }
-.statement__image { width: 100%; max-height: 480px; object-fit: cover; border-radius: var(--r-card); box-shadow: var(--shadow-float); }
+/* La columna de la imagen se ensancho el 28 de septiembre de 2026, al
+   cambiar la captura vieja del CRM por la del rediseno. La anterior era
+   vertical y angosta (395x665) y cabia en 360 px; una captura del panel
+   es horizontal, y a 360 px de ancho quedaba como una estampilla donde
+   no se distinguia nada — que es justo lo contrario de lo que hace esta
+   seccion. `object-fit` pasa a `contain` por lo mismo: recortar una
+   captura de interfaz corta renglones a la mitad. */
+.statement__layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, 680px); gap: clamp(32px, 6vw, 80px); align-items: center; }
+.statement__image { width: 100%; height: auto; object-fit: contain; border-radius: var(--r-card); box-shadow: var(--shadow-float); }
 .process__layout, .pillars__layout, .benefits__layout { display: grid; grid-template-columns: minmax(220px, .72fr) minmax(0, 1.28fr); gap: clamp(42px, 8vw, 120px); align-items: start; }
 .process__head, .pillars__head, .benefits__head { position: sticky; top: 24px; margin-bottom: 0; }
 .process__list { min-width: 0; }
@@ -120,7 +127,6 @@
 }
 @media (max-width: 680px) {
   .statement__layout, .pricing__head { grid-template-columns: 1fr; }
-  .statement__image { max-height: 420px; }
   .pricing__head { row-gap: 18px; }
   .phase { grid-template-columns: 54px 1fr; gap: 14px; }
   .phase__num { font-size: 38px; }

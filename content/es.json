@@ -332,8 +332,8 @@
       "h2a": "Cuando todo lo que",
       "h2b": "importa está conectado.",
       "body": "Una sola lectura de tu operación comercial: captas, atiendes, conviertes y mides sin perder el hilo.",
-      "image": "/img/crm-seguimiento.png",
-      "imageAlt": "Seguimiento de un lead en PAWWER"
+      "image": "/img/crm-inicio.webp",
+      "imageAlt": "El inicio de PAWWER: los números de la semana, el pipeline y lo que hay que atender hoy"
     },
     {
       "type": "process",
@@ -394,7 +394,7 @@
       "eyebrow": "Vista del producto",
       "h2": "El siguiente paso es claro.",
       "body": "Una sola lectura de tu operación comercial: captas, atiendes, conviertes y mides sin perder el hilo.",
-      "image": "",
+      "image": "/img/crm-customer-journey.webp",
       "mock": {
         "bar": "Sistema operativo comercial",
         "eyebrow": "Hoy · 09:42",
