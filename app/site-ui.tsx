@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { Menu, X, ArrowUpRight, PawPrint } from 'lucide-react';
-import { content, type Content, type Locale, CRM_URL } from './site-content';
+import { content, type Content, type Locale, CRM_URL, planHref } from './site-content';
 
 export function Header({ locale, homeHref, altHref, draft, crmUrl = CRM_URL }: { locale: Locale; homeHref: string; altHref: string; draft?: Content; crmUrl?: string }) {
   const [open, setOpen] = useState(false);
@@ -38,8 +38,28 @@ export function Footer({ locale, homeHref, draft, crmUrl = CRM_URL }: { locale: 
   const current = draft || content[locale];
   const t = current.footer;
   const notes = current.blocks.find(block => block.type === 'notes');
+  const planes = current.plans;
   return (
     <footer className="site-footer">
+      {/*
+        Los enlaces a los planes viven en el PIE, no solo en la seccion de
+        precios, y es a proposito. Hasta el 28 de septiembre de 2026 las
+        cuatro paginas de plan —que son las paginas que venden— solo se
+        alcanzaban desde el bloque de precios de la portada: cuatro clics
+        de profundidad para un rastreador que entra por la politica de
+        privacidad, y cero enlaces internos apuntandoles desde el resto del
+        sitio. Un enlace en el pie las pone a UN clic desde cualquier
+        pagina, que es lo que un buscador lee como «esto importa».
+      */}
+      <div className="wrap site-footer__map">
+        <span className="site-footer__maplabel">{locale === 'es' ? 'Planes' : 'Plans'}</span>
+        {planes.map(plan => (
+          <a key={plan.slug} href={planHref(locale, plan.slug)}>{plan.name}</a>
+        ))}
+        <a href={locale === 'es' ? '/programa-beta' : '/en/beta-program'}>
+          {locale === 'es' ? 'Programa beta' : 'Beta program'}
+        </a>
+      </div>
       <div className="wrap site-footer__inner">
         <a href={homeHref} className="brand" aria-label="PAWWER">pawwer<PawPrint aria-hidden strokeWidth={2.25} /></a>
         <a href={t.privacyHref}>{t.privacy}</a>

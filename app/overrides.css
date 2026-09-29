@@ -355,3 +355,39 @@
   .plans__switch { width: 100%; }
   .plans__switch button { flex: 1; justify-content: center; padding: 9px 10px; font-size: 13px; }
 }
+
+/* ---------- Preguntas frecuentes ----------
+   Mismo esqueleto de dos columnas que Proceso y Beneficios: el titulo
+   pegado a la izquierda y la lista a la derecha. Los <details> se pintan
+   como renglones separados por una linea, no como tarjetas: once tarjetas
+   seguidas pesan mas que las once respuestas juntas. */
+.faq__layout { display: grid; grid-template-columns: minmax(220px, .72fr) minmax(0, 1.28fr); gap: clamp(42px, 8vw, 120px); align-items: start; }
+.faq__head { position: sticky; top: 24px; }
+.faq__head h2 { font-size: clamp(28px, 4vw, 52px); max-width: 14ch; }
+.faq__list { min-width: 0; border-top: 1px solid var(--line); }
+.faq__item { border-bottom: 1px solid var(--line); }
+.faq__item summary {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 24px;
+  padding: 22px 0; cursor: pointer; list-style: none;
+  font-family: var(--font-display), sans-serif; font-weight: 600; font-size: clamp(16px, 1.6vw, 19px);
+  color: var(--ink); letter-spacing: -0.01em;
+}
+.faq__item summary::-webkit-details-marker { display: none; }
+.faq__item summary:hover { color: var(--accent); }
+.faq__item summary svg { flex-shrink: 0; color: var(--muted); transition: transform .18s ease, color .18s ease; }
+.faq__item[open] summary svg { transform: rotate(45deg); color: var(--accent); }
+.faq__item[open] summary { color: var(--accent); }
+.faq__item p { font-size: 15.5px; line-height: 1.65; color: var(--muted); max-width: 68ch; margin: 0 0 24px; }
+@media (max-width: 920px) {
+  .faq__layout { grid-template-columns: 1fr; gap: 28px; }
+  .faq__head { position: static; }
+}
+
+/* ---------- Pie: el mapa de planes ----------
+   Un renglon propio arriba del pie legal. Los planes son las paginas que
+   venden, y hasta hoy solo se alcanzaban desde el bloque de precios de la
+   portada. */
+.site-footer__map { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 22px; padding-bottom: 22px; margin-bottom: 26px; border-bottom: 1px solid var(--line-dark); }
+.site-footer__maplabel { font-family: var(--font-display), sans-serif; font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-right: 6px; }
+.site-footer__map a { font-size: 14px; color: var(--on-dark-2); text-decoration: none; }
+.site-footer__map a:hover { color: var(--on-dark); }

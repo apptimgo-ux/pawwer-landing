@@ -22,6 +22,7 @@ export type Block =
   | { type: 'pricing'; anchor?: string; eyebrow: string; h2a: string; h2b: string; intro: string; priceUnit: string; mostPopular: string; cta: string; activationLabel: string; compareTitle: string; compareFeatureCol: string; showComparison: boolean; /* Mes o año. Opcionales para que un contenido viejo siga compilando: sin ellos el selector usa sus textos de respaldo y el precio mensual. */ priceUnitAnual?: string; labelMensual?: string; labelAnual?: string; descuentoAnual?: string; ahorroTexto?: string }
   | { type: 'agency'; anchor?: string; eyebrow: string; h2a: string; h2b: string; body: string; cta: string }
   | { type: 'notes'; anchor?: string; items: Note[] }
+  | { type: 'faq'; anchor?: string; eyebrow: string; h2a: string; h2b: string; items: { q: string; a: string }[] }
   | { type: 'cta'; anchor?: string; eyebrow: string; h2a: string; h2b: string; buttonLabel: string };
 
 export type Plan = {

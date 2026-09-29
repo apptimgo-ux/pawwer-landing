@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import Landing from '../landing';
+import DatosEstructurados from '../datos-estructurados';
+import { grafoDeLanding } from '../seo';
 import { content, OG_IMAGE } from '../site-content';
 
 const t = content.en;
@@ -14,5 +16,10 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <Landing locale="en" />;
+  return (
+    <>
+      <DatosEstructurados grafo={grafoDeLanding('en')} />
+      <Landing locale="en" />
+    </>
+  );
 }

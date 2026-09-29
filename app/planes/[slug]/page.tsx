@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import PlanDetail from '../../plan-detail';
+import DatosEstructurados from '../../datos-estructurados';
+import { grafoDePlan } from '../../seo';
 import { content, PLAN_SLUGS } from '../../site-content';
 
 export const dynamicParams = false;
@@ -28,5 +30,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   if (!content.es.plans.some(p => p.slug === slug)) notFound();
-  return <PlanDetail locale="es" slug={slug} />;
+  return (
+    <>
+      <DatosEstructurados grafo={grafoDePlan('es', slug)} />
+      <PlanDetail locale="es" slug={slug} />
+    </>
+  );
 }

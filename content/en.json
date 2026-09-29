@@ -506,6 +506,59 @@
       ]
     },
     {
+      "type": "faq",
+      "anchor": "faq",
+      "eyebrow": "Frequently asked",
+      "h2a": "What people ask",
+      "h2b": "before they start.",
+      "items": [
+        {
+          "q": "What is PAWWER?",
+          "a": "PAWWER is a marketing agency that lives inside your business. It brings together the leads that reach you through WhatsApp, Instagram and Facebook, the follow-up on each one, your appointments, the content you publish and your ad campaigns — all in one place. It isn't just a CRM you type into: it creates the content, replies when you can't, and tells you where each customer came from."
+        },
+        {
+          "q": "How much does PAWWER cost?",
+          "a": "Esencial is $89 a month, Crecimiento $179, Escala $329 and Empresarial $1,999, in US dollars. Paying yearly is 15% less on all four. PAWWER Agencia — the service with a team behind it — is quoted by proposal. Prices don't include tax: it is added at checkout based on your country."
+        },
+        {
+          "q": "Is there a free trial?",
+          "a": "Yes, 3 days with access to the Escala tier, the second highest. You register a card at the start and the first charge lands on day four. Cancel before that and nothing is charged. One trial per business."
+        },
+        {
+          "q": "Which social networks can I connect?",
+          "a": "Instagram, Facebook and WhatsApp come with any plan. TikTok, YouTube, LinkedIn, Google, Pinterest and X are enabled separately. Connecting a network means authorizing it on that network's own page: PAWWER never sees your Meta password and never stores it, and you can revoke the permission whenever you want."
+        },
+        {
+          "q": "Does PAWWER reply to my customers on its own?",
+          "a": "Yes, if you switch it on. The AI agent answers within seconds to anyone writing for the first time through Messenger, Instagram or WhatsApp, works out what they're after, and hands the lead to your team. The moment someone on your team types, the agent switches itself off — you'll never both be writing to the same lead. And there are things it never does, like quoting prices or confirming availability."
+        },
+        {
+          "q": "Do I need to know Meta Ads to launch a campaign?",
+          "a": "No. The builder puts the campaign together in six steps, in plain language: who you're talking to, what you want to happen, where the lead arrives, the creative, how much you're spending and who replies. On Meta that's four screens of jargon. There's also a copilot on every step that advises from your business, not from Meta's handbook."
+        },
+        {
+          "q": "Does it connect to my calendar?",
+          "a": "Yes, to Google Calendar. Every appointment you book shows up there, your client gets the invitation by email even if they don't use PAWWER, and Google reminds you both a day before, 30 minutes before and 5 minutes before. Cancel the appointment in PAWWER and the event goes away, with your client notified."
+        },
+        {
+          "q": "Is my data mine?",
+          "a": "Yes. Every business lives isolated: no other PAWWER customer can see your contacts, your conversations or your files, and that's enforced by the database, not by a setting anyone could switch off. You can export your list whenever you want, with where each lead came from and who handled them."
+        },
+        {
+          "q": "Can I cancel any time?",
+          "a": "Yes, from your own account, without calling anyone. You keep using PAWWER until the end of the period you already paid for, and no further charges are made. Time already paid for isn't refunded; if you change your mind before it ends, you can resume your plan in one click."
+        },
+        {
+          "q": "What languages is PAWWER available in?",
+          "a": "Spanish and English, in full: the app, the guided tours and the emails. You switch from the sign-in screen or from My account, and it's remembered for next time."
+        },
+        {
+          "q": "Who invoices me?",
+          "a": "Dodo Payments, PAWWER's merchant of record. If you enter your tax ID and company name at checkout, their invoice carries those details with the tax broken out. Your receipts live in the Dodo portal, which you reach from My business."
+        }
+      ]
+    },
+    {
       "type": "cta",
       "anchor": "contacto",
       "eyebrow": "Start building with us",

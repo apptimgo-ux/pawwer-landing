@@ -506,6 +506,59 @@
       ]
     },
     {
+      "type": "faq",
+      "anchor": "preguntas",
+      "eyebrow": "Preguntas frecuentes",
+      "h2a": "Lo que nos preguntan",
+      "h2b": "antes de empezar.",
+      "items": [
+        {
+          "q": "¿Qué es PAWWER?",
+          "a": "PAWWER es una agencia de marketing dentro de tu negocio. En un solo lugar junta los leads que te llegan por WhatsApp, Instagram y Facebook, el seguimiento de cada uno, tus citas, el contenido que publicas y tus campañas de anuncios. No es solo un CRM donde anotas: crea el contenido, contesta cuando tú no puedes y te dice de dónde viene cada cliente."
+        },
+        {
+          "q": "¿Cuánto cuesta PAWWER?",
+          "a": "Esencial cuesta $89 dólares al mes, Crecimiento $179, Escala $329 y Empresarial $1,999. Pagando al año son 15% menos en los cuatro. PAWWER Agencia, que es el servicio con equipo detrás, va por propuesta. Los precios no llevan impuesto incluido: se suma en el checkout según tu país, así que en México verás el 16% de IVA encima."
+        },
+        {
+          "q": "¿Hay prueba gratis?",
+          "a": "Sí, 3 días con acceso al nivel Escala, que es el segundo más alto. Se registra una tarjeta al empezar y el primer cobro sale el cuarto día. Si cancelas antes, no se cobra nada. Una prueba por negocio."
+        },
+        {
+          "q": "¿Qué redes sociales se conectan?",
+          "a": "Instagram, Facebook y WhatsApp vienen con cualquier plan. TikTok, YouTube, LinkedIn, Google, Pinterest y X se dan de alta aparte. Conectar una red es autorizarla en la página de la propia red: PAWWER nunca ve tu contraseña de Meta ni la guarda, y puedes quitar el permiso cuando quieras."
+        },
+        {
+          "q": "¿PAWWER contesta solo a mis clientes?",
+          "a": "Sí, si tú lo enciendes. El agente de inteligencia artificial responde en segundos a quien te escribe por primera vez por Messenger, Instagram o WhatsApp, entiende qué busca y pasa el lead a tu equipo. En cuanto alguien de tu equipo escribe, el agente se apaga solo: nunca van a estar los dos escribiéndole al mismo prospecto. Y hay cosas que no hace nunca, como dar precios o confirmar disponibilidad."
+        },
+        {
+          "q": "¿Necesito saber de Meta Ads para lanzar una campaña?",
+          "a": "No. El constructor arma la campaña en seis pasos, en español: a quién le hablas, qué quieres que pase, por dónde llega el lead, el arte, cuánto inviertes y quién contesta. En Meta eso mismo son cuatro pantallas de jerga. Además hay un copiloto que te aconseja en cada paso desde tu negocio, no desde el manual de Meta."
+        },
+        {
+          "q": "¿Se conecta con mi calendario?",
+          "a": "Sí, con Google Calendar. Cada cita que agendes aparece ahí, tu cliente recibe la invitación por correo aunque no use PAWWER, y Google les recuerda a los dos un día antes, 30 minutos antes y 5 minutos antes. Si cancelas la cita en PAWWER, el evento se quita y a tu cliente le llega el aviso."
+        },
+        {
+          "q": "¿Mis datos son míos?",
+          "a": "Sí. Cada negocio vive aislado: ningún otro cliente de PAWWER puede ver tus contactos, tus conversaciones ni tus archivos, y eso lo aplica la base de datos, no una preferencia que se pueda apagar. Exportas tu lista cuando quieras, con el origen de cada lead y quién lo atendió."
+        },
+        {
+          "q": "¿Puedo cancelar cuando quiera?",
+          "a": "Sí, desde tu propia cuenta y sin llamar a nadie. Sigues usando PAWWER hasta el final del periodo que ya pagaste y no se hacen más cobros. El tiempo ya cobrado no se devuelve; si cambias de opinión antes de que termine, puedes reanudar tu plan con un clic."
+        },
+        {
+          "q": "¿En qué idiomas está PAWWER?",
+          "a": "En español y en inglés, completo: el panel, los recorridos guiados y los correos. Se cambia desde la pantalla de entrar o desde Mi cuenta, y se recuerda para la próxima vez."
+        },
+        {
+          "q": "¿Quién me factura?",
+          "a": "Dodo Payments, que es el comerciante registrado de PAWWER. Si escribes tu RFC y tu razón social en el checkout, su comprobante sale con esos datos y con el impuesto desglosado. Los recibos viven en el portal de Dodo, al que entras desde Mi empresa."
+        }
+      ]
+    },
+    {
       "type": "cta",
       "anchor": "contacto",
       "eyebrow": "Empecemos juntos",

@@ -1,7 +1,7 @@
 import PlanesConPeriodo from './planes-con-periodo';
 import {
   ArrowUpRight, Check, CalendarDays, ChartNoAxesCombined, MessageSquare, Target,
-  Users, Sparkles, Zap, Compass, Layers, ShieldCheck, PawPrint, type LucideIcon,
+  Users, Sparkles, Zap, Compass, Layers, ShieldCheck, PawPrint, Plus, type LucideIcon,
 } from 'lucide-react';
 import HeroMedia from './hero-media';
 import {
@@ -289,6 +289,36 @@ function BlockView({ block, locale, t, settings }: { block: Block; locale: Local
 
     case 'notes':
       return null;
+
+    // ⚠️ Las preguntas se PINTAN, no solo se marcan. Google solo acepta
+    // `FAQPage` cuando la respuesta esta visible en la pagina para
+    // cualquiera; marcar una pregunta escondida es motivo de accion
+    // manual. Y para un modelo de lenguaje es lo mismo: lo que cita es
+    // lo que puede leer.
+    //
+    // Van en <details>, no en un acordeon de JavaScript: un <details>
+    // cerrado SI lo lee el rastreador, se abre sin script, funciona con
+    // teclado y con lector de pantalla, y el navegador lo abre solo
+    // cuando alguien busca dentro de la pagina con Ctrl+F.
+    case 'faq':
+      return (
+        <section className="band faq" id={id}>
+          <div className="wrap faq__layout">
+            <div className="faq__head" data-reveal>
+              <p className="eyebrow">{block.eyebrow}</p>
+              <h2>{block.h2a} {block.h2b}</h2>
+            </div>
+            <div className="faq__list" data-reveal>
+              {block.items.map((item, i) => (
+                <details key={i} className="faq__item" name="faq">
+                  <summary><span>{item.q}</span><Plus size={17} aria-hidden /></summary>
+                  <p>{item.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+      );
 
     case 'cta':
       return (
