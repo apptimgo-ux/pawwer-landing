@@ -1,4 +1,5 @@
 'use client';
+import { AI_DISCLAIMER } from './aiDisclaimer';
 import { useState } from 'react';
 import { Menu, X, ArrowUpRight, PawPrint } from 'lucide-react';
 import { content, type Content, type Locale, CRM_URL, planHref } from './site-content';
@@ -40,7 +41,8 @@ export function Footer({ locale, homeHref, draft, crmUrl = CRM_URL }: { locale: 
   const notes = current.blocks.find(block => block.type === 'notes');
   const planes = current.plans;
   return (
-    <footer className="site-footer">
+      <footer className="site-footer">
+        <div className="wrap site-footer__disclaimer"><p>{AI_DISCLAIMER[locale].landing} <a href={`https://crm.pawwerapp.com/legal/contenido-ia?lang=${locale}`}>{AI_DISCLAIMER[locale].more}</a></p></div>
       {/*
         Los enlaces a los planes viven en el PIE, no solo en la seccion de
         precios, y es a proposito. Hasta el 28 de septiembre de 2026 las

@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { AI_DISCLAIMER } from './aiDisclaimer';
 import { Header, Footer } from './site-ui';
 import type { Locale } from './site-content';
 
@@ -41,6 +42,7 @@ export default function LegalView({
             {b.ps.map((p, i) => <p key={i}>{p}</p>)}
           </section>
         ))}
+        <section><h2>{AI_DISCLAIMER[locale].title}</h2><p>{AI_DISCLAIMER[locale].long}</p><a href={locale === 'es' ? '/privacidad' : '/en/privacy'}>{AI_DISCLAIMER[locale].privacy}</a></section>
       </main>
       <Footer locale={locale} homeHref={homeHref} />
     </>
