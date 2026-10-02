@@ -4,6 +4,7 @@ import './globals.css';
 import './editor-media.css';
 import { content } from './site-content';
 import Reveal from './reveal';
+import CookiePreferences from './cookie-preferences';
 
 // Fuente del sistema PAWWER (misma que el CRM).
 const display = Space_Grotesk({
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         {children}
         <Reveal />
+        <CookiePreferences />
       </body>
     </html>
   );
