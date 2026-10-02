@@ -84,7 +84,7 @@ export default function HeroMedia({
     const current = count ? photos[active % count] : { image: image!, alt };
     return (
       <div className={background ? 'hero__backdrop' : 'wrap hero__media'}>
-        <img src={current.image} alt={current.alt || alt} style={mediaStyle} />
+        <img src={current.image} alt={current.alt || alt} style={mediaStyle} data-zoomable tabIndex={0} role="button" aria-label={current.alt || alt || 'Ampliar imagen'} />
         {shade}
         {count > 1 && <div className="hero__carousel-controls" role="group" aria-label="Carrusel de portada">
           <button type="button" aria-label="Imagen anterior" onClick={() => {setCycling(false);setActive((active + count - 1) % count);}}>‹</button>

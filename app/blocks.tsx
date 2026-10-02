@@ -4,6 +4,7 @@ import {
   Users, Sparkles, Zap, Compass, Layers, ShieldCheck, PawPrint, Plus, type LucideIcon,
 } from 'lucide-react';
 import HeroMedia from './hero-media';
+import { LandingImageCarousel } from './ImageExperience';
 import { Fragment, type ReactNode } from 'react';
 import {
   content, mailFor, planHref, type Block, type Content, type Locale,
@@ -76,7 +77,7 @@ function BlockView({ block, locale, t, settings }: { block: Block; locale: Local
             <h2>{block.h2a} {block.h2b}</h2>
             <p>{block.body}</p>
             </div>
-            {block.image && <img className="statement__image" src={block.image} alt={block.imageAlt || ''} loading="lazy" data-reveal />}
+            {block.image && <img className="statement__image" src={block.image} alt={block.imageAlt || ''} loading="lazy" data-reveal data-zoomable tabIndex={0} role="button" aria-label={locale === 'es' ? `Ampliar imagen: ${block.imageAlt || block.h2a}` : `Expand image: ${block.imageAlt || block.h2a}`} />}
           </div>
         </section>
       );
@@ -133,7 +134,12 @@ function BlockView({ block, locale, t, settings }: { block: Block; locale: Local
               <p>{block.body}</p>
             </div>
             {block.image ? (
-              <img className="mock mock--img" src={block.image} alt={locale === 'es' ? 'CMS de Pawwer con contenido de demostración' : 'Pawwer CMS with demonstration content'} data-reveal />
+              <LandingImageCarousel locale={locale} images={[
+                { src: block.image, alt: locale === 'es' ? 'Pantalla del CMS de Pawwer con contenido de demostración' : 'Pawwer CMS screen with demonstration content', label: locale === 'es' ? 'CMS · crea contenido con tu marca' : 'CMS · create on-brand content' },
+                { src: `/img/crm-crear-${locale}.webp`, alt: locale === 'es' ? 'Editor de Crea tu post con vista previa y estilos de demostración' : 'Create your post editor with demo preview and styles', label: locale === 'es' ? 'Crea tu post · editor visual' : 'Create your post · visual editor' },
+                { src: `/img/crm-planner-${locale}.webp`, alt: locale === 'es' ? 'Planner mensual con publicaciones de demostración' : 'Monthly Planner with demonstration posts', label: locale === 'es' ? 'Planner · agenda publicaciones' : 'Planner · schedule posts' },
+                { src: locale === 'es' ? '/img/crm-customer-journey.webp' : '/img/crm-customer-journey-en.webp', alt: locale === 'es' ? 'Customer Journey de Pawwer con información de demostración' : 'Pawwer Customer Journey with demonstration data', label: locale === 'es' ? 'Customer Journey · sigue cada oportunidad' : 'Customer Journey · track every opportunity' },
+              ]} />
             ) : (
               <div className="mock" data-reveal>
                 <div className="mock__bar">
@@ -163,7 +169,7 @@ function BlockView({ block, locale, t, settings }: { block: Block; locale: Local
               </div>
             )}
           </div>
-          <div className="wrap" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: 24, paddingBottom: 48 }}>
+          <div className="wrap showcase__legacy-examples" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: 24, paddingBottom: 48 }}>
             {['crear', 'planner'].map(view => <figure key={view} style={{ margin: 0 }}><img src={`/img/crm-${view}-${locale}.webp`} alt={locale === 'es' ? (view === 'crear' ? 'Editor de Crea tu post con vista previa y estilos' : 'Planner mensual con publicaciones de demostración') : (view === 'crear' ? 'Create your post editor with preview and styles' : 'Monthly Planner with demonstration posts')} loading="lazy" style={{ width: '100%', display: 'block', borderRadius: 16, border: '1px solid rgba(255,255,255,.2)' }} /><figcaption style={{ paddingTop: 12, color: '#fff' }}>{locale === 'es' ? (view === 'crear' ? 'Crea tu post · Interfaz de demostración' : 'Planner · Publicaciones de demostración') : (view === 'crear' ? 'Create your post · Demo interface' : 'Planner · Demo posts')}</figcaption></figure>)}
           </div>
         </section>
