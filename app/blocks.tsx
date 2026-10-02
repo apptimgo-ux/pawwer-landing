@@ -4,6 +4,7 @@ import {
   Users, Sparkles, Zap, Compass, Layers, ShieldCheck, PawPrint, Plus, type LucideIcon,
 } from 'lucide-react';
 import HeroMedia from './hero-media';
+import { Fragment, type ReactNode } from 'react';
 import {
   content, mailFor, planHref, type Block, type Content, type Locale,
   siteSettings, type SiteSettings,
@@ -30,9 +31,10 @@ function Cell({ value }: { value: string }) {
   return <>{value}</>;
 }
 
-export function BlockList({ locale, draft, settings = siteSettings }: { locale: Locale; draft?: Content; settings?: SiteSettings }) {
+export function BlockList({ locale, draft, settings = siteSettings, afterHero }: { locale: Locale; draft?: Content; settings?: SiteSettings; afterHero?: ReactNode }) {
   const t = draft || content[locale];
-  return <>{t.blocks.map((b, i) => <BlockView key={i} block={b} locale={locale} t={t} settings={settings} />)}</>;
+  const heroIndex = t.blocks.findIndex(b => b.type === 'hero');
+  return <>{t.blocks.map((b, i) => <Fragment key={i}><BlockView block={b} locale={locale} t={t} settings={settings} />{i === heroIndex && afterHero}</Fragment>)}</>;
 }
 
 function BlockView({ block, locale, t, settings }: { block: Block; locale: Locale; t: Content; settings: SiteSettings }) {
@@ -131,7 +133,7 @@ function BlockView({ block, locale, t, settings }: { block: Block; locale: Local
               <p>{block.body}</p>
             </div>
             {block.image ? (
-              <img className="mock mock--img" src={block.image} alt="" data-reveal />
+              <img className="mock mock--img" src={block.image} alt={locale === 'es' ? 'CMS de Pawwer con contenido de demostración' : 'Pawwer CMS with demonstration content'} data-reveal />
             ) : (
               <div className="mock" data-reveal>
                 <div className="mock__bar">
@@ -160,6 +162,9 @@ function BlockView({ block, locale, t, settings }: { block: Block; locale: Local
                 <p className="mock__cap">{block.mock.caption}</p>
               </div>
             )}
+          </div>
+          <div className="wrap" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: 24, paddingBottom: 48 }}>
+            {['crear', 'planner'].map(view => <figure key={view} style={{ margin: 0 }}><img src={`/img/crm-${view}-${locale}.webp`} alt={locale === 'es' ? (view === 'crear' ? 'Editor de Crea tu post con vista previa y estilos' : 'Planner mensual con publicaciones de demostración') : (view === 'crear' ? 'Create your post editor with preview and styles' : 'Monthly Planner with demonstration posts')} loading="lazy" style={{ width: '100%', display: 'block', borderRadius: 16, border: '1px solid rgba(255,255,255,.2)' }} /><figcaption style={{ paddingTop: 12, color: '#fff' }}>{locale === 'es' ? (view === 'crear' ? 'Crea tu post · Interfaz de demostración' : 'Planner · Publicaciones de demostración') : (view === 'crear' ? 'Create your post · Demo interface' : 'Planner · Demo posts')}</figcaption></figure>)}
           </div>
         </section>
       );

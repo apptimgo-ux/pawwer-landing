@@ -332,8 +332,8 @@
       "h2a": "Cuando todo lo que",
       "h2b": "importa está conectado.",
       "body": "Una sola lectura de tu operación comercial: captas, atiendes, conviertes y mides sin perder el hilo.",
-      "image": "/img/crm-inicio.webp",
-      "imageAlt": "El inicio de PAWWER: los números de la semana, el pipeline y lo que hay que atender hoy"
+      "image": "/img/crm-planner-es.webp",
+      "imageAlt": "Planner de PAWWER con publicaciones de demostración organizadas en el calendario mensual"
     },
     {
       "type": "process",
@@ -392,9 +392,9 @@
       "type": "showcase",
       "anchor": "",
       "eyebrow": "Vista del producto",
-      "h2": "El siguiente paso es claro.",
-      "body": "Una sola lectura de tu operación comercial: captas, atiendes, conviertes y mides sin perder el hilo.",
-      "image": "/img/crm-customer-journey.webp",
+      "h2": "Crea tu publicidad. Dale fecha para salir.",
+      "body": "Desde CMS creas posts, imágenes y videos con tu marca. En Planner revisas el contenido y agendas cada publicación para su red social.",
+      "image": "/img/crm-cms-es.webp",
       "mock": {
         "bar": "Sistema operativo comercial",
         "eyebrow": "Hoy · 09:42",

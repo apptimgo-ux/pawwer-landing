@@ -332,8 +332,8 @@
       "h2a": "When everything that",
       "h2b": "matters is connected.",
       "body": "One read on your commercial operation: capture, engage, convert and measure without losing the thread.",
-      "image": "/img/crm-inicio-en.webp",
-      "imageAlt": "The PAWWER home screen: this week's numbers, the pipeline and what needs attention today"
+      "image": "/img/crm-planner-en.webp",
+      "imageAlt": "PAWWER Planner with demonstration posts organized in the monthly calendar"
     },
     {
       "type": "process",
@@ -392,9 +392,9 @@
       "type": "showcase",
       "anchor": "",
       "eyebrow": "Product view",
-      "h2": "The next step is clear.",
-      "body": "One read on your commercial operation: capture, engage, convert and measure without losing the thread.",
-      "image": "/img/crm-customer-journey-en.webp",
+      "h2": "Create your advertising. Plan when it goes live.",
+      "body": "Create branded posts, images and videos in CMS. Review your content and schedule each post for its social network in Planner.",
+      "image": "/img/crm-cms-en.webp",
       "mock": {
         "bar": "Commercial operating system",
         "eyebrow": "Today · 09:42",
