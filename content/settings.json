@@ -11,9 +11,9 @@
     "crmUrl": "https://crm.pawwerapp.com"
   },
   "prices": {
-    "esencial": "$89",
-    "crecimiento": "$179",
-    "escala": "$329",
+    "esencial": "$99",
+    "crecimiento": "$199",
+    "escala": "$349",
     "empresarial": "$1,999"
   },
   "checkout": {
@@ -27,15 +27,15 @@
     "en": "September 21, 2026"
   },
   "pricesAnual": {
-    "esencial": "$907.80",
-    "crecimiento": "$1,825.80",
-    "escala": "$3,355.80",
+    "esencial": "$1,009.80",
+    "crecimiento": "$2,029.80",
+    "escala": "$3,559.80",
     "empresarial": "$20,389.80"
   },
   "ahorroAnual": {
-    "esencial": "$160.20",
-    "crecimiento": "$322.20",
-    "escala": "$592.20",
+    "esencial": "$178.20",
+    "crecimiento": "$358.20",
+    "escala": "$628.20",
     "empresarial": "$3,598.20"
   }
 }
