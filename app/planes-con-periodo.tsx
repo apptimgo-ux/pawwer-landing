@@ -49,7 +49,7 @@ export default function PlanesConPeriodo({
 
       <div className="plans">
         {plans.map(plan => {
-          const featured = plan.slug === 'crecimiento';
+          const featured = plan.slug === 'content_creator';
           // El periodo se lleva en la dirección para que el detalle del
           // plan —y después el CRM— enseñen y cobren lo mismo que aquí.
           const href = planHref(locale, plan.slug) + (anual ? '?periodo=anual' : '');
@@ -71,7 +71,7 @@ export default function PlanesConPeriodo({
               <ul className="plan__list">
                 {plan.features.map(f => <li key={f.text}><Check size={15} />{f.text}</li>)}
               </ul>
-              {plan.note && <p className="plan__note"><b>{activationLabel}</b>{plan.note}</p>}
+              {plan.note && <p className="plan__note"><b>{plan.slug === 'content_creator' ? (locale === 'es' ? 'Ten en cuenta: ' : 'Please note: ') : activationLabel}</b>{plan.note}</p>}
             </article>
           );
         })}

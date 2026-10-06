@@ -44,6 +44,21 @@
   },
   "plans": [
     {
+      "slug": "content_creator",
+      "name": "Content Creator",
+      "summary": "Crea tu contenido y publícalo en tus redes, sin contratar el CRM.",
+      "inherits": "Herramientas de contenido y publicación manual",
+      "features": [
+        { "text": "Crea tu post: imágenes, historias y videos con IA" },
+        { "text": "Mejora tu foto de producto y quita fondos" },
+        { "text": "250 créditos de IA al mes" },
+        { "text": "Publica y agenda manualmente en Instagram, Facebook y TikTok" },
+        { "text": "Hasta 3 perfiles sociales conectados en total" },
+        { "text": "1 usuario y 1 marca" }
+      ],
+      "note": "No incluye CRM, leads, conversaciones, citas, agentes IA ni creación automatizada. Cada generación consume créditos. Puedes cambiar de plan cuando necesites más herramientas."
+    },
+    {
       "slug": "esencial",
       "name": "Esencial",
       "summary": "Pon orden en tu operación comercial.",
@@ -164,6 +179,7 @@
   "comparison": [
     {
       "label": "Integrantes",
+      "content_creator": "1",
       "esencial": "3",
       "crecimiento": "10",
       "escala": "25",
@@ -171,6 +187,7 @@
     },
     {
       "label": "Canales con conexión oficial",
+      "content_creator": "Hasta 3 perfiles: Instagram, Facebook y TikTok",
       "esencial": "Hasta 2",
       "crecimiento": "Hasta 4",
       "escala": "Hasta 8",
@@ -178,6 +195,7 @@
     },
     {
       "label": "Créditos de IA / mes",
+      "content_creator": "250",
       "esencial": "150",
       "crecimiento": "500",
       "escala": "1,500",
@@ -199,6 +217,7 @@
     },
     {
       "label": "Marca, biblioteca y preparación de contenidos",
+      "content_creator": "✓",
       "esencial": "✓",
       "crecimiento": "✓",
       "escala": "✓",
@@ -206,6 +225,7 @@
     },
     {
       "label": "Planner de contenidos",
+      "content_creator": "Manual",
       "esencial": "—",
       "crecimiento": "✓",
       "escala": "✓",
@@ -268,13 +288,13 @@
     "trialTitle": "Cómo funciona la prueba de 3 días",
     "trialLines": [
       {
-        "text": "Durante la prueba tienes acceso temporal al nivel Escala, o Empresarial si eliges ese plan."
+        "text": "La prueba de Content Creator incluye sus herramientas de contenido y publicación manual. En los planes con CRM tienes acceso temporal a Escala, o Empresarial si eliges ese plan."
       },
       {
         "text": "Creas tu cuenta en el CRM (crm.pawwerapp.com) y registras tu tarjeta en el checkout seguro de Dodo Payments. Este sitio no captura ni almacena datos de tarjeta."
       },
       {
-        "text": "No se cobra nada durante los 3 días. Si no cancelas, el día 4 se cobra tu plan en USD y se renueva cada mes."
+        "text": "No se cobra nada durante los 3 días. Si no cancelas, el día 4 se cobra tu plan en USD y se renueva según el periodo mensual o anual que hayas elegido."
       },
       {
         "text": "Puedes cancelar tu suscripción en cualquier momento desde el CRM. Si cancelas antes de que terminen los 3 días, no se genera ningún cargo."
@@ -475,9 +495,9 @@
       "eyebrow": "Planes y precios",
       "h2a": "Elige el ritmo",
       "h2b": "de tu crecimiento.",
-      "intro": "Prueba de 3 días con acceso temporal al nivel Escala. Registras tu tarjeta en el checkout seguro de Dodo Payments y no se cobra nada hasta el día 4. Al año pagas doce meses con 15% de descuento, en un solo cargo. Precios en USD, sin impuestos:",
+      "intro": "Elige herramientas de contenido o un plan con CRM. Prueba de 3 días con tarjeta en el checkout seguro de Dodo Payments; no se cobra nada hasta el día 4. Al año pagas doce meses con 15% de descuento, en un solo cargo. Precios en USD, sin impuestos:",
       "priceUnit": "USD / mes",
-      "mostPopular": "Más elegido",
+      "mostPopular": "Recomendado",
       "cta": "Empezar",
       "activationLabel": "En activación",
       "compareTitle": "Comparar los planes",
@@ -529,7 +549,7 @@
         },
         {
           "q": "¿Hay prueba gratis?",
-          "a": "Sí, 3 días con acceso al nivel Escala, que es el segundo más alto. Se registra una tarjeta al empezar y el primer cobro sale el cuarto día. Si cancelas antes, no se cobra nada. Una prueba por negocio."
+          "a": "Sí, 3 días. Content Creator prueba sus herramientas de contenido y publicación manual; los planes con CRM prueban Escala, o Empresarial si eliges ese plan. Se registra una tarjeta al empezar y el primer cobro sale el cuarto día. Si cancelas antes, no se cobra nada. Una prueba por negocio."
         },
         {
           "q": "¿Qué redes sociales se conectan?",

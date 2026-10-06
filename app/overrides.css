@@ -144,9 +144,15 @@
 .plan__banner { position: absolute; top: -12px; left: 26px; background: var(--ink); color: var(--paper); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 10px; border-radius: 3px; }
 .plan h3 { font-size: 24px; }
 .plan__summary { font-size: 14.5px; color: var(--muted); margin-top: 10px; min-height: 44px; }
-.plan__price { display: block; font-family: var(--font-display), sans-serif; font-weight: 600; font-size: 40px; letter-spacing: -0.04em; color: var(--ink); margin: 20px 0 4px; }
-.plan__price span { font-family: var(--font-sans); font-size: 13px; font-weight: 400; letter-spacing: 0; color: var(--muted); margin-left: 8px; }
+.plan__price { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 8px; line-height: 1.15; font-family: var(--font-display), sans-serif; font-weight: 600; font-size: 40px; letter-spacing: -0.04em; color: var(--ink); margin: 20px 0 4px; }
+.plan__price span { font-family: var(--font-sans); font-size: 13px; font-weight: 400; letter-spacing: 0; color: var(--muted); white-space: nowrap; }
 .plan__price:hover { color: var(--accent); }
+@media (min-width: 1280px) {
+  .plans { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .plan { padding: 30px 20px; }
+  .plan h3 { font-size: 22px; }
+  .plan__price { font-size: clamp(28px, 2.2vw, 36px); }
+}
 
 /* Pricing header: keep the editorial heading and intro together across the canvas. */
 .pricing__head {

@@ -44,6 +44,21 @@
   },
   "plans": [
     {
+      "slug": "content_creator",
+      "name": "Content Creator",
+      "summary": "Create content and publish to your social accounts without subscribing to the CRM.",
+      "inherits": "Content tools and manual publishing",
+      "features": [
+        { "text": "Create your post: AI images, stories, and videos" },
+        { "text": "Enhance product photos and remove backgrounds" },
+        { "text": "250 AI credits per month" },
+        { "text": "Manually publish and schedule on Instagram, Facebook, and TikTok" },
+        { "text": "Up to 3 connected social profiles in total" },
+        { "text": "1 user and 1 brand" }
+      ],
+      "note": "CRM, leads, conversations, appointments, AI agents, and automated content creation are not included. Each generation uses credits. You can change plans when you need more tools."
+    },
+    {
       "slug": "esencial",
       "name": "Essential",
       "summary": "Bring order to your commercial operation.",
@@ -164,6 +179,7 @@
   "comparison": [
     {
       "label": "Team members",
+      "content_creator": "1",
       "esencial": "3",
       "crecimiento": "10",
       "escala": "25",
@@ -171,6 +187,7 @@
     },
     {
       "label": "Channels with official connection",
+      "content_creator": "Up to 3 profiles: Instagram, Facebook, and TikTok",
       "esencial": "Up to 2",
       "crecimiento": "Up to 4",
       "escala": "Up to 8",
@@ -178,6 +195,7 @@
     },
     {
       "label": "AI credits / mo",
+      "content_creator": "250",
       "esencial": "150",
       "crecimiento": "500",
       "escala": "1,500",
@@ -199,6 +217,7 @@
     },
     {
       "label": "Brand, library and content preparation",
+      "content_creator": "✓",
       "esencial": "✓",
       "crecimiento": "✓",
       "escala": "✓",
@@ -206,6 +225,7 @@
     },
     {
       "label": "Content planner",
+      "content_creator": "Manual",
       "esencial": "—",
       "crecimiento": "✓",
       "escala": "✓",
@@ -268,13 +288,13 @@
     "trialTitle": "How the 3-day trial works",
     "trialLines": [
       {
-        "text": "During the trial you get temporary access to Scale, or Enterprise if you choose that plan."
+        "text": "The Content Creator trial includes its content tools and manual publishing. CRM plans get temporary access to Scale, or Enterprise if you choose that plan."
       },
       {
         "text": "You create your account in the CRM (crm.pawwerapp.com) and add your card in Dodo Payments' secure checkout. This site does not capture or store card data."
       },
       {
-        "text": "Nothing is charged during the 3 days. If you don't cancel, your plan is charged in USD on day 4 and renews monthly."
+        "text": "Nothing is charged during the 3 days. If you don't cancel, your plan is charged in USD on day 4 and renews on the monthly or yearly billing cycle you selected."
       },
       {
         "text": "You can cancel your subscription at any time from the CRM. If you cancel before the 3 days end, no charge is made."
@@ -475,9 +495,9 @@
       "eyebrow": "Plans & pricing",
       "h2a": "Choose the pace",
       "h2b": "of your growth.",
-      "intro": "3-day trial with temporary access to the Scale tier. You add your card in Dodo Payments' secure checkout and nothing is charged until day 4. Pay yearly and you get twelve months with 15% off, in a single charge. Prices in USD, excluding taxes:",
+      "intro": "Choose content tools or a plan with CRM. A 3-day trial requires a card in Dodo Payments' secure checkout; nothing is charged until day 4. Pay yearly and you get twelve months with 15% off, in a single charge. Prices in USD, excluding taxes:",
       "priceUnit": "USD / mo",
-      "mostPopular": "Most popular",
+      "mostPopular": "Recommended",
       "cta": "Get started",
       "activationLabel": "In activation",
       "compareTitle": "Compare the plans",
@@ -529,7 +549,7 @@
         },
         {
           "q": "Is there a free trial?",
-          "a": "Yes, 3 days with access to the Escala tier, the second highest. You register a card at the start and the first charge lands on day four. Cancel before that and nothing is charged. One trial per business."
+          "a": "Yes, 3 days. Content Creator trials include its content tools and manual publishing; CRM plans trial Scale, or Enterprise if you choose that plan. You register a card at the start and the first charge lands on day four. Cancel before that and nothing is charged. One trial per business."
         },
         {
           "q": "Which social networks can I connect?",
