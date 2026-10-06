@@ -17,7 +17,7 @@ const PAWRtners = [
 // Personality labels describe the companions, not additional product services.
 const personalities = [
   { es: 'Tu aliado paciente', en: 'The patient sidekick', line: { es: 'Calma, cercanía y una mano amiga. Siempre de tu lado.', en: 'Warm support, a calm presence. Always on your side.' } },
-  { es: 'Tu cómplice de ventas', en: 'The sales sidekick', line: { es: 'Llaves en mano y atención en cada detalle. Cercana a cada cliente.', en: 'Keys in hand, an eye for every detail. Close to every client.' } },
+  { es: 'Tu aliada de ventas', en: 'The sales sidekick', line: { es: 'Llaves en mano y atención en cada detalle. Cercana a cada cliente.', en: 'Keys in hand, an eye for every detail. Close to every client.' } },
   { es: 'La mirada atenta', en: 'The thoughtful companion', line: { es: 'Una presencia serena y profesional para tu marca de salud.', en: 'A calm, professional presence for your healthcare brand.' } },
   { es: 'La voz de confianza', en: 'The reassuring voice', line: { es: 'Claridad, confianza y trato humano en cada conversación.', en: 'Clarity, confidence and a human touch in every conversation.' } },
   { es: 'Tu socio firme', en: 'The dependable partner', line: { es: 'Firme cuando importa. Accesible cuando lo necesitas.', en: 'Confident when it matters. Approachable when you need it.' } },
@@ -42,8 +42,8 @@ export default function PawrtnerExplorer({ locale }: { locale: Locale }) {
       <div className="wrap pawrtner__layout">
         <header className="pawrtner__head" data-reveal>
           <p className="eyebrow">{en ? 'The PAWrtner™ series' : 'La serie PAWrtner™'}</p>
-          <h2 id="pawrtner-title">{en ? <>Choose your <span>PAWrtner in crime.</span></> : <>Escoge tu <span>PAWrtner cómplice.</span></>}</h2>
-          <p>{en ? 'Every great marketing team needs a sidekick. Pick the personality that feels like your brand—then put PAWWER to work.' : 'Todo gran equipo de marketing necesita un cómplice. Escoge la personalidad que va con tu marca y pon a PAWWER en acción.'}</p>
+          <h2 id="pawrtner-title">{en ? <>Choose your <span>PAWrtner in crime.</span></> : <>Escoge tu PAWrtner.<br /><span>Tu aliado de marketing.</span></>}</h2>
+          <p>{en ? 'Every great marketing team needs a sidekick. Pick the personality that feels like your brand—then put PAWWER to work.' : 'Todo gran equipo de marketing necesita un aliado. Escoge la personalidad que va con tu marca y pon a PAWWER en acción.'}</p>
         </header>
 
         <div className="pawrtner__feature" aria-live="polite">
