@@ -32,10 +32,10 @@ function Cell({ value }: { value: string }) {
   return <>{value}</>;
 }
 
-export function BlockList({ locale, draft, settings = siteSettings, afterHero }: { locale: Locale; draft?: Content; settings?: SiteSettings; afterHero?: ReactNode }) {
+export function BlockList({ locale, draft, settings = siteSettings, afterHero, afterShowcase }: { locale: Locale; draft?: Content; settings?: SiteSettings; afterHero?: ReactNode; afterShowcase?: ReactNode }) {
   const t = draft || content[locale];
   const heroIndex = t.blocks.findIndex(b => b.type === 'hero');
-  return <>{t.blocks.map((b, i) => <Fragment key={i}><BlockView block={b} locale={locale} t={t} settings={settings} />{i === heroIndex && afterHero}</Fragment>)}</>;
+  return <>{t.blocks.map((b, i) => <Fragment key={i}><BlockView block={b} locale={locale} t={t} settings={settings} />{i === heroIndex && afterHero}{b.type === 'showcase' && afterShowcase}</Fragment>)}</>;
 }
 
 function BlockView({ block, locale, t, settings }: { block: Block; locale: Locale; t: Content; settings: SiteSettings }) {
@@ -76,6 +76,8 @@ function BlockView({ block, locale, t, settings }: { block: Block; locale: Local
             <p className="eyebrow">{block.label}</p>
             <h2>{block.h2a} {block.h2b}</h2>
             <p>{block.body}</p>
+            {block.methodSteps?.length ? <div className="statement__steps">{block.methodSteps.map((step, i) => <article key={step.h3 + i}><h3>{step.h3}</h3><p>{step.p}</p></article>)}</div> : null}
+            {block.note && <p className="statement__note">{block.note}</p>}
             </div>
             {block.image && <img className="statement__image" src={block.image} alt={block.imageAlt || ''} loading="lazy" data-reveal data-zoomable tabIndex={0} role="button" aria-label={locale === 'es' ? `Ampliar imagen: ${block.imageAlt || block.h2a}` : `Expand image: ${block.imageAlt || block.h2a}`} />}
           </div>

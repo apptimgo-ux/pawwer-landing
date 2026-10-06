@@ -3,7 +3,7 @@
   "ogLocale": "en_US",
   "meta": {
     "title": "PAWWER: Your marketing agency, in your hands",
-    "description": "Create content, analyze campaigns and turn leads into long-term customers. Everything a marketing agency does, inside your business. From $99 a month."
+    "description": "Create social posts, images and videos with HUELLA, a marketing methodology shaped by 25 years of experience. Plan campaigns and connect content with leads and follow-up in one place."
   },
   "nav": {
     "skip": "Skip to content",
@@ -296,10 +296,10 @@
     {
       "type": "hero",
       "anchor": "",
-      "kicker": "",
+      "kicker": "HUELLA methodology · 25 years of experience",
       "h1a": "Your AI marketing agency,",
       "h1b": "right at your fingertips.",
-      "sub": "Create content, analyze campaigns, and turn leads into long-term customers.",
+      "sub": "Create posts, images and videos; plan campaigns; and follow every lead with AI. Guided by HUELLA, a marketing methodology shaped by 25 years of experience.",
       "ctaPrimary": "Build your system",
       "ctaSecondary": "Explore the process",
       "metaLeft": "Scroll to explore",
@@ -328,19 +328,26 @@
     {
       "type": "statement",
       "anchor": "",
-      "label": "PAWWER for teams on the move",
-      "h2a": "When everything that",
-      "h2b": "matters is connected.",
-      "body": "One read on your commercial operation: capture, engage, convert and measure without losing the thread.",
+      "label": "The HUELLA methodology",
+      "h2a": "25 years of experience.",
+      "h2b": "Right at your fingertips.",
+      "body": "The 25 years of agency marketing experience behind HUELLA become a practical guide to setting a strategy, creating useful content, organizing campaigns, and following up with every lead. PAWWER brings those steps together so your team can keep the work connected.",
+      "methodSteps": [
+        { "h3": "Plan the strategy", "p": "Define who you want to reach, what they need, and your marketing objective." },
+        { "h3": "Create content", "p": "Turn real customer questions into ideas and creative that reflect your brand." },
+        { "h3": "Organize campaigns", "p": "Coordinate messages, channels, and timing; review each piece before deciding what to share." },
+        { "h3": "Follow up with leads", "p": "Keep each lead's context close and organize conversations, appointments, and next steps." }
+      ],
+      "note": "Experience provides a method and continuity, not guaranteed results; outcomes depend on each business, its market, and execution.",
       "image": "/img/crm-planner-en.webp",
       "imageAlt": "PAWWER Planner with demonstration posts organized in the monthly calendar"
     },
     {
       "type": "process",
       "anchor": "soluciones",
-      "label": "Explore our process",
-      "h2a": "From the first signal",
-      "h2b": "to the next step.",
+      "label": "From methodology to sales",
+      "h2a": "From the first idea",
+      "h2b": "to a customer cared for.",
       "phases": [
         {
           "name": "Capture",
@@ -367,24 +374,24 @@
     {
       "type": "pillars",
       "anchor": "",
-      "eyebrow": "What PAWWER does",
-      "h2a": "One system,",
-      "h2b": "three moves.",
+      "eyebrow": "A marketing agency at your fingertips",
+      "h2a": "One methodology,",
+      "h2b": "the whole cycle.",
       "items": [
         {
           "icon": "chat",
-          "h3": "Engage with context",
-          "p": "Leads, contacts and follow-up in one place so every conversation keeps its continuity."
+          "h3": "Plan with HUELLA",
+          "p": "Turn what you know about your customers into a clear strategy and useful content themes for your business."
         },
         {
           "icon": "calendar",
-          "h3": "Turn interest into action",
-          "p": "Connect your calendar with follow-up and give every opportunity a next step."
+          "h3": "Create content with AI",
+          "p": "Prepare branded posts, images and videos; review each piece and organize when to share it."
         },
         {
           "icon": "chart",
-          "h3": "Measure what moves the team",
-          "p": "Source, results and operational analytics to decide where to invest energy."
+          "h3": "Connect marketing and sales",
+          "p": "Follow up with leads, conversations and appointments from the same place where you organize your marketing."
         }
       ]
     },
@@ -393,7 +400,7 @@
       "anchor": "",
       "eyebrow": "Product view",
       "h2": "Create your advertising. Plan when it goes live.",
-      "body": "Create branded posts, images and videos in CMS. Review your content and schedule each post for its social network in Planner.",
+      "body": "Describe what you need in CMS and create branded posts, images and videos. In Planner, review each piece, choose its social network and schedule it. HUELLA guides the themes; you decide what gets published.",
       "image": "/img/crm-cms-en.webp",
       "mock": {
         "bar": "Commercial operating system",

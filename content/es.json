@@ -3,7 +3,7 @@
   "ogLocale": "es_MX",
   "meta": {
     "title": "PAWWER: La agencia de marketing en tus manos",
-    "description": "Crea contenido, analiza campañas y convierte leads en clientes de largo plazo. Todo lo que hace una agencia de marketing, dentro de tu negocio. Desde $99 al mes."
+    "description": "Crea posts, imágenes y videos con HUELLA, una metodología de marketing construida durante 25 años. Planea campañas y conecta tu contenido con leads y seguimiento en un solo lugar."
   },
   "nav": {
     "skip": "Saltar al contenido",
@@ -296,10 +296,10 @@
     {
       "type": "hero",
       "anchor": "",
-      "kicker": "",
+      "kicker": "Metodología HUELLA · 25 años de experiencia",
       "h1a": "La agencia de marketing con IA",
       "h1b": "en tus manos.",
-      "sub": "Crea contenido, analiza campañas y convierte leads en clientes de largo plazo.",
+      "sub": "Crea posts, imágenes y videos; planea campañas y da seguimiento a cada lead con IA. Todo guiado por HUELLA, una metodología de marketing construida a partir de 25 años de experiencia.",
       "ctaPrimary": "Construye tu sistema",
       "ctaSecondary": "Explorar el proceso",
       "metaLeft": "Desliza para explorar",
@@ -328,19 +328,26 @@
     {
       "type": "statement",
       "anchor": "",
-      "label": "PAWWER para equipos en movimiento",
-      "h2a": "Cuando todo lo que",
-      "h2b": "importa está conectado.",
-      "body": "Una sola lectura de tu operación comercial: captas, atiendes, conviertes y mides sin perder el hilo.",
+      "label": "Metodología HUELLA",
+      "h2a": "25 años de experiencia.",
+      "h2b": "Al alcance de tu mano.",
+      "body": "Los 25 años de experiencia en marketing de agencia detrás de HUELLA se convierten en una guía práctica para definir una estrategia, crear contenidos útiles, organizar campañas y dar seguimiento a cada lead. PAWWER reúne esos pasos para que tu equipo trabaje con continuidad.",
+      "methodSteps": [
+        { "h3": "Planea la estrategia", "p": "Define a quién quieres llegar, qué necesita y cuál es el objetivo de marketing." },
+        { "h3": "Crea contenidos", "p": "Convierte preguntas reales de tus clientes en ideas y piezas con la identidad de tu marca." },
+        { "h3": "Organiza campañas", "p": "Ordena mensajes, canales y fechas; revisa cada pieza antes de decidir qué compartir." },
+        { "h3": "Da seguimiento", "p": "Conserva el contexto de cada lead y organiza conversaciones, citas y próximos pasos." }
+      ],
+      "note": "La experiencia aporta método y continuidad; no garantiza resultados, que dependen de cada negocio, su mercado y su ejecución.",
       "image": "/img/crm-planner-es.webp",
       "imageAlt": "Planner de PAWWER con publicaciones de demostración organizadas en el calendario mensual"
     },
     {
       "type": "process",
       "anchor": "soluciones",
-      "label": "Explora el proceso",
-      "h2a": "De la primera señal",
-      "h2b": "al siguiente paso.",
+      "label": "De la metodología a la venta",
+      "h2a": "De la primera idea",
+      "h2b": "al cliente atendido.",
       "phases": [
         {
           "name": "Captar",
@@ -367,24 +374,24 @@
     {
       "type": "pillars",
       "anchor": "",
-      "eyebrow": "Qué hace PAWWER",
-      "h2a": "Un sistema,",
-      "h2b": "tres movimientos.",
+      "eyebrow": "Una agencia de marketing en tus manos",
+      "h2a": "Una metodología,",
+      "h2b": "todo el ciclo.",
       "items": [
         {
           "icon": "chat",
-          "h3": "Atiende con contexto",
-          "p": "Leads, contactos y seguimiento en un mismo lugar para que cada conversación tenga continuidad."
+          "h3": "Planea con HUELLA",
+          "p": "Convierte lo que sabes de tus clientes en una estrategia clara y temas de contenido para tu negocio."
         },
         {
           "icon": "calendar",
-          "h3": "Convierte interés en acción",
-          "p": "Relaciona tu calendario con el seguimiento y da a cada oportunidad un próximo paso."
+          "h3": "Crea contenido con IA",
+          "p": "Prepara posts, imágenes y videos con tu marca; revisa cada pieza y organiza cuándo compartirla."
         },
         {
           "icon": "chart",
-          "h3": "Mide lo que mueve al equipo",
-          "p": "Origen, resultados y analítica operativa para decidir dónde invertir energía."
+          "h3": "Conecta marketing y ventas",
+          "p": "Da seguimiento a los leads, conversaciones y citas desde el mismo lugar donde organizas tu marketing."
         }
       ]
     },
@@ -393,7 +400,7 @@
       "anchor": "",
       "eyebrow": "Vista del producto",
       "h2": "Crea tu publicidad. Dale fecha para salir.",
-      "body": "Desde CMS creas posts, imágenes y videos con tu marca. En Planner revisas el contenido y agendas cada publicación para su red social.",
+      "body": "Desde CMS describes lo que necesitas y creas posts, imágenes y videos con tu marca. Planner te permite revisar cada pieza, elegir la red y programar su fecha. HUELLA guía los temas; tú decides qué se publica.",
       "image": "/img/crm-cms-es.webp",
       "mock": {
         "bar": "Sistema operativo comercial",

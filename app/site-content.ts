@@ -13,7 +13,7 @@ type Note = { lead: string; body: string };
 
 export type Block =
   | { type: 'hero'; anchor?: string; kicker: string; h1a: string; h1b: string; sub: string; ctaPrimary: string; ctaSecondary: string; metaLeft: string; metaRight: string; mediaType: 'none' | 'image' | 'video'; image: string; video: string; poster: string; slides?: { image: string; alt?: string }[]; mediaPlacement?: 'below' | 'background'; focalX?: number; focalY?: number; overlay?: number; mediaHeight?: number; mediaFit?: 'cover' | 'contain'; textTone?: 'light' | 'dark'; imageAlt?: string }
-  | { type: 'statement'; anchor?: string; label: string; h2a: string; h2b: string; body: string; image?: string; imageAlt?: string }
+  | { type: 'statement'; anchor?: string; label: string; h2a: string; h2b: string; body: string; image?: string; imageAlt?: string; methodSteps?: Item[]; note?: string }
   | { type: 'process'; anchor?: string; label: string; h2a: string; h2b: string; phases: Phase[] }
   | { type: 'pillars'; anchor?: string; eyebrow: string; h2a: string; h2b: string; items: Item[] }
   | { type: 'showcase'; anchor?: string; eyebrow: string; h2: string; body: string; image: string; mock: { bar: string; eyebrow: string; h3: string; leads: Lead[]; context: string; caption: string } }
