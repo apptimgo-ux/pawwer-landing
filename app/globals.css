@@ -209,19 +209,54 @@ a:focus-visible, button:focus-visible {
 .pawrtner__thumb img { width: 100%; height: 100%; object-fit: contain; }
 .pawrtner__name { display: block; padding: 9px 2px 3px; font-size: 13px; font-weight: 650; line-height: 1.3; }
 .pawrtner__choice:focus-visible, .pawrtner__arrows button:focus-visible { outline: 2px solid #ff8266; outline-offset: 3px; }
+
+/* One character takes the stage; the rail stays deliberately secondary. */
+.pawrtner { background: #183a44; }
+.pawrtner__layout { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 54px; align-items: center; }
+.pawrtner__head { margin: 0; grid-column: 1; grid-row: 1; }
+.pawrtner__head h2 { max-width: 12ch; font-size: clamp(42px, 5.5vw, 74px); letter-spacing: -.055em; }
+.pawrtner__head h2 span { color: #ff8266; }
+.pawrtner__head > p:last-child { color: #d0e4e8; }
+.pawrtner__feature { position: relative; display: block; grid-column: 2; grid-row: 1 / 4; border: 0; border-radius: 0; background: transparent; min-height: 570px; overflow: visible; }
+.pawrtner__portrait { position: relative; height: 530px; min-height: 0; background: transparent; isolation: isolate; }
+.pawrtner__portrait::before, .pawrtner__portrait::after { content: ''; position: absolute; width: 90%; aspect-ratio: 1; border: 1px solid #ffffff25; border-radius: 50%; z-index: -1; }
+.pawrtner__portrait::after { width: 72%; }
+.pawrtner__portrait img { width: 85%; height: 100%; max-height: none; animation: pawrtner-arrive .3s ease-out; }
+.pawrtner__seal { position: absolute; right: 0; top: 5%; display: flex; flex-direction: column; justify-content: center; width: 100px; height: 100px; text-align: center; border: 1px solid #ffffff50; border-radius: 50%; color: #b5e9ee; font-size: 12px; font-weight: 700; transform: rotate(10deg); }
+.pawrtner__seal small { font-size: 10px; }
+.pawrtner__details { position: absolute; bottom: 0; left: 0; width: min(340px, 88%); padding: 20px 24px; border-radius: 14px; background: #faf9f6; box-shadow: 0 12px 40px #0002; }
+.pawrtner__details h3 { margin: 0; color: #183a44; font-size: 22px; }
+.pawrtner__description { margin-top: 6px; color: #4b6268; font-size: 14px; }
+.pawrtner__identity { margin-top: 8px; color: #647a80; font-size: 12px; }
+.pawrtner__rail { position: relative; grid-column: 1; grid-row: 2; margin: 0; gap: 10px; }
+.pawrtner button { font-family: inherit; }
+.pawrtner__choice { flex-basis: 105px; background: #ffffff08; border-color: #ffffff30; text-align: center; padding: 8px; }
+.pawrtner__choice.is-selected { background: #faf9f6; color: #183a44; border-color: #faf9f6; }
+.pawrtner__thumb { background: transparent; aspect-ratio: 1; }
+.pawrtner__name { font-size: 11px; }
+.pawrtner__footer { grid-column: 1; grid-row: 3; }
+.pawrtner__note { margin: 0; padding: 0; border: 0; font-size: 12px; color: #b1ccd2; }
+.pawrtner__arrows { margin-top: 16px; }
+@keyframes pawrtner-arrive { from { opacity: .4; transform: translateY(10px) scale(.98); } to { opacity: 1; transform: none; } }
 @media (max-width: 760px) {
   .statement__steps { grid-template-columns: 1fr; gap: 16px; margin-top: 28px; }
   .statement .statement__steps p { font-size: 15px; }
   .pawrtner__head h2 { max-width: 14ch; font-size: clamp(34px, 10vw, 48px); }
   .pawrtner__head > p:last-child { font-size: 16px; }
-  .pawrtner__feature { grid-template-columns: 1fr; min-height: 0; border-radius: 16px; }
+  .pawrtner__layout { grid-template-columns: 1fr; gap: 24px; }
+  .pawrtner__head, .pawrtner__rail, .pawrtner__footer, .pawrtner__feature { grid-column: 1; grid-row: auto; }
+  .pawrtner__feature { min-height: 390px; order: 2; }
+  .pawrtner__rail { order: 3; }
+  .pawrtner__footer { order: 4; }
   .pawrtner__portrait { min-height: 0; height: min(72vw, 340px); }
-  .pawrtner__details { padding: 24px 22px 26px; }
-  .pawrtner__details h3 { font-size: 32px; }
-  .pawrtner__description { font-size: 17px; }
+  .pawrtner__details { padding: 16px 20px; }
+  .pawrtner__details h3 { font-size: 22px; }
+  .pawrtner__description { font-size: 14px; }
   .pawrtner__note { margin-top: 18px; }
-  .pawrtner__choice { flex-basis: 128px; }
+  .pawrtner__choice { flex-basis: 100px; }
+  .pawrtner__seal { width: 75px; height: 75px; font-size: 10px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .pawrtner__choice, .pawrtner__arrows button { transition: none; }
+  .pawrtner__portrait img { animation: none; }
 }
