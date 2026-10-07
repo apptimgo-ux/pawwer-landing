@@ -51,7 +51,7 @@
       "features": [
         { "text": "Crea tu post: imágenes, historias y videos con IA" },
         { "text": "Mejora tu foto de producto y quita fondos" },
-        { "text": "250 créditos de IA al mes" },
+        { "text": "750 créditos de IA al mes" },
         { "text": "Publica y agenda manualmente en Instagram, Facebook y TikTok" },
         { "text": "Hasta 3 perfiles sociales conectados en total" },
         { "text": "1 usuario y 1 marca" }
@@ -195,7 +195,7 @@
     },
     {
       "label": "Créditos de IA / mes",
-      "content_creator": "250",
+      "content_creator": "750",
       "esencial": "150",
       "crecimiento": "500",
       "escala": "1,500",
@@ -545,7 +545,7 @@
         },
         {
           "q": "¿Cuánto cuesta PAWWER?",
-          "a": "Esencial cuesta $99 dólares al mes, Crecimiento $199, Escala $349 y Empresarial $1,999. Pagando al año son 15% menos en los cuatro. PAWWER Agencia, que es el servicio con equipo detrás, va por propuesta. Los precios no llevan impuesto incluido: se suma en el checkout según tu país, así que en México verás el 16% de IVA encima."
+          "a": "Content Creator cuesta $49 dólares al mes, Esencial $99, Crecimiento $199, Escala $349 y Empresarial $1,999. Pagando al año son 15% menos en todos. PAWWER Agencia, que es el servicio con equipo detrás, va por propuesta. Los precios no llevan impuesto incluido: se suma en el checkout según tu país, así que en México verás el 16% de IVA encima."
         },
         {
           "q": "¿Hay prueba gratis?",
