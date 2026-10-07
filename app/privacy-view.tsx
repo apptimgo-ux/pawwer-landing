@@ -40,9 +40,10 @@ function esContent() {
       {
         h2: 'Cookies y recursos del sitio',
         ps: [
-          'El código de esta landing no incorpora analítica publicitaria ni píxeles de seguimiento. Las imágenes y el video se sirven desde el mismo sitio. Una vista privada puede requerir cookies del proveedor de acceso; ese acceso se rige por su propio aviso.',
+          'La analítica y el Pixel de Meta de esta landing solo se cargan con tu permiso, como se explica abajo. Las imágenes y el video se sirven desde el mismo sitio. Una vista privada puede requerir cookies del proveedor de acceso; ese acceso se rige por su propio aviso.',
           'Se guarda una cookie funcional llamada «locale» con tu preferencia de idioma (español o inglés): la que eliges con el selector o la que se deduce de tu país en la primera visita. No se usa para publicidad ni seguimiento y puedes borrarla desde tu navegador.',
           'Solo si aceptas la categoría «Analítica» en el aviso de cookies, usamos Google Analytics 4 para contar visitas, de dónde llegan y qué páginas llevan a crear una cuenta. Sin ese permiso el script de Google no se carga. No compartimos esos datos para publicidad y puedes retirar el permiso en cualquier momento desde «Cookies».',
+          'Solo si aceptas la categoría «Marketing», cargamos el Pixel de Meta para medir qué anuncios de PAWWER traen visitas y cuántas personas pasan a crear su cuenta. Sin ese permiso no se carga, y los identificadores de clic de un anuncio no viajan a la aplicación.',
         ],
       },
       {
@@ -111,9 +112,10 @@ function enContent() {
       {
         h2: 'Cookies and site resources',
         ps: [
-          "This landing page's code does not include advertising analytics or tracking pixels. Images and video are served from the same site. A private view may require cookies from the access provider; that access is governed by its own notice.",
+          "This landing's analytics and Meta Pixel load only with your permission, as explained below. Images and video are served from the same site. A private view may require cookies from the access provider; that access is governed by its own notice.",
           'A functional cookie named "locale" stores your language preference (Spanish or English): the one you pick with the switcher or the one inferred from your country on the first visit. It is not used for advertising or tracking and you can clear it from your browser.',
           'Only if you accept the Analytics category in the cookie notice do we use Google Analytics 4 to count visits, where they come from and which pages lead to creating an account. Without that permission the Google script is not loaded. We do not share this data for advertising, and you can withdraw permission anytime from Cookies.',
+          'Only if you accept the Marketing category do we load the Meta Pixel to measure which PAWWER ads bring visits and how many people go on to create an account. Without that permission it is not loaded, and ad click identifiers are not passed to the app.',
         ],
       },
       {
