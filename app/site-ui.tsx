@@ -3,6 +3,7 @@ import { AI_DISCLAIMER } from './aiDisclaimer';
 import { useState } from 'react';
 import { Menu, X, ArrowUpRight, PawPrint } from 'lucide-react';
 import { content, type Content, type Locale, CRM_URL, planHref } from './site-content';
+import { REDES_SOCIALES } from './redes-sociales';
 
 export function Header({ locale, homeHref, altHref, draft, crmUrl = CRM_URL }: { locale: Locale; homeHref: string; altHref: string; draft?: Content; crmUrl?: string }) {
   const [open, setOpen] = useState(false);
@@ -69,6 +70,13 @@ export function Footer({ locale, homeHref, draft, crmUrl = CRM_URL }: { locale: 
         {t.refunds && t.refundsHref && <a href={t.refundsHref}>{t.refunds}</a>}
         {t.dataProcessing && t.dataProcessingHref && <a href={t.dataProcessingHref}>{t.dataProcessing}</a>}
         <a href={crmUrl}>{(draft || content[locale]).nav.login} <ArrowUpRight size={13} /></a>
+        <div className="site-footer__redes" aria-label={locale === 'es' ? 'PAWWER en redes sociales' : 'PAWWER on social media'}>
+          {REDES_SOCIALES.map(red => (
+            <a key={red.id} href={red.url} target="_blank" rel="noopener noreferrer" aria-label={`PAWWER ${locale === 'es' ? 'en' : 'on'} ${red.nombre}`} title={red.nombre}>
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d={red.path} /></svg>
+            </a>
+          ))}
+        </div>
         <p className="site-footer__spacer">© {new Date().getFullYear()} {t.rights}</p>
         {notes?.type === 'notes' && <div className="site-footer__disclaimer">{notes.items.map((note, i) => <p key={i}>{note.lead && <strong>{note.lead} </strong>}{note.body}</p>)}</div>}
       </div>

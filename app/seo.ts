@@ -1,4 +1,5 @@
 import { content, EMAIL, PHONE_HREF, PHONE_LABEL, ADDRESS_LINES, CRM_URL, PLAN_SLUGS, siteSettings } from './site-content';
+import { REDES_SOCIALES } from './redes-sociales';
 
 /**
  * SEO: lo que se le da a Google y a los modelos de lenguaje.
@@ -60,6 +61,7 @@ export function organizacion() {
     name: 'PAWWER',
     url: SITE_URL,
     logo: `${SITE_URL}/favicon.svg`,
+    sameAs: REDES_SOCIALES.map(red => red.url),
     email: EMAIL,
     telephone: PHONE_LABEL,
     address: {

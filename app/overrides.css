@@ -463,3 +463,8 @@
   .landing-carousel__image, .image-lightbox::backdrop, .image-lightbox__panel { animation: none !important; }
   .landing-carousel__choice, .landing-carousel__arrow, .landing-carousel__zoom, .image-lightbox__close, .image-lightbox__nav { transition: none !important; }
 }
+
+/* Redes de PAWWER en el pie (7 de octubre de 2026). */
+.site-footer__redes { display: flex; gap: 14px; align-items: center; }
+.site-footer__redes a { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 999px; border: 1px solid var(--line-dark); color: var(--on-dark-2); transition: color .2s, border-color .2s; }
+.site-footer__redes a:hover { color: #fff; border-color: #fff; }
