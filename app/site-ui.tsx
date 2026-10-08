@@ -28,7 +28,7 @@ export function Header({ locale, homeHref, altHref, draft, crmUrl = CRM_URL }: {
               <a key={l.hash} onClick={() => setOpen(false)} href={`${homeHref}${l.hash}`}>{l.label}</a>
             ))}
             <a className="lang-switch" href={altHref} aria-label={t.langAria} hrefLang={locale === 'es' ? 'en' : 'es'}>{t.langLabel}</a>
-            <a className="login" href={crmUrl}>{t.login}<ArrowUpRight size={15} /></a>
+            <a className="login" href={crmUrl}>{t.login}</a>
           </nav>
         </div>
       </header>
@@ -69,7 +69,7 @@ export function Footer({ locale, homeHref, draft, crmUrl = CRM_URL }: { locale: 
         {t.terms && t.termsHref && <a href={t.termsHref}>{t.terms}</a>}
         {t.refunds && t.refundsHref && <a href={t.refundsHref}>{t.refunds}</a>}
         {t.dataProcessing && t.dataProcessingHref && <a href={t.dataProcessingHref}>{t.dataProcessing}</a>}
-        <a href={crmUrl}>{(draft || content[locale]).nav.login} <ArrowUpRight size={13} /></a>
+        <a href={crmUrl}>{(draft || content[locale]).nav.login}</a>
         <div className="site-footer__redes" aria-label={locale === 'es' ? 'PAWWER en redes sociales' : 'PAWWER on social media'}>
           {REDES_SOCIALES.map(red => (
             <a key={red.id} href={red.url} target="_blank" rel="noopener noreferrer" aria-label={`PAWWER ${locale === 'es' ? 'en' : 'on'} ${red.nombre}`} title={red.nombre}>

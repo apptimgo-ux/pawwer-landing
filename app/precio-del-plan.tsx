@@ -65,7 +65,7 @@ export default function PrecioDelPlan({
         </>
       )}
       <div className="plan-detail__actions">
-        <a className="btn btn--solid" href={hrefFinal}>{etiqueta} <ArrowUpRight size={18} /></a>
+        <a className="btn btn--solid btn--coral" href={hrefFinal}>{etiqueta}</a>
         <a className="textlink" href={hrefVentas}>{etiquetaVentas}</a>
       </div>
     </>

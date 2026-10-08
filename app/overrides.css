@@ -468,3 +468,13 @@
 .site-footer__redes { display: flex; gap: 14px; align-items: center; }
 .site-footer__redes a { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 999px; border: 1px solid var(--line-dark); color: var(--on-dark-2); transition: color .2s, border-color .2s; }
 .site-footer__redes a:hover { color: #fff; border-color: #fff; }
+
+/* Conversión desde anuncios (8 de octubre de 2026). */
+.btn--coral { background: #FF5A3C !important; border-color: #FF5A3C !important; color: #fff !important; box-shadow: 0 8px 24px rgba(255, 90, 60, 0.32); }
+.btn--coral:hover { background: #e84a2d !important; border-color: #e84a2d !important; }
+.hero__nota { margin: 10px 0 0; font-size: 14px; font-weight: 600; color: var(--muted, #5c6170); }
+.cookies-compacto .btn { padding: 8px 14px; font-size: 13px; min-height: 0; }
+.cta-fija { position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 60; display: none; }
+.cta-fija a { display: flex; justify-content: center; align-items: center; min-height: 52px; border-radius: 14px; background: #FF5A3C; color: #fff; font-weight: 700; font-size: 16px; box-shadow: 0 10px 28px rgba(255, 90, 60, 0.38); text-decoration: none; }
+@media (max-width: 760px) { .cta-fija.visible { display: block; } }
+@media (max-width: 760px) { .pastilla-cookies { bottom: 76px !important; } }

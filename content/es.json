@@ -49,12 +49,24 @@
       "summary": "Crea tu contenido y publícalo en tus redes, sin contratar el CRM.",
       "inherits": "Herramientas de contenido y publicación manual",
       "features": [
-        { "text": "Crea tu post: imágenes, historias y videos con IA" },
-        { "text": "Mejora tu foto de producto y quita fondos" },
-        { "text": "750 créditos de IA al mes" },
-        { "text": "Publica y agenda manualmente en Instagram, Facebook y TikTok" },
-        { "text": "Hasta 3 perfiles sociales conectados en total" },
-        { "text": "1 usuario y 1 marca" }
+        {
+          "text": "Crea tu post: imágenes, historias y videos con IA"
+        },
+        {
+          "text": "Mejora tu foto de producto y quita fondos"
+        },
+        {
+          "text": "750 créditos de IA al mes"
+        },
+        {
+          "text": "Publica y agenda manualmente en Instagram, Facebook y TikTok"
+        },
+        {
+          "text": "Hasta 3 perfiles sociales conectados en total"
+        },
+        {
+          "text": "1 usuario y 1 marca"
+        }
       ],
       "note": "No incluye CRM, leads, conversaciones, citas, agentes IA ni creación automatizada. Cada generación consume créditos. Puedes cambiar de plan cuando necesites más herramientas."
     },
@@ -320,7 +332,7 @@
       "h1a": "La agencia de marketing con IA",
       "h1b": "en tus manos.",
       "sub": "Crea posts, imágenes y videos; planea campañas y da seguimiento a cada lead con IA. Todo guiado por HUELLA, una metodología de marketing construida a partir de 25 años de experiencia.",
-      "ctaPrimary": "Construye tu sistema",
+      "ctaPrimary": "Empieza tu prueba de 3 días",
       "ctaSecondary": "Explorar el proceso",
       "metaLeft": "Desliza para explorar",
       "metaRight": "CRM / Marketing / Seguimiento",
@@ -343,7 +355,8 @@
           "image": "/img/recepcion-01.jpg",
           "alt": "Atención de clientes en recepción"
         }
-      ]
+      ],
+      "ctaNote": "Desde US$49 al mes · 3 días de prueba · cancela cuando quieras"
     },
     {
       "type": "statement",
@@ -353,10 +366,22 @@
       "h2b": "Al alcance de tu mano.",
       "body": "Los 25 años de experiencia en marketing de agencia detrás de HUELLA se convierten en una guía práctica para definir una estrategia, crear contenidos útiles, organizar campañas y dar seguimiento a cada lead. PAWWER reúne esos pasos para que tu equipo trabaje con continuidad.",
       "methodSteps": [
-        { "h3": "Planea la estrategia", "p": "Define a quién quieres llegar, qué necesita y cuál es el objetivo de marketing." },
-        { "h3": "Crea contenidos", "p": "Convierte preguntas reales de tus clientes en ideas y piezas con la identidad de tu marca." },
-        { "h3": "Organiza campañas", "p": "Ordena mensajes, canales y fechas; revisa cada pieza antes de decidir qué compartir." },
-        { "h3": "Da seguimiento", "p": "Conserva el contexto de cada lead y organiza conversaciones, citas y próximos pasos." }
+        {
+          "h3": "Planea la estrategia",
+          "p": "Define a quién quieres llegar, qué necesita y cuál es el objetivo de marketing."
+        },
+        {
+          "h3": "Crea contenidos",
+          "p": "Convierte preguntas reales de tus clientes en ideas y piezas con la identidad de tu marca."
+        },
+        {
+          "h3": "Organiza campañas",
+          "p": "Ordena mensajes, canales y fechas; revisa cada pieza antes de decidir qué compartir."
+        },
+        {
+          "h3": "Da seguimiento",
+          "p": "Conserva el contexto de cada lead y organiza conversaciones, citas y próximos pasos."
+        }
       ],
       "note": "La experiencia aporta método y continuidad; no garantiza resultados, que dependen de cada negocio, su mercado y su ejecución.",
       "image": "/img/crm-planner-es.webp",

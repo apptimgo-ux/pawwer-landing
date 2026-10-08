@@ -8,6 +8,7 @@ import CookiePreferences from './cookie-preferences';
 import Analitica from './analitica';
 import PasarUtms from './pasar-utms';
 import PixelMeta from './pixel-meta';
+import CtaFija from './cta-fija';
 
 // Fuente del sistema PAWWER (misma que el CRM).
 const display = Space_Grotesk({
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <CookiePreferences />
         <Analitica />
         <PixelMeta />
+        <CtaFija />
         <PasarUtms />
       </body>
     </html>

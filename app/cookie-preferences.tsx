@@ -26,21 +26,22 @@ export default function CookiePreferences() {
     window.dispatchEvent(new CustomEvent('pawwer:cookie-consent', { detail: consent }));
   }
   return <>
-    <button type="button" onClick={() => { setOpen(true); setCustom(true); }} style={{ position: 'fixed', bottom: 12, left: 12, zIndex: 70, padding: '8px 12px', borderRadius: 20, background: '#fff', color: '#17202a', border: '1px solid #d9d9d9', fontSize: 12 }}>{english ? 'Cookie settings' : 'Preferencias de cookies'}</button>
-    {open && <section aria-label={english ? 'Cookie preferences' : 'Preferencias de cookies'} style={{ position: 'fixed', bottom: 16, left: 16, right: 16, maxWidth: 640, maxHeight: 'calc(100dvh - 32px)', overflowY: 'auto', margin: '0 auto', zIndex: 90, padding: 24, background: '#fff', color: '#17202a', border: '1px solid #d9d9d9', borderRadius: 20, boxShadow: '0 12px 50px #0003' }}>
-      <h2 style={{ fontSize: 20, margin: '0 0 10px' }}>{english ? 'Your privacy, your choice' : 'Tu privacidad, tú decides'}</h2>
-      <p style={{ fontSize: 14, lineHeight: 1.6 }}>{english ? 'Essential storage keeps the site working. Optional categories remain off until you choose them. You can reject all optional cookies and change your choice at any time.' : 'El almacenamiento necesario permite que el sitio funcione. Las categorías opcionales permanecen apagadas hasta que las elijas. Puedes rechazarlas todas y cambiar tu decisión cuando quieras.'}</p>
+    <button type="button" className="pastilla-cookies" onClick={() => { setOpen(true); setCustom(true); }} style={{ position: 'fixed', bottom: 12, left: 12, zIndex: 70, padding: '8px 12px', borderRadius: 20, background: '#fff', color: '#17202a', border: '1px solid #d9d9d9', fontSize: 12 }}>{english ? 'Cookie settings' : 'Preferencias de cookies'}</button>
+    {open && <section aria-label={english ? 'Cookie preferences' : 'Preferencias de cookies'} style={{ position: 'fixed', bottom: 12, left: 12, right: 12, maxWidth: 640, maxHeight: 'calc(100dvh - 24px)', overflowY: 'auto', margin: '0 auto', zIndex: 90, padding: custom ? 24 : '14px 16px', background: '#fff', color: '#17202a', border: '1px solid #d9d9d9', borderRadius: 20, boxShadow: '0 12px 50px #0003' }}>
+      {custom && <h2 style={{ fontSize: 20, margin: '0 0 10px' }}>{english ? 'Your privacy, your choice' : 'Tu privacidad, tú decides'}</h2>}
+      {!custom && <p style={{ fontSize: 13, lineHeight: 1.45, margin: '0 0 10px' }}>{english ? 'We use optional cookies only if you allow them.' : 'Usamos cookies opcionales solo si nos dejas.'} <a href={english ? '/en/privacy' : '/privacidad'} style={{ textDecoration: 'underline' }}>{english ? 'Privacy' : 'Privacidad'}</a></p>}
+      {custom && <p style={{ fontSize: 14, lineHeight: 1.6 }}>{english ? 'Essential storage keeps the site working. Optional categories remain off until you choose them. You can reject all optional cookies and change your choice at any time.' : 'El almacenamiento necesario permite que el sitio funcione. Las categorías opcionales permanecen apagadas hasta que las elijas. Puedes rechazarlas todas y cambiar tu decisión cuando quieras.'}</p>}
       {custom && <div style={{ display: 'grid', gap: 12, margin: '16px 0' }}>
         <label><input type="checkbox" checked disabled /> {english ? 'Necessary: security and storing your consent' : 'Necesarias: seguridad y guardar tu consentimiento'}</label>
         {(['preferences', 'analytics', 'marketing'] as const).map(category => <label key={category} style={{ display: 'flex', alignItems: 'start', gap: 8 }}><input type="checkbox" checked={values[category]} onChange={e => setValues(v => ({ ...v, [category]: e.target.checked }))} />{({ preferences: english ? 'Preferences: remember optional personalization' : 'Preferencias: recordar personalización opcional', analytics: english ? 'Analytics: understand visits and improve the site' : 'Analítica: conocer las visitas y mejorar el sitio', marketing: english ? 'Marketing: measure campaigns and personalize ads' : 'Marketing: medir campañas y personalizar anuncios' })[category]}</label>)}
         <small>{english ? 'If you allow Analytics, we use Google Analytics to count visits. If you allow Marketing, we use the Meta Pixel to measure our ads. Both stay off until you choose.' : 'Si permites Analítica, usamos Google Analytics para contar visitas. Si permites Marketing, usamos el Pixel de Meta para medir nuestros anuncios. Los dos quedan apagados hasta que eliges.'}</small>
       </div>}
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: custom ? 10 : 8 }} className={custom ? undefined : 'cookies-compacto'}>
         <button className="btn" type="button" onClick={() => save({ preferences: false, analytics: false, marketing: false })}>{english ? 'Reject optional' : 'Rechazar opcionales'}</button>
         <button className="btn" type="button" onClick={() => custom ? save(values) : setCustom(true)}>{custom ? (english ? 'Save selection' : 'Guardar selección') : (english ? 'Customize' : 'Personalizar')}</button>
         <button className="btn" type="button" onClick={() => save({ preferences: true, analytics: true, marketing: true })}>{english ? 'Accept all' : 'Aceptar todas'}</button>
       </div>
-      <a href={english ? '/en/privacy' : '/privacidad'} style={{ display: 'inline-block', marginTop: 14, textDecoration: 'underline', fontSize: 13 }}>{english ? 'Privacy notice' : 'Aviso de privacidad'}</a>
+      {custom && <a href={english ? '/en/privacy' : '/privacidad'} style={{ display: 'inline-block', marginTop: 14, textDecoration: 'underline', fontSize: 13 }}>{english ? 'Privacy notice' : 'Aviso de privacidad'}</a>}
     </section>}
   </>;
 }

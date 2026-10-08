@@ -66,7 +66,7 @@ export default function PlanesConPeriodo({
               {anual && plan.ahorroAnual && (
                 <p className="plan__ahorro">{ahorroTexto.replace('{0}', plan.ahorroAnual)}</p>
               )}
-              <a className={'btn' + (featured ? ' btn--solid' : '')} href={href}>{cta} <ArrowUpRight size={15} /></a>
+              <a className={'btn btn--coral'} href={href}>{cta}</a>
               <p className="plan__inherits">{plan.inherits}</p>
               <ul className="plan__list">
                 {plan.features.map(f => <li key={f.text}><Check size={15} />{f.text}</li>)}

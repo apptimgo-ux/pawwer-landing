@@ -53,10 +53,11 @@ function BlockView({ block, locale, t, settings }: { block: Block; locale: Local
             <h1>{block.h1a} {block.h1b}</h1>
             <div className="hero__body">
               <div className="hero__actions">
-                <a className="btn btn--solid" href={contact.trial}>{block.ctaPrimary} <ArrowUpRight size={17} /></a>
+                <a className="btn btn--solid btn--coral" href="#planes">{block.ctaPrimary}</a>
                 {block.ctaSecondary && <a className="textlink" href="#soluciones">{block.ctaSecondary}</a>}
               </div>
               <p className="hero__lead">{block.sub}</p>
+              {block.ctaNote && <p className="hero__nota">{block.ctaNote}</p>}
             </div>
             <div className="hero__meta">
               <span>{block.metaLeft}</span>
@@ -295,7 +296,7 @@ function BlockView({ block, locale, t, settings }: { block: Block; locale: Local
               <h2>{block.h2a} {block.h2b}</h2>
               <p>{block.body}</p>
             </div>
-            <a className="btn btn--solid" href={contact.agency}>{block.cta} <ArrowUpRight size={16} /></a>
+            <a className="btn btn--solid" href={contact.agency}>{block.cta}</a>
           </div>
         </section>
       );
@@ -341,12 +342,12 @@ function BlockView({ block, locale, t, settings }: { block: Block; locale: Local
               <p className="eyebrow">{block.eyebrow}</p>
               <h2>{block.h2a} {block.h2b}</h2>
               <div className="cta__actions">
-                <a className="btn btn--solid" href={contact.trial}>{block.buttonLabel} <ArrowUpRight size={17} /></a>
+                <a className="btn btn--solid" href={contact.trial}>{block.buttonLabel}</a>
               </div>
             </div>
             <div className="contact-list" data-reveal>
-              <a href={`mailto:${settings.contact.email}`}>{settings.contact.email} <ArrowUpRight size={16} /></a>
-              <a href={settings.contact.phoneHref}>{settings.contact.phoneLabel} <ArrowUpRight size={16} /></a>
+              <a href={`mailto:${settings.contact.email}`}>{settings.contact.email}</a>
+              <a href={settings.contact.phoneHref}>{settings.contact.phoneLabel}</a>
               <address>{settings.contact.addressLine1}<br />{settings.contact.addressLine2}</address>
             </div>
           </div>

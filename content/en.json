@@ -49,12 +49,24 @@
       "summary": "Create content and publish to your social accounts without subscribing to the CRM.",
       "inherits": "Content tools and manual publishing",
       "features": [
-        { "text": "Create your post: AI images, stories, and videos" },
-        { "text": "Enhance product photos and remove backgrounds" },
-        { "text": "750 AI credits per month" },
-        { "text": "Manually publish and schedule on Instagram, Facebook, and TikTok" },
-        { "text": "Up to 3 connected social profiles in total" },
-        { "text": "1 user and 1 brand" }
+        {
+          "text": "Create your post: AI images, stories, and videos"
+        },
+        {
+          "text": "Enhance product photos and remove backgrounds"
+        },
+        {
+          "text": "750 AI credits per month"
+        },
+        {
+          "text": "Manually publish and schedule on Instagram, Facebook, and TikTok"
+        },
+        {
+          "text": "Up to 3 connected social profiles in total"
+        },
+        {
+          "text": "1 user and 1 brand"
+        }
       ],
       "note": "CRM, leads, conversations, appointments, AI agents, and automated content creation are not included. Each generation uses credits. You can change plans when you need more tools."
     },
@@ -320,7 +332,7 @@
       "h1a": "Your AI marketing agency,",
       "h1b": "right at your fingertips.",
       "sub": "Create posts, images and videos; plan campaigns; and follow every lead with AI. Guided by HUELLA, a marketing methodology shaped by 25 years of experience.",
-      "ctaPrimary": "Build your system",
+      "ctaPrimary": "Start your 3-day trial",
       "ctaSecondary": "Explore the process",
       "metaLeft": "Scroll to explore",
       "metaRight": "CRM / Marketing / Follow-up",
@@ -343,7 +355,8 @@
           "image": "/img/recepcion-01.jpg",
           "alt": "Customer service at reception"
         }
-      ]
+      ],
+      "ctaNote": "From US$49/month · 3-day trial · cancel anytime"
     },
     {
       "type": "statement",
@@ -353,10 +366,22 @@
       "h2b": "Right at your fingertips.",
       "body": "The 25 years of agency marketing experience behind HUELLA become a practical guide to setting a strategy, creating useful content, organizing campaigns, and following up with every lead. PAWWER brings those steps together so your team can keep the work connected.",
       "methodSteps": [
-        { "h3": "Plan the strategy", "p": "Define who you want to reach, what they need, and your marketing objective." },
-        { "h3": "Create content", "p": "Turn real customer questions into ideas and creative that reflect your brand." },
-        { "h3": "Organize campaigns", "p": "Coordinate messages, channels, and timing; review each piece before deciding what to share." },
-        { "h3": "Follow up with leads", "p": "Keep each lead's context close and organize conversations, appointments, and next steps." }
+        {
+          "h3": "Plan the strategy",
+          "p": "Define who you want to reach, what they need, and your marketing objective."
+        },
+        {
+          "h3": "Create content",
+          "p": "Turn real customer questions into ideas and creative that reflect your brand."
+        },
+        {
+          "h3": "Organize campaigns",
+          "p": "Coordinate messages, channels, and timing; review each piece before deciding what to share."
+        },
+        {
+          "h3": "Follow up with leads",
+          "p": "Keep each lead's context close and organize conversations, appointments, and next steps."
+        }
       ],
       "note": "Experience provides a method and continuity, not guaranteed results; outcomes depend on each business, its market, and execution.",
       "image": "/img/crm-planner-en.webp",
