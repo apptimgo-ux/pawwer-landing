@@ -62,7 +62,7 @@ aplicación en el teléfono.
 ## Planes y precios
 
 Los precios NO incluyen impuesto: se suma en el checkout según el país.
-Prueba de 3 días con tarjeta; el primer cobro sale el cuarto día.
+Prueba de 7 días con tarjeta; el primer cobro sale el octavo día.
 
 ${planes}
 

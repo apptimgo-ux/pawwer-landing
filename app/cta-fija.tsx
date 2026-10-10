@@ -32,7 +32,7 @@ export default function CtaFija() {
 
   return (
     <div className={`cta-fija${visible ? ' visible' : ''}`}>
-      <a href="#planes">{english ? 'Start your 3-day trial' : 'Empieza tu prueba de 3 días'}</a>
+      <a href="#planes">{english ? 'Start your 7-day trial' : 'Empieza tu prueba de 7 días'}</a>
     </div>
   );
 }

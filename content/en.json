@@ -152,7 +152,7 @@
           "text": "1,500 AI credits per month"
         },
         {
-          "text": "BrandForge: 3 on-brand design options in one click"
+          "text": "BrandForge: 3 on-brand design options; premium 20- or 30-second commercials (400 or 600 credits per video)"
         }
       ],
       "note": "Multichannel automations are enabled per channel once its official connection is complete."
@@ -182,7 +182,7 @@
           "text": "Priority support and operational analytics"
         },
         {
-          "text": "BrandForge: 3 on-brand design options in one click"
+          "text": "BrandForge: 3 on-brand design options; premium 20- or 30-second commercials (400 or 600 credits per video)"
         }
       ],
       "note": "US$1,999 per month plus tax. Ad spend, overages and custom ERP integrations are quoted separately. Agency services and features not yet connected are excluded."
@@ -297,7 +297,7 @@
     "back": "← Back to plans",
     "includesTitle": "What's included",
     "inheritsLabel": "Also includes everything in the previous plan.",
-    "trialTitle": "How the 3-day trial works",
+    "trialTitle": "How the 7-day trial works",
     "trialLines": [
       {
         "text": "The Content Creator trial includes its content tools and manual publishing. CRM plans get temporary access to Scale, or Enterprise if you choose that plan."
@@ -306,10 +306,10 @@
         "text": "You create your account in the CRM (crm.pawwerapp.com) and add your card in Dodo Payments' secure checkout. This site does not capture or store card data."
       },
       {
-        "text": "Nothing is charged during the 3 days. If you don't cancel, your plan is charged in USD on day 4 and renews on the monthly or yearly billing cycle you selected."
+        "text": "Nothing is charged during the 7 days. If you don't cancel, your plan is charged in USD on day 8 and renews on the monthly or yearly billing cycle you selected."
       },
       {
-        "text": "You can cancel your subscription at any time from the CRM. If you cancel before the 3 days end, no charge is made."
+        "text": "You can cancel your subscription at any time from the CRM. If you cancel before the 7 days end, no charge is made."
       },
       {
         "text": "Prices exclude tax: Dodo Payments, as PAWWER's authorized reseller, adds any applicable tax at checkout and you see it before paying. AI credits renew on the 1st of each month."
@@ -317,8 +317,8 @@
     ],
     "activationTitle": "In activation",
     "exclusionsTitle": "What the monthly fee does not cover",
-    "ctaTrial": "Start the 3-day trial",
-    "ctaCheckout": "Start the 3-day trial",
+    "ctaTrial": "Start the 7-day trial",
+    "ctaCheckout": "Start the 7-day trial",
     "ctaSales": "Talk to sales",
     "priceUnit": "USD / mo",
     "priceUnitAnual": "USD / year",
@@ -332,7 +332,7 @@
       "h1a": "Your AI marketing agency,",
       "h1b": "right at your fingertips.",
       "sub": "Create posts, images and videos; plan campaigns; and follow every lead with AI. Guided by HUELLA, a marketing methodology shaped by 25 years of experience.",
-      "ctaPrimary": "Start your 3-day trial",
+      "ctaPrimary": "Start your 7-day trial",
       "ctaSecondary": "Explore the process",
       "metaLeft": "Scroll to explore",
       "metaRight": "CRM / Marketing / Follow-up",
@@ -356,7 +356,7 @@
           "alt": "Customer service at reception"
         }
       ],
-      "ctaNote": "From US$49/month · 3-day trial · cancel anytime"
+      "ctaNote": "From US$49/month · 7-day trial · cancel anytime"
     },
     {
       "type": "statement",
@@ -520,7 +520,7 @@
       "eyebrow": "Plans & pricing",
       "h2a": "Choose the pace",
       "h2b": "of your growth.",
-      "intro": "Choose content tools or a plan with CRM. A 3-day trial requires a card in Dodo Payments' secure checkout; nothing is charged until day 4. Pay yearly and you get twelve months with 15% off, in a single charge. Prices in USD, excluding taxes:",
+      "intro": "Choose content tools or a plan with CRM. A 7-day trial requires a card in Dodo Payments' secure checkout; nothing is charged until day 8. Pay yearly and you get twelve months with 15% off, in a single charge. Prices in USD, excluding taxes:",
       "priceUnit": "USD / mo",
       "mostPopular": "Recommended",
       "cta": "Get started",
@@ -574,7 +574,7 @@
         },
         {
           "q": "Is there a free trial?",
-          "a": "Yes, 3 days. Content Creator trials include its content tools and manual publishing; CRM plans trial Scale, or Enterprise if you choose that plan. You register a card at the start and the first charge lands on day four. Cancel before that and nothing is charged. One trial per business."
+          "a": "Yes, 7 days. Content Creator trials include its content tools and manual publishing; CRM plans trial Scale, or Enterprise if you choose that plan. You register a card at the start and the first charge lands on day four. Cancel before that and nothing is charged. One trial per business."
         },
         {
           "q": "Which social networks can I connect?",
@@ -616,7 +616,7 @@
       "eyebrow": "Start building with us",
       "h2a": "Make every",
       "h2b": "lead move forward.",
-      "buttonLabel": "Request the 3-day trial"
+      "buttonLabel": "Request the 7-day trial"
     }
   ]
 }

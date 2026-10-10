@@ -152,7 +152,7 @@
           "text": "1,500 créditos de IA al mes"
         },
         {
-          "text": "BrandForge: 3 opciones de diseño con tu marca en un clic"
+          "text": "BrandForge: 3 opciones de diseño con tu marca; comerciales premium de 20 o 30 segundos (400 o 600 créditos por video)"
         }
       ],
       "note": "Las automatizaciones multicanal se habilitan por canal al terminar su conexión oficial."
@@ -182,7 +182,7 @@
           "text": "Atención prioritaria y analítica de operación"
         },
         {
-          "text": "BrandForge: 3 opciones de diseño con tu marca en un clic"
+          "text": "BrandForge: 3 opciones de diseño con tu marca; comerciales premium de 20 o 30 segundos (400 o 600 créditos por video)"
         }
       ],
       "note": "US$1,999 al mes más impuestos. Pauta, excedentes e integraciones ERP a medida se cotizan aparte. No incluye servicios de agencia ni funciones aún no conectadas."
@@ -297,7 +297,7 @@
     "back": "← Volver a planes",
     "includesTitle": "Qué incluye",
     "inheritsLabel": "Incluye además todo lo del plan anterior.",
-    "trialTitle": "Cómo funciona la prueba de 3 días",
+    "trialTitle": "Cómo funciona la prueba de 7 días",
     "trialLines": [
       {
         "text": "La prueba de Content Creator incluye sus herramientas de contenido y publicación manual. En los planes con CRM tienes acceso temporal a Escala, o Empresarial si eliges ese plan."
@@ -306,10 +306,10 @@
         "text": "Creas tu cuenta en el CRM (crm.pawwerapp.com) y registras tu tarjeta en el checkout seguro de Dodo Payments. Este sitio no captura ni almacena datos de tarjeta."
       },
       {
-        "text": "No se cobra nada durante los 3 días. Si no cancelas, el día 4 se cobra tu plan en USD y se renueva según el periodo mensual o anual que hayas elegido."
+        "text": "No se cobra nada durante los 7 días. Si no cancelas, el día 8 se cobra tu plan en USD y se renueva según el periodo mensual o anual que hayas elegido."
       },
       {
-        "text": "Puedes cancelar tu suscripción en cualquier momento desde el CRM. Si cancelas antes de que terminen los 3 días, no se genera ningún cargo."
+        "text": "Puedes cancelar tu suscripción en cualquier momento desde el CRM. Si cancelas antes de que terminen los 7 días, no se genera ningún cargo."
       },
       {
         "text": "Los precios no incluyen impuestos: Dodo Payments, como revendedor autorizado de PAWWER, suma en el checkout los que apliquen —en México, el IVA— y los verás antes de pagar. Los créditos de IA se renuevan el día 1 de cada mes."
@@ -317,8 +317,8 @@
     ],
     "activationTitle": "En activación",
     "exclusionsTitle": "Qué no cubre la mensualidad",
-    "ctaTrial": "Iniciar prueba de 3 días",
-    "ctaCheckout": "Empezar prueba de 3 días",
+    "ctaTrial": "Iniciar prueba de 7 días",
+    "ctaCheckout": "Empezar prueba de 7 días",
     "ctaSales": "Hablar con ventas",
     "priceUnit": "USD / mes",
     "priceUnitAnual": "USD / año",
@@ -332,7 +332,7 @@
       "h1a": "La agencia de marketing con IA",
       "h1b": "en tus manos.",
       "sub": "Crea posts, imágenes y videos; planea campañas y da seguimiento a cada lead con IA. Todo guiado por HUELLA, una metodología de marketing construida a partir de 25 años de experiencia.",
-      "ctaPrimary": "Empieza tu prueba de 3 días",
+      "ctaPrimary": "Empieza tu prueba de 7 días",
       "ctaSecondary": "Explorar el proceso",
       "metaLeft": "Desliza para explorar",
       "metaRight": "CRM / Marketing / Seguimiento",
@@ -356,7 +356,7 @@
           "alt": "Atención de clientes en recepción"
         }
       ],
-      "ctaNote": "Desde US$49 al mes · 3 días de prueba · cancela cuando quieras"
+      "ctaNote": "Desde US$49 al mes · 7 días de prueba · cancela cuando quieras"
     },
     {
       "type": "statement",
@@ -520,7 +520,7 @@
       "eyebrow": "Planes y precios",
       "h2a": "Elige el ritmo",
       "h2b": "de tu crecimiento.",
-      "intro": "Elige herramientas de contenido o un plan con CRM. Prueba de 3 días con tarjeta en el checkout seguro de Dodo Payments; no se cobra nada hasta el día 4. Al año pagas doce meses con 15% de descuento, en un solo cargo. Precios en USD, sin impuestos:",
+      "intro": "Elige herramientas de contenido o un plan con CRM. Prueba de 7 días con tarjeta en el checkout seguro de Dodo Payments; no se cobra nada hasta el día 8. Al año pagas doce meses con 15% de descuento, en un solo cargo. Precios en USD, sin impuestos:",
       "priceUnit": "USD / mes",
       "mostPopular": "Recomendado",
       "cta": "Empezar",
@@ -574,7 +574,7 @@
         },
         {
           "q": "¿Hay prueba gratis?",
-          "a": "Sí, 3 días. Content Creator prueba sus herramientas de contenido y publicación manual; los planes con CRM prueban Escala, o Empresarial si eliges ese plan. Se registra una tarjeta al empezar y el primer cobro sale el cuarto día. Si cancelas antes, no se cobra nada. Una prueba por negocio."
+          "a": "Sí, 7 días. Content Creator prueba sus herramientas de contenido y publicación manual; los planes con CRM prueban Escala, o Empresarial si eliges ese plan. Se registra una tarjeta al empezar y el primer cobro sale el octavo día. Si cancelas antes, no se cobra nada. Una prueba por negocio."
         },
         {
           "q": "¿Qué redes sociales se conectan?",
@@ -616,7 +616,7 @@
       "eyebrow": "Empecemos juntos",
       "h2a": "Haz que cada",
       "h2b": "lead avance.",
-      "buttonLabel": "Solicitar prueba de 3 días"
+      "buttonLabel": "Solicitar prueba de 7 días"
     }
   ]
 }

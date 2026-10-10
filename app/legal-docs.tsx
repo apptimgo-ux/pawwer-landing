@@ -93,9 +93,9 @@ export const terminos: Record<'es' | 'en', Documento> = {
         ],
       },
       {
-        h2: 'La prueba de 3 días',
+        h2: 'La prueba de 7 días',
         ps: [
-          'Una cuenta nueva puede empezar con una prueba de 3 días que requiere registrar una tarjeta. Durante la prueba no se cobra nada y usas las herramientas del plan más completo, con los créditos de IA del plan que contrataste.',
+          'Una cuenta nueva puede empezar con una prueba de 7 días que requiere registrar una tarjeta. Durante la prueba no se cobra nada y usas las herramientas del plan más completo, con los créditos de IA del plan que contrataste.',
           'Al terminar la prueba se cobra automáticamente el primer mes, salvo que canceles antes desde tu cuenta. Es una prueba por negocio: quien ya tuvo la suya paga desde el primer día.',
           <>Los negocios invitados a la beta entran con un código, <strong>sin tarjeta</strong>, por el tiempo que diga el código. Al terminar eligen su plan y lo pagan; la beta cuenta como su prueba. Las reglas completas están en los <a href="/programa-beta">términos del programa beta</a>.</>,
         ],
@@ -209,9 +209,9 @@ export const terminos: Record<'es' | 'en', Documento> = {
         ],
       },
       {
-        h2: 'The 3-day trial',
+        h2: 'The 7-day trial',
         ps: [
-          'A new account can start with a 3-day trial that requires registering a card. Nothing is charged during the trial and you use the tools of the most complete plan, with the AI credits of the plan you signed up for.',
+          'A new account can start with a 7-day trial that requires registering a card. Nothing is charged during the trial and you use the tools of the most complete plan, with the AI credits of the plan you signed up for.',
           'When the trial ends, the first month is charged automatically unless you cancel before that. It is one trial per business: whoever already had theirs pays from day one.',
           <>Businesses invited to the beta get in with a code, <strong>without a card</strong>, for the time the code states. When it ends they choose their plan and pay for it; the beta counts as their trial. The full rules are in the <a href="/en/beta-program">beta program terms</a>.</>,
         ],
@@ -299,7 +299,7 @@ export const reembolsos: Record<'es' | 'en', Documento> = {
       {
         h2: 'Antes de que se cobre nada: la prueba',
         ps: [
-          'Una cuenta nueva empieza con 3 días de prueba. Se pide una tarjeta para empezarla, pero no se cobra durante la prueba: el primer cargo ocurre al terminar. Si cancelas antes de que termine, no se cobra nada.',
+          'Una cuenta nueva empieza con 7 días de prueba. Se pide una tarjeta para empezarla, pero no se cobra durante la prueba: el primer cargo ocurre al terminar. Si cancelas antes de que termine, no se cobra nada.',
           'Te recomendamos usar esos días para conectar tus canales y meter a tu equipo: es la forma de saber si PAWWER te sirve antes de pagar.',
         ],
       },
@@ -359,7 +359,7 @@ export const reembolsos: Record<'es' | 'en', Documento> = {
       {
         h2: 'Before anything is charged: the trial',
         ps: [
-          'A new account starts with a 3-day trial. A card is required to start it, but nothing is charged during the trial: the first charge happens when it ends. If you cancel before then, nothing is charged.',
+          'A new account starts with a 7-day trial. A card is required to start it, but nothing is charged during the trial: the first charge happens when it ends. If you cancel before then, nothing is charged.',
           'We recommend using those days to connect your channels and add your team: that is how you find out whether PAWWER works for you before paying.',
         ],
       },
