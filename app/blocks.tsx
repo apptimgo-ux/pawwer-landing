@@ -1,4 +1,5 @@
 import PlanesConPeriodo from './planes-con-periodo';
+import Image from 'next/image';
 import {
   ArrowUpRight, Check, CalendarDays, ChartNoAxesCombined, MessageSquare, Target,
   Users, Sparkles, Zap, Compass, Layers, ShieldCheck, PawPrint, Plus, type LucideIcon,
@@ -54,6 +55,9 @@ function BlockView({ block, locale, t, settings }: { block: Block; locale: Local
             <div className="hero__body">
               <div className="hero__actions">
                 <a className="btn btn--solid btn--coral" href="#planes">{block.ctaPrimary}</a>
+                <a className="hero__sello-prueba" href="#planes" aria-label={locale === 'en' ? 'Explore plans with a 7-day free trial' : 'Ver planes con 7 días de prueba gratis'}>
+                  <Image src={`/promociones/sello-prueba-7-dias-${locale}.png`} alt={locale === 'en' ? '7 day free trial' : '7 días de prueba gratis'} width={112} height={112} sizes="(max-width: 760px) 88px, 112px" loading="lazy" />
+                </a>
                 {block.ctaSecondary && <a className="textlink" href="#soluciones">{block.ctaSecondary}</a>}
               </div>
               <p className="hero__lead">{block.sub}</p>
