@@ -7,6 +7,7 @@ import Reveal from './reveal';
 import CookiePreferences from './cookie-preferences';
 import Analitica from './analitica';
 import PasarUtms from './pasar-utms';
+import ContadorVisitas from './contador-visitas';
 import PixelMeta from './pixel-meta';
 import CtaFija from './cta-fija';
 
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <PixelMeta />
         <CtaFija />
         <PasarUtms />
+        <ContadorVisitas />
       </body>
     </html>
   );
