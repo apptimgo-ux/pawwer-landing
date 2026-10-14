@@ -2,7 +2,7 @@
 import { AI_DISCLAIMER } from './aiDisclaimer';
 import { useState } from 'react';
 import { Menu, X, ArrowUpRight, PawPrint } from 'lucide-react';
-import { content, type Content, type Locale, CRM_URL, planHref } from './site-content';
+import { content, type Content, type Locale, CRM_URL, EMAIL, PHONE_HREF, PHONE_LABEL, ADDRESS_LINES, planHref } from './site-content';
 import { REDES_SOCIALES } from './redes-sociales';
 
 export function Header({ locale, homeHref, altHref, draft, crmUrl = CRM_URL }: { locale: Locale; homeHref: string; altHref: string; draft?: Content; crmUrl?: string }) {
@@ -76,6 +76,12 @@ export function Footer({ locale, homeHref, draft, crmUrl = CRM_URL }: { locale: 
               <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d={red.path} /></svg>
             </a>
           ))}
+        </div>
+        <div className="site-footer__company" aria-label={locale === 'es' ? 'Datos de la empresa' : 'Company details'}>
+          <strong>PAWWER S.A.S. de C.V.</strong>
+          <span>{ADDRESS_LINES.join(' ')}</span>
+          <a href={PHONE_HREF}>{PHONE_LABEL}</a>
+          <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
         </div>
         <p className="site-footer__spacer">© {new Date().getFullYear()} {t.rights}</p>
         {notes?.type === 'notes' && <div className="site-footer__disclaimer">{notes.items.map((note, i) => <p key={i}>{note.lead && <strong>{note.lead} </strong>}{note.body}</p>)}</div>}

@@ -155,6 +155,9 @@ a:focus-visible, button:focus-visible {
 .site-footer__inner { display: flex; flex-wrap: wrap; align-items: center; gap: 20px 34px; padding-block: 48px; }
 .site-footer .brand { color: var(--on-dark); }
 .site-footer a:hover { color: #fff; }
+.site-footer__company { flex: 0 0 100%; display: flex; flex-direction: column; gap: 5px; font-size: 13px; line-height: 1.5; }
+.site-footer__company strong { color: var(--on-dark); }
+.site-footer__company a { width: fit-content; }
 .site-footer__spacer { margin-left: auto; }
 .site-footer__disclaimer { flex: 0 0 100%; border-top: 1px solid var(--line-dark); margin-top: 24px; padding-top: 18px; font-size: 12.5px; line-height: 1.6; color: var(--on-dark-2); }
 .site-footer__disclaimer p { margin: 0 0 8px; max-width: none; }
