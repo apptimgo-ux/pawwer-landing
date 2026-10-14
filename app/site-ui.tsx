@@ -78,7 +78,7 @@ export function Footer({ locale, homeHref, draft, crmUrl = CRM_URL }: { locale: 
           ))}
         </div>
         <div className="site-footer__company" aria-label={locale === 'es' ? 'Datos de la empresa' : 'Company details'}>
-          <strong>PAWWER S.A.S. de C.V.</strong>
+          <strong>Pawwer S.A.S de C.V.</strong>
           <span>{ADDRESS_LINES.join(' ')}</span>
           <a href={PHONE_HREF}>{PHONE_LABEL}</a>
           <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
