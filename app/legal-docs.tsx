@@ -7,7 +7,7 @@ import type { Documento } from './legal-view';
  * ============================================================
  * QUÉ DECIDIÓ LA PERSONA DUEÑA (18 de septiembre de 2026)
  *
- * · Quien vende y responde es **PAWWER S.A.S. de C.V.**, con domicilio en
+ * · Quien vende y responde es **Pawwer S.A.S de C.V.**, con domicilio en
  *   Culiacán. Dodo Payments es el revendedor autorizado que cobra
  *   (merchant of record): la tarjeta nunca toca a PAWWER.
  *
@@ -32,7 +32,7 @@ import type { Documento } from './legal-view';
  * ============================================================
  */
 
-export const EMPRESA = 'PAWWER S.A.S. de C.V.';
+export const EMPRESA = 'Pawwer S.A.S de C.V.';
 export const REVISION = { es: '22 de septiembre de 2026', en: 'September 22, 2026' };
 
 const DIRECCION = `${ADDRESS_LINES[0]} ${ADDRESS_LINES[1]}`;
