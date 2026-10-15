@@ -113,6 +113,8 @@ const T = {
     finalEtiqueta: 'Empieza hoy',
     finalH2: 'Tu liga puede estar lista en cinco minutos.',
     planes: '¿Buscas PAWWER solo para tu negocio? Ver planes',
+    terminos: 'Términos para distribuidores',
+    terminosHref: '/terminos-distribuidores',
     planesHref: '/#planes',
   },
   en: {
@@ -196,6 +198,8 @@ const T = {
     finalEtiqueta: 'Start today',
     finalH2: 'Your link can be ready in five minutes.',
     planes: 'Looking for PAWWER just for your business? See plans',
+    terminos: 'Distributor terms',
+    terminosHref: '/en/distributor-terms',
     planesHref: '/en#planes',
   },
 } as const;
@@ -322,7 +326,7 @@ export default function DistribuidoresView({ locale }: { locale: Locale }) {
             <div className="pricing__head" data-reveal>
               <p className="eyebrow">{t.membresiasEtiqueta}</p>
               <h2>{t.membresiasH2}</h2>
-              <p>{t.membresiasIntro}</p>
+              <p>{t.membresiasIntro} <a href={t.terminosHref}>{t.terminos}</a>.</p>
             </div>
             <div className={`plans ${estilos.dosPlanes}`}>
               {MEMBRESIAS.map(m => {
@@ -403,6 +407,7 @@ export default function DistribuidoresView({ locale }: { locale: Locale }) {
             </div>
             <div className="contact-list" data-reveal>
               <a href={t.planesHref}>{t.planes}</a>
+              <a href={t.terminosHref}>{t.terminos}</a>
             </div>
           </div>
         </section>
