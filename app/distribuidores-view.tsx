@@ -4,6 +4,7 @@ import { LandingImageCarousel, LandingImageZoom } from './ImageExperience';
 import { Header, Footer } from './site-ui';
 import { content } from './site-content';
 import estilos from './distribuidores.module.css';
+import EstudioCreativo from './estudio-creativo';
 
 /**
  * La página de DISTRIBUIDORES: www.pawwerapp.com/distribuidores y
@@ -280,6 +281,8 @@ export default function DistribuidoresView({ locale }: { locale: Locale }) {
             <LandingImageCarousel locale={locale} images={t.capturas.map(([src, alt, label]) => ({ src, alt, label }))} />
           </div>
         </section>
+
+        <EstudioCreativo locale={locale} href="#membresias" />
 
         <section className={`band band--cream2 showcase ${estilos.panelClaro}`} id="panel">
           <div className="wrap showcase__inner">
