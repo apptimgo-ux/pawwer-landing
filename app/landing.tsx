@@ -18,7 +18,7 @@ export default function Landing({ locale }: { locale: Locale }) {
         <HeroeEstudio locale={locale} />
         <DetalleEstudio locale={locale} />
         <PawwerEsMas locale={locale} />
-        <BlockList locale={locale} omitirHero afterHero={<GeneratedGallery locale={locale} videos={[1, 2, 3, 4, 5].map(index => ({ src: `/videos/pawwer-example-${String(index).padStart(2, '0')}.mp4`, title: locale === 'es' ? `Video ${index}` : `Video ${index}` }))} />} afterShowcase={<PawrtnerExplorer locale={locale} />} />
+        <BlockList locale={locale} omitirHero afterHero={<GeneratedGallery locale={locale} videos={[1, 2, 5].map((index, i) => ({ src: `/videos/pawwer-example-${String(index).padStart(2, '0')}.mp4`, title: `Video ${i + 1}` }))} />} afterShowcase={<PawrtnerExplorer locale={locale} />} />
       </main>
       <Footer locale={locale} homeHref={homeHref} />
     </>
