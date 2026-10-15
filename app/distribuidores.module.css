@@ -1,0 +1,25 @@
+/* Página de distribuidores: casi todo usa las clases de la landing
+   (globals.css). Aquí solo lo que es propio de esta página. */
+
+.dosPlanes { grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); max-width: 860px; margin-inline: auto; }
+
+.ganancia { display: grid; grid-template-columns: auto 1fr; gap: 24px; align-items: center; max-width: 860px; margin: 32px auto 0; padding: 24px 28px; border: 1px solid var(--line); border-radius: var(--r-card); background: var(--surface); }
+.ganancia h3 { font-family: var(--font-display); font-size: 20px; color: var(--ink); margin: 0 0 6px; }
+.ganancia p { margin: 0 0 6px; line-height: 1.6; }
+.grande { font-family: var(--font-display); font-weight: 700; font-size: 64px; line-height: 1; color: var(--accent); margin: 0 !important; }
+.nota { font-size: 13.5px; color: var(--muted); }
+.notaClara { font-size: 13.5px; opacity: .75; margin-top: 14px; }
+
+.mockClientes { display: grid; gap: 8px; margin: 14px 0; }
+.mockCliente { display: grid; grid-template-columns: 34px 1fr auto; grid-template-rows: auto auto; column-gap: 10px; align-items: center; padding: 10px 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); }
+.mockCliente > span { grid-row: span 2; }
+.mockCliente strong { color: var(--ink); font-size: 14px; }
+.mockCliente small { grid-column: 2; color: var(--muted); font-size: 12px; }
+.mockCliente em { grid-column: 3; grid-row: 1 / span 2; font-style: normal; font-size: 12px; font-weight: 700; color: #1F8A5B; background: #E5F5EC; padding: 3px 9px; border-radius: 999px; }
+
+@media (max-width: 600px) {
+  .ganancia { grid-template-columns: 1fr; gap: 10px; }
+}
+
+.panelClaro :global(.showcase__copy) p { color: var(--ink-2); }
+.panelClaro :global(.eyebrow) { color: var(--accent); }

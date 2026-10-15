@@ -38,6 +38,7 @@ export const RUTAS: { es: string; en: string; prioridad: number }[] = [
   { es: '/', en: '/en', prioridad: 1 },
   ...PLAN_SLUGS.map(slug => ({ es: `/planes/${slug}`, en: `/en/plans/${slug}`, prioridad: 0.8 })),
   { es: '/programa-beta', en: '/en/beta-program', prioridad: 0.6 },
+  { es: '/distribuidores', en: '/en/distributors', prioridad: 0.7 },
   { es: '/privacidad', en: '/en/privacy', prioridad: 0.3 },
   { es: '/terminos', en: '/en/terms', prioridad: 0.3 },
   { es: '/reembolsos', en: '/en/refunds', prioridad: 0.3 },
