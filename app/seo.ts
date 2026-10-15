@@ -61,6 +61,8 @@ export function organizacion() {
     '@type': 'Organization',
     '@id': `${SITE_URL}/#organizacion`,
     name: 'PAWWER',
+    // Razón social EXACTA como está en el portafolio de Meta (verificación del negocio).
+    legalName: 'Pawwer S.A.S de C.V.',
     url: SITE_URL,
     logo: `${SITE_URL}/favicon.svg`,
     sameAs: REDES_SOCIALES.map(red => red.url),

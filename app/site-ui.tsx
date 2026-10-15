@@ -83,7 +83,9 @@ export function Footer({ locale, homeHref, draft, crmUrl = CRM_URL }: { locale: 
           <a href={PHONE_HREF}>{PHONE_LABEL}</a>
           <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
         </div>
-        <p className="site-footer__spacer">© {new Date().getFullYear()} {t.rights}</p>
+        {/* La razón social EXACTA del registro de Meta: la verificación del
+            negocio exige que el nombre legal esté en el sitio (15-oct-2026). */}
+        <p className="site-footer__spacer">© {new Date().getFullYear()} Pawwer S.A.S de C.V. {locale === 'es' ? 'PAWWER es una marca de Pawwer S.A.S de C.V.' : 'PAWWER is a brand of Pawwer S.A.S de C.V.'}</p>
         {notes?.type === 'notes' && <div className="site-footer__disclaimer">{notes.items.map((note, i) => <p key={i}>{note.lead && <strong>{note.lead} </strong>}{note.body}</p>)}</div>}
       </div>
     </footer>
