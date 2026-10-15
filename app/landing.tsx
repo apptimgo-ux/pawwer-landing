@@ -4,7 +4,7 @@ import { type Locale } from './site-content';
 import { LandingImageZoom } from './ImageExperience';
 import GeneratedGallery from './GeneratedGallery';
 import PawrtnerExplorer from './PawrtnerExplorer';
-import EstudioCreativo from './estudio-creativo';
+import { HeroeEstudio, DetalleEstudio, PawwerEsMas } from './inicio-estudio';
 
 export default function Landing({ locale }: { locale: Locale }) {
   const homeHref = locale === 'es' ? '/' : '/en';
@@ -14,7 +14,11 @@ export default function Landing({ locale }: { locale: Locale }) {
       <Header locale={locale} homeHref={homeHref} altHref={altHref} />
       <LandingImageZoom locale={locale} />
       <main id="contenido" lang={locale === 'en' ? 'en' : undefined}>
-        <BlockList locale={locale} afterHero={<GeneratedGallery locale={locale} videos={[1, 2, 3, 4, 5].map(index => ({ src: `/videos/pawwer-example-${String(index).padStart(2, '0')}.mp4`, title: locale === 'es' ? `Video ${index}` : `Video ${index}` }))} />} afterShowcase={<><EstudioCreativo locale={locale} /><PawrtnerExplorer locale={locale} /></>} />
+        {/* Inicio (15-oct-2026): héroe con estilos animados, el detalle de lo que creas y «PAWWER es todavía más». */}
+        <HeroeEstudio locale={locale} />
+        <DetalleEstudio locale={locale} />
+        <PawwerEsMas locale={locale} />
+        <BlockList locale={locale} omitirHero afterHero={<GeneratedGallery locale={locale} videos={[1, 2, 3, 4, 5].map(index => ({ src: `/videos/pawwer-example-${String(index).padStart(2, '0')}.mp4`, title: locale === 'es' ? `Video ${index}` : `Video ${index}` }))} />} afterShowcase={<PawrtnerExplorer locale={locale} />} />
       </main>
       <Footer locale={locale} homeHref={homeHref} />
     </>

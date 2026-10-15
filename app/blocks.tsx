@@ -33,10 +33,11 @@ function Cell({ value }: { value: string }) {
   return <>{value}</>;
 }
 
-export function BlockList({ locale, draft, settings = siteSettings, afterHero, afterShowcase }: { locale: Locale; draft?: Content; settings?: SiteSettings; afterHero?: ReactNode; afterShowcase?: ReactNode }) {
+export function BlockList({ locale, draft, settings = siteSettings, afterHero, afterShowcase, omitirHero = false }: { locale: Locale; draft?: Content; settings?: SiteSettings; afterHero?: ReactNode; afterShowcase?: ReactNode; omitirHero?: boolean }) {
   const t = draft || content[locale];
   const heroIndex = t.blocks.findIndex(b => b.type === 'hero');
-  return <>{t.blocks.map((b, i) => <Fragment key={i}><BlockView block={b} locale={locale} t={t} settings={settings} />{i === heroIndex && afterHero}{b.type === 'showcase' && afterShowcase}</Fragment>)}</>;
+  // omitirHero: la portada pinta su propio héroe (inicio-estudio.tsx) con el MISMO texto del bloque.
+  return <>{t.blocks.map((b, i) => <Fragment key={i}>{!(omitirHero && b.type === 'hero') && <BlockView block={b} locale={locale} t={t} settings={settings} />}{i === heroIndex && afterHero}{b.type === 'showcase' && afterShowcase}</Fragment>)}</>;
 }
 
 function BlockView({ block, locale, t, settings }: { block: Block; locale: Locale; t: Content; settings: SiteSettings }) {
