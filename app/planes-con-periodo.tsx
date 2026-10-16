@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ArrowUpRight, Check } from 'lucide-react';
 import { planHref, type Locale, type Plan } from './site-content';
 
@@ -35,6 +35,12 @@ export default function PlanesConPeriodo({
   activationLabel: string;
 }) {
   const [anual, setAnual] = useState(false);
+
+  useEffect(() => {
+    const elegirAnual = () => setAnual(true);
+    window.addEventListener('pawwer:promocion-anual-reclamada', elegirAnual);
+    return () => window.removeEventListener('pawwer:promocion-anual-reclamada', elegirAnual);
+  }, []);
 
   return (
     <>

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
+import { promocionVigente } from './promociones-anuales';
 
 /**
  * EL PRECIO Y EL BOTÓN DEL DETALLE DE UN PLAN, SEGÚN MES O AÑO.
@@ -41,7 +42,8 @@ export default function PrecioDelPlan({
 
   useEffect(() => {
     try {
-      setAnual(new URLSearchParams(window.location.search).get('periodo') === 'anual');
+      const reclamada = sessionStorage.getItem('pawwer:promocion-anual-reclamada');
+      setAnual(new URLSearchParams(window.location.search).get('periodo') === 'anual' || Boolean(promocionVigente(reclamada)));
     } catch {
       // Sin `location` legible se queda en mensual, que es lo que ya se pintó.
     }

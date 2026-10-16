@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import { promocionVigente } from './promociones-anuales';
 
 /**
  * Lleva la atribución de la visita hasta el alta en el CRM.
@@ -61,6 +62,13 @@ export default function PasarUtms() {
       if (!a || !/^https:\/\/crm\.pawwerapp\.com/.test(a.href)) return;
       const datos = { ...(leer()?.datos || {}), ...nuevos };
       const destino = new URL(a.href);
+      let codigoReclamado: string | null = null;
+      try { codigoReclamado = sessionStorage.getItem('pawwer:promocion-anual-reclamada'); } catch { /* sin almacenamiento */ }
+      const promocion = promocionVigente(codigoReclamado);
+      if (promocion && !destino.searchParams.has('convenio')) {
+        destino.searchParams.set('promo', promocion.codigo);
+        destino.searchParams.set('periodo', 'anual');
+      }
       for (const k of UTMS) if (datos[k] && !destino.searchParams.has(k)) destino.searchParams.set(k, datos[k]);
       if (conMarketing()) {
         for (const k of CLICS) if (datos[k]) destino.searchParams.set(k, datos[k]);
