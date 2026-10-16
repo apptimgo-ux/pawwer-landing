@@ -114,7 +114,12 @@ function Videos({ locale, videos }: { locale: Locale; videos: ExampleVideo[] }) 
 }
 
 function Carrusel3D({ locale }: { locale: Locale }) {
-  const n = DISENOS.length;
+  // Las muestras originales llevan copy español incrustado. En inglés se
+  // muestran las versiones localizadas, nunca el fotograma español.
+  const disenos = locale === 'en'
+    ? DISENOS.filter(d => d.src.startsWith('/estilos/')).map(d => ({ ...d, src: d.src.replace('/estilos/', '/estilos/en/') }))
+    : DISENOS;
+  const n = disenos.length;
   const paso = 360 / n;
   const [angulo, setAngulo] = useState(0);
   const arrastre = useRef<{ x: number; a: number } | null>(null);
@@ -152,7 +157,7 @@ function Carrusel3D({ locale }: { locale: Locale }) {
       onMouseEnter={() => { tocando.current = true; }} onMouseLeave={() => { if (!arrastre.current) tocando.current = false; }}
       aria-label={locale === 'es' ? 'Diseños creados con Pawwer. Arrastra para girar.' : 'Designs created with Pawwer. Drag to rotate.'}>
       <div className={estilos.anillo} style={{ transform: `translateZ(calc(-1 * ${radio})) rotateY(${angulo}deg)` }}>
-        {DISENOS.map((d, i) => (
+        {disenos.map((d, i) => (
           <figure key={d.src} className={estilos.tarjeta} style={{ transform: `rotateY(${i * paso}deg) translateZ(${radio})` }}>
             {d.video
               ? <video src={d.src} muted loop playsInline autoPlay={!quieto()} preload="metadata" aria-label={locale === 'es' ? 'Video vertical creado con Pawwer' : 'Vertical video created with Pawwer'} />

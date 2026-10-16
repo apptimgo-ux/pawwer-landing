@@ -55,11 +55,11 @@ const T = {
   },
 } as const;
 
-function Muestra({ id, nombre }: { id: string; nombre: string }) {
+function Muestra({ id, nombre, locale }: { id: string; nombre: string; locale: Locale }) {
   const ref = useRef<HTMLVideoElement>(null);
   useEffect(() => {
     const video = ref.current;
-    if (!video || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!video || locale === 'en' || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const io = new IntersectionObserver(([e]) => {
       if (e.isIntersecting) {
         if (!video.src) video.src = `/estilos/${id}.mp4`;
@@ -68,10 +68,12 @@ function Muestra({ id, nombre }: { id: string; nombre: string }) {
     }, { threshold: 0.35 });
     io.observe(video);
     return () => io.disconnect();
-  }, [id]);
+  }, [id, locale]);
   return (
     <figure className={estilos.muestra}>
-      <video ref={ref} poster={`/estilos/${id}.webp`} muted loop playsInline preload="none" aria-label={nombre} />
+      {locale === 'en'
+        ? <img src={`/estilos/en/${id}.webp`} alt={nombre} loading="lazy" />
+        : <video ref={ref} poster={`/estilos/${id}.webp`} muted loop playsInline preload="none" aria-label={nombre} />}
       <figcaption>{nombre}</figcaption>
     </figure>
   );
@@ -90,7 +92,7 @@ export default function EstudioCreativo({ locale, href = '#planes' }: { locale: 
       </div>
 
       <div className={estilos.riel} aria-label={t.ceja}>
-        {MUESTRAS.map(([id, nombre]) => <Muestra key={id} id={id} nombre={nombre} />)}
+        {MUESTRAS.map(([id, nombre]) => <Muestra key={id} id={id} nombre={nombre} locale={locale} />)}
       </div>
 
       <div className={`wrap ${estilos.pantalla}`} data-reveal>

@@ -91,11 +91,11 @@ const T = {
 
 const ICONOS = { inbox: MessageSquare, bot: Bot, calendar: CalendarDays, pipeline: Workflow, huella: Compass, chart: ChartNoAxesCombined };
 
-function Muestra({ id, nombre, activa }: { id: string; nombre: string; activa: boolean }) {
+function Muestra({ id, nombre, activa, locale }: { id: string; nombre: string; activa: boolean; locale: Locale }) {
   const ref = useRef<HTMLVideoElement>(null);
   useEffect(() => {
     const video = ref.current;
-    if (!video) return;
+    if (!video || locale === 'en') return;
     if (!activa || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       video.pause();
       return;
@@ -108,10 +108,12 @@ function Muestra({ id, nombre, activa }: { id: string; nombre: string; activa: b
     }, { threshold: 0.35 });
     io.observe(video);
     return () => io.disconnect();
-  }, [id, activa]);
+  }, [id, activa, locale]);
   return (
     <figure className={estilos.muestra}>
-      <video ref={ref} poster={`/estilos/${id}.webp`} muted loop playsInline preload="none" aria-label={nombre} />
+      {locale === 'en'
+        ? <Image src={`/estilos/en/${id}.webp`} alt={nombre} width={600} height={600} sizes="(max-width: 600px) 70vw, 300px" />
+        : <video ref={ref} poster={`/estilos/${id}.webp`} muted loop playsInline preload="none" aria-label={nombre} />}
       <figcaption>{nombre}</figcaption>
     </figure>
   );
@@ -162,7 +164,7 @@ function CarruselEstilos({ locale }: { locale: Locale }) {
           const distancia = (indice - actual + MUESTRAS.length + Math.floor(MUESTRAS.length / 2)) % MUESTRAS.length - Math.floor(MUESTRAS.length / 2);
           return (
             <div key={id} className={estilos.posicion} data-offset={Math.max(-3, Math.min(3, distancia))} aria-hidden={Math.abs(distancia) > 2}>
-              <Muestra id={id} nombre={nombre} activa={Math.abs(distancia) <= 1} />
+              <Muestra id={id} nombre={nombre} activa={Math.abs(distancia) <= 1} locale={locale} />
             </div>
           );
         })}
@@ -242,6 +244,7 @@ export function HeroeEstudio({ locale }: { locale: Locale }) {
         {h.ctaNote && <p className={estilos.nota}>{h.ctaNote}</p>}
       </div>
       <CarruselEstilos locale={locale} />
+      <span className={estilos.creditoVideo}>{locale === 'en' ? 'Video generated with Pawwer' : 'Video generado con Pawwer'}</span>
     </section>
   );
 }
