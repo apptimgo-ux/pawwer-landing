@@ -8,6 +8,8 @@ import type { Locale } from './site-content';
 import estilos from './promocion-anual.module.css';
 
 export const PROMOCION_RECLAMADA = 'pawwer:promocion-anual-reclamada';
+const ESPERA_OFERTA_MS = 3500;
+let ofertaVistaEnEstaNavegacion = false;
 
 export default function PromocionAnual({ locale }: { locale: Locale }) {
   const [codigo, setCodigo] = useState<string | null>(null);
@@ -16,12 +18,12 @@ export default function PromocionAnual({ locale }: { locale: Locale }) {
 
   useEffect(() => {
     const activa = promocionVigente();
-    if (!activa) return;
-    try {
-      if (sessionStorage.getItem(`pawwer:promocion-oculta:${activa.codigo}`) === '1'
-        || sessionStorage.getItem(PROMOCION_RECLAMADA) === activa.codigo) return;
-    } catch { /* La oferta puede mostrarse aunque el almacenamiento esté deshabilitado. */ }
-    setCodigo(activa.codigo);
+    if (!activa || ofertaVistaEnEstaNavegacion) return;
+    const espera = window.setTimeout(() => {
+      ofertaVistaEnEstaNavegacion = true;
+      setCodigo(activa.codigo);
+    }, ESPERA_OFERTA_MS);
+    return () => window.clearTimeout(espera);
   }, []);
 
   useEffect(() => {
@@ -45,7 +47,6 @@ export default function PromocionAnual({ locale }: { locale: Locale }) {
 
   function cerrar() {
     if (!promocion) return;
-    try { sessionStorage.setItem(`pawwer:promocion-oculta:${promocion.codigo}`, '1'); } catch { /* sin almacenamiento */ }
     setCodigo(null);
   }
 
@@ -61,7 +62,7 @@ export default function PromocionAnual({ locale }: { locale: Locale }) {
     <div className={estilos.fondo} onMouseDown={e => { if (e.target === e.currentTarget) cerrar(); }}>
       <section className={estilos.ventana} role="dialog" aria-modal="true" aria-labelledby="promocion-anual-titulo">
         <button ref={cerrarRef} type="button" className={estilos.cerrar} onClick={cerrar} aria-label={en ? 'Close offer' : 'Cerrar oferta'}><X size={20} /></button>
-        <Image src={imagen} alt={en ? 'Pawwer seasonal annual offer' : 'Oferta anual de temporada Pawwer'} width={600} height={900} sizes="(max-width: 560px) 100vw, 480px" className={estilos.imagen} priority />
+        <div className={estilos.arte}><Image src={imagen} alt={en ? 'Pawwer seasonal annual offer: save 25% on your first annual payment' : 'Oferta anual Pawwer: ahorra 25% en tu primer pago anual'} width={600} height={900} sizes="(max-width: 760px) 100vw, 48vw" className={estilos.imagen} priority /></div>
         <div className={estilos.contenido}>
           <p className={estilos.ceja}>{en ? 'Limited-time annual offer' : 'Oferta anual por tiempo limitado'}</p>
           <h2 id="promocion-anual-titulo">{halloween ? en ? 'Make the most of Halloween' : 'Aprovecha Halloween' : en ? 'A holiday gift for your business' : 'Un regalo de Navidad para tu negocio'}</h2>
