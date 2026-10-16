@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { MessageSquare, Bot, CalendarDays, Workflow, ChartNoAxesCombined, Compass, Check } from 'lucide-react';
 import { AI_DISCLAIMER } from './aiDisclaimer';
 import { content, type Locale } from './site-content';
@@ -36,6 +36,9 @@ const MUESTRAS = [
   ['brandforge-victorian-style', 'Victorian'],
   ['brandforge-surreal-design', 'Surreal'],
 ] as const;
+
+// Muestras propias, sin marcas de terceros. El fondo nunca solicita videos
+// hasta que el héroe sea visible y respeta movimiento reducido/ahorro de datos.
 
 const T = {
   es: {
@@ -88,11 +91,15 @@ const T = {
 
 const ICONOS = { inbox: MessageSquare, bot: Bot, calendar: CalendarDays, pipeline: Workflow, huella: Compass, chart: ChartNoAxesCombined };
 
-function Muestra({ id, nombre }: { id: string; nombre: string }) {
+function Muestra({ id, nombre, activa }: { id: string; nombre: string; activa: boolean }) {
   const ref = useRef<HTMLVideoElement>(null);
   useEffect(() => {
     const video = ref.current;
-    if (!video || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!video) return;
+    if (!activa || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      video.pause();
+      return;
+    }
     const io = new IntersectionObserver(([e]) => {
       if (e.isIntersecting) {
         if (!video.src) video.src = `/estilos/${id}.mp4`;
@@ -101,7 +108,7 @@ function Muestra({ id, nombre }: { id: string; nombre: string }) {
     }, { threshold: 0.35 });
     io.observe(video);
     return () => io.disconnect();
-  }, [id]);
+  }, [id, activa]);
   return (
     <figure className={estilos.muestra}>
       <video ref={ref} poster={`/estilos/${id}.webp`} muted loop playsInline preload="none" aria-label={nombre} />
@@ -112,11 +119,115 @@ function Muestra({ id, nombre }: { id: string; nombre: string }) {
 
 type Heroe = Extract<(typeof content)['es']['blocks'][number], { type: 'hero' }>;
 
+function CarruselEstilos({ locale }: { locale: Locale }) {
+  const [actual, setActual] = useState(0);
+  const inicio = useRef<{ x: number; y: number; ultimaX: number } | null>(null);
+  const mover = (pasos: number) => setActual(valor => (valor + pasos + MUESTRAS.length) % MUESTRAS.length);
+
+  return (
+    <div className={estilos.carrusel} role="region" aria-roledescription={locale === 'en' ? 'carousel' : 'carrusel'} aria-label={locale === 'en' ? 'Ad styles created with PAWWER' : 'Estilos de anuncio creados con PAWWER'}>
+      <button type="button" className={`${estilos.flecha} ${estilos.flechaIzquierda}`} onClick={() => mover(-1)} aria-label={locale === 'en' ? 'Previous style' : 'Estilo anterior'}>‹</button>
+      <div
+        className={estilos.riel}
+        tabIndex={0}
+        aria-label={locale === 'en' ? 'Drag or use arrow keys to explore styles' : 'Arrastra o usa las flechas para explorar estilos'}
+        onPointerDown={event => {
+          if (event.pointerType === 'mouse' && event.button !== 0) return;
+          if (event.pointerType === 'mouse') event.preventDefault();
+          inicio.current = { x: event.clientX, y: event.clientY, ultimaX: event.clientX };
+          event.currentTarget.setPointerCapture(event.pointerId);
+        }}
+        onPointerMove={event => {
+          if (!inicio.current) return;
+          const gesto = inicio.current;
+          if (Math.abs(event.clientY - gesto.y) > Math.abs(event.clientX - gesto.x)) return;
+          const distancia = event.clientX - gesto.ultimaX;
+          const pasos = Math.trunc(distancia / 70);
+          if (!pasos) return;
+          mover(-pasos);
+          gesto.ultimaX += pasos * 70;
+        }}
+        onPointerUp={() => { inicio.current = null; }}
+        onPointerCancel={() => { inicio.current = null; }}
+        onLostPointerCapture={() => { inicio.current = null; }}
+        onDragStart={event => event.preventDefault()}
+        onKeyDown={event => {
+          if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+            event.preventDefault();
+            mover(event.key === 'ArrowLeft' ? -1 : 1);
+          }
+        }}
+      >
+        {MUESTRAS.map(([id, nombre], indice) => {
+          const distancia = (indice - actual + MUESTRAS.length + Math.floor(MUESTRAS.length / 2)) % MUESTRAS.length - Math.floor(MUESTRAS.length / 2);
+          return (
+            <div key={id} className={estilos.posicion} data-offset={Math.max(-3, Math.min(3, distancia))} aria-hidden={Math.abs(distancia) > 2}>
+              <Muestra id={id} nombre={nombre} activa={Math.abs(distancia) <= 1} />
+            </div>
+          );
+        })}
+      </div>
+      <button type="button" className={`${estilos.flecha} ${estilos.flechaDerecha}`} onClick={() => mover(1)} aria-label={locale === 'en' ? 'Next style' : 'Estilo siguiente'}>›</button>
+    </div>
+  );
+}
+
+function FondoCreativo() {
+  const fondo = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const root = fondo.current;
+    if (!root) return;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const video = root.querySelector('video');
+    if (!video) return;
+    const dataSaver = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData;
+    if (reducedMotion.matches || dataSaver) return;
+
+    const pause = () => video.pause();
+    const show = () => {
+      if (document.hidden) return;
+      if (!video.src) video.src = video.dataset.src || '';
+      video.play().catch(() => { /* El fondo oscuro queda visible si el navegador bloquea autoplay. */ });
+    };
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) show();
+      else pause();
+    }, { threshold: 0.1 });
+    observer.observe(root);
+    const visibilityChanged = () => {
+      if (document.hidden) pause();
+      else if (root.getBoundingClientRect().bottom > 0) show();
+    };
+    document.addEventListener('visibilitychange', visibilityChanged);
+    return () => {
+      observer.disconnect();
+      document.removeEventListener('visibilitychange', visibilityChanged);
+      pause();
+    };
+  }, []);
+
+  return (
+    <div ref={fondo} className={estilos.heroeFondo} aria-hidden="true">
+      <video
+        className={estilos.fondoVideo}
+        data-src="/videos/hero-pawwer-cliente.mp4"
+        muted
+        loop
+        playsInline
+        preload="none"
+        tabIndex={-1}
+      />
+    </div>
+  );
+}
+
 export function HeroeEstudio({ locale }: { locale: Locale }) {
   const h = content[locale].blocks.find(b => b.type === 'hero') as Heroe | undefined;
   if (!h) return null;
   return (
     <section className={`band band--dark ${estilos.heroe}`}>
+      <FondoCreativo />
       <div className={`wrap ${estilos.heroeTexto}`}>
         {h.kicker && <p className={estilos.kicker}><i /> {h.kicker}</p>}
         <h1>{h.h1a} <span className={estilos.acento}>{h.h1b}</span></h1>
@@ -130,9 +241,7 @@ export function HeroeEstudio({ locale }: { locale: Locale }) {
         </div>
         {h.ctaNote && <p className={estilos.nota}>{h.ctaNote}</p>}
       </div>
-      <div className={estilos.riel} aria-label={locale === 'en' ? 'Ad styles created with PAWWER' : 'Estilos de anuncio creados con PAWWER'}>
-        {MUESTRAS.map(([id, nombre]) => <Muestra key={id} id={id} nombre={nombre} />)}
-      </div>
+      <CarruselEstilos locale={locale} />
     </section>
   );
 }
