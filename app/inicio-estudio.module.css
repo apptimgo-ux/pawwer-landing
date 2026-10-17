@@ -46,6 +46,21 @@
 .pantalla { margin: 0; display: grid; gap: 10px; }
 .pantalla img { width: 100%; border-radius: 18px; border: 1px solid var(--line); box-shadow: var(--shadow-float); cursor: zoom-in; }
 .pantalla figcaption { font-size: 12.5px; color: var(--muted); }
+/* Carrusel de pantallas */
+.pestanas { display: flex; gap: 6px; flex-wrap: wrap; }
+.pestana, .pestanaActiva { border: 1px solid var(--line); background: var(--surface); color: var(--ink-2); border-radius: 999px; padding: 7px 14px; font-size: 13.5px; font-weight: 600; cursor: pointer; transition: background .2s, color .2s, border-color .2s; }
+.pestanaActiva { background: var(--accent); border-color: var(--accent); color: #fff; }
+.pestana:hover { border-color: var(--accent); color: var(--ink); }
+.marcoPantalla { position: relative; aspect-ratio: 16 / 10; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow-float); background: var(--surface); touch-action: pan-y; }
+.diapo, .diapoActiva { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: opacity .5s ease; cursor: zoom-in; }
+.diapo { opacity: 0; pointer-events: none; }
+.diapoActiva { opacity: 1; }
+.marcoPantalla .diapo, .marcoPantalla .diapoActiva { border: 0; border-radius: 0; box-shadow: none; }
+.flechaPantalla { position: absolute; top: 50%; transform: translateY(-50%); width: 38px; height: 38px; border-radius: 999px; border: 0; background: rgba(255, 255, 255, .92); color: #14161f; font-size: 22px; line-height: 1; cursor: pointer; box-shadow: 0 4px 14px rgba(0, 0, 0, .18); display: grid; place-items: center; }
+.flechaPantallaIzq { left: 10px; }
+.flechaPantallaDer { right: 10px; }
+.oculto { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .diapo, .diapoActiva { transition: none; } }
 
 /* ---------- PAWWER es todavía más ---------- */
 .masCabeza { max-width: 760px; margin: 0 auto 32px; text-align: center; }

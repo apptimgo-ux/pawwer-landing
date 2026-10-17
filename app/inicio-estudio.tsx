@@ -50,6 +50,15 @@ const T = {
     pantalla: 'Así se ve por dentro',
     alt: 'Editor de PAWWER con formatos y estilos de anuncio',
     nota: 'Ejemplos generados con PAWWER usando productos genéricos.',
+    pantallas: [
+      ['crm-crear', 'Crea tu post', 'Posts, historias y videos con tu marca'],
+      ['crm-mailers', 'Mailers', 'Correos con el ADN de tu marca'],
+      ['crm-pawwer-studio', 'Pawwer Studio', 'Tus textos y tu logo sobre tu video'],
+      ['crm-mapa-leads', 'Mapa de leads', 'De dónde llegan tus leads'],
+    ],
+    anterior: 'Pantalla anterior',
+    siguiente: 'Pantalla siguiente',
+    carrusel: 'Pantallas de PAWWER',
     masCeja: 'Y eso es solo el principio',
     masH2a: 'Pero PAWWER',
     masH2b: 'es todavía más.',
@@ -73,6 +82,15 @@ const T = {
     pantalla: 'What it looks like inside',
     alt: 'PAWWER editor with formats and ad styles',
     nota: 'Examples generated with PAWWER using generic products.',
+    pantallas: [
+      ['crm-crear', 'Create your post', 'Posts, stories and videos with your brand'],
+      ['crm-mailers', 'Mailers', 'Emails with your brand DNA'],
+      ['crm-pawwer-studio', 'Pawwer Studio', 'Your text and logo on your video'],
+      ['crm-mapa-leads', 'Lead heat map', 'Where your leads come from'],
+    ],
+    anterior: 'Previous screen',
+    siguiente: 'Next screen',
+    carrusel: 'PAWWER screens',
     masCeja: 'And that is just the start',
     masH2a: 'But PAWWER',
     masH2b: 'is even more.',
@@ -249,6 +267,73 @@ export function HeroeEstudio({ locale }: { locale: Locale }) {
   );
 }
 
+/**
+ * Las pantallas de PAWWER en carrusel (17 de octubre de 2026, pedido de la
+ * persona dueña): Crea tu post, Mailers, Pawwer Studio y el mapa de leads.
+ * Capturas del panel en modo demo, con datos ficticios. Pasa sola cada 5 s
+ * mientras se ve y nadie la toca; se cambia con las pestañas, las flechas,
+ * el teclado o deslizando el dedo.
+ */
+function CarruselPantallas({ locale }: { locale: Locale }) {
+  const t = T[locale];
+  const total = t.pantallas.length;
+  const [actual, setActual] = useState(0);
+  const [quieto, setQuieto] = useState(false);
+  const caja = useRef<HTMLElement>(null);
+  const toque = useRef<number | null>(null);
+  const ir = (i: number) => setActual((i + total) % total);
+
+  useEffect(() => {
+    const el = caja.current;
+    if (!el || quieto || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    let visible = false;
+    const io = new IntersectionObserver(([e]) => { visible = e.isIntersecting; }, { threshold: 0.4 });
+    io.observe(el);
+    const id = window.setInterval(() => { if (visible && !document.hidden) setActual(a => (a + 1) % total); }, 5000);
+    return () => { io.disconnect(); window.clearInterval(id); };
+  }, [quieto, total]);
+
+  const [id, nombre, desc] = t.pantallas[actual];
+  return (
+    <figure
+      ref={caja}
+      className={estilos.pantalla}
+      data-reveal
+      role="region"
+      aria-roledescription={locale === 'en' ? 'carousel' : 'carrusel'}
+      aria-label={t.carrusel}
+      onMouseEnter={() => setQuieto(true)}
+      onMouseLeave={() => setQuieto(false)}
+      onFocus={() => setQuieto(true)}
+      onKeyDown={e => { if (e.key === 'ArrowLeft') ir(actual - 1); if (e.key === 'ArrowRight') ir(actual + 1); }}
+    >
+      <div className={estilos.pestanas} role="tablist">
+        {t.pantallas.map(([pid, pnombre], i) => (
+          <button key={pid} type="button" role="tab" aria-selected={i === actual} className={i === actual ? estilos.pestanaActiva : estilos.pestana} onClick={() => { ir(i); setQuieto(true); }}>{pnombre}</button>
+        ))}
+      </div>
+      <div
+        className={estilos.marcoPantalla}
+        onTouchStart={e => { toque.current = e.touches[0].clientX; }}
+        onTouchEnd={e => {
+          if (toque.current == null) return;
+          const dx = e.changedTouches[0].clientX - toque.current;
+          toque.current = null;
+          if (Math.abs(dx) > 40) { ir(actual + (dx < 0 ? 1 : -1)); setQuieto(true); }
+        }}
+      >
+        {t.pantallas.map(([pid, pnombre], i) => (
+          <img key={pid} src={`/img/${pid}-${locale}.webp`} alt={pnombre} loading="lazy" data-zoomable tabIndex={i === actual ? 0 : -1} role="button" aria-hidden={i !== actual} className={i === actual ? estilos.diapoActiva : estilos.diapo} />
+        ))}
+        <button type="button" className={`${estilos.flechaPantalla} ${estilos.flechaPantallaIzq}`} onClick={() => { ir(actual - 1); setQuieto(true); }} aria-label={t.anterior}>‹</button>
+        <button type="button" className={`${estilos.flechaPantalla} ${estilos.flechaPantallaDer}`} onClick={() => { ir(actual + 1); setQuieto(true); }} aria-label={t.siguiente}>›</button>
+      </div>
+      <figcaption><b>{nombre}</b> · {desc}. {t.pantalla} · {t.nota} {AI_DISCLAIMER[locale].created}</figcaption>
+      <span className={estilos.oculto} aria-live="polite">{nombre}</span>
+    </figure>
+  );
+}
+
 export function DetalleEstudio({ locale }: { locale: Locale }) {
   const t = T[locale];
   return (
@@ -260,10 +345,7 @@ export function DetalleEstudio({ locale }: { locale: Locale }) {
           <p className={estilos.detalleLead}>{t.detalleLead}</p>
           <ul className={estilos.puntos}>{t.puntos.map(p => <li key={p}><Check size={16} aria-hidden /> {p}</li>)}</ul>
         </div>
-        <figure className={estilos.pantalla} data-reveal>
-          <img src={`/img/crm-crear-${locale}.webp`} alt={t.alt} loading="lazy" data-zoomable tabIndex={0} role="button" />
-          <figcaption>{t.pantalla} · {t.nota} {AI_DISCLAIMER[locale].created}</figcaption>
-        </figure>
+        <CarruselPantallas locale={locale} />
       </div>
     </section>
   );
