@@ -24,15 +24,30 @@ import estilos from './inicio-estudio.module.css';
  * Los videos se cargan al entrar en pantalla y se pausan al salir; con
  * movimiento reducido solo se ve el póster.
  */
-type MuestraCarrusel = { id: string; titulo: readonly [string, string]; image: string; video?: string };
+type MuestraCarrusel = { id: string; titulo: readonly [string, string]; image: string; imageEn?: string; video?: string };
+
+const ESTILOS = [
+  ['brandforge-aurora', 'Aurora'], ['brandforge-cyberpunk', 'Cyberpunk'],
+  ['brandforge-pop-art', 'Pop art'], ['food_promo', 'Promo'],
+  ['brandforge-y2k', 'Y2K'], ['brandforge-graffiti', 'Graffiti'],
+  ['brandforge-maximalism', 'Maximalism'], ['brandforge-retro', 'Retro'],
+  ['brandforge-victorian-style', 'Victorian'], ['brandforge-surreal-design', 'Surreal'],
+] as const;
 
 const MUESTRAS: MuestraCarrusel[] = [
+  ...ESTILOS.map(([id, nombre]) => ({
+    id,
+    titulo: [nombre, nombre] as const,
+    image: `/estilos/${id}.webp`,
+    imageEn: `/estilos/en/${id}.webp`,
+    video: `/estilos/${id}.mp4`,
+  })),
   { id: 'real-estate', titulo: ['Bienes raíces', 'Real estate'], image: '/img/pawwer-generated-luna.png', video: '/summit-inmobiliario/assets/summit-real-estate-hero-16x9.mp4' },
   { id: 'producto', titulo: ['Productos', 'Products'], image: '/estilos/food_promo.webp', video: '/estilos/food_promo.mp4' },
   { id: 'avatar', titulo: ['AI Avatar', 'AI Avatar'], image: '/img/portrait-autos-cliente.png' },
   { id: 'ugc', titulo: ['UGC', 'UGC'], image: '/img/inmobiliaria-entrega-llaves-portrait.png' },
   { id: 'unboxing', titulo: ['Unboxing', 'Unboxing'], image: '/img/unboxing-demo.png' },
-] as const;
+];
 
 // Muestras propias, sin marcas de terceros. El fondo nunca solicita videos
 // hasta que el héroe sea visible y respeta movimiento reducido/ahorro de datos.
@@ -110,14 +125,15 @@ function Muestra({ muestra, activa, locale }: { muestra: MuestraCarrusel; activa
   const ref = useRef<HTMLVideoElement>(null);
   useEffect(() => {
     const video = ref.current;
-    if (!video) return;
+    const videoSrc = muestra.video;
+    if (!video || !videoSrc) return;
     if (!activa || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       video.pause();
       return;
     }
     const io = new IntersectionObserver(([e]) => {
       if (e.isIntersecting) {
-        if (!video.src) video.src = muestra.video || '';
+        if (!video.src) video.src = videoSrc;
         video.play().catch(() => { /* el navegador puede negarse; queda el póster */ });
       } else video.pause();
     }, { threshold: 0.35 });
@@ -126,9 +142,9 @@ function Muestra({ muestra, activa, locale }: { muestra: MuestraCarrusel; activa
   }, [muestra.video, activa]);
   return (
     <figure className={estilos.muestra} data-activa={activa}>
-      {muestra.video
+      {muestra.video && !(locale === 'en' && muestra.imageEn)
         ? <video ref={ref} poster={muestra.image} muted loop playsInline preload="none" aria-label={muestra.titulo[locale === 'en' ? 1 : 0]} />
-        : <Image src={muestra.image} alt={muestra.titulo[locale === 'en' ? 1 : 0]} width={600} height={600} sizes="(max-width: 600px) 70vw, 300px" />}
+        : <Image src={locale === 'en' && muestra.imageEn ? muestra.imageEn : muestra.image} alt={muestra.titulo[locale === 'en' ? 1 : 0]} width={600} height={600} sizes="(max-width: 600px) 70vw, 300px" />}
       <figcaption>{muestra.titulo[locale === 'en' ? 1 : 0]}</figcaption>
     </figure>
   );
@@ -195,44 +211,22 @@ function FondoCreativo() {
   useEffect(() => {
     const root = fondo.current;
     if (!root) return;
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     const video = root.querySelector('video');
     if (!video) return;
-    const dataSaver = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData;
-    if (reducedMotion.matches || dataSaver) return;
-
-    const pause = () => video.pause();
-    const show = () => {
-      if (document.hidden) return;
-      if (!video.src) video.src = video.dataset.src || '';
-      video.play().catch(() => { /* El fondo oscuro queda visible si el navegador bloquea autoplay. */ });
-    };
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) show();
-      else pause();
-    }, { threshold: 0.1 });
-    observer.observe(root);
-    const visibilityChanged = () => {
-      if (document.hidden) pause();
-      else if (root.getBoundingClientRect().bottom > 0) show();
-    };
-    document.addEventListener('visibilitychange', visibilityChanged);
-    return () => {
-      observer.disconnect();
-      document.removeEventListener('visibilitychange', visibilityChanged);
-      pause();
-    };
+    video.play().catch(() => { /* El video es muted/autoplay; el navegador puede requerir su política local. */ });
+    return () => video.pause();
   }, []);
 
   return (
     <div ref={fondo} className={estilos.heroeFondo} aria-hidden="true">
       <video
         className={estilos.fondoVideo}
-        data-src="/videos/hero-pawwer-cliente.mp4"
+        src="/videos/hero-pawwer-cliente.mp4"
+        autoPlay
         muted
         loop
         playsInline
-        preload="none"
+        preload="auto"
         tabIndex={-1}
       />
     </div>
