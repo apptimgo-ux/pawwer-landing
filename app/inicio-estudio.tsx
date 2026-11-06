@@ -24,17 +24,14 @@ import estilos from './inicio-estudio.module.css';
  * Los videos se cargan al entrar en pantalla y se pausan al salir; con
  * movimiento reducido solo se ve el póster.
  */
-const MUESTRAS = [
-  ['brandforge-aurora', 'Aurora'],
-  ['brandforge-cyberpunk', 'Cyberpunk'],
-  ['brandforge-pop-art', 'Pop art'],
-  ['food_promo', 'Promo'],
-  ['brandforge-y2k', 'Y2K'],
-  ['brandforge-graffiti', 'Graffiti'],
-  ['brandforge-maximalism', 'Maximalism'],
-  ['brandforge-retro', 'Retro'],
-  ['brandforge-victorian-style', 'Victorian'],
-  ['brandforge-surreal-design', 'Surreal'],
+type MuestraCarrusel = { id: string; titulo: readonly [string, string]; image: string; video?: string };
+
+const MUESTRAS: MuestraCarrusel[] = [
+  { id: 'real-estate', titulo: ['Bienes raíces', 'Real estate'], image: '/img/pawwer-generated-luna.png', video: '/summit-inmobiliario/assets/summit-real-estate-hero-16x9.mp4' },
+  { id: 'producto', titulo: ['Productos', 'Products'], image: '/estilos/food_promo.webp', video: '/estilos/food_promo.mp4' },
+  { id: 'avatar', titulo: ['AI Avatar', 'AI Avatar'], image: '/img/portrait-autos-cliente.png' },
+  { id: 'ugc', titulo: ['UGC', 'UGC'], image: '/img/inmobiliaria-entrega-llaves-portrait.png' },
+  { id: 'unboxing', titulo: ['Unboxing', 'Unboxing'], image: '/img/unboxing-demo.png' },
 ] as const;
 
 // Muestras propias, sin marcas de terceros. El fondo nunca solicita videos
@@ -109,30 +106,30 @@ const T = {
 
 const ICONOS = { inbox: MessageSquare, bot: Bot, calendar: CalendarDays, pipeline: Workflow, huella: Compass, chart: ChartNoAxesCombined };
 
-function Muestra({ id, nombre, activa, locale }: { id: string; nombre: string; activa: boolean; locale: Locale }) {
+function Muestra({ muestra, activa, locale }: { muestra: MuestraCarrusel; activa: boolean; locale: Locale }) {
   const ref = useRef<HTMLVideoElement>(null);
   useEffect(() => {
     const video = ref.current;
-    if (!video || locale === 'en') return;
+    if (!video) return;
     if (!activa || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       video.pause();
       return;
     }
     const io = new IntersectionObserver(([e]) => {
       if (e.isIntersecting) {
-        if (!video.src) video.src = `/estilos/${id}.mp4`;
+        if (!video.src) video.src = muestra.video || '';
         video.play().catch(() => { /* el navegador puede negarse; queda el póster */ });
       } else video.pause();
     }, { threshold: 0.35 });
     io.observe(video);
     return () => io.disconnect();
-  }, [id, activa, locale]);
+  }, [muestra.video, activa]);
   return (
-    <figure className={estilos.muestra}>
-      {locale === 'en'
-        ? <Image src={`/estilos/en/${id}.webp`} alt={nombre} width={600} height={600} sizes="(max-width: 600px) 70vw, 300px" />
-        : <video ref={ref} poster={`/estilos/${id}.webp`} muted loop playsInline preload="none" aria-label={nombre} />}
-      <figcaption>{nombre}</figcaption>
+    <figure className={estilos.muestra} data-activa={activa}>
+      {muestra.video
+        ? <video ref={ref} poster={muestra.image} muted loop playsInline preload="none" aria-label={muestra.titulo[locale === 'en' ? 1 : 0]} />
+        : <Image src={muestra.image} alt={muestra.titulo[locale === 'en' ? 1 : 0]} width={600} height={600} sizes="(max-width: 600px) 70vw, 300px" />}
+      <figcaption>{muestra.titulo[locale === 'en' ? 1 : 0]}</figcaption>
     </figure>
   );
 }
@@ -178,11 +175,11 @@ function CarruselEstilos({ locale }: { locale: Locale }) {
           }
         }}
       >
-        {MUESTRAS.map(([id, nombre], indice) => {
+        {MUESTRAS.map((muestra, indice) => {
           const distancia = (indice - actual + MUESTRAS.length + Math.floor(MUESTRAS.length / 2)) % MUESTRAS.length - Math.floor(MUESTRAS.length / 2);
           return (
-            <div key={id} className={estilos.posicion} data-offset={Math.max(-3, Math.min(3, distancia))} aria-hidden={Math.abs(distancia) > 2}>
-              <Muestra id={id} nombre={nombre} activa={Math.abs(distancia) <= 1} locale={locale} />
+            <div key={muestra.id} className={estilos.posicion} data-offset={Math.max(-3, Math.min(3, distancia))} aria-hidden={Math.abs(distancia) > 2}>
+              <Muestra muestra={muestra} activa={Math.abs(distancia) <= 1} locale={locale} />
             </div>
           );
         })}
