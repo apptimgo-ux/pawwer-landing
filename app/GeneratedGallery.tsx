@@ -169,8 +169,37 @@ function Carrusel3D({ locale }: { locale: Locale }) {
   );
 }
 
+function Formatos({ locale }: { locale: Locale }) {
+  const formatos = locale === 'es'
+    ? [
+        { title: 'Bienes raíces', detail: 'Recorridos y desarrollos', src: '/img/pawwer-generated-luna.png' },
+        { title: 'Producto', detail: 'Anuncios para tu catálogo', src: '/estilos/food_promo.webp' },
+        { title: 'Avatar IA', detail: 'Presentadores para tu marca', src: '/img/crm-pawwer-studio-es.webp' },
+        { title: 'UGC', detail: 'Contenido cercano y natural', src: '/img/portrait-autos-cliente.png' },
+        { title: 'Unboxing', detail: 'Presenta cada detalle', src: '/img/unboxing-demo.png' },
+      ]
+    : [
+        { title: 'Real estate', detail: 'Tours and developments', src: '/img/pawwer-generated-luna.png' },
+        { title: 'Product', detail: 'Ads for your catalog', src: '/estilos/en/food_promo.webp' },
+        { title: 'AI avatar', detail: 'On-brand presenters', src: '/img/crm-pawwer-studio-en.webp' },
+        { title: 'UGC', detail: 'Natural, relatable content', src: '/img/portrait-autos-cliente.png' },
+        { title: 'Unboxing', detail: 'Show every detail', src: '/img/unboxing-demo.png' },
+      ];
+
+  return (
+    <div className={estilos.formatos}>
+      {formatos.map((formato, i) => (
+        <article className={estilos.formato} key={formato.title} style={{ '--formato-delay': `${i * 90}ms` } as React.CSSProperties}>
+          <img src={formato.src} alt="" loading="lazy" draggable={false} />
+          <div><h3>{formato.title}</h3><p>{formato.detail}</p></div>
+        </article>
+      ))}
+    </div>
+  );
+}
+
 export default function GeneratedGallery({ locale, videos = [] }: { locale: Locale; videos?: ExampleVideo[] }) {
-  const [tab, setTab] = useState<'videos' | 'designs'>('videos');
+  const [tab, setTab] = useState<'videos' | 'designs' | 'formats'>('videos');
   const t = (es: string, en: string) => (locale === 'es' ? es : en);
   return (
     <section className={`band band--dark ${estilos.seccion}`}>
@@ -178,10 +207,10 @@ export default function GeneratedGallery({ locale, videos = [] }: { locale: Loca
         <div className={estilos.cabeza}>
           <h2>{AI_DISCLAIMER[locale].gallery}</h2>
           <div role="tablist" aria-label={t('Ejemplos de Pawwer', 'Pawwer examples')} className={estilos.pestanas}>
-            {(['videos', 'designs'] as const).map(value => (
+            {(['videos', 'designs', 'formats'] as const).map(value => (
               <button key={value} type="button" role="tab" id={`generated-${value}-tab`} aria-controls={`generated-${value}`} aria-selected={tab === value}
                 className={tab === value ? estilos.pestanaActiva : estilos.pestana} onClick={() => setTab(value)}>
-                {value === 'designs' ? t('Diseños', 'Designs') : 'Videos'}
+                {value === 'designs' ? t('Diseños', 'Designs') : value === 'formats' ? t('Por formato', 'By format') : 'Videos'}
               </button>
             ))}
           </div>
@@ -191,6 +220,9 @@ export default function GeneratedGallery({ locale, videos = [] }: { locale: Loca
         </div>
         <div id="generated-designs" role="tabpanel" aria-labelledby="generated-designs-tab" hidden={tab !== 'designs'}>
           {tab === 'designs' && <><Carrusel3D locale={locale} /><p className={estilos.ayuda}>{t('Arrastra para girar', 'Drag to rotate')}</p></>}
+        </div>
+        <div id="generated-formats" role="tabpanel" aria-labelledby="generated-formats-tab" hidden={tab !== 'formats'}>
+          {tab === 'formats' && <Formatos locale={locale} />}
         </div>
         <div className={estilos.pie}>
           <p>{AI_DISCLAIMER[locale].created}</p>

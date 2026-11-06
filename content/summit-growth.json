@@ -1,0 +1,27 @@
+{
+  "slug": "crecimiento",
+  "name": "Crecimiento",
+  "summary": "Conecta tus contenidos con tus oportunidades.",
+  "inherits": "Todo Esencial, más",
+  "features": [
+    {
+      "text": "10 integrantes"
+    },
+    {
+      "text": "Planner de contenidos"
+    },
+    {
+      "text": "Mapa y origen de leads"
+    },
+    {
+      "text": "Resultados, cotizaciones y contratos"
+    },
+    {
+      "text": "Hasta 4 canales con conexión oficial"
+    },
+    {
+      "text": "500 créditos de IA al mes"
+    }
+  ],
+  "note": ""
+}

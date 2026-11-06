@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { ArrowLeft, ArrowRight, Check } from 'lucide-react';
 import { Header, Footer } from '../../site-ui';
-import { CHECKOUT_URLS, content, EMAIL, PHONE_HREF, PHONE_LABEL } from '../../site-content';
+import { CHECKOUT_URLS, summitGrowthPlan as plan, EMAIL, PHONE_HREF, PHONE_LABEL } from '../../site-content';
 import SummitCrecimientoCta from './summit-crecimiento-cta';
 import styles from './summit-crecimiento.module.css';
 
@@ -11,7 +11,6 @@ export const metadata: Metadata = {
   alternates: { canonical: '/summit-inmobiliario/crecimiento' },
 };
 
-const plan = content.es.plans.find((item) => item.slug === 'crecimiento')!;
 const precioAnual = Number(plan.priceAnual.replace(/[^\d.]/g, ''));
 const precioConBeneficio = (precioAnual * 0.75).toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 const equivalenteMensual = (precioAnual * 0.75 / 12).toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 });

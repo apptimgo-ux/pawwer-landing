@@ -3,6 +3,7 @@
 import esData from '../content/es.json';
 import enData from '../content/en.json';
 import settings from '../content/settings.json';
+import summitGrowth from '../content/summit-growth.json';
 
 export type Locale = 'es' | 'en';
 
@@ -41,7 +42,7 @@ export type Plan = {
   features: { text: string }[];
   note: string;
 };
-export type CompareRow = { label: string; content_creator?: string; esencial: string; crecimiento: string; escala: string; empresarial?: string };
+export type CompareRow = { label: string; content_creator?: string; esencial?: string; escala?: string; empresarial?: string };
 
 export type PlanDetailCopy = {
   back: string; includesTitle: string; inheritsLabel: string; trialTitle: string;
@@ -80,10 +81,18 @@ export const ADDRESS_LINES = [settings.contact.addressLine1, settings.contact.ad
 export const PRIVACY_REVIEW = settings.privacyReview as { es: string; en: string };
 export const OG_IMAGE = settings.media.ogImage || '/hero.jpg';
 
-export const PLAN_SLUGS = ['content_creator', 'esencial', 'crecimiento', 'escala', 'empresarial'];
+export const PLAN_SLUGS = ['content_creator', 'esencial', 'escala', 'empresarial'] as const;
+
+// Plan heredado visible solo en la oferta independiente del Summit Inmobiliario.
+export const summitGrowthPlan: Plan = {
+  ...summitGrowth,
+  price: settings.prices.crecimiento,
+  priceAnual: settings.pricesAnual.crecimiento,
+  ahorroAnual: settings.ahorroAnual.crecimiento,
+} as Plan;
 
 // El plan se identifica por `slug` (estable en los dos idiomas). El `name`
-// es texto localizado — en inglés es Essential / Growth / Scale.
+// es texto localizado — en inglés es Essential / Scale.
 export const planHref = (locale: Locale, slug: string) =>
   locale === 'es' ? `/planes/${slug}` : `/en/plans/${slug}`;
 

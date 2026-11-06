@@ -69,6 +69,9 @@
         },
         {
           "text": "1 usuario y 1 marca"
+        },
+        {
+          "text": "Con 750 créditos: hasta 75 imágenes o 12 videos estándar (60 créditos c/u)."
         }
       ],
       "note": "No incluye CRM, leads, conversaciones, citas, agentes IA ni creación automatizada. Cada generación consume créditos. Puedes cambiar de plan cuando necesites más herramientas."
@@ -102,33 +105,9 @@
         },
         {
           "text": "150 créditos de IA al mes"
-        }
-      ],
-      "note": ""
-    },
-    {
-      "slug": "crecimiento",
-      "name": "Crecimiento",
-      "summary": "Conecta tus contenidos con tus oportunidades.",
-      "inherits": "Todo Esencial, más",
-      "features": [
-        {
-          "text": "10 integrantes"
         },
         {
-          "text": "Planner de contenidos"
-        },
-        {
-          "text": "Mapa y origen de leads"
-        },
-        {
-          "text": "Resultados, cotizaciones y contratos"
-        },
-        {
-          "text": "Hasta 4 canales con conexión oficial"
-        },
-        {
-          "text": "500 créditos de IA al mes"
+          "text": "Con 150 créditos: hasta 15 imágenes o 2 videos estándar (60 créditos c/u)."
         }
       ],
       "note": ""
@@ -137,8 +116,17 @@
       "slug": "escala",
       "name": "Escala",
       "summary": "Amplía el alcance de tu equipo.",
-      "inherits": "Todo Crecimiento, más",
+      "inherits": "Todo Esencial, más",
       "features": [
+        {
+          "text": "Resultados, cotizaciones y contratos"
+        },
+        {
+          "text": "Mapa y origen de leads"
+        },
+        {
+          "text": "Planner de contenidos"
+        },
         {
           "text": "25 integrantes"
         },
@@ -161,7 +149,10 @@
           "text": "Pawwer Studio completo: video con IA con la persona idéntica (desde 40 créditos), voces profesionales en español e inglés y música a la medida"
         },
         {
-          "text": "BrandForge: 3 opciones de diseño con tu marca; comerciales premium de 20 o 30 segundos (400 o 600 créditos por video)"
+          "text": "BrandForge: 3 opciones de diseño con tu marca; comerciales premium de 20 s (500 créditos) o 30 s (750 créditos)"
+        },
+        {
+          "text": "Con 1,500 créditos: hasta 150 imágenes o 25 videos estándar; alternativamente, 3 comerciales premium de 20 s o 2 de 30 s. Los créditos se comparten."
         }
       ],
       "note": "Las automatizaciones multicanal se habilitan por canal al terminar su conexión oficial."
@@ -194,7 +185,7 @@
           "text": "Atención prioritaria y analítica de operación"
         },
         {
-          "text": "BrandForge: 3 opciones de diseño con tu marca; comerciales premium de 20 o 30 segundos (400 o 600 créditos por video)"
+          "text": "Con 5,000 créditos: hasta 500 imágenes o 83 videos estándar; alternativamente, 10 comerciales premium de 20 s o 6 de 30 s. Los créditos se comparten."
         }
       ],
       "note": "US$1,999 al mes más impuestos. Pauta, excedentes e integraciones ERP a medida se cotizan aparte. No incluye servicios de agencia ni funciones aún no conectadas."
@@ -205,7 +196,6 @@
       "label": "Integrantes",
       "content_creator": "1",
       "esencial": "3",
-      "crecimiento": "10",
       "escala": "25",
       "empresarial": "50"
     },
@@ -213,7 +203,6 @@
       "label": "Canales con conexión oficial",
       "content_creator": "Hasta 3 perfiles: Instagram, Facebook y TikTok",
       "esencial": "Hasta 2",
-      "crecimiento": "Hasta 4",
       "escala": "Hasta 8",
       "empresarial": "Hasta 9"
     },
@@ -221,21 +210,25 @@
       "label": "Créditos de IA / mes",
       "content_creator": "750",
       "esencial": "150",
-      "crecimiento": "500",
       "escala": "1,500",
       "empresarial": "5,000"
     },
     {
+      "label": "Capacidad aproximada de generación / mes",
+      "content_creator": "Con 750 créditos: hasta 75 imágenes o 12 videos estándar (60 créditos c/u).",
+      "esencial": "Con 150 créditos: hasta 15 imágenes o 2 videos estándar (60 créditos c/u).",
+      "escala": "Hasta 150 imágenes o 25 videos estándar; o 3 comerciales premium de 20 s / 2 de 30 s. Créditos compartidos.",
+      "empresarial": "Hasta 500 imágenes o 83 videos estándar; o 10 comerciales premium de 20 s / 6 de 30 s. Créditos compartidos."
+    },
+    {
       "label": "CRM de leads, contactos y seguimiento",
       "esencial": "✓",
-      "crecimiento": "✓",
       "escala": "✓",
       "empresarial": "✓"
     },
     {
       "label": "Calendario de citas",
       "esencial": "✓",
-      "crecimiento": "✓",
       "escala": "✓",
       "empresarial": "✓"
     },
@@ -243,7 +236,6 @@
       "label": "Marca, biblioteca y preparación de contenidos",
       "content_creator": "✓",
       "esencial": "✓",
-      "crecimiento": "✓",
       "escala": "✓",
       "empresarial": "✓"
     },
@@ -251,56 +243,48 @@
       "label": "Planner de contenidos",
       "content_creator": "Manual",
       "esencial": "—",
-      "crecimiento": "✓",
       "escala": "✓",
       "empresarial": "✓"
     },
     {
       "label": "Mapa y origen de leads",
       "esencial": "—",
-      "crecimiento": "✓",
       "escala": "✓",
       "empresarial": "✓"
     },
     {
       "label": "Resultados, cotizaciones y contratos",
       "esencial": "—",
-      "crecimiento": "✓",
       "escala": "✓",
       "empresarial": "✓"
     },
     {
       "label": "Automatización comercial",
       "esencial": "—",
-      "crecimiento": "—",
       "escala": "✓",
       "empresarial": "✓"
     },
     {
       "label": "Atención prioritaria",
       "esencial": "—",
-      "crecimiento": "—",
       "escala": "✓",
       "empresarial": "✓"
     },
     {
       "label": "Analítica operativa",
       "esencial": "—",
-      "crecimiento": "—",
       "escala": "✓",
       "empresarial": "✓"
     },
     {
       "label": "Agente de ventas IA con traspaso humano",
       "esencial": "✓",
-      "crecimiento": "✓",
       "escala": "✓",
       "empresarial": "✓"
     },
     {
       "label": "BrandForge (3 opciones por diseño)",
       "esencial": "—",
-      "crecimiento": "—",
       "escala": "Incluido",
       "empresarial": "Incluido"
     }
@@ -510,7 +494,7 @@
         {
           "icon": "chart",
           "h3": "Una lectura medible",
-          "p": "Entiende qué funciona y qué necesita atención desde Crecimiento y Escala."
+          "p": "Entiende qué funciona y qué necesita atención, desde tu primer reporte hasta la operación completa."
         },
         {
           "icon": "spark",
@@ -532,7 +516,7 @@
       "eyebrow": "Planes y precios",
       "h2a": "Elige el ritmo",
       "h2b": "de tu crecimiento.",
-      "intro": "Elige herramientas de contenido o un plan con CRM. Prueba de 7 días con tarjeta en el checkout seguro de Dodo Payments; no se cobra nada hasta el día 8. Al año pagas doce meses con 15% de descuento, en un solo cargo. Precios en USD, sin impuestos:",
+      "intro": "Elige herramientas de contenido o un plan con CRM. Prueba de 7 días con tarjeta en el checkout seguro de Dodo Payments; no se cobra nada hasta el día 8. Al año pagas doce meses con 15% de descuento, en un solo cargo. Precios en USD, sin impuestos: Los créditos se comparten entre imágenes y videos. Como referencia: cada imagen cuesta 10 créditos, cada video estándar 60 y los comerciales premium de 20/30 s cuestan 500/750. Verás el costo exacto antes de generar.",
       "priceUnit": "USD / mes",
       "mostPopular": "Recomendado",
       "cta": "Empezar",
@@ -582,7 +566,7 @@
         },
         {
           "q": "¿Cuánto cuesta PAWWER?",
-          "a": "Content Creator cuesta $49 dólares al mes, Esencial $99, Crecimiento $199, Escala $349 y Empresarial $1,999. Pagando al año son 15% menos en todos. PAWWER Agencia, que es el servicio con equipo detrás, va por propuesta. Los precios no llevan impuesto incluido: se suma en el checkout según tu país, así que en México verás el 16% de IVA encima."
+          "a": "Content Creator cuesta US$49 al mes, Esencial US$99, Escala US$349 y Empresarial US$1,999. Al pagar el año por adelantado ahorras 15%. PAWWER Agencia, el servicio con un equipo detrás, se cotiza por propuesta. Los precios no incluyen impuestos; se muestran en el checkout."
         },
         {
           "q": "¿Hay prueba gratis?",

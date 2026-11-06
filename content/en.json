@@ -69,6 +69,9 @@
         },
         {
           "text": "1 user and 1 brand"
+        },
+        {
+          "text": "With 750 credits: up to 75 images or 12 standard videos (60 credits each)."
         }
       ],
       "note": "CRM, leads, conversations, appointments, AI agents, and automated content creation are not included. Each generation uses credits. You can change plans when you need more tools."
@@ -102,33 +105,9 @@
         },
         {
           "text": "150 AI credits per month"
-        }
-      ],
-      "note": ""
-    },
-    {
-      "slug": "crecimiento",
-      "name": "Growth",
-      "summary": "Connect your content with your opportunities.",
-      "inherits": "Everything in Essential, plus",
-      "features": [
-        {
-          "text": "10 team members"
         },
         {
-          "text": "Content planner"
-        },
-        {
-          "text": "Lead map and source"
-        },
-        {
-          "text": "Results, quotes and contracts"
-        },
-        {
-          "text": "Up to 4 channels with official connection"
-        },
-        {
-          "text": "500 AI credits per month"
+          "text": "With 150 credits: up to 15 images or 2 standard videos (60 credits each)."
         }
       ],
       "note": ""
@@ -137,8 +116,17 @@
       "slug": "escala",
       "name": "Scale",
       "summary": "Extend your team's reach.",
-      "inherits": "Everything in Growth, plus",
+      "inherits": "Everything in Essential, plus",
       "features": [
+        {
+          "text": "Results, quotes and contracts"
+        },
+        {
+          "text": "Lead map and source"
+        },
+        {
+          "text": "Content planner"
+        },
         {
           "text": "25 team members"
         },
@@ -161,7 +149,10 @@
           "text": "Full Pawwer Studio: AI video with the identical person (from 40 credits), professional Spanish and English voices and custom music"
         },
         {
-          "text": "BrandForge: 3 on-brand design options; premium 20- or 30-second commercials (400 or 600 credits per video)"
+          "text": "BrandForge: 3 on-brand design options; premium commercials: 20 sec (500 credits) or 30 sec (750 credits)"
+        },
+        {
+          "text": "With 1,500 credits: up to 150 images or 25 standard videos; alternatively, 3 premium 20-sec commercials or 2 at 30 sec. Credits are shared."
         }
       ],
       "note": "Multichannel automations are enabled per channel once its official connection is complete."
@@ -194,7 +185,7 @@
           "text": "Priority support and operational analytics"
         },
         {
-          "text": "BrandForge: 3 on-brand design options; premium 20- or 30-second commercials (400 or 600 credits per video)"
+          "text": "With 5,000 credits: up to 500 images or 83 standard videos; alternatively, 10 premium 20-sec commercials or 6 at 30 sec. Credits are shared."
         }
       ],
       "note": "US$1,999 per month plus tax. Ad spend, overages and custom ERP integrations are quoted separately. Agency services and features not yet connected are excluded."
@@ -205,7 +196,6 @@
       "label": "Team members",
       "content_creator": "1",
       "esencial": "3",
-      "crecimiento": "10",
       "escala": "25",
       "empresarial": "50"
     },
@@ -213,7 +203,6 @@
       "label": "Channels with official connection",
       "content_creator": "Up to 3 profiles: Instagram, Facebook, and TikTok",
       "esencial": "Up to 2",
-      "crecimiento": "Up to 4",
       "escala": "Up to 8",
       "empresarial": "Up to 9"
     },
@@ -221,21 +210,25 @@
       "label": "AI credits / mo",
       "content_creator": "750",
       "esencial": "150",
-      "crecimiento": "500",
       "escala": "1,500",
       "empresarial": "5,000"
     },
     {
+      "label": "Approximate generation capacity / mo",
+      "content_creator": "With 750 credits: up to 75 images or 12 standard videos (60 credits each).",
+      "esencial": "With 150 credits: up to 15 images or 2 standard videos (60 credits each).",
+      "escala": "Up to 150 images or 25 standard videos; or 3 premium 20-sec / 2 30-sec commercials. Shared credits.",
+      "empresarial": "Up to 500 images or 83 standard videos; or 10 premium 20-sec / 6 30-sec commercials. Shared credits."
+    },
+    {
       "label": "Leads, contacts and follow-up CRM",
       "esencial": "✓",
-      "crecimiento": "✓",
       "escala": "✓",
       "empresarial": "✓"
     },
     {
       "label": "Appointment calendar",
       "esencial": "✓",
-      "crecimiento": "✓",
       "escala": "✓",
       "empresarial": "✓"
     },
@@ -243,7 +236,6 @@
       "label": "Brand, library and content preparation",
       "content_creator": "✓",
       "esencial": "✓",
-      "crecimiento": "✓",
       "escala": "✓",
       "empresarial": "✓"
     },
@@ -251,56 +243,48 @@
       "label": "Content planner",
       "content_creator": "Manual",
       "esencial": "—",
-      "crecimiento": "✓",
       "escala": "✓",
       "empresarial": "✓"
     },
     {
       "label": "Lead map and source",
       "esencial": "—",
-      "crecimiento": "✓",
       "escala": "✓",
       "empresarial": "✓"
     },
     {
       "label": "Results, quotes and contracts",
       "esencial": "—",
-      "crecimiento": "✓",
       "escala": "✓",
       "empresarial": "✓"
     },
     {
       "label": "Commercial automation",
       "esencial": "—",
-      "crecimiento": "—",
       "escala": "✓",
       "empresarial": "✓"
     },
     {
       "label": "Priority support",
       "esencial": "—",
-      "crecimiento": "—",
       "escala": "✓",
       "empresarial": "✓"
     },
     {
       "label": "Operational analytics",
       "esencial": "—",
-      "crecimiento": "—",
       "escala": "✓",
       "empresarial": "✓"
     },
     {
       "label": "AI sales agent with human handoff",
       "esencial": "✓",
-      "crecimiento": "✓",
       "escala": "✓",
       "empresarial": "✓"
     },
     {
       "label": "BrandForge (3 options per design)",
       "esencial": "—",
-      "crecimiento": "—",
       "escala": "Included",
       "empresarial": "Included"
     }
@@ -510,7 +494,7 @@
         {
           "icon": "chart",
           "h3": "A measurable read",
-          "p": "Understand what works and what needs attention from Growth and Scale."
+          "p": "Understand what works and what needs attention, from your first report to your full operation."
         },
         {
           "icon": "spark",
@@ -532,7 +516,7 @@
       "eyebrow": "Plans & pricing",
       "h2a": "Choose the pace",
       "h2b": "of your growth.",
-      "intro": "Choose content tools or a plan with CRM. A 7-day trial requires a card in Dodo Payments' secure checkout; nothing is charged until day 8. Pay yearly and you get twelve months with 15% off, in a single charge. Prices in USD, excluding taxes:",
+      "intro": "Choose content tools or a plan with CRM. A 7-day trial requires a card in Dodo Payments' secure checkout; nothing is charged until day 8. Pay yearly and you get twelve months with 15% off, in a single charge. Prices in USD, excluding taxes: Credits are shared across images and videos. As a guide: each image costs 10 credits, each standard video 60, and premium 20/30-sec commercials cost 500/750. You will see the exact cost before generating.",
       "priceUnit": "USD / mo",
       "mostPopular": "Recommended",
       "cta": "Get started",
@@ -582,7 +566,7 @@
         },
         {
           "q": "How much does PAWWER cost?",
-          "a": "Content Creator is $49 a month, Esencial $99, Crecimiento $199, Escala $349 and Empresarial $1,999, in US dollars. Paying yearly is 15% less on every plan. PAWWER Agencia — the service with a team behind it — is quoted by proposal. Prices don't include tax: it is added at checkout based on your country."
+          "a": "Content Creator is US$49 per month, Essential US$99, Scale US$349 and Enterprise US$1,999. Pay yearly upfront and save 15%. PAWWER Agency, the service with a team behind it, is quoted by proposal. Prices exclude taxes, which are shown at checkout."
         },
         {
           "q": "Is there a free trial?",
