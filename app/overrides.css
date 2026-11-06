@@ -148,10 +148,35 @@
 .plan__price span { font-family: var(--font-sans); font-size: 13px; font-weight: 400; letter-spacing: 0; color: var(--muted); white-space: nowrap; }
 .plan__price:hover { color: var(--accent); }
 @media (min-width: 1280px) {
-  .plans { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .pricing > .wrap {
+    width: min(calc(100% - clamp(48px, 8vw, 160px)), 1600px);
+    max-width: 1600px;
+  }
+  .plans { grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: stretch; }
   .plan { padding: 30px 20px; }
   .plan h3 { font-size: 22px; }
   .plan__price { font-size: clamp(28px, 2.2vw, 36px); }
+}
+
+@media (min-width: 861px) and (max-width: 1279px) {
+  .plans { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; }
+}
+
+@media (max-width: 860px) {
+  .pricing > .wrap { width: calc(100% - 32px); }
+}
+
+/* The hero's industry examples move like living campaign frames. */
+.hero--background .hero__backdrop > .hero__slide {
+  animation: heroSlideMotion 6s cubic-bezier(.2,.65,.3,1) both;
+  will-change: transform, opacity;
+}
+@keyframes heroSlideMotion {
+  from { opacity: .72; transform: scale(1.04) translate3d(-.5%, .25%, 0); }
+  to { opacity: 1; transform: scale(1.12) translate3d(.5%, -.25%, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero--background .hero__backdrop > .hero__slide { animation: none; will-change: auto; }
 }
 
 /* Pricing header: keep the editorial heading and intro together across the canvas. */

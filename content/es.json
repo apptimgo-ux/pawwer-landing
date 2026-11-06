@@ -340,16 +340,24 @@
       "poster": "",
       "slides": [
         {
-          "image": "/img/inmobiliario-01.jpg",
-          "alt": "Equipo inmobiliario atendiendo a una familia"
+          "image": "/img/inmobiliaria-entrega-llaves-portrait.png",
+          "alt": "Asesora entrega las llaves de una propiedad"
         },
         {
-          "image": "/img/autos-01.jpg",
-          "alt": "Asesoría en una agencia de autos"
+          "image": "/estilos/food_promo.webp",
+          "alt": "Anuncio de producto creado con Pawwer"
         },
         {
-          "image": "/img/recepcion-01.jpg",
-          "alt": "Atención de clientes en recepción"
+          "image": "/img/crm-pawwer-studio-es.webp",
+          "alt": "Avatar de demostración en Pawwer Studio"
+        },
+        {
+          "image": "/img/portrait-autos-cliente.png",
+          "alt": "Contenido de estilo UGC para una marca automotriz"
+        },
+        {
+          "image": "/img/unboxing-demo.png",
+          "alt": "Video de unboxing de producto creado para una campaña"
         }
       ],
       "ctaNote": "Desde US$49 al mes · 7 días de prueba · cancela cuando quieras"

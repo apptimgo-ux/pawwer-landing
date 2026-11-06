@@ -340,16 +340,24 @@
       "poster": "",
       "slides": [
         {
-          "image": "/img/inmobiliario-01.jpg",
-          "alt": "Real estate team helping a family"
+          "image": "/img/inmobiliaria-entrega-llaves-portrait.png",
+          "alt": "An advisor hands over the keys to a property"
         },
         {
-          "image": "/img/autos-01.jpg",
-          "alt": "Advisor helping a car dealership customer"
+          "image": "/estilos/en/food_promo.webp",
+          "alt": "Product ad created with Pawwer"
         },
         {
-          "image": "/img/recepcion-01.jpg",
-          "alt": "Customer service at reception"
+          "image": "/img/crm-pawwer-studio-en.webp",
+          "alt": "Demo avatar in Pawwer Studio"
+        },
+        {
+          "image": "/img/portrait-autos-cliente.png",
+          "alt": "UGC-style content for an automotive brand"
+        },
+        {
+          "image": "/img/unboxing-demo.png",
+          "alt": "Product unboxing video concept for a campaign"
         }
       ],
       "ctaNote": "From US$49/month · 7-day trial · cancel anytime"
